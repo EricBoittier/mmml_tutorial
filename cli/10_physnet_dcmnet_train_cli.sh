@@ -14,8 +14,8 @@ uv run python -m mmml.cli.misc.train_joint \
   --train-esp out/splits/grids_esp_train.npz \
   --valid-efd out/splits/energies_forces_dipoles_valid.npz \
   --valid-esp out/splits/grids_esp_valid.npz \
-  --epochs 50 \
-  --batch-size 1 \
+  --epochs 1000 \
+  --batch-size 8 \
   --name cybz_joint \
   --ckpt-dir out/ckpts
 echo "Output: out/ckpts/cybz_joint/"
