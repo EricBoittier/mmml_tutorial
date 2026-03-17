@@ -35,7 +35,8 @@ uv run python examples/other/co2/physnet_train/trainer.py \
   --epochs 50 \
   --batch-size 1 \
   --name cybz_physnet \
-  --ckpt-dir examples/mmml_tutorial/cli/out/ckpts
+  --ckpt-dir examples/mmml_tutorial/cli/out/ckpts \
+  --charges
 
 echo ""
 echo "--- 10: PhysNet+DCMNet joint training ---"
