@@ -24,7 +24,7 @@ bash examples/mmml_tutorial/01_make_res_cli.sh
 uv run python examples/mmml_tutorial/01_make_res_programmatic.py
 ```
 
-Output: `pdb/initial.pdb`, `psf/initial.psf`, CHARMM topology files.
+Output: `pdb/initial.pdb`, `psf/initial.psf`, `xyz/initial.xyz`, CHARMM topology files.
 
 ### make_box
 

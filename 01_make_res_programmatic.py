@@ -20,7 +20,7 @@ def main():
     print("=== 01: make_res programmatic ===")
     atoms = main_loop(args)
     print(f"Generated {len(atoms)} atoms")
-    print("Output: pdb/initial.pdb, psf/initial.psf, CHARMM topology files")
+    print("Output: pdb/initial.pdb, psf/initial.psf, xyz/initial.xyz, CHARMM topology files")
 
 
 if __name__ == "__main__":

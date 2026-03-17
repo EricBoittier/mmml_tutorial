@@ -11,4 +11,4 @@ cd "$SCRIPT_DIR"
 
 echo "=== 01: make_res (CLI) ==="
 uv run mmml make-res --res CYBZ --skip-energy-show
-echo "Output: pdb/initial.pdb, psf/initial.psf (in $SCRIPT_DIR)"
+echo "Output: pdb/initial.pdb, psf/initial.psf, xyz/initial.xyz (in $SCRIPT_DIR)"
