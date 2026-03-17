@@ -4,7 +4,8 @@
 # Requires: CHARMM, PyCHARMM, PackMol. Run 01_make_res first.
 
 set -e
-cd "$(dirname "$0")/../.."
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+cd "$SCRIPT_DIR"
 
 echo "=== 02: make_box (CLI) ==="
 uv run mmml make-box --res CYBZ --n 50 --side_length 25.0
