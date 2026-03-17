@@ -75,9 +75,33 @@ uv run python examples/mmml_tutorial/programmatic/06_normal_mode_sample_programm
 # 07: Evaluate sampled geometries (E, F, D, ESP)
 bash examples/mmml_tutorial/cli/07_pyscf_evaluate_cli.sh
 uv run python examples/mmml_tutorial/programmatic/07_pyscf_evaluate_programmatic.py
+
+# 08: Fix units and create train/valid/test splits
+bash examples/mmml_tutorial/cli/08_fix_and_split_cli.sh
+
+# 09: Train PhysNet (energies, forces, dipoles)
+bash examples/mmml_tutorial/cli/09_physnet_train_cli.sh
+
+# 10: Train PhysNet+DCMNet (joint, with ESP)
+bash examples/mmml_tutorial/cli/10_physnet_dcmnet_train_cli.sh
 ```
 
 See `examples/pyscf4gpu/README.md` for full GPU-accelerated DFT/MP2 docs.
+
+### Full training workflow (1000 structures)
+
+For a larger dataset suitable for training, run:
+
+```bash
+# Generate 1000 structures (uses combination modes when needed)
+mmml normal-mode-sample -i out/04_results.h5 -o out/06_sampled.npz --amplitude 0.1 --max-samples 1000
+
+# Evaluate with pyscf-dft (E, F, D, ESP)
+mmml pyscf-evaluate -i out/06_sampled.npz -o out/07_evaluated.npz --esp
+
+# Or run the full pipeline script:
+bash examples/mmml_tutorial/cli/run_full_training.sh
+```
 
 ### Normal mode sampling
 
@@ -104,27 +128,34 @@ Output: NPZ with `R`, `Z`, `N`, `E`, `F`, `Dxyz`, `esp`, `esp_grid`. Ready for P
 
 ## 03 – PhysNet
 
-Train a PhysNetJAX model on energies, forces, and optionally dipoles/charges.
+Train a PhysNetJAX model on energies, forces, and dipoles.
 
-### Prepare data
+### Prepare data (fix-and-split)
 
-```bash
-mmml fix-and-split --efd energies_forces_dipoles.npz --output-dir ./splits
-```
-
-### Train
+Converts units (Hartree → eV, etc.) and creates train/valid/test splits. If `07_evaluated.npz` contains esp/esp_grid, no separate grid file is needed:
 
 ```bash
-make physnet-train TRAIN=train.npz VALID=valid.npz NATOMS=60 BATCH=32 EPOCHS=100
+mmml fix-and-split --efd out/07_evaluated.npz --output-dir out/splits
 ```
 
-Or with Hydra:
+Output: `energies_forces_dipoles_{train,valid,test}.npz`, `grids_esp_{train,valid,test}.npz`.
+
+### Train PhysNet
 
 ```bash
-python scripts/physnet_hydra_train.py data.train_file=train.npz train.max_epochs=100
+bash examples/mmml_tutorial/cli/09_physnet_train_cli.sh
 ```
 
-Checkpoints: `mmml/models/physnetjax/ckpts/<run_name>/`.
+Or manually:
+
+```bash
+uv run python examples/other/co2/physnet_train/trainer.py \
+  --train out/splits/energies_forces_dipoles_train.npz \
+  --valid out/splits/energies_forces_dipoles_valid.npz \
+  --natoms 16 --epochs 50 --batch-size 1 --name cybz_physnet --ckpt-dir out/ckpts
+```
+
+Checkpoints: `out/ckpts/cybz_physnet/`.
 
 ---
 
@@ -132,7 +163,28 @@ Checkpoints: `mmml/models/physnetjax/ckpts/<run_name>/`.
 
 Train a DCMNet model for distributed charges and ESPs (electrostatic potential).
 
-### Quick start
+### PhysNet+DCMNet joint training
+
+Train PhysNet and DCMNet together for end-to-end energy, forces, dipoles, and ESP:
+
+```bash
+bash examples/mmml_tutorial/cli/10_physnet_dcmnet_train_cli.sh
+```
+
+Or manually:
+
+```bash
+uv run python -m mmml.cli.misc.train_joint \
+  --train-efd out/splits/energies_forces_dipoles_train.npz \
+  --train-esp out/splits/grids_esp_train.npz \
+  --valid-efd out/splits/energies_forces_dipoles_valid.npz \
+  --valid-esp out/splits/grids_esp_valid.npz \
+  --epochs 50 --batch-size 1 --name cybz_joint --ckpt-dir out/ckpts
+```
+
+Checkpoints: `out/ckpts/cybz_joint/`.
+
+### DCMNet only
 
 ```bash
 cd examples/dcm-net
@@ -203,5 +255,8 @@ python -m mmml.cli.calculator --checkpoint <path-to-checkpoint> --test-molecule 
 | 05 | pyscf-mp2 | `mmml pyscf-mp2 --mol "..." --energy --gradient` | `cli/05_pyscf_mp2_cli.sh`, `programmatic/05_pyscf_mp2_programmatic.py` |
 | 06 | normal-mode-sample | `mmml normal-mode-sample -i out/04_results.h5 -o out/06_sampled.npz --amplitude 0.1 --max-samples 10` | `cli/06_normal_mode_sample_cli.sh`, `programmatic/06_normal_mode_sample_programmatic.py` |
 | 07 | pyscf-evaluate | `mmml pyscf-evaluate -i out/06_sampled.npz -o out/07_evaluated.npz --esp` | `cli/07_pyscf_evaluate_cli.sh`, `programmatic/07_pyscf_evaluate_programmatic.py` |
-| — | PhysNet | — | `make physnet-train`, `scripts/physnet_hydra_train.py` |
-| — | DCMNet | — | `examples/dcm-net/train.py` |
+| 08 | fix-and-split | `mmml fix-and-split --efd out/07_evaluated.npz --output-dir out/splits` | `cli/08_fix_and_split_cli.sh` |
+| 09 | PhysNet train | `python examples/other/co2/physnet_train/trainer.py --train ... --valid ...` | `cli/09_physnet_train_cli.sh` |
+| 10 | PhysNet+DCMNet | `python -m mmml.cli.misc.train_joint --train-efd ... --train-esp ...` | `cli/10_physnet_dcmnet_train_cli.sh` |
+| — | Full workflow | `bash examples/mmml_tutorial/cli/run_full_training.sh` | 1000 structures, split, PhysNet, PhysNet+DCMNet |
+| — | DCMNet only | — | `examples/dcm-net/train.py` |
