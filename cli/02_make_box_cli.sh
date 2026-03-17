@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Example: make_box via CLI (section 01 – Generating a molecule)
-# Run from project root: bash examples/mmml_tutorial/02_make_box_cli.sh
+# Run from project root: bash examples/mmml_tutorial/cli/02_make_box_cli.sh
 # Requires: CHARMM, PyCHARMM, PackMol. Run 01_make_res first.
 
 set -e

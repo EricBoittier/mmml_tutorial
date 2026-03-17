@@ -20,11 +20,11 @@ mmml make-res --res CYBZ
 mmml make-res --res CYBZ --skip-energy-show   # skip energy.show() on clusters
 
 # Or run the example scripts (from project root):
-bash examples/mmml_tutorial/01_make_res_cli.sh
-uv run python examples/mmml_tutorial/01_make_res_programmatic.py
+bash examples/mmml_tutorial/cli/01_make_res_cli.sh
+uv run python examples/mmml_tutorial/programmatic/01_make_res_programmatic.py
 ```
 
-Output: `pdb/initial.pdb`, `psf/initial.psf`, `xyz/initial.xyz`, CHARMM topology files.
+Output: `pdb/initial.pdb`, `psf/initial.psf`, `xyz/initial.xyz`, CHARMM topology files (in `cli/` or `programmatic/` respectively).
 
 ### make_box
 
@@ -38,11 +38,11 @@ mmml make-box --res CYBZ --n 2 --side_length 25.0
 mmml make-box --res CYBZ --n 2 --side_length 25.0 --solvent TIP3 --density 1.0
 
 # Or run the example scripts (from project root):
-bash examples/mmml_tutorial/02_make_box_cli.sh
-uv run python examples/mmml_tutorial/02_make_box_programmatic.py
+bash examples/mmml_tutorial/cli/02_make_box_cli.sh
+uv run python examples/mmml_tutorial/programmatic/02_make_box_programmatic.py
 ```
 
-Output: `pdb/init-packmol.pdb` (or `pdb/init-TIP3box.pdb` if solvated).
+Output: `pdb/init-packmol.pdb` (or `pdb/init-TIP3box.pdb` if solvated) in `cli/` or `programmatic/` respectively.
 
 ---
 
@@ -57,19 +57,34 @@ mmml pyscf-mp2 --mol "O 0 0 0; H 0.96 0 0; H -0.24 0.93 0" --energy --gradient
 
 # Or run the example scripts (from project root):
 # 03: DFT energy
-bash examples/mmml_tutorial/03_pyscf_dft_cli.sh
-uv run python examples/mmml_tutorial/03_pyscf_dft_programmatic.py
+bash examples/mmml_tutorial/cli/03_pyscf_dft_cli.sh
+uv run python examples/mmml_tutorial/programmatic/03_pyscf_dft_programmatic.py
 
 # 04: DFT full (energy, gradient, hessian, harmonic, thermo)
-bash examples/mmml_tutorial/04_pyscf_dft_cli_full.sh
-uv run python examples/mmml_tutorial/04_pyscf_dft_programmatic.py
+bash examples/mmml_tutorial/cli/04_pyscf_dft_cli_full.sh
+uv run python examples/mmml_tutorial/programmatic/04_pyscf_dft_programmatic.py
 
 # 05: MP2 (post-HF)
-bash examples/mmml_tutorial/05_pyscf_mp2_cli.sh
-uv run python examples/mmml_tutorial/05_pyscf_mp2_programmatic.py
+bash examples/mmml_tutorial/cli/05_pyscf_mp2_cli.sh
+uv run python examples/mmml_tutorial/programmatic/05_pyscf_mp2_programmatic.py
+
+# 06: Normal mode sampling (from step 04 harmonic output)
+bash examples/mmml_tutorial/cli/06_normal_mode_sample_cli.sh
+uv run python examples/mmml_tutorial/programmatic/06_normal_mode_sample_programmatic.py
 ```
 
 See `examples/pyscf4gpu/README.md` for full GPU-accelerated DFT/MP2 docs.
+
+### Normal mode sampling
+
+After running step 04 (DFT full with harmonic), sample geometries along vibrational modes for downstream QM/ML:
+
+```bash
+mmml normal-mode-sample -i out/04_results.h5 -o out/06_sampled.npz --amplitude 0.1
+mmml normal-mode-sample -i out/04_results.h5 -o out/06_sampled.npz --amplitude 0.1 --include-equilibrium
+```
+
+Output: NPZ with `R` (n_samples, n_atoms, 3), `Z`, `N`. Run QM on each geometry for training data.
 
 ---
 
@@ -167,10 +182,11 @@ python -m mmml.cli.calculator --checkpoint <path-to-checkpoint> --test-molecule 
 
 | # | Step | CLI | Scripts |
 |---|------|-----|---------|
-| 01 | make_res | `mmml make-res --res CYBZ` | `01_make_res_cli.sh`, `01_make_res_programmatic.py` |
-| 02 | make_box | `mmml make-box --res CYBZ --n 50 --side_length 25` | `02_make_box_cli.sh`, `02_make_box_programmatic.py` |
-| 03 | pyscf-dft | `mmml pyscf-dft --mol "..." --energy` | `03_pyscf_dft_cli.sh`, `03_pyscf_dft_programmatic.py` |
-| 04 | pyscf-dft full | `mmml pyscf-dft --mol water.xyz --energy --gradient --hessian --harmonic --thermo` | `04_pyscf_dft_cli_full.sh`, `04_pyscf_dft_programmatic.py` |
-| 05 | pyscf-mp2 | `mmml pyscf-mp2 --mol "..." --energy --gradient` | `05_pyscf_mp2_cli.sh`, `05_pyscf_mp2_programmatic.py` |
+| 01 | make_res | `mmml make-res --res CYBZ` | `cli/01_make_res_cli.sh`, `programmatic/01_make_res_programmatic.py` |
+| 02 | make_box | `mmml make-box --res CYBZ --n 50 --side_length 25` | `cli/02_make_box_cli.sh`, `programmatic/02_make_box_programmatic.py` |
+| 03 | pyscf-dft | `mmml pyscf-dft --mol "..." --energy` | `cli/03_pyscf_dft_cli.sh`, `programmatic/03_pyscf_dft_programmatic.py` |
+| 04 | pyscf-dft full | `mmml pyscf-dft --mol xyz/initial.xyz --energy --gradient --hessian --harmonic --thermo` | `cli/04_pyscf_dft_cli_full.sh`, `programmatic/04_pyscf_dft_programmatic.py` |
+| 05 | pyscf-mp2 | `mmml pyscf-mp2 --mol "..." --energy --gradient` | `cli/05_pyscf_mp2_cli.sh`, `programmatic/05_pyscf_mp2_programmatic.py` |
+| 06 | normal-mode-sample | `mmml normal-mode-sample -i out/04_results.h5 -o out/06_sampled.npz --amplitude 0.1` | `cli/06_normal_mode_sample_cli.sh`, `programmatic/06_normal_mode_sample_programmatic.py` |
 | — | PhysNet | — | `make physnet-train`, `scripts/physnet_hydra_train.py` |
 | — | DCMNet | — | `examples/dcm-net/train.py` |
