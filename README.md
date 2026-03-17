@@ -71,6 +71,10 @@ uv run python examples/mmml_tutorial/programmatic/05_pyscf_mp2_programmatic.py
 # 06: Normal mode sampling (from step 04 harmonic output)
 bash examples/mmml_tutorial/cli/06_normal_mode_sample_cli.sh
 uv run python examples/mmml_tutorial/programmatic/06_normal_mode_sample_programmatic.py
+
+# 07: Evaluate sampled geometries (E, F, D, ESP)
+bash examples/mmml_tutorial/cli/07_pyscf_evaluate_cli.sh
+uv run python examples/mmml_tutorial/programmatic/07_pyscf_evaluate_programmatic.py
 ```
 
 See `examples/pyscf4gpu/README.md` for full GPU-accelerated DFT/MP2 docs.
@@ -84,7 +88,18 @@ mmml normal-mode-sample -i out/04_results.h5 -o out/06_sampled.npz --amplitude 0
 mmml normal-mode-sample -i out/04_results.h5 -o out/06_sampled.npz --amplitude 0.1 --include-equilibrium
 ```
 
-Output: NPZ with `R` (n_samples, n_atoms, 3), `Z`, `N`. Run QM on each geometry for training data.
+Output: NPZ with `R` (n_samples, n_atoms, 3), `Z`, `N`.
+
+### Evaluate sampled geometries
+
+Run DFT on each sampled geometry (energy, forces, dipoles, optionally ESP) in one GPU process:
+
+```bash
+mmml pyscf-evaluate -i out/06_sampled.npz -o out/07_evaluated.npz
+mmml pyscf-evaluate -i out/06_sampled.npz -o out/07_evaluated.npz --esp
+```
+
+Output: NPZ with `R`, `Z`, `N`, `E`, `F`, `Dxyz`, and optionally `esp`, `esp_grid`. Ready for PhysNet/DCMNet training.
 
 ---
 
@@ -188,5 +203,6 @@ python -m mmml.cli.calculator --checkpoint <path-to-checkpoint> --test-molecule 
 | 04 | pyscf-dft full | `mmml pyscf-dft --mol xyz/initial.xyz --energy --gradient --hessian --harmonic --thermo` | `cli/04_pyscf_dft_cli_full.sh`, `programmatic/04_pyscf_dft_programmatic.py` |
 | 05 | pyscf-mp2 | `mmml pyscf-mp2 --mol "..." --energy --gradient` | `cli/05_pyscf_mp2_cli.sh`, `programmatic/05_pyscf_mp2_programmatic.py` |
 | 06 | normal-mode-sample | `mmml normal-mode-sample -i out/04_results.h5 -o out/06_sampled.npz --amplitude 0.1` | `cli/06_normal_mode_sample_cli.sh`, `programmatic/06_normal_mode_sample_programmatic.py` |
+| 07 | pyscf-evaluate | `mmml pyscf-evaluate -i out/06_sampled.npz -o out/07_evaluated.npz` | `cli/07_pyscf_evaluate_cli.sh`, `programmatic/07_pyscf_evaluate_programmatic.py` |
 | — | PhysNet | — | `make physnet-train`, `scripts/physnet_hydra_train.py` |
 | — | DCMNet | — | `examples/dcm-net/train.py` |
