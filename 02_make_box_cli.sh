@@ -8,5 +8,5 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 cd "$SCRIPT_DIR"
 
 echo "=== 02: make_box (CLI) ==="
-uv run mmml make-box --res CYBZ --n 50 --side_length 25.0
+uv run mmml make-box --res CYBZ --n 2 --side_length 25.0
 echo "Output: pdb/init-packmol.pdb"

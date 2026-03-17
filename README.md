@@ -28,12 +28,14 @@ Output: `pdb/initial.pdb`, `psf/initial.psf`, CHARMM topology files.
 
 ### make_box
 
-Packs molecules into a periodic box (vacuum or solvated):
+Packs molecules into a periodic box (vacuum or solvated).
+
+In this case, we will prepare the dimers.
 
 ```bash
 # CLI
-mmml make-box --res CYBZ --n 50 --side_length 25.0
-mmml make-box --res CYBZ --n 50 --side_length 25.0 --solvent TIP3 --density 1.0
+mmml make-box --res CYBZ --n 2 --side_length 25.0
+mmml make-box --res CYBZ --n 2 --side_length 25.0 --solvent TIP3 --density 1.0
 
 # Or run the example scripts (from project root):
 bash examples/mmml_tutorial/02_make_box_cli.sh
@@ -46,15 +48,11 @@ Output: `pdb/init-packmol.pdb` (or `pdb/init-TIP3box.pdb` if solvated).
 
 ## 02 – Calculating energy, forces, ESPs
 
-Run MD or evaluate energy/forces with a trained ML model.
-
-
-
 ### QM/DFT (GPU)
 
 ```bash
-# CLI
-mmml pyscf-dft --mol "O 0 0 0; H 0.96 0 0; H -0.24 0.93 0" --energy
+# CLI example
+mmml pyscf-dft --mol pdb/initial.pdb --energy
 mmml pyscf-mp2 --mol "O 0 0 0; H 0.96 0 0; H -0.24 0.93 0" --energy --gradient
 
 # Or run the example scripts (from project root):
@@ -132,7 +130,7 @@ Convert trained DCMNet models to MDCM (multipole-derived charge model) formats f
 
 ## 05 – MMML
 ### Run simulation
-
+Run MD or evaluate energy/forces with a trained ML model.
 From Python (see `examples/general/dimers/sim.py`):
 
 ```python
