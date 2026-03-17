@@ -49,36 +49,7 @@ Output: `pdb/init-packmol.pdb` (or `pdb/init-TIP3box.pdb` if solvated).
 
 Run MD or evaluate energy/forces with a trained ML model.
 
-### Run simulation
 
-From Python (see `examples/general/dimers/sim.py`):
-
-```python
-import argparse
-from pathlib import Path
-from mmml.cli.run.run_sim import run
-from mmml.cli.base import resolve_desdimers_checkpoint
-
-args = argparse.Namespace(
-    pdbfile=Path("pdb/init-packmol.pdb"),
-    checkpoint=resolve_desdimers_checkpoint(),
-    n_monomers=50,
-    n_atoms_monomer=15,
-    cell=25.0,
-    nsteps_jaxmd=1000,
-    nsteps_ase=100,
-    temperature=298.0,
-    ensemble="npt",
-    # ... see run_sim.parse_args() for full options
-)
-run(args)
-```
-
-### Test calculator (energy, forces, charges, dipole)
-
-```bash
-python -m mmml.cli.calculator --checkpoint <path-to-checkpoint> --test-molecule CO2
-```
 
 ### QM/DFT (GPU)
 
@@ -143,6 +114,40 @@ Convert trained DCMNet models to MDCM (multipole-derived charge model) formats f
 - **kMDCM**: Kernel-based MDCM variant
 
 *(Detailed workflow and scripts to be added.)*
+
+
+## 05 – MMML
+### Run simulation
+
+From Python (see `examples/general/dimers/sim.py`):
+
+```python
+import argparse
+from pathlib import Path
+from mmml.cli.run.run_sim import run
+from mmml.cli.base import resolve_desdimers_checkpoint
+
+args = argparse.Namespace(
+    pdbfile=Path("pdb/init-packmol.pdb"),
+    checkpoint=resolve_desdimers_checkpoint(),
+    n_monomers=50,
+    n_atoms_monomer=15,
+    cell=25.0,
+    nsteps_jaxmd=1000,
+    nsteps_ase=100,
+    temperature=298.0,
+    ensemble="npt",
+    # ... see run_sim.parse_args() for full options
+)
+run(args)
+```
+
+### Test calculator (energy, forces, charges, dipole)
+
+```bash
+python -m mmml.cli.calculator --checkpoint <path-to-checkpoint> --test-molecule CO2
+```
+
 
 ---
 
