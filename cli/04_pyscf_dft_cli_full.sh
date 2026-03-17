@@ -8,6 +8,7 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 cd "$SCRIPT_DIR"
 
 echo "=== 04: DFT full (energy, gradient, hessian, harmonic, thermo) ==="
+echo "Command: uv run mmml pyscf-dft --mol xyz/initial.xyz --energy --gradient --hessian --harmonic --thermo --output out/04_results"
 uv run mmml pyscf-dft --mol xyz/initial.xyz \
   --energy --gradient --hessian --harmonic --thermo \
   --output out/04_results
