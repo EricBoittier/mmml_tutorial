@@ -7,6 +7,6 @@ set -e
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 cd "$SCRIPT_DIR"
 
-echo "=== 07: pyscf-evaluate (energy, forces, dipoles) ==="
-uv run mmml pyscf-evaluate -i out/06_sampled.npz -o out/07_evaluated.npz
-echo "Output: out/07_evaluated.npz (R, Z, N, E, F, Dxyz)"
+echo "=== 07: pyscf-evaluate (energy, forces, dipoles, ESP) ==="
+uv run mmml pyscf-evaluate -i out/06_sampled.npz -o out/07_evaluated.npz --esp
+echo "Output: out/07_evaluated.npz (R, Z, N, E, F, Dxyz, esp, esp_grid)"

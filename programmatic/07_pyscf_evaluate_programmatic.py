@@ -42,7 +42,7 @@ def main():
         energy=True,
         gradient=True,
         dipole=True,
-        dens_esp=False,
+        dens_esp=True,
         verbose=0,
     )
 
