@@ -54,10 +54,20 @@ Run MD or evaluate energy/forces with a trained ML model.
 ### QM/DFT (GPU)
 
 ```bash
-mmml pyscf-dft --mol "C 0 0 0; N 1.16 0 0; ..." --energy --gradient
+# 01: Energy only
+bash examples/mmml_tutorial/01_pyscf_dft_cli.sh
+uv run python examples/mmml_tutorial/01_pyscf_dft_programmatic.py
+
+# 02: Full (energy, gradient, hessian, harmonic, thermo)
+bash examples/mmml_tutorial/02_pyscf_dft_cli_full.sh
+uv run python examples/mmml_tutorial/02_pyscf_dft_programmatic.py
+
+# 03: MP2 (post-HF)
+bash examples/mmml_tutorial/03_pyscf_mp2_cli.sh
+uv run python examples/mmml_tutorial/03_pyscf_mp2_programmatic.py
 ```
 
-See `examples/pyscf4gpu/README.md` for GPU-accelerated DFT.
+See `examples/pyscf4gpu/README.md` for full GPU-accelerated DFT/MP2 docs.
 
 ---
 
