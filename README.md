@@ -1,16 +1,159 @@
-# mmml tutorial
+# MMML Tutorial: Cyanobenzene (CYBZ)
 
-Cyanobenze (CYBZ)
+Step-by-step tutorial for building and simulating cyanobenzene using MMML's hybrid MM/ML workflow.
 
-# 01 - generating a molecule
+**Prerequisites:** MMML installed (`uv sync --extra all` or `make micromamba-create-full`), CHARMM set up for `make_res`/`make_box`.
 
-(Make res)
+---
 
-# 02 - calculating energy, forces, ESPs, etc...
+## 01 – Generating a molecule
 
-# 03 - PhysNet
+Create the residue structure and pack it into a simulation box.
 
-# 04 - DCMNet
+### make_res
 
-# 05 - DCMNet to fMDCM, kMDCM
+Generates PDB, PSF, and topology for a single residue using PyCHARMM/CGENFF:
 
+```bash
+python -c "
+from mmml.cli.make import make_res
+import argparse
+args = argparse.Namespace(res='CYBZ', skip_energy_show=False)
+atoms = make_res.main_loop(args)
+print(f'Generated {len(atoms)} atoms')
+"
+```
+
+Or from a script: `make_res.main_loop(args)` with `args.res='CYBZ'`.
+
+Output: `pdb/initial.pdb`, `psf/initial.psf`, CHARMM topology files.
+
+### make_box
+
+Packs molecules into a periodic box (vacuum or solvated):
+
+```bash
+python -c "
+from mmml.cli.make import make_box
+import argparse
+args = argparse.Namespace(res='CYBZ', n=50, side_length=25.0, pdb=None, solvent=None, density=None)
+make_box.main_loop(args)
+"
+```
+
+Output: `pdb/init-packmol.pdb` (or `pdb/init-TIP3box.pdb` if solvated).
+
+---
+
+## 02 – Calculating energy, forces, ESPs
+
+Run MD or evaluate energy/forces with a trained ML model.
+
+### Run simulation
+
+From Python (see `examples/general/dimers/sim.py`):
+
+```python
+import argparse
+from pathlib import Path
+from mmml.cli.run.run_sim import run
+from mmml.cli.base import resolve_desdimers_checkpoint
+
+args = argparse.Namespace(
+    pdbfile=Path("pdb/init-packmol.pdb"),
+    checkpoint=resolve_desdimers_checkpoint(),
+    n_monomers=50,
+    n_atoms_monomer=15,
+    cell=25.0,
+    nsteps_jaxmd=1000,
+    nsteps_ase=100,
+    temperature=298.0,
+    ensemble="npt",
+    # ... see run_sim.parse_args() for full options
+)
+run(args)
+```
+
+### Test calculator (energy, forces, charges, dipole)
+
+```bash
+python -m mmml.cli.calculator --checkpoint <path-to-checkpoint> --test-molecule CO2
+```
+
+### QM/DFT (GPU)
+
+```bash
+mmml pyscf-dft --mol "C 0 0 0; N 1.16 0 0; ..." --energy --gradient
+```
+
+See `examples/pyscf4gpu/README.md` for GPU-accelerated DFT.
+
+---
+
+## 03 – PhysNet
+
+Train a PhysNetJAX model on energies, forces, and optionally dipoles/charges.
+
+### Prepare data
+
+```bash
+mmml fix-and-split --efd energies_forces_dipoles.npz --output-dir ./splits
+```
+
+### Train
+
+```bash
+make physnet-train TRAIN=train.npz VALID=valid.npz NATOMS=60 BATCH=32 EPOCHS=100
+```
+
+Or with Hydra:
+
+```bash
+python scripts/physnet_hydra_train.py data.train_file=train.npz train.max_epochs=100
+```
+
+Checkpoints: `mmml/models/physnetjax/ckpts/<run_name>/`.
+
+---
+
+## 04 – DCMNet
+
+Train a DCMNet model for distributed charges and ESPs (electrostatic potential).
+
+### Quick start
+
+```bash
+cd examples/dcm-net
+python train.py model=base training=bootstrap
+```
+
+### With PhysNet (joint training)
+
+See `examples/other/co2/dcmnet_physnet_train/` for joint PhysNet–DCMNet training.
+
+DCMNet predicts monopoles and dipoles per atom for improved ESP and charge fitting.
+
+---
+
+## 05 – DCMNet to fMDCM, kMDCM
+
+Convert trained DCMNet models to MDCM (multipole-derived charge model) formats for use in classical force fields.
+
+- **fMDCM**: Fixed-site MDCM
+- **kMDCM**: Kernel-based MDCM variant
+
+*(Detailed workflow and scripts to be added.)*
+
+---
+
+## Reference
+
+| Step | Command / module |
+|------|------------------|
+| 01 make_res | `mmml.cli.make.make_res` |
+| 01 make_box | `mmml.cli.make.make_box` |
+| 02 run | `mmml.cli.run.run_sim.run` |
+| 02 calculator | `mmml.cli.calculator` |
+| 02 pyscf-dft | `mmml pyscf-dft` |
+| 03 PhysNet | `make physnet-train`, `scripts/physnet_hydra_train.py` |
+| 04 DCMNet | `examples/dcm-net/train.py` |
