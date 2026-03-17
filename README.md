@@ -84,7 +84,7 @@ See `examples/pyscf4gpu/README.md` for full GPU-accelerated DFT/MP2 docs.
 After running step 04 (DFT full with harmonic), sample geometries along vibrational modes for downstream QM/ML:
 
 ```bash
-mmml normal-mode-sample -i out/04_results.h5 -o out/06_sampled.npz --amplitude 0.1
+mmml normal-mode-sample -i out/04_results.h5 -o out/06_sampled.npz --amplitude 0.1 --max-samples 10
 mmml normal-mode-sample -i out/04_results.h5 -o out/06_sampled.npz --amplitude 0.1 --include-equilibrium
 ```
 
@@ -201,7 +201,7 @@ python -m mmml.cli.calculator --checkpoint <path-to-checkpoint> --test-molecule 
 | 03 | pyscf-dft | `mmml pyscf-dft --mol "..." --energy` | `cli/03_pyscf_dft_cli.sh`, `programmatic/03_pyscf_dft_programmatic.py` |
 | 04 | pyscf-dft full | `mmml pyscf-dft --mol xyz/initial.xyz --energy --gradient --hessian --harmonic --thermo` | `cli/04_pyscf_dft_cli_full.sh`, `programmatic/04_pyscf_dft_programmatic.py` |
 | 05 | pyscf-mp2 | `mmml pyscf-mp2 --mol "..." --energy --gradient` | `cli/05_pyscf_mp2_cli.sh`, `programmatic/05_pyscf_mp2_programmatic.py` |
-| 06 | normal-mode-sample | `mmml normal-mode-sample -i out/04_results.h5 -o out/06_sampled.npz --amplitude 0.1` | `cli/06_normal_mode_sample_cli.sh`, `programmatic/06_normal_mode_sample_programmatic.py` |
+| 06 | normal-mode-sample | `mmml normal-mode-sample -i out/04_results.h5 -o out/06_sampled.npz --amplitude 0.1 --max-samples 10` | `cli/06_normal_mode_sample_cli.sh`, `programmatic/06_normal_mode_sample_programmatic.py` |
 | 07 | pyscf-evaluate | `mmml pyscf-evaluate -i out/06_sampled.npz -o out/07_evaluated.npz --esp` | `cli/07_pyscf_evaluate_cli.sh`, `programmatic/07_pyscf_evaluate_programmatic.py` |
 | — | PhysNet | — | `make physnet-train`, `scripts/physnet_hydra_train.py` |
 | — | DCMNet | — | `examples/dcm-net/train.py` |

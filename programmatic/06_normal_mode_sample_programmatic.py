@@ -44,6 +44,7 @@ def main():
         freq_min=50.0,
         include_equilibrium=False,
         samples_per_mode=2,
+        max_samples=10,
     )
 
     output_path.parent.mkdir(parents=True, exist_ok=True)

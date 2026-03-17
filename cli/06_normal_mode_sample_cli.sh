@@ -8,5 +8,5 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 cd "$SCRIPT_DIR"
 
 echo "=== 06: Normal mode sampling ==="
-uv run mmml normal-mode-sample -i out/04_results.h5 -o out/06_sampled.npz --amplitude 0.1
+uv run mmml normal-mode-sample -i out/04_results.h5 -o out/06_sampled.npz --amplitude 0.1 --max-samples 10
 echo "Output: out/06_sampled.npz (R, Z, N)"
