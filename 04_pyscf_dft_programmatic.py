@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 """
-Example: DFT full (energy, gradient, hessian, harmonic, thermo) via programmatic interface.
+Example: DFT full (energy, gradient, hessian, harmonic, thermo) via programmatic interface (section 02 – QM/DFT).
 
-Run from project root: uv run python examples/mmml_tutorial/02_pyscf_dft_programmatic.py
+Run from project root: uv run python examples/mmml_tutorial/04_pyscf_dft_programmatic.py
 Note: Hessian/harmonic/thermo are expensive; use small molecules.
 """
 
@@ -25,9 +25,9 @@ def main():
     args = get_dummy_args(mol_str, calcs)
     args.basis = "def2-SVP"
     args.xc = "PBE0"
-    args.output = "examples/mmml_tutorial/out/02_results"
+    args.output = "examples/mmml_tutorial/out/04_results"
 
-    print("=== 02: DFT full programmatic (energy, gradient, hessian, harmonic, thermo) ===")
+    print("=== 04: DFT full programmatic (energy, gradient, hessian, harmonic, thermo) ===")
     output = compute_dft(args, calcs)
     print(f"Energy: {output['energy']} Hartree")
 

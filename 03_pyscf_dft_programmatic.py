@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 """
-Example: DFT energy + gradient via programmatic interface.
+Example: DFT energy + gradient via programmatic interface (section 02 – QM/DFT).
 
-Run from project root: uv run python examples/mmml_tutorial/01_pyscf_dft_programmatic.py
+Run from project root: uv run python examples/mmml_tutorial/03_pyscf_dft_programmatic.py
 """
 
 from pathlib import Path
@@ -23,9 +23,9 @@ def main():
     args = get_dummy_args(mol_str, [CALCS.ENERGY, CALCS.GRADIENT])
     args.basis = "def2-TZVP"  # default is def2-SVP
     args.xc = "PBE0"
-    args.output = "examples/mmml_tutorial/out/01_results"
+    args.output = "examples/mmml_tutorial/out/03_results"
 
-    print("=== 01: DFT programmatic (PBE0/def2-TZVP) ===")
+    print("=== 03: DFT programmatic (PBE0/def2-TZVP) ===")
     output = compute_dft(args, [CALCS.ENERGY, CALCS.GRADIENT])
     print(f"Energy: {output['energy']} Hartree")
 

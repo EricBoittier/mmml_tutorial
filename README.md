@@ -15,16 +15,14 @@ Create the residue structure and pack it into a simulation box.
 Generates PDB, PSF, and topology for a single residue using PyCHARMM/CGENFF:
 
 ```bash
-python -c "
-from mmml.cli.make import make_res
-import argparse
-args = argparse.Namespace(res='CYBZ', skip_energy_show=False)
-atoms = make_res.main_loop(args)
-print(f'Generated {len(atoms)} atoms')
-"
-```
+# CLI (like pyscf-dft)
+mmml make-res --res CYBZ
+mmml make-res --res CYBZ --skip-energy-show   # skip energy.show() on clusters
 
-Or from a script: `make_res.main_loop(args)` with `args.res='CYBZ'`.
+# Or run the example scripts (from project root):
+bash examples/mmml_tutorial/01_make_res_cli.sh
+uv run python examples/mmml_tutorial/01_make_res_programmatic.py
+```
 
 Output: `pdb/initial.pdb`, `psf/initial.psf`, CHARMM topology files.
 
@@ -33,12 +31,13 @@ Output: `pdb/initial.pdb`, `psf/initial.psf`, CHARMM topology files.
 Packs molecules into a periodic box (vacuum or solvated):
 
 ```bash
-python -c "
-from mmml.cli.make import make_box
-import argparse
-args = argparse.Namespace(res='CYBZ', n=50, side_length=25.0, pdb=None, solvent=None, density=None)
-make_box.main_loop(args)
-"
+# CLI
+mmml make-box --res CYBZ --n 50 --side_length 25.0
+mmml make-box --res CYBZ --n 50 --side_length 25.0 --solvent TIP3 --density 1.0
+
+# Or run the example scripts (from project root):
+bash examples/mmml_tutorial/02_make_box_cli.sh
+uv run python examples/mmml_tutorial/02_make_box_programmatic.py
 ```
 
 Output: `pdb/init-packmol.pdb` (or `pdb/init-TIP3box.pdb` if solvated).
@@ -54,17 +53,22 @@ Run MD or evaluate energy/forces with a trained ML model.
 ### QM/DFT (GPU)
 
 ```bash
-# 01: Energy only
-bash examples/mmml_tutorial/01_pyscf_dft_cli.sh
-uv run python examples/mmml_tutorial/01_pyscf_dft_programmatic.py
+# CLI
+mmml pyscf-dft --mol "O 0 0 0; H 0.96 0 0; H -0.24 0.93 0" --energy
+mmml pyscf-mp2 --mol "O 0 0 0; H 0.96 0 0; H -0.24 0.93 0" --energy --gradient
 
-# 02: Full (energy, gradient, hessian, harmonic, thermo)
-bash examples/mmml_tutorial/02_pyscf_dft_cli_full.sh
-uv run python examples/mmml_tutorial/02_pyscf_dft_programmatic.py
+# Or run the example scripts (from project root):
+# 03: DFT energy
+bash examples/mmml_tutorial/03_pyscf_dft_cli.sh
+uv run python examples/mmml_tutorial/03_pyscf_dft_programmatic.py
 
-# 03: MP2 (post-HF)
-bash examples/mmml_tutorial/03_pyscf_mp2_cli.sh
-uv run python examples/mmml_tutorial/03_pyscf_mp2_programmatic.py
+# 04: DFT full (energy, gradient, hessian, harmonic, thermo)
+bash examples/mmml_tutorial/04_pyscf_dft_cli_full.sh
+uv run python examples/mmml_tutorial/04_pyscf_dft_programmatic.py
+
+# 05: MP2 (post-HF)
+bash examples/mmml_tutorial/05_pyscf_mp2_cli.sh
+uv run python examples/mmml_tutorial/05_pyscf_mp2_programmatic.py
 ```
 
 See `examples/pyscf4gpu/README.md` for full GPU-accelerated DFT/MP2 docs.
@@ -163,12 +167,12 @@ python -m mmml.cli.calculator --checkpoint <path-to-checkpoint> --test-molecule 
 
 ## Reference
 
-| Step | Command / module |
-|------|------------------|
-| 01 make_res | `mmml.cli.make.make_res` |
-| 01 make_box | `mmml.cli.make.make_box` |
-| 02 run | `mmml.cli.run.run_sim.run` |
-| 02 calculator | `mmml.cli.calculator` |
-| 02 pyscf-dft | `mmml pyscf-dft` |
-| 03 PhysNet | `make physnet-train`, `scripts/physnet_hydra_train.py` |
-| 04 DCMNet | `examples/dcm-net/train.py` |
+| # | Step | CLI | Scripts |
+|---|------|-----|---------|
+| 01 | make_res | `mmml make-res --res CYBZ` | `01_make_res_cli.sh`, `01_make_res_programmatic.py` |
+| 02 | make_box | `mmml make-box --res CYBZ --n 50 --side_length 25` | `02_make_box_cli.sh`, `02_make_box_programmatic.py` |
+| 03 | pyscf-dft | `mmml pyscf-dft --mol "..." --energy` | `03_pyscf_dft_cli.sh`, `03_pyscf_dft_programmatic.py` |
+| 04 | pyscf-dft full | `mmml pyscf-dft --mol water.xyz --energy --gradient --hessian --harmonic --thermo` | `04_pyscf_dft_cli_full.sh`, `04_pyscf_dft_programmatic.py` |
+| 05 | pyscf-mp2 | `mmml pyscf-mp2 --mol "..." --energy --gradient` | `05_pyscf_mp2_cli.sh`, `05_pyscf_mp2_programmatic.py` |
+| — | PhysNet | — | `make physnet-train`, `scripts/physnet_hydra_train.py` |
+| — | DCMNet | — | `examples/dcm-net/train.py` |

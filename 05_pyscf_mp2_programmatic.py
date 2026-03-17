@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 """
-Example: MP2 energy + gradient via programmatic interface.
+Example: MP2 energy + gradient via programmatic interface (section 02 – QM/DFT).
 
-Run from project root: uv run python examples/mmml_tutorial/03_pyscf_mp2_programmatic.py
+Run from project root: uv run python examples/mmml_tutorial/05_pyscf_mp2_programmatic.py
 """
 
 from pathlib import Path
@@ -16,7 +16,7 @@ from mmml.interfaces.pyscf4gpuInterface.calcs import compute_mp2, save_pyscf_res
 def main():
     mol_str = "O 0 0 0; H 0.96 0 0; H -0.24 0.93 0"
 
-    print("=== 03: MP2 programmatic (def2-SVP) ===")
+    print("=== 05: MP2 programmatic (def2-SVP) ===")
     output = compute_mp2(
         mol_str=mol_str,
         basis="def2-SVP",
@@ -27,8 +27,8 @@ def main():
     print(f"HF energy:  {output['energy_hf']} Hartree")
     print(f"Correlation: {output['energy_corr']} Hartree")
 
-    save_pyscf_results("examples/mmml_tutorial/out/03_results", output)
-    print("Output: examples/mmml_tutorial/out/03_results.npz and .h5")
+    save_pyscf_results("examples/mmml_tutorial/out/05_results", output)
+    print("Output: examples/mmml_tutorial/out/05_results.npz and .h5")
 
 
 if __name__ == "__main__":
