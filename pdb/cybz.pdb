@@ -1,0 +1,20 @@
+REMARK  EXECUTING CHARMM SCRIPT FROM PYTHON                                           
+REMARK   DATE:     3/17/26     13: 5: 1      CREATED BY USER: boittier                
+ATOM      1  C1  CYBZ    1       0.958   0.568   0.115  1.00  0.00      CYBZ
+ATOM      2  H1  CYBZ    1       0.648   0.285   0.761  1.00  0.00      CYBZ
+ATOM      3  C2  CYBZ    1       1.289   0.100   0.946  1.00  0.00      CYBZ
+ATOM      4  H2  CYBZ    1       0.453   0.778   0.104  1.00  0.00      CYBZ
+ATOM      5  C3  CYBZ    1       0.091   0.453   0.384  1.00  0.00      CYBZ
+ATOM      6  H3  CYBZ    1       0.423   1.430   0.939  1.00  0.00      CYBZ
+ATOM      7  C4  CYBZ    1       0.286   0.018   0.261  1.00  0.00      CYBZ
+ATOM      8  H4  CYBZ    1       1.015   1.336   0.143  1.00  0.00      CYBZ
+ATOM      9  C5  CYBZ    1       0.070   0.335   0.476  1.00  0.00      CYBZ
+ATOM     10  C6  CYBZ    1       0.917   1.212   0.818  1.00  0.00      CYBZ
+ATOM     11  H6  CYBZ    1       0.401   0.059   0.112  1.00  0.00      CYBZ
+ATOM     12  C7  CYBZ    1       0.586   0.684   0.222  1.00  0.00      CYBZ
+ATOM     13  H71 CYBZ    1       0.841   0.864   0.824  1.00  0.00      CYBZ
+ATOM     14  H72 CYBZ    1       0.652   1.297   0.401  1.00  0.00      CYBZ
+ATOM     15  C8  CYBZ    1       0.284   1.447   0.395  1.00  0.00      CYBZ
+ATOM     16  N9  CYBZ    1       0.788   0.102   0.350  1.00  0.00      CYBZ
+TER      17      CYBZ     1
+END

@@ -1,0 +1,38 @@
+HEADER 
+TITLE     Built with Packmol                                             
+REMARK   Packmol generated pdb file 
+REMARK   Home-Page: http://m3g.iqm.unicamp.br/packmol
+REMARK
+ATOM      1  C1  CYBZA   1      11.430   9.241  15.664  1.00  0.00      CYBZ    
+ATOM      2  H1  CYBZA   1      12.500   9.383  15.591  1.00  0.00      CYBZ    
+ATOM      3  C2  CYBZA   1      10.874   7.975  15.438  1.00  0.00      CYBZ    
+ATOM      4  H2  CYBZA   1      11.514   7.141  15.187  1.00  0.00      CYBZ    
+ATOM      5  C3  CYBZA   1       9.491   7.790  15.536  1.00  0.00      CYBZ    
+ATOM      6  H3  CYBZA   1       9.062   6.813  15.361  1.00  0.00      CYBZ    
+ATOM      7  C4  CYBZA   1       8.659   8.873  15.855  1.00  0.00      CYBZ    
+ATOM      8  H4  CYBZA   1       7.592   8.725  15.925  1.00  0.00      CYBZ    
+ATOM      9  C5  CYBZA   1       9.208  10.147  16.075  1.00  0.00      CYBZ    
+ATOM     10  C6  CYBZA   1      10.599  10.325  15.978  1.00  0.00      CYBZ    
+ATOM     11  H6  CYBZA   1      11.031  11.302  16.141  1.00  0.00      CYBZ    
+ATOM     12  C7  CYBZA   1       8.316  11.316  16.400  1.00  0.00      CYBZ    
+ATOM     13  H71 CYBZA   1       8.810  11.933  17.179  1.00  0.00      CYBZ    
+ATOM     14  H72 CYBZA   1       7.352  10.943  16.804  1.00  0.00      CYBZ    
+ATOM     15  C8  CYBZA   1       8.031  12.173  15.238  1.00  0.00      CYBZ    
+ATOM     16  N9  CYBZA   1       7.788  12.877  14.326  1.00  0.00      CYBZ    
+ATOM     17  C1  CYBZA   2      15.197  21.962   3.442  1.00  0.00      CYBZ    
+ATOM     18  H1  CYBZA   2      14.317  21.851   2.824  1.00  0.00      CYBZ    
+ATOM     19  C2  CYBZA   2      16.447  22.186   2.848  1.00  0.00      CYBZ    
+ATOM     20  H2  CYBZA   2      16.531  22.242   1.771  1.00  0.00      CYBZ    
+ATOM     21  C3  CYBZA   2      17.586  22.332   3.647  1.00  0.00      CYBZ    
+ATOM     22  H3  CYBZA   2      18.550  22.504   3.188  1.00  0.00      CYBZ    
+ATOM     23  C4  CYBZA   2      17.479  22.251   5.043  1.00  0.00      CYBZ    
+ATOM     24  H4  CYBZA   2      18.362  22.361   5.653  1.00  0.00      CYBZ    
+ATOM     25  C5  CYBZA   2      16.231  22.020   5.645  1.00  0.00      CYBZ    
+ATOM     26  C6  CYBZA   2      15.091  21.876   4.836  1.00  0.00      CYBZ    
+ATOM     27  H6  CYBZA   2      14.127  21.693   5.290  1.00  0.00      CYBZ    
+ATOM     28  C7  CYBZA   2      16.116  21.914   7.143  1.00  0.00      CYBZ    
+ATOM     29  H71 CYBZA   2      15.190  22.434   7.465  1.00  0.00      CYBZ    
+ATOM     30  H72 CYBZA   2      16.985  22.416   7.616  1.00  0.00      CYBZ    
+ATOM     31  C8  CYBZA   2      16.062  20.525   7.627  1.00  0.00      CYBZ    
+ATOM     32  N9  CYBZA   2      16.016  19.424   8.042  1.00  0.00      CYBZ    
+END
