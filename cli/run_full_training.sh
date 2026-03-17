@@ -41,6 +41,13 @@ uv run python examples/other/co2/physnet_train/trainer.py \
 echo ""
 echo "--- 10: PhysNet+DCMNet joint training ---"
 cd "$SCRIPT_DIR"
+# Load PhysNet from step 09 if available (latest cybz_physnet-* dir)
+PHYSNET_CKPT=$(ls -d out/ckpts/cybz_physnet-* 2>/dev/null | tail -1)
+PHYSNET_ARG=""
+if [ -n "$PHYSNET_CKPT" ] && [ -d "$PHYSNET_CKPT" ]; then
+  PHYSNET_ARG="--physnet-checkpoint $PHYSNET_CKPT"
+  echo "Using PhysNet checkpoint: $PHYSNET_CKPT"
+fi
 uv run python -m mmml.cli.misc.train_joint \
   --train-efd out/splits/energies_forces_dipoles_train.npz \
   --train-esp out/splits/grids_esp_train.npz \
@@ -49,7 +56,8 @@ uv run python -m mmml.cli.misc.train_joint \
   --epochs 50 \
   --batch-size 1 \
   --name cybz_joint \
-  --ckpt-dir out/ckpts
+  --ckpt-dir out/ckpts \
+  $PHYSNET_ARG
 
 echo ""
 echo "=== Full training workflow complete ==="
