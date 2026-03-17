@@ -44,6 +44,20 @@ uv run python examples/mmml_tutorial/programmatic/02_make_box_programmatic.py
 
 Output: `pdb/init-packmol.pdb` (or `pdb/init-TIP3box.pdb` if solvated) in `cli/` or `programmatic/` respectively.
 
+### run-pycharmm (pure CHARMM)
+
+Run CHARMM heating and equilibration only (no ML). Uses the box from step 02:
+
+```bash
+# CLI (from cli/ directory after 01–02)
+mmml run-pycharmm --pdbfile pdb/init-packmol.pdb --cell 25.0
+
+# Or run the example script (from project root):
+bash examples/mmml_tutorial/cli/11_run_pycharmm_cli.sh
+```
+
+Output: `heat.pdb`, `equi.pdb`, restart files (`heat.res`, `equi.res`), and trajectories (`heat.dcd`, `equi.dcd`).
+
 ---
 
 ## 02 – Calculating energy, forces, ESPs
@@ -250,6 +264,7 @@ python -m mmml.cli.calculator --checkpoint <path-to-checkpoint> --test-molecule 
 |---|------|-----|---------|
 | 01 | make_res | `mmml make-res --res CYBZ` | `cli/01_make_res_cli.sh`, `programmatic/01_make_res_programmatic.py` |
 | 02 | make_box | `mmml make-box --res CYBZ --n 50 --side_length 25` | `cli/02_make_box_cli.sh`, `programmatic/02_make_box_programmatic.py` |
+| 11 | run-pycharmm | `mmml run-pycharmm --pdbfile pdb/init-packmol.pdb --cell 25.0` | `cli/11_run_pycharmm_cli.sh` |
 | 03 | pyscf-dft | `mmml pyscf-dft --mol "..." --energy` | `cli/03_pyscf_dft_cli.sh`, `programmatic/03_pyscf_dft_programmatic.py` |
 | 04 | pyscf-dft full | `mmml pyscf-dft --mol xyz/initial.xyz --energy --gradient --hessian --harmonic --thermo` | `cli/04_pyscf_dft_cli_full.sh`, `programmatic/04_pyscf_dft_programmatic.py` |
 | 05 | pyscf-mp2 | `mmml pyscf-mp2 --mol "..." --energy --gradient` | `cli/05_pyscf_mp2_cli.sh`, `programmatic/05_pyscf_mp2_programmatic.py` |

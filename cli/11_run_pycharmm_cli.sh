@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Example: Pure PyCHARMM heating and equilibration (no MM/ML)
+# Run from project root: bash examples/mmml_tutorial/cli/11_run_pycharmm_cli.sh
+# Requires: Steps 01–02 run first (make_res, make_box). CHARMM/PyCHARMM.
+
+set -e
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+cd "$SCRIPT_DIR"
+
+echo "=== 11: run-pycharmm (CHARMM heat + equilibration) ==="
+echo "Command: uv run mmml run-pycharmm --pdbfile pdb/init-packmol.pdb --cell 25.0"
+uv run mmml run-pycharmm --pdbfile pdb/init-packmol.pdb --cell 25.0
+echo "Output: heat.pdb, equi.pdb, heat.res, equi.res, heat.dcd, equi.dcd"
