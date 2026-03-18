@@ -10,4 +10,4 @@ cd "$SCRIPT_DIR"
 echo "=== 11: run-pycharmm (CHARMM heat + equilibration) ==="
 echo "Command: uv run mmml run-pycharmm --pdbfile pdb/init-packmol.pdb --cell 25.0"
 uv run mmml run-pycharmm --pdbfile pdb/init-packmol.pdb --cell 25.0
-echo "Output: heat.pdb, equi.pdb, heat.res, equi.res, heat.dcd, equi.dcd"
+echo "Output: pdb/{heat,equi}.pdb, dcd/{heat,equi}.{dcd,crd}, res/{heat,equi}.res"
