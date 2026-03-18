@@ -1,3 +1,10 @@
-cli/out/*
+out/
+outputs/
 *.npz
 *.h5
+*.traj
+*.xyz
+ckpts/
+
+
+out/
