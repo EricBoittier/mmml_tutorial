@@ -6,5 +6,15 @@ outputs/
 *.xyz
 ckpts/
 
+evaluated.npz
+out/
+xyz/
+pdb/
+dcd/
+psf/
+packmol/
+res/
+charmm_ml_comparison/
+*.npz
 
 out/
