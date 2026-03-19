@@ -12,10 +12,17 @@ if __name__ == "__main__":
 #INFO: ******************** input file end ********************
 
 
+<<<<<<< HEAD
 System: uname_result(system='Linux', node='nobara-pc', release='6.19.8-200.nobara.fc43.x86_64', version='#1 SMP PREEMPT_DYNAMIC Fri Mar 13 19:08:20 UTC 2026', machine='x86_64')  Threads 24
 Python 3.13.11 (main, Jan 28 2026, 00:01:45) [Clang 21.1.4 ]
 numpy 2.4.3  scipy 1.17.1  h5py 3.16.0
 Date: Fri Mar 20 14:41:49 2026
+=======
+System: uname_result(system='Linux', node='gpu08', release='5.15.0-118-generic', version='#128-Ubuntu SMP Fri Jul 5 09:28:59 UTC 2024', machine='x86_64')  Threads 32
+Python 3.13.12 | packaged by conda-forge | (main, Feb  5 2026, 05:53:46) [GCC 14.3.0]
+numpy 2.3.5  scipy 1.17.0  h5py 3.15.1
+Date: Thu Mar 19 11:15:36 2026
+>>>>>>> 3ca1dc8 (asdf)
 PySCF version 2.12.1
 PySCF path  /home/ericb/mmml/.venv/lib/python3.13/site-packages/pyscf/__init__.py
 CUDA Environment
@@ -46,6 +53,7 @@ GPU4PySCF path  /home/ericb/mmml/.venv/lib/python3.13/site-packages/gpu4pyscf
 [INPUT] symmetry False subgroup None
 [INPUT] Mole.unit = angstrom
 [INPUT] Symbol           X                Y                Z      unit          X                Y                Z       unit  Magmom
+<<<<<<< HEAD
 [INPUT]  1 C      0.262224170000  -0.025341540000   0.375227330000 AA    0.495531864541  -0.047888570175   0.709076888152 Bohr   0.0
 [INPUT]  2 O     -0.050286480000   0.283188270000   1.730966960000 AA   -0.095027674968   0.535148271989   3.271053485071 Bohr   0.0
 [INPUT]  3 H      0.511332280000   1.022167500000   2.007574150000 AA    0.966277967849   1.931616628431   3.793765318256 Bohr   0.0
@@ -60,6 +68,26 @@ GPU4PySCF path  /home/ericb/mmml/.venv/lib/python3.13/site-packages/gpu4pyscf
                                 0.44453796        0.47831935
 [INPUT] 0    0    [1    /1   ]  0.12194962           1
 [INPUT] 1    0    [1    /1   ]  0.8                  1
+=======
+[INPUT]  1 C     -0.055107820000   2.342150760000   0.422950720000 AA   -0.104138687122   4.426023478842   0.799261024988 Bohr   0.0
+[INPUT]  2 H     -0.032894240000   3.356331970000   0.046573300000 AA   -0.062161104676   6.342548206422   0.088010781717 Bohr   0.0
+[INPUT]  3 C     -1.156058130000   1.894519560000   1.162720400000 AA   -2.184633249777   3.580123106032   2.197223115445 Bohr   0.0
+[INPUT]  4 H     -1.984027190000   2.561798050000   1.356013110000 AA   -3.749268012790   4.841096700945   2.562493399220 Bohr   0.0
+[INPUT]  5 C     -1.185178390000   0.581651600000   1.651964460000 AA   -2.239662565853   1.099162223915   3.121760396915 Bohr   0.0
+[INPUT]  6 H     -2.037093100000   0.235131060000   2.220455100000 AA   -3.849548049241   0.444333306779   4.196052010894 Bohr   0.0
+[INPUT]  7 C     -0.109091340000  -0.279233160000   1.402316260000 AA   -0.206152755162  -0.527674197297   2.649993671424 Bohr   0.0
+[INPUT]  8 H     -0.139339510000  -1.291730150000   1.780781150000 AA   -0.263313512231  -2.441016210343   3.365188661288 Bohr   0.0
+[INPUT]  9 C      1.000852260000   0.158803480000   0.660156310000 AA    1.891336662552   0.300095084828   1.247514625303 Bohr   0.0
+[INPUT] 10 C      1.019910710000   1.481063840000   0.174194580000 AA    1.927351913411   2.798805030597   0.329180048584 Bohr   0.0
+[INPUT] 11 H      1.868508600000   1.833647080000  -0.394696050000 AA    3.530969515394   3.465090790308  -0.745867436948 Bohr   0.0
+[INPUT] 12 C      2.178817790000  -0.758376910000   0.433939690000 AA    4.117368898430  -1.433124659094   0.820027168679 Bohr   0.0
+[INPUT] 13 H      3.044205840000  -0.332461090000   0.983205640000 AA    5.752715304402  -0.628260407174   1.857989383728 Bohr   0.0
+[INPUT] 14 H      1.955281120000  -1.764272320000   0.849069380000 AA    3.694945813333  -3.333991493951   1.604508588954 Bohr   0.0
+[INPUT] 15 C      2.567345170000  -0.926477340000  -0.973707460000 AA    4.851579238525  -1.750788433216  -1.840040424846 Bohr   0.0
+[INPUT] 16 N      2.903234540000  -1.063140760000  -2.095346160000 AA    5.486318155978  -2.009044868262  -3.959630378559 Bohr   0.0
+[INPUT] ---------------- BASIS SET ---------------- 
+[INPUT] l, kappa, [nprim/nctr], expnt,             c_1 c_2 ...
+>>>>>>> 3ca1dc8 (asdf)
 [INPUT] C
 [INPUT] 0    0    [5    /1   ]  1238.4016938      0.0054568832082
                                 186.29004992      0.040638409211
@@ -73,6 +101,7 @@ GPU4PySCF path  /home/ericb/mmml/.venv/lib/python3.13/site-packages/gpu4pyscf
                                 0.54771004707     0.51328172114
 [INPUT] 1    0    [1    /1   ]  0.15268613795        1
 [INPUT] 2    0    [1    /1   ]  0.8                  1
+<<<<<<< HEAD
 [INPUT] O
 [INPUT] 0    0    [5    /1   ]  2266.1767785      -0.0053431809926
                                 340.87010191      -0.03989003923
@@ -94,6 +123,35 @@ number of NR cGTOs = 48
 basis = def2-SVP
 ecp = {}
 CPU time:         4.88
+=======
+[INPUT] N
+[INPUT] 0    0    [5    /1   ]  1712.8415853      -0.0053934125305
+                                257.64812677      -0.040221581118
+                                58.458245853      -0.1793114499
+                                16.198367905      -0.46376317823
+                                5.0052600809      -0.44171422662
+[INPUT] 0    0    [1    /1   ]  0.58731856571        1
+[INPUT] 0    0    [1    /1   ]  0.18764592253        1
+[INPUT] 1    0    [3    /1   ]  13.571470233      -0.040072398852
+                                2.9257372874      -0.21807045028
+                                0.79927750754     -0.51294466049
+[INPUT] 1    0    [1    /1   ]  0.21954348034        1
+[INPUT] 2    0    [1    /1   ]  1                    1
+[INPUT] H
+[INPUT] 0    0    [3    /1   ]  13.010701         0.019682158
+                                1.9622572         0.13796524
+                                0.44453796        0.47831935
+[INPUT] 0    0    [1    /1   ]  0.12194962           1
+[INPUT] 1    0    [1    /1   ]  0.8                  1
+
+nuclear repulsion = 370.678806576584
+number of shells = 75
+number of NR pGTOs = 265
+number of NR cGTOs = 161
+basis = def2-SVP
+ecp = {}
+CPU time:         5.23
+>>>>>>> 3ca1dc8 (asdf)
 
 
 ******** <class 'gpu4pyscf.df.df_jk.DFRKS'> ********
@@ -116,6 +174,7 @@ radial grids:
 Treutler-Ahlrichs [JCP 102, 346 (1995); DOI:10.1063/1.469408] (M4) radial grids
 
 becke partition: Becke, JCP 88, 2547 (1988); DOI:10.1063/1.454033
+<<<<<<< HEAD
 pruning grids: <function nwchem_prune at 0x7f0b39510fe0>
 grids dens level: 3
 symmetrized grids: False
@@ -124,6 +183,16 @@ User specified grid scheme (99, 590)
 small_rho_cutoff = 1e-07
 Set gradient conv threshold to 1e-05
     CPU time for generating initial guess                                1.10 sec, wall time      0.10 sec, GPU time    100.65 ms
+=======
+pruning grids: <function nwchem_prune at 0x14b5debc54e0>
+grids dens level: 3
+symmetrized grids: False
+atomic radii adjust function: <function treutler_atomic_radii_adjust at 0x14b5debc5580>
+User specified grid scheme (99, 590)
+small_rho_cutoff = 1e-07
+Set gradient conv threshold to 1e-05
+    CPU time for generating initial guess                                0.49 sec, wall time      0.42 sec, GPU time    418.20 ms
+>>>>>>> 3ca1dc8 (asdf)
 Number of shells for each [l, nprim] group
     [0 5] : 2
     [0 3] : 4
@@ -132,7 +201,11 @@ Number of shells for each [l, nprim] group
     [1 1] : 6
     [2 1] : 2
 sp_blocks = 21, ksh_blocks = 1, shm_size = 59512 B
+<<<<<<< HEAD
     CPU time for processing contract_int3c2e_auxvec                      0.00 sec, wall time      0.00 sec, GPU time      2.93 ms
+=======
+    CPU time for processing contract_int3c2e_auxvec                      0.00 sec, wall time      0.01 sec, GPU time     10.99 ms
+>>>>>>> 3ca1dc8 (asdf)
 Number of shells for each [l, nprim] group
     [0 5] : 2
     [0 3] : 4
@@ -141,6 +214,7 @@ Number of shells for each [l, nprim] group
     [1 1] : 6
     [2 1] : 2
 Number of shells for each [l, nprim] group
+<<<<<<< HEAD
     [0 5] : 2
     [0 3] : 4
     [0 1] : 8
@@ -148,6 +222,15 @@ Number of shells for each [l, nprim] group
     [1 1] : 6
     [2 1] : 2
     CPU time for hcore                                                   0.17 sec, wall time      0.14 sec, GPU time    135.64 ms
+=======
+    [0 5] : 9
+    [0 3] : 7
+    [0 1] : 25
+    [1 3] : 9
+    [1 1] : 16
+    [2 1] : 9
+    CPU time for hcore                                                   0.05 sec, wall time      2.83 sec, GPU time   2832.82 ms
+>>>>>>> 3ca1dc8 (asdf)
 atom C rad-grids = 99, ang-grids = [ 50  50  50  50  50  50  50  50  50  50  50  50  50  50  50  50  50  50
   50  50  50  50  50  50  50  50  50  50  50  50  86  86  86  86  86  86
   86  86  86  86  86  86 434 434 434 434 434 434 434 434 434 590 590 590
@@ -166,6 +249,7 @@ atom H rad-grids = 99, ang-grids = [ 50  50  50  50  50  50  50  50  50  50  50 
  590 590 590 590 590 590 590 590 590 590 590 590 590 590 590 590 590 590
  590 590 434 434 434 434 434 434 434 434 434 434 434 434 434 434 434 434
  434 434 434 434 434 434 434 434 434]
+<<<<<<< HEAD
     CPU time for generating atomic grids                                 0.01 sec, wall time      0.01 sec, GPU time      6.18 ms
 Padding 236 grids
     CPU time for sorting grids                                           0.02 sec, wall time      0.02 sec, GPU time     16.49 ms
@@ -202,6 +286,60 @@ Psi4 predefined JKFIT basis set def2-svp-jkfit for HF
 Default auxbasis def2-svp-jkfit is applied universally
 num shells = 74, num cGTOs = 224
     CPU time for 2c2e                                                    0.04 sec, wall time      0.01 sec, GPU time      8.14 ms
+=======
+atom N rad-grids = 99, ang-grids = [ 50  50  50  50  50  50  50  50  50  50  50  50  50  50  50  50  50  50
+  50  50  50  50  50  50  50  50  50  50  50  50  50  86  86  86  86  86
+  86  86  86  86  86  86  86  86 434 434 434 434 434 434 434 434 434 590
+ 590 590 590 590 590 590 590 590 590 590 590 590 590 590 590 590 590 590
+ 590 590 590 590 590 590 590 434 434 434 434 434 434 434 434 434 434 434
+ 434 434 434 434 434 434 434 434 434]
+    CPU time for generating atomic grids                                 0.00 sec, wall time      0.01 sec, GPU time      9.58 ms
+Padding 36 grids
+    CPU time for sorting grids                                           0.02 sec, wall time      0.02 sec, GPU time     20.27 ms
+tot grids = 513792
+Number of shells for each [l, nctr] group
+    [0 1] : 25
+    [0 3] : 7
+    [0 5] : 9
+    [1 1] : 16
+    [1 3] : 9
+    [2 1] : 9
+0 - 513792 grids are calculated on Device 0.
+mem_info: unallocated=31470.06 MB, used=26.34 MB, free=32.80 MB, free_blocks=18
+33033.148416 MB memory is available on Device 0, block_size None
+    CPU time for eval rho                                                0.04 sec, wall time      0.05 sec, GPU time     58.35 ms
+Drop grids 76766
+prune_by_density_: 222 padding grids
+    CPU time for setting up grids                                        0.08 sec, wall time      0.10 sec, GPU time     99.37 ms
+221184 grids on Device 0
+0 - 221184 grids are calculated on Device 0.
+mem_info: unallocated=31682.06 MB, used=32.88 MB, free=38.02 MB, free_blocks=20
+33260.921344 MB memory is available on Device 0, block_size None
+216064 grids on Device 1
+221184 - 437248 grids are calculated on Device 1.
+mem_info: unallocated=31584.06 MB, used=13.67 MB, free=0.00 MB, free_blocks=0
+33118.28992 MB memory is available on Device 1, block_size None
+    CPU time for eval rho on Device 0                                    0.14 sec, wall time      0.11 sec, GPU time    115.34 ms
+    CPU time for eval rho on Device 1                                    0.13 sec, wall time      0.07 sec, GPU time     70.88 ms
+    CPU time for eval vxc on Device 0                                    0.15 sec, wall time      0.11 sec, GPU time    105.67 ms
+0 - 221184 grids are calculated on Device 0.
+mem_info: unallocated=31586.06 MB, used=51.26 MB, free=49.27 MB, free_blocks=21
+33172.050944 MB memory is available on Device 0, block_size None
+    CPU time for eval vxc on Device 1                                    0.09 sec, wall time      0.08 sec, GPU time     78.28 ms
+221184 - 437248 grids are calculated on Device 1.
+mem_info: unallocated=31460.06 MB, used=31.94 MB, free=32.67 MB, free_blocks=7
+33022.518272 MB memory is available on Device 1, block_size None
+    CPU time for eval integration on 0                                   0.10 sec, wall time      0.10 sec, GPU time    108.61 ms
+    CPU time for eval integration on 1                                   0.10 sec, wall time      0.10 sec, GPU time    110.58 ms
+    CPU time for nr_rks                                                  0.42 sec, wall time      0.34 sec, GPU time    335.93 ms
+nelec by numeric integration = 61.96706527807831
+    CPU time for vxc                                                     0.50 sec, wall time      0.44 sec, GPU time    435.39 ms
+Build CDERI ...
+Psi4 predefined JKFIT basis set def2-svp-jkfit for HF
+Default auxbasis def2-svp-jkfit is applied universally
+num shells = 267, num cGTOs = 803
+    CPU time for 2c2e                                                    0.01 sec, wall time      0.01 sec, GPU time      7.95 ms
+>>>>>>> 3ca1dc8 (asdf)
 Number of shells for each [l, nctr] group
     [0 1] : 8
     [0 3] : 4
@@ -219,6 +357,7 @@ Number of shells for each [l, nctr] group
     [2 2] : 1
     [2 3] : 1
     [3 1] : 2
+<<<<<<< HEAD
     [3 2] : 1
     [4 1] : 2
     CPU time for Initialize q_cond                                       0.15 sec, wall time      0.01 sec, GPU time      6.94 ms
@@ -515,10 +654,538 @@ E1 = -236.25605967283443  Ecoul = 96.13351007430806  Exc = -15.347987346803446
 cycle= 9 E= -115.497504882552  delta_E= -6.93e-12  |g|= 1.01e-06  |ddm|= 5.7e-06
     CPU time for SCF                                                     2.20 sec, wall time      0.85 sec, GPU time    847.70 ms
 converged SCF energy = -115.497504882552
+=======
+    [3 2] : 8
+    [4 1] : 9
+    CPU time for Initialize q_cond                                       0.06 sec, wall time      0.00 sec, GPU time      1.55 ms
+    CPU time for Get AO pairing                                          0.00 sec, wall time      0.00 sec, GPU time      0.30 ms
+    CPU time for AO indices                                              0.00 sec, wall time      0.00 sec, GPU time      0.11 ms
+    CPU time for Aux AO indices                                          0.00 sec, wall time      0.00 sec, GPU time      0.24 ms
+    CPU time for Get AO pairs                                            0.00 sec, wall time      0.00 sec, GPU time      0.41 ms
+    CPU time for prepare intopt                                          0.15 sec, wall time      0.00 sec, GPU time      4.73 ms
+size of aux basis 803
+Saving CDERI on GPU
+CDERI size 0.038 GB on Device 0
+CDERI size 0.036 GB on Device 1
+    CPU time for Initialize GPU cache on Device 1                        0.00 sec, wall time      0.00 sec, GPU time      0.50 ms
+    CPU time for Initialize GPU cache on Device 0                        0.00 sec, wall time      0.00 sec, GPU time      0.79 ms
+    CPU time for solve 2 / 21 on Device 1                                0.06 sec, wall time      0.06 sec, GPU time     60.96 ms
+    CPU time for solve 5 / 21 on Device 0                                0.06 sec, wall time      0.06 sec, GPU time     61.46 ms
+    CPU time for transfer data for 2 / 21 on Device 1                    0.00 sec, wall time      0.00 sec, GPU time      0.39 ms
+    CPU time for transfer data for 5 / 21 on Device 0                    0.00 sec, wall time      0.00 sec, GPU time      0.25 ms
+    CPU time for solve 1 / 21 on Device 1                                0.00 sec, wall time      0.00 sec, GPU time      2.21 ms
+    CPU time for transfer data for 1 / 21 on Device 1                    0.00 sec, wall time      0.00 sec, GPU time      0.15 ms
+    CPU time for solve 4 / 21 on Device 0                                0.00 sec, wall time      0.00 sec, GPU time      3.66 ms
+    CPU time for transfer data for 4 / 21 on Device 0                    0.00 sec, wall time      0.00 sec, GPU time      0.18 ms
+    CPU time for solve 12 / 21 on Device 1                               0.01 sec, wall time      0.00 sec, GPU time      4.77 ms
+    CPU time for solve 11 / 21 on Device 0                               0.00 sec, wall time      0.00 sec, GPU time      3.64 ms
+    CPU time for transfer data for 12 / 21 on Device 1                   0.00 sec, wall time      0.00 sec, GPU time      0.61 ms
+    CPU time for transfer data for 11 / 21 on Device 0                   0.00 sec, wall time      0.00 sec, GPU time      0.22 ms
+    CPU time for solve 3 / 21 on Device 0                                0.00 sec, wall time      0.00 sec, GPU time      2.44 ms
+    CPU time for solve 16 / 21 on Device 1                               0.00 sec, wall time      0.00 sec, GPU time      2.88 ms
+    CPU time for transfer data for 3 / 21 on Device 0                    0.00 sec, wall time      0.00 sec, GPU time      0.31 ms
+    CPU time for transfer data for 16 / 21 on Device 1                   0.00 sec, wall time      0.00 sec, GPU time      0.17 ms
+    CPU time for solve 7 / 21 on Device 1                                0.00 sec, wall time      0.00 sec, GPU time      2.65 ms
+    CPU time for solve 17 / 21 on Device 0                               0.00 sec, wall time      0.00 sec, GPU time      3.70 ms
+    CPU time for transfer data for 7 / 21 on Device 1                    0.00 sec, wall time      0.00 sec, GPU time      0.98 ms
+    CPU time for transfer data for 17 / 21 on Device 0                   0.00 sec, wall time      0.00 sec, GPU time      0.17 ms
+    CPU time for solve 0 / 21 on Device 0                                0.00 sec, wall time      0.00 sec, GPU time      1.95 ms
+    CPU time for transfer data for 0 / 21 on Device 0                    0.00 sec, wall time      0.00 sec, GPU time      0.16 ms
+    CPU time for solve 8 / 21 on Device 0                                0.00 sec, wall time      0.00 sec, GPU time      2.89 ms
+    CPU time for solve 14 / 21 on Device 1                               0.01 sec, wall time      0.00 sec, GPU time      5.26 ms
+    CPU time for transfer data for 8 / 21 on Device 0                    0.00 sec, wall time      0.00 sec, GPU time      0.20 ms
+    CPU time for transfer data for 14 / 21 on Device 1                   0.00 sec, wall time      0.00 sec, GPU time      0.18 ms
+    CPU time for solve 10 / 21 on Device 1                               0.00 sec, wall time      0.00 sec, GPU time      2.61 ms
+    CPU time for solve 20 / 21 on Device 0                               0.00 sec, wall time      0.00 sec, GPU time      3.09 ms
+    CPU time for transfer data for 10 / 21 on Device 1                   0.00 sec, wall time      0.00 sec, GPU time      0.43 ms
+    CPU time for transfer data for 20 / 21 on Device 0                   0.00 sec, wall time      0.00 sec, GPU time      0.23 ms
+    CPU time for solve 15 / 21 on Device 1                               0.00 sec, wall time      0.00 sec, GPU time      2.81 ms
+    CPU time for solve 9 / 21 on Device 0                                0.00 sec, wall time      0.00 sec, GPU time      2.89 ms
+    CPU time for transfer data for 15 / 21 on Device 1                   0.00 sec, wall time      0.00 sec, GPU time      0.35 ms
+    CPU time for transfer data for 9 / 21 on Device 0                    0.00 sec, wall time      0.00 sec, GPU time      0.24 ms
+    CPU time for solve 6 / 21 on Device 0                                0.00 sec, wall time      0.00 sec, GPU time      2.53 ms
+    CPU time for solve 19 / 21 on Device 1                               0.00 sec, wall time      0.00 sec, GPU time      3.76 ms
+    CPU time for transfer data for 6 / 21 on Device 0                    0.00 sec, wall time      0.00 sec, GPU time      1.22 ms
+    CPU time for transfer data for 19 / 21 on Device 1                   0.00 sec, wall time      0.00 sec, GPU time      0.25 ms
+    CPU time for solve 13 / 21 on Device 1                               0.00 sec, wall time      0.00 sec, GPU time      3.35 ms
+    CPU time for solve 18 / 21 on Device 0                               0.01 sec, wall time      0.00 sec, GPU time      3.98 ms
+    CPU time for transfer data for 13 / 21 on Device 1                   0.00 sec, wall time      0.00 sec, GPU time      0.64 ms
+    CPU time for transfer data for 18 / 21 on Device 0                   0.00 sec, wall time      0.00 sec, GPU time      0.34 ms
+    CPU time for cholesky_eri                                            0.41 sec, wall time      0.11 sec, GPU time    109.98 ms
+    CPU time for init jk                                                 0.42 sec, wall time      0.12 sec, GPU time    118.07 ms
+30.230 GB memory available on Device 0, block size = 256
+33.080 GB memory available on Device 1, block size = 256
+    CPU time for vj and vk on Device 1                                   0.02 sec, wall time      0.01 sec, GPU time     15.05 ms
+    CPU time for vj and vk on Device 0                                   0.02 sec, wall time      0.01 sec, GPU time     15.89 ms
+    CPU time for vj and vk                                               0.02 sec, wall time      0.02 sec, GPU time     18.83 ms
+    CPU time for veff                                                    0.44 sec, wall time      0.14 sec, GPU time    140.54 ms
+E1 = -1220.0905015754943  Ecoul = 537.5996322610264  Exc = -52.51112854781598
+init E= -364.3231912857
+cond(S) = 21137.653179371257
+    CPU time for SCF initialization                                      1.51 sec, wall time      3.85 sec, GPU time   3850.27 ms
+    CPU time for DIIS                                                    0.00 sec, wall time      0.00 sec, GPU time      0.24 ms
+    CPU time for eig                                                     0.00 sec, wall time      0.00 sec, GPU time      3.73 ms
+  HOMO = -0.295929687552773  LUMO = -0.0918826329788658
+221184 grids on Device 0
+216064 grids on Device 1
+0 - 221184 grids are calculated on Device 0.
+mem_info: unallocated=31272.06 MB, used=82.58 MB, free=286.14 MB, free_blocks=29
+33091.170304 MB memory is available on Device 0, block_size None
+221184 - 437248 grids are calculated on Device 1.
+mem_info: unallocated=31282.06 MB, used=50.04 MB, free=248.21 MB, free_blocks=12
+33061.892096 MB memory is available on Device 1, block_size None
+    CPU time for eval rho on Device 0                                    0.02 sec, wall time      0.02 sec, GPU time     16.94 ms
+    CPU time for eval rho on Device 1                                    0.02 sec, wall time      0.02 sec, GPU time     17.07 ms
+    CPU time for eval vxc on Device 0                                    0.00 sec, wall time      0.00 sec, GPU time      1.03 ms
+0 - 221184 grids are calculated on Device 0.
+mem_info: unallocated=31208.06 MB, used=100.93 MB, free=267.79 MB, free_blocks=28
+33004.822016 MB memory is available on Device 0, block_size None
+    CPU time for eval vxc on Device 1                                    0.01 sec, wall time      0.00 sec, GPU time      0.88 ms
+221184 - 437248 grids are calculated on Device 1.
+mem_info: unallocated=31218.06 MB, used=68.27 MB, free=229.98 MB, free_blocks=14
+32975.666688 MB memory is available on Device 1, block_size None
+    CPU time for eval integration on 0                                   0.01 sec, wall time      0.01 sec, GPU time     16.52 ms
+    CPU time for eval integration on 1                                   0.01 sec, wall time      0.01 sec, GPU time     18.96 ms
+    CPU time for nr_rks                                                  0.06 sec, wall time      0.04 sec, GPU time     39.26 ms
+nelec by numeric integration = 61.999996839069475
+    CPU time for vxc                                                     0.06 sec, wall time      0.04 sec, GPU time     39.35 ms
+30.229 GB memory available on Device 0, block size = 256
+33.075 GB memory available on Device 1, block size = 256
+    CPU time for vj and vk on Device 1                                   0.00 sec, wall time      0.00 sec, GPU time      3.25 ms
+    CPU time for vj and vk on Device 0                                   0.00 sec, wall time      0.00 sec, GPU time      3.40 ms
+    CPU time for vj and vk                                               0.01 sec, wall time      0.01 sec, GPU time      5.01 ms
+    CPU time for veff                                                    0.01 sec, wall time      0.01 sec, GPU time      5.57 ms
+    CPU time for veff                                                    0.08 sec, wall time      0.05 sec, GPU time     48.31 ms
+E1 = -1224.8830387404762  Ecoul = 543.6906181668223  Exc = -52.52439316026716
+    CPU time for cycle=1                                                 0.08 sec, wall time      0.06 sec, GPU time     55.37 ms
+cycle= 1 E= -363.038007157337  delta_E= 1.29  |g|= 0.484  |ddm|= 4.94
+diis-c [-0.23473332  1.        ]
+    CPU time for DIIS                                                    0.00 sec, wall time      0.00 sec, GPU time      2.60 ms
+    CPU time for eig                                                     0.00 sec, wall time      0.00 sec, GPU time      4.12 ms
+  HOMO = -0.244753250269749  LUMO = -0.0046399887680687
+221184 grids on Device 0
+216064 grids on Device 1
+0 - 221184 grids are calculated on Device 0.
+mem_info: unallocated=31272.06 MB, used=82.78 MB, free=285.94 MB, free_blocks=31
+33090.960384 MB memory is available on Device 0, block_size None
+221184 - 437248 grids are calculated on Device 1.
+mem_info: unallocated=31282.06 MB, used=50.04 MB, free=248.21 MB, free_blocks=12
+33061.892096 MB memory is available on Device 1, block_size None
+    CPU time for eval rho on Device 0                                    0.02 sec, wall time      0.01 sec, GPU time     14.53 ms
+    CPU time for eval rho on Device 1                                    0.02 sec, wall time      0.01 sec, GPU time     15.01 ms
+    CPU time for eval vxc on Device 0                                    0.01 sec, wall time      0.00 sec, GPU time      1.40 ms
+0 - 221184 grids are calculated on Device 0.
+mem_info: unallocated=31208.06 MB, used=101.13 MB, free=267.59 MB, free_blocks=29
+33004.612096 MB memory is available on Device 0, block_size None
+    CPU time for eval vxc on Device 1                                    0.01 sec, wall time      0.00 sec, GPU time      0.85 ms
+221184 - 437248 grids are calculated on Device 1.
+mem_info: unallocated=31218.06 MB, used=68.27 MB, free=229.98 MB, free_blocks=14
+32975.666688 MB memory is available on Device 1, block_size None
+    CPU time for eval integration on 0                                   0.01 sec, wall time      0.01 sec, GPU time     16.83 ms
+    CPU time for eval integration on 1                                   0.01 sec, wall time      0.01 sec, GPU time     19.58 ms
+    CPU time for nr_rks                                                  0.06 sec, wall time      0.04 sec, GPU time     37.31 ms
+nelec by numeric integration = 61.999996305648644
+    CPU time for vxc                                                     0.06 sec, wall time      0.04 sec, GPU time     37.39 ms
+30.229 GB memory available on Device 0, block size = 256
+33.075 GB memory available on Device 1, block size = 256
+    CPU time for vj and vk on Device 1                                   0.00 sec, wall time      0.00 sec, GPU time      3.20 ms
+    CPU time for vj and vk on Device 0                                   0.00 sec, wall time      0.00 sec, GPU time      3.35 ms
+    CPU time for vj and vk                                               0.01 sec, wall time      0.00 sec, GPU time      4.73 ms
+    CPU time for veff                                                    0.01 sec, wall time      0.01 sec, GPU time      5.26 ms
+    CPU time for veff                                                    0.07 sec, wall time      0.05 sec, GPU time     43.11 ms
+E1 = -1222.013073079199  Ecoul = 540.5942308146093  Exc = -52.09604731068079
+    CPU time for cycle=2                                                 0.08 sec, wall time      0.05 sec, GPU time     50.45 ms
+cycle= 2 E= -362.836082998687  delta_E= 0.202  |g|= 1.06  |ddm|= 1.42
+diis-c [-0.02349621  0.69555796  0.30444204]
+    CPU time for DIIS                                                    0.00 sec, wall time      0.00 sec, GPU time      0.45 ms
+    CPU time for eig                                                     0.00 sec, wall time      0.00 sec, GPU time      4.10 ms
+  HOMO = -0.258555537013927  LUMO = -0.00924325766350111
+221184 grids on Device 0
+216064 grids on Device 1
+0 - 221184 grids are calculated on Device 0.
+mem_info: unallocated=31272.06 MB, used=82.98 MB, free=285.74 MB, free_blocks=33
+33090.751488 MB memory is available on Device 0, block_size None
+221184 - 437248 grids are calculated on Device 1.
+mem_info: unallocated=31282.06 MB, used=50.04 MB, free=248.21 MB, free_blocks=12
+33061.892096 MB memory is available on Device 1, block_size None
+    CPU time for eval rho on Device 0                                    0.02 sec, wall time      0.01 sec, GPU time     14.44 ms
+    CPU time for eval rho on Device 1                                    0.02 sec, wall time      0.01 sec, GPU time     14.96 ms
+    CPU time for eval vxc on Device 0                                    0.00 sec, wall time      0.00 sec, GPU time      1.42 ms
+0 - 221184 grids are calculated on Device 0.
+mem_info: unallocated=31208.06 MB, used=101.33 MB, free=267.39 MB, free_blocks=31
+33004.4032 MB memory is available on Device 0, block_size None
+    CPU time for eval vxc on Device 1                                    0.01 sec, wall time      0.00 sec, GPU time      0.81 ms
+221184 - 437248 grids are calculated on Device 1.
+mem_info: unallocated=31218.06 MB, used=68.27 MB, free=229.98 MB, free_blocks=14
+32975.666688 MB memory is available on Device 1, block_size None
+    CPU time for eval integration on 0                                   0.01 sec, wall time      0.01 sec, GPU time     16.42 ms
+    CPU time for eval integration on 1                                   0.01 sec, wall time      0.01 sec, GPU time     18.97 ms
+    CPU time for nr_rks                                                  0.06 sec, wall time      0.04 sec, GPU time     36.57 ms
+nelec by numeric integration = 61.999996595781724
+    CPU time for vxc                                                     0.06 sec, wall time      0.04 sec, GPU time     36.64 ms
+30.229 GB memory available on Device 0, block size = 256
+33.075 GB memory available on Device 1, block size = 256
+    CPU time for vj and vk on Device 1                                   0.00 sec, wall time      0.00 sec, GPU time      2.93 ms
+    CPU time for vj and vk on Device 0                                   0.00 sec, wall time      0.00 sec, GPU time      3.08 ms
+    CPU time for vj and vk                                               0.01 sec, wall time      0.00 sec, GPU time      4.39 ms
+    CPU time for veff                                                    0.01 sec, wall time      0.00 sec, GPU time      4.89 ms
+    CPU time for veff                                                    0.07 sec, wall time      0.04 sec, GPU time     41.96 ms
+E1 = -1221.9331508990033  Ecoul = 540.4014200043146  Exc = -52.24507317551009
+    CPU time for cycle=3                                                 0.07 sec, wall time      0.05 sec, GPU time     47.07 ms
+cycle= 3 E= -363.097997493615  delta_E= -0.262  |g|= 0.126  |ddm|= 0.905
+diis-c [-0.00301833  0.27769324  0.14500068  0.57730608]
+    CPU time for DIIS                                                    0.00 sec, wall time      0.00 sec, GPU time      0.46 ms
+    CPU time for eig                                                     0.00 sec, wall time      0.00 sec, GPU time      4.11 ms
+  HOMO = -0.278928453266897  LUMO = -0.0278215439547909
+221184 grids on Device 0
+216064 grids on Device 1
+0 - 221184 grids are calculated on Device 0.
+mem_info: unallocated=31272.06 MB, used=83.18 MB, free=285.54 MB, free_blocks=33
+33090.542592 MB memory is available on Device 0, block_size None
+221184 - 437248 grids are calculated on Device 1.
+mem_info: unallocated=31282.06 MB, used=50.04 MB, free=248.21 MB, free_blocks=12
+33061.892096 MB memory is available on Device 1, block_size None
+    CPU time for eval rho on Device 0                                    0.03 sec, wall time      0.03 sec, GPU time     25.08 ms
+    CPU time for eval vxc on Device 0                                    0.00 sec, wall time      0.00 sec, GPU time      1.03 ms
+0 - 221184 grids are calculated on Device 0.
+mem_info: unallocated=31208.06 MB, used=101.53 MB, free=267.19 MB, free_blocks=32
+33004.194304 MB memory is available on Device 0, block_size None
+    CPU time for eval rho on Device 1                                    0.04 sec, wall time      0.03 sec, GPU time     29.96 ms
+    CPU time for eval vxc on Device 1                                    0.01 sec, wall time      0.00 sec, GPU time      3.32 ms
+221184 - 437248 grids are calculated on Device 1.
+mem_info: unallocated=31218.06 MB, used=68.27 MB, free=229.98 MB, free_blocks=14
+32975.666688 MB memory is available on Device 1, block_size None
+    CPU time for eval integration on 0                                   0.01 sec, wall time      0.01 sec, GPU time     15.24 ms
+    CPU time for eval integration on 1                                   0.01 sec, wall time      0.01 sec, GPU time     20.41 ms
+    CPU time for nr_rks                                                  0.09 sec, wall time      0.06 sec, GPU time     55.47 ms
+nelec by numeric integration = 61.999996699999414
+    CPU time for vxc                                                     0.09 sec, wall time      0.06 sec, GPU time     55.52 ms
+30.228 GB memory available on Device 0, block size = 256
+33.075 GB memory available on Device 1, block size = 256
+    CPU time for vj and vk on Device 1                                   0.00 sec, wall time      0.00 sec, GPU time      3.76 ms
+    CPU time for vj and vk on Device 0                                   0.00 sec, wall time      0.00 sec, GPU time      4.18 ms
+    CPU time for vj and vk                                               0.01 sec, wall time      0.01 sec, GPU time      5.15 ms
+    CPU time for veff                                                    0.01 sec, wall time      0.01 sec, GPU time      5.40 ms
+    CPU time for veff                                                    0.10 sec, wall time      0.06 sec, GPU time     61.33 ms
+E1 = -1223.187248539591  Ecoul = 541.7164982897438  Exc = -52.309954465936016
+    CPU time for cycle=4                                                 0.10 sec, wall time      0.07 sec, GPU time     66.27 ms
+cycle= 4 E= -363.101898139199  delta_E= -0.0039  |g|= 0.0358  |ddm|= 0.182
+diis-c [-1.16417027e-04  6.11644163e-03  3.41075463e-04  2.10615405e-01
+  7.82927078e-01]
+    CPU time for DIIS                                                    0.00 sec, wall time      0.00 sec, GPU time      0.51 ms
+    CPU time for eig                                                     0.00 sec, wall time      0.00 sec, GPU time      4.08 ms
+  HOMO = -0.27517875122567  LUMO = -0.0242316024025012
+221184 grids on Device 0
+216064 grids on Device 1
+0 - 221184 grids are calculated on Device 0.
+mem_info: unallocated=31272.06 MB, used=83.38 MB, free=285.34 MB, free_blocks=32
+33090.333696 MB memory is available on Device 0, block_size None
+221184 - 437248 grids are calculated on Device 1.
+mem_info: unallocated=31282.06 MB, used=50.04 MB, free=248.21 MB, free_blocks=12
+33061.892096 MB memory is available on Device 1, block_size None
+    CPU time for eval rho on Device 0                                    0.02 sec, wall time      0.01 sec, GPU time     14.21 ms
+    CPU time for eval rho on Device 1                                    0.02 sec, wall time      0.01 sec, GPU time     14.96 ms
+    CPU time for eval vxc on Device 0                                    0.01 sec, wall time      0.00 sec, GPU time      1.61 ms
+0 - 221184 grids are calculated on Device 0.
+mem_info: unallocated=31208.06 MB, used=101.73 MB, free=266.99 MB, free_blocks=30
+33003.985408 MB memory is available on Device 0, block_size None
+    CPU time for eval vxc on Device 1                                    0.01 sec, wall time      0.00 sec, GPU time      0.90 ms
+221184 - 437248 grids are calculated on Device 1.
+mem_info: unallocated=31218.06 MB, used=68.27 MB, free=229.98 MB, free_blocks=14
+32975.666688 MB memory is available on Device 1, block_size None
+    CPU time for eval integration on 0                                   0.01 sec, wall time      0.01 sec, GPU time     16.23 ms
+    CPU time for eval integration on 1                                   0.01 sec, wall time      0.01 sec, GPU time     19.10 ms
+    CPU time for nr_rks                                                  0.06 sec, wall time      0.04 sec, GPU time     36.73 ms
+nelec by numeric integration = 61.999996684644046
+    CPU time for vxc                                                     0.06 sec, wall time      0.04 sec, GPU time     36.80 ms
+30.228 GB memory available on Device 0, block size = 256
+33.075 GB memory available on Device 1, block size = 256
+    CPU time for vj and vk on Device 1                                   0.00 sec, wall time      0.00 sec, GPU time      2.87 ms
+    CPU time for vj and vk on Device 0                                   0.00 sec, wall time      0.00 sec, GPU time      3.07 ms
+    CPU time for vj and vk                                               0.01 sec, wall time      0.00 sec, GPU time      4.43 ms
+    CPU time for veff                                                    0.01 sec, wall time      0.00 sec, GPU time      4.91 ms
+    CPU time for veff                                                    0.07 sec, wall time      0.04 sec, GPU time     42.12 ms
+E1 = -1222.9863030612223  Ecoul = 541.5095449638159  Exc = -52.3042465118284
+    CPU time for cycle=5                                                 0.07 sec, wall time      0.05 sec, GPU time     47.09 ms
+cycle= 5 E= -363.102198032651  delta_E= -0.0003  |g|= 0.00869  |ddm|= 0.052
+diis-c [-9.72136265e-06 -7.06990184e-03 -5.28239028e-03  7.84451891e-02
+  3.53554201e-01  5.80352902e-01]
+    CPU time for DIIS                                                    0.00 sec, wall time      0.00 sec, GPU time      0.55 ms
+    CPU time for eig                                                     0.00 sec, wall time      0.00 sec, GPU time      4.10 ms
+  HOMO = -0.275110994408851  LUMO = -0.024181471699264
+221184 grids on Device 0
+216064 grids on Device 1
+0 - 221184 grids are calculated on Device 0.
+221184 - 437248 grids are calculated on Device 1.
+mem_info: unallocated=31272.06 MB, used=83.58 MB, free=285.14 MB, free_blocks=36
+mem_info: unallocated=31282.06 MB, used=50.04 MB, free=248.21 MB, free_blocks=12
+33090.1248 MB memory is available on Device 0, block_size None
+33061.892096 MB memory is available on Device 1, block_size None
+    CPU time for eval rho on Device 0                                    0.02 sec, wall time      0.01 sec, GPU time     14.42 ms
+    CPU time for eval rho on Device 1                                    0.02 sec, wall time      0.01 sec, GPU time     15.01 ms
+    CPU time for eval vxc on Device 0                                    0.01 sec, wall time      0.00 sec, GPU time      1.36 ms
+0 - 221184 grids are calculated on Device 0.
+mem_info: unallocated=31208.06 MB, used=101.93 MB, free=266.79 MB, free_blocks=34
+33003.776512 MB memory is available on Device 0, block_size None
+    CPU time for eval vxc on Device 1                                    0.01 sec, wall time      0.00 sec, GPU time      0.85 ms
+221184 - 437248 grids are calculated on Device 1.
+mem_info: unallocated=31218.06 MB, used=68.27 MB, free=229.98 MB, free_blocks=14
+32975.666688 MB memory is available on Device 1, block_size None
+    CPU time for eval integration on 0                                   0.01 sec, wall time      0.01 sec, GPU time     16.15 ms
+    CPU time for eval integration on 1                                   0.01 sec, wall time      0.01 sec, GPU time     18.82 ms
+    CPU time for nr_rks                                                  0.06 sec, wall time      0.04 sec, GPU time     36.34 ms
+nelec by numeric integration = 61.999996686441655
+    CPU time for vxc                                                     0.06 sec, wall time      0.04 sec, GPU time     36.41 ms
+33.075 GB memory available on Device 1, block size = 256
+30.228 GB memory available on Device 0, block size = 256
+    CPU time for vj and vk on Device 1                                   0.00 sec, wall time      0.00 sec, GPU time      3.45 ms
+    CPU time for vj and vk on Device 0                                   0.00 sec, wall time      0.00 sec, GPU time      4.37 ms
+    CPU time for vj and vk                                               0.01 sec, wall time      0.01 sec, GPU time      5.64 ms
+    CPU time for veff                                                    0.01 sec, wall time      0.01 sec, GPU time      5.95 ms
+    CPU time for veff                                                    0.07 sec, wall time      0.05 sec, GPU time     42.77 ms
+E1 = -1222.9728947269718  Ecoul = 541.4936119751721  Exc = -52.30173932489807
+    CPU time for cycle=6                                                 0.07 sec, wall time      0.05 sec, GPU time     47.79 ms
+cycle= 6 E= -363.102215500114  delta_E= -1.75e-05  |g|= 0.00335  |ddm|= 0.0126
+diis-c [-1.02338169e-06 -4.31480586e-03 -3.00659900e-03  2.81020257e-02
+  1.33684154e-01  3.25780911e-01  5.19754314e-01]
+    CPU time for DIIS                                                    0.00 sec, wall time      0.00 sec, GPU time      0.58 ms
+    CPU time for eig                                                     0.00 sec, wall time      0.00 sec, GPU time      4.09 ms
+  HOMO = -0.275117085189366  LUMO = -0.0241534879996383
+221184 grids on Device 0
+216064 grids on Device 1
+0 - 221184 grids are calculated on Device 0.
+mem_info: unallocated=31272.06 MB, used=83.78 MB, free=284.94 MB, free_blocks=35
+33089.915904 MB memory is available on Device 0, block_size None
+221184 - 437248 grids are calculated on Device 1.
+mem_info: unallocated=31282.06 MB, used=50.04 MB, free=248.21 MB, free_blocks=12
+33061.892096 MB memory is available on Device 1, block_size None
+    CPU time for eval rho on Device 0                                    0.02 sec, wall time      0.01 sec, GPU time     14.39 ms
+    CPU time for eval rho on Device 1                                    0.02 sec, wall time      0.01 sec, GPU time     14.91 ms
+    CPU time for eval vxc on Device 0                                    0.01 sec, wall time      0.00 sec, GPU time      1.42 ms
+0 - 221184 grids are calculated on Device 0.
+mem_info: unallocated=31208.06 MB, used=102.13 MB, free=266.59 MB, free_blocks=34
+33003.567616 MB memory is available on Device 0, block_size None
+    CPU time for eval vxc on Device 1                                    0.01 sec, wall time      0.00 sec, GPU time      0.88 ms
+221184 - 437248 grids are calculated on Device 1.
+mem_info: unallocated=31218.06 MB, used=68.27 MB, free=229.98 MB, free_blocks=14
+32975.666688 MB memory is available on Device 1, block_size None
+    CPU time for eval integration on 0                                   0.01 sec, wall time      0.01 sec, GPU time     16.36 ms
+    CPU time for eval integration on 1                                   0.01 sec, wall time      0.01 sec, GPU time     19.26 ms
+    CPU time for nr_rks                                                  0.06 sec, wall time      0.04 sec, GPU time     36.86 ms
+nelec by numeric integration = 61.99999668630957
+    CPU time for vxc                                                     0.06 sec, wall time      0.04 sec, GPU time     36.93 ms
+33.075 GB memory available on Device 1, block size = 256
+30.228 GB memory available on Device 0, block size = 256
+    CPU time for vj and vk on Device 1                                   0.00 sec, wall time      0.00 sec, GPU time      3.67 ms
+    CPU time for vj and vk on Device 0                                   0.00 sec, wall time      0.00 sec, GPU time      4.20 ms
+    CPU time for vj and vk                                               0.01 sec, wall time      0.01 sec, GPU time      5.41 ms
+    CPU time for veff                                                    0.01 sec, wall time      0.01 sec, GPU time      5.67 ms
+    CPU time for veff                                                    0.07 sec, wall time      0.05 sec, GPU time     43.00 ms
+E1 = -1222.9675055197201  Ecoul = 541.487915610498  Exc = -52.30143513800079
+    CPU time for cycle=7                                                 0.07 sec, wall time      0.05 sec, GPU time     48.04 ms
+cycle= 7 E= -363.102218470639  delta_E= -2.97e-06  |g|= 0.000961  |ddm|= 0.00456
+diis-c [-7.93781407e-08 -1.50532650e-03 -1.07745061e-03  6.45843325e-03
+  3.11439979e-02  1.08806777e-01  2.75662397e-01  5.80511171e-01]
+    CPU time for DIIS                                                    0.00 sec, wall time      0.00 sec, GPU time      0.62 ms
+    CPU time for eig                                                     0.00 sec, wall time      0.00 sec, GPU time      4.09 ms
+  HOMO = -0.275098181984797  LUMO = -0.0241355114227873
+221184 grids on Device 0
+216064 grids on Device 1
+0 - 221184 grids are calculated on Device 0.
+mem_info: unallocated=31272.06 MB, used=83.98 MB, free=284.74 MB, free_blocks=36
+33089.707008 MB memory is available on Device 0, block_size None
+221184 - 437248 grids are calculated on Device 1.
+mem_info: unallocated=31282.06 MB, used=50.04 MB, free=248.21 MB, free_blocks=12
+33061.892096 MB memory is available on Device 1, block_size None
+    CPU time for eval rho on Device 0                                    0.02 sec, wall time      0.01 sec, GPU time     14.23 ms
+    CPU time for eval rho on Device 1                                    0.02 sec, wall time      0.01 sec, GPU time     14.76 ms
+    CPU time for eval vxc on Device 0                                    0.00 sec, wall time      0.00 sec, GPU time      1.37 ms
+0 - 221184 grids are calculated on Device 0.
+mem_info: unallocated=31208.06 MB, used=102.33 MB, free=266.39 MB, free_blocks=34
+33003.35872 MB memory is available on Device 0, block_size None
+    CPU time for eval vxc on Device 1                                    0.01 sec, wall time      0.00 sec, GPU time      0.83 ms
+221184 - 437248 grids are calculated on Device 1.
+mem_info: unallocated=31218.06 MB, used=68.27 MB, free=229.98 MB, free_blocks=14
+32975.666688 MB memory is available on Device 1, block_size None
+    CPU time for eval integration on 0                                   0.01 sec, wall time      0.01 sec, GPU time     16.86 ms
+    CPU time for eval integration on 1                                   0.01 sec, wall time      0.01 sec, GPU time     19.53 ms
+    CPU time for nr_rks                                                  0.06 sec, wall time      0.04 sec, GPU time     36.88 ms
+nelec by numeric integration = 61.9999966857582
+    CPU time for vxc                                                     0.06 sec, wall time      0.04 sec, GPU time     36.95 ms
+30.227 GB memory available on Device 0, block size = 256
+33.075 GB memory available on Device 1, block size = 256
+    CPU time for vj and vk on Device 1                                   0.00 sec, wall time      0.00 sec, GPU time      2.93 ms
+    CPU time for vj and vk on Device 0                                   0.00 sec, wall time      0.00 sec, GPU time      3.07 ms
+    CPU time for vj and vk                                               0.01 sec, wall time      0.00 sec, GPU time      4.33 ms
+    CPU time for veff                                                    0.01 sec, wall time      0.00 sec, GPU time      4.61 ms
+    CPU time for veff                                                    0.07 sec, wall time      0.04 sec, GPU time     41.97 ms
+E1 = -1222.9694051394658  Ecoul = 541.4899408931394  Exc = -52.30156104632179
+    CPU time for cycle=8                                                 0.07 sec, wall time      0.05 sec, GPU time     47.06 ms
+cycle= 8 E= -363.102218716064  delta_E= -2.45e-07  |g|= 0.000222  |ddm|= 0.00132
+diis-c [-8.45292321e-09 -3.39368739e-04 -2.96605700e-04  8.45807996e-04
+  3.68825548e-03  2.39375574e-02  8.05939164e-02  2.45931337e-01
+  6.45639100e-01]
+    CPU time for DIIS                                                    0.00 sec, wall time      0.00 sec, GPU time      0.67 ms
+    CPU time for eig                                                     0.00 sec, wall time      0.00 sec, GPU time      4.10 ms
+  HOMO = -0.275093288910018  LUMO = -0.0241340969575167
+221184 grids on Device 0
+216064 grids on Device 1
+0 - 221184 grids are calculated on Device 0.
+mem_info: unallocated=31272.06 MB, used=84.18 MB, free=284.54 MB, free_blocks=37
+33089.498112 MB memory is available on Device 0, block_size None
+221184 - 437248 grids are calculated on Device 1.
+mem_info: unallocated=31282.06 MB, used=50.04 MB, free=248.21 MB, free_blocks=12
+33061.892096 MB memory is available on Device 1, block_size None
+    CPU time for eval rho on Device 0                                    0.02 sec, wall time      0.01 sec, GPU time     14.16 ms
+    CPU time for eval rho on Device 1                                    0.02 sec, wall time      0.01 sec, GPU time     14.70 ms
+    CPU time for eval vxc on Device 0                                    0.01 sec, wall time      0.00 sec, GPU time      1.41 ms
+0 - 221184 grids are calculated on Device 0.
+mem_info: unallocated=31208.06 MB, used=102.53 MB, free=266.19 MB, free_blocks=35
+33003.149824 MB memory is available on Device 0, block_size None
+    CPU time for eval vxc on Device 1                                    0.01 sec, wall time      0.00 sec, GPU time      0.87 ms
+221184 - 437248 grids are calculated on Device 1.
+mem_info: unallocated=31218.06 MB, used=68.27 MB, free=229.98 MB, free_blocks=14
+32975.666688 MB memory is available on Device 1, block_size None
+    CPU time for eval integration on 0                                   0.01 sec, wall time      0.01 sec, GPU time     16.32 ms
+    CPU time for eval integration on 1                                   0.01 sec, wall time      0.01 sec, GPU time     18.96 ms
+    CPU time for nr_rks                                                  0.06 sec, wall time      0.04 sec, GPU time     36.23 ms
+nelec by numeric integration = 61.99999668590109
+    CPU time for vxc                                                     0.06 sec, wall time      0.04 sec, GPU time     36.28 ms
+30.227 GB memory available on Device 0, block size = 256
+33.075 GB memory available on Device 1, block size = 256
+    CPU time for vj and vk on Device 1                                   0.00 sec, wall time      0.00 sec, GPU time      2.86 ms
+    CPU time for vj and vk on Device 0                                   0.00 sec, wall time      0.00 sec, GPU time      3.03 ms
+    CPU time for vj and vk                                               0.01 sec, wall time      0.01 sec, GPU time     12.55 ms
+    CPU time for veff                                                    0.01 sec, wall time      0.01 sec, GPU time     12.82 ms
+    CPU time for veff                                                    0.07 sec, wall time      0.05 sec, GPU time     49.51 ms
+E1 = -1222.9690458728476  Ecoul = 541.4895902332145  Exc = -52.30156966426046
+    CPU time for cycle=9                                                 0.07 sec, wall time      0.05 sec, GPU time     54.66 ms
+cycle= 9 E= -363.10221872731  delta_E= -1.12e-08  |g|= 7.7e-05  |ddm|= 0.000292
+diis-c [-4.34756603e-10  6.41950339e-01 -4.33771202e-05 -2.36292789e-04
+ -1.51641185e-03  1.90865908e-04  9.31805974e-03  5.24789867e-02
+  2.97857831e-01]
+    CPU time for DIIS                                                    0.00 sec, wall time      0.00 sec, GPU time      0.68 ms
+    CPU time for eig                                                     0.00 sec, wall time      0.00 sec, GPU time      4.10 ms
+  HOMO = -0.275097681654928  LUMO = -0.0241376086864195
+221184 grids on Device 0
+216064 grids on Device 1
+221184 - 437248 grids are calculated on Device 1.
+mem_info: unallocated=31282.06 MB, used=50.04 MB, free=248.21 MB, free_blocks=12
+33061.892096 MB memory is available on Device 1, block_size None
+0 - 221184 grids are calculated on Device 0.
+mem_info: unallocated=31272.06 MB, used=84.18 MB, free=284.54 MB, free_blocks=36
+33089.498112 MB memory is available on Device 0, block_size None
+    CPU time for eval rho on Device 0                                    0.02 sec, wall time      0.01 sec, GPU time     14.23 ms
+    CPU time for eval rho on Device 1                                    0.02 sec, wall time      0.01 sec, GPU time     14.70 ms
+    CPU time for eval vxc on Device 0                                    0.01 sec, wall time      0.00 sec, GPU time      1.21 ms
+0 - 221184 grids are calculated on Device 0.
+mem_info: unallocated=31208.06 MB, used=102.53 MB, free=266.19 MB, free_blocks=35
+33003.149824 MB memory is available on Device 0, block_size None
+    CPU time for eval vxc on Device 1                                    0.01 sec, wall time      0.00 sec, GPU time      0.88 ms
+221184 - 437248 grids are calculated on Device 1.
+mem_info: unallocated=31218.06 MB, used=68.27 MB, free=229.98 MB, free_blocks=14
+32975.666688 MB memory is available on Device 1, block_size None
+    CPU time for eval integration on 0                                   0.01 sec, wall time      0.01 sec, GPU time     16.08 ms
+    CPU time for eval integration on 1                                   0.01 sec, wall time      0.01 sec, GPU time     19.22 ms
+    CPU time for nr_rks                                                  0.06 sec, wall time      0.04 sec, GPU time     36.40 ms
+nelec by numeric integration = 61.99999668589559
+    CPU time for vxc                                                     0.06 sec, wall time      0.04 sec, GPU time     36.47 ms
+30.227 GB memory available on Device 0, block size = 256
+33.075 GB memory available on Device 1, block size = 256
+    CPU time for vj and vk on Device 1                                   0.00 sec, wall time      0.00 sec, GPU time      3.05 ms
+    CPU time for vj and vk on Device 0                                   0.00 sec, wall time      0.00 sec, GPU time      3.21 ms
+    CPU time for vj and vk                                               0.01 sec, wall time      0.00 sec, GPU time      4.52 ms
+    CPU time for veff                                                    0.01 sec, wall time      0.00 sec, GPU time      4.81 ms
+    CPU time for veff                                                    0.07 sec, wall time      0.04 sec, GPU time     41.69 ms
+E1 = -1222.9691274468455  Ecoul = 541.4896778562183  Exc = -52.30157571463699
+    CPU time for cycle=10                                                0.07 sec, wall time      0.05 sec, GPU time     46.86 ms
+cycle= 10 E= -363.10221872868  delta_E= -1.37e-09  |g|= 1.91e-05  |ddm|= 8.6e-05
+diis-c [-1.30086062e-10  1.83447954e-01  8.15897412e-01 -1.76479390e-04
+ -8.74789277e-04 -2.17898791e-03 -4.68869701e-03 -1.00944704e-02
+  1.86680576e-02]
+    CPU time for DIIS                                                    0.00 sec, wall time      0.00 sec, GPU time      0.67 ms
+    CPU time for eig                                                     0.00 sec, wall time      0.00 sec, GPU time      4.10 ms
+  HOMO = -0.275096810421917  LUMO = -0.0241370719664071
+221184 grids on Device 0
+216064 grids on Device 1
+221184 - 437248 grids are calculated on Device 1.
+mem_info: unallocated=31282.06 MB, used=50.04 MB, free=248.21 MB, free_blocks=12
+33061.892096 MB memory is available on Device 1, block_size None
+0 - 221184 grids are calculated on Device 0.
+mem_info: unallocated=31272.06 MB, used=84.18 MB, free=284.54 MB, free_blocks=38
+33089.498112 MB memory is available on Device 0, block_size None
+    CPU time for eval rho on Device 0                                    0.02 sec, wall time      0.01 sec, GPU time     14.35 ms
+    CPU time for eval rho on Device 1                                    0.02 sec, wall time      0.01 sec, GPU time     14.82 ms
+    CPU time for eval vxc on Device 0                                    0.01 sec, wall time      0.00 sec, GPU time      1.20 ms
+0 - 221184 grids are calculated on Device 0.
+mem_info: unallocated=31208.06 MB, used=102.53 MB, free=266.19 MB, free_blocks=36
+33003.149824 MB memory is available on Device 0, block_size None
+    CPU time for eval vxc on Device 1                                    0.01 sec, wall time      0.00 sec, GPU time      0.87 ms
+221184 - 437248 grids are calculated on Device 1.
+mem_info: unallocated=31218.06 MB, used=68.27 MB, free=229.98 MB, free_blocks=14
+32975.666688 MB memory is available on Device 1, block_size None
+    CPU time for eval integration on 0                                   0.01 sec, wall time      0.01 sec, GPU time     16.56 ms
+    CPU time for eval integration on 1                                   0.01 sec, wall time      0.01 sec, GPU time     19.21 ms
+    CPU time for nr_rks                                                  0.06 sec, wall time      0.04 sec, GPU time     36.57 ms
+nelec by numeric integration = 61.99999668589294
+    CPU time for vxc                                                     0.06 sec, wall time      0.04 sec, GPU time     36.64 ms
+30.227 GB memory available on Device 0, block size = 256
+33.075 GB memory available on Device 1, block size = 256
+    CPU time for vj and vk on Device 1                                   0.00 sec, wall time      0.00 sec, GPU time      3.03 ms
+    CPU time for vj and vk on Device 0                                   0.00 sec, wall time      0.00 sec, GPU time      3.24 ms
+    CPU time for vj and vk                                               0.01 sec, wall time      0.00 sec, GPU time      4.52 ms
+    CPU time for veff                                                    0.01 sec, wall time      0.00 sec, GPU time      4.82 ms
+    CPU time for veff                                                    0.07 sec, wall time      0.04 sec, GPU time     41.87 ms
+E1 = -1222.9691046042387  Ecoul = 541.4896575512644  Exc = -52.301578252324774
+    CPU time for cycle=11                                                0.07 sec, wall time      0.05 sec, GPU time     47.03 ms
+cycle= 11 E= -363.102218728715  delta_E= -3.5e-11  |g|= 1.48e-05  |ddm|= 3.08e-05
+diis-c [-4.26690221e-12  7.86100594e-02  3.95946009e-01  5.12288845e-01
+ -7.73195662e-05 -1.22723809e-04 -9.49337063e-05 -9.69376264e-05
+  1.35470012e-02]
+    CPU time for DIIS                                                    0.00 sec, wall time      0.00 sec, GPU time      0.97 ms
+    CPU time for eig                                                     0.00 sec, wall time      0.00 sec, GPU time      4.10 ms
+  HOMO = -0.275096550014336  LUMO = -0.0241367023876627
+221184 grids on Device 0
+216064 grids on Device 1
+0 - 221184 grids are calculated on Device 0.
+mem_info: unallocated=31272.06 MB, used=84.18 MB, free=284.54 MB, free_blocks=37
+221184 - 437248 grids are calculated on Device 1.
+33089.498112 MB memory is available on Device 0, block_size None
+mem_info: unallocated=31282.06 MB, used=50.04 MB, free=248.21 MB, free_blocks=12
+33061.892096 MB memory is available on Device 1, block_size None
+    CPU time for eval rho on Device 0                                    0.02 sec, wall time      0.01 sec, GPU time     14.60 ms
+    CPU time for eval rho on Device 1                                    0.02 sec, wall time      0.01 sec, GPU time     15.14 ms
+    CPU time for eval vxc on Device 0                                    0.01 sec, wall time      0.00 sec, GPU time      1.45 ms
+0 - 221184 grids are calculated on Device 0.
+mem_info: unallocated=31208.06 MB, used=102.53 MB, free=266.19 MB, free_blocks=36
+33003.149824 MB memory is available on Device 0, block_size None
+    CPU time for eval vxc on Device 1                                    0.01 sec, wall time      0.00 sec, GPU time      0.89 ms
+221184 - 437248 grids are calculated on Device 1.
+mem_info: unallocated=31218.06 MB, used=68.27 MB, free=229.98 MB, free_blocks=14
+32975.666688 MB memory is available on Device 1, block_size None
+    CPU time for eval integration on 0                                   0.01 sec, wall time      0.01 sec, GPU time     16.33 ms
+    CPU time for eval integration on 1                                   0.01 sec, wall time      0.01 sec, GPU time     19.23 ms
+    CPU time for nr_rks                                                  0.06 sec, wall time      0.04 sec, GPU time     37.08 ms
+nelec by numeric integration = 61.999996685890196
+    CPU time for vxc                                                     0.06 sec, wall time      0.04 sec, GPU time     37.15 ms
+30.227 GB memory available on Device 0, block size = 256
+33.075 GB memory available on Device 1, block size = 256
+    CPU time for vj and vk on Device 0                                   0.00 sec, wall time      0.00 sec, GPU time      2.99 ms
+    CPU time for vj and vk on Device 1                                   0.00 sec, wall time      0.00 sec, GPU time      2.86 ms
+    CPU time for vj and vk                                               0.01 sec, wall time      0.00 sec, GPU time      4.36 ms
+    CPU time for veff                                                    0.01 sec, wall time      0.00 sec, GPU time      4.69 ms
+    CPU time for veff                                                    0.07 sec, wall time      0.05 sec, GPU time     42.26 ms
+E1 = -1222.9690956836873  Ecoul = 541.4896456776493  Exc = -52.30157529931235
+    CPU time for cycle=12                                                0.07 sec, wall time      0.05 sec, GPU time     47.72 ms
+cycle= 12 E= -363.102218728766  delta_E= -5.12e-11  |g|= 2.04e-06  |ddm|= 1.46e-05
+    CPU time for SCF                                                     2.43 sec, wall time      4.46 sec, GPU time   4461.78 ms
+converged SCF energy = -363.102218728766
+>>>>>>> 3ca1dc8 (asdf)
 
 
 ******** <class 'gpu4pyscf.df.grad.rks.Gradients'> for <class 'gpu4pyscf.df.df_jk.DFRKS'> ********
 unit = Eh/Bohr
+<<<<<<< HEAD
 max_memory 4000 MB (current use 1188 MB)
 Number of shells for each [l, nctr] group
     [0 1] : 8
@@ -539,6 +1206,33 @@ mem_info: unallocated=13098.94 MB, used=12.48 MB, free=43.45 MB, free_blocks=27
     CPU time for gradient of vxc                                         2.54 sec, wall time      2.60 sec, GPU time   2594.69 ms
     CPU time for grad vxc                                                2.56 sec, wall time      2.60 sec, GPU time   2598.29 ms
     CPU time for vxc total                                               2.56 sec, wall time      2.60 sec, GPU time   2598.50 ms
+=======
+max_memory 4000 MB (current use 1985 MB)
+Number of shells for each [l, nctr] group
+    [0 1] : 25
+    [0 3] : 7
+    [0 5] : 9
+    [1 1] : 16
+    [1 3] : 9
+    [2 1] : 9
+    CPU time for Initialize q_cond                                       0.00 sec, wall time      0.00 sec, GPU time      0.71 ms
+    CPU time for Get AO pairing                                          0.00 sec, wall time      0.00 sec, GPU time      0.43 ms
+    CPU time for AO indices                                              0.00 sec, wall time      0.00 sec, GPU time      0.13 ms
+    CPU time for Initialize GPU cache                                    0.05 sec, wall time      0.00 sec, GPU time      1.11 ms
+    CPU time for gradients of h1e                                        0.36 sec, wall time      0.03 sec, GPU time     29.86 ms
+216064 grids on Device 1
+221184 grids on Device 0
+0 - 221184 grids are calculated on Device 0.
+mem_info: unallocated=31272.06 MB, used=41.60 MB, free=327.12 MB, free_blocks=33
+33134.148608 MB memory is available on Device 0, block_size None
+221184 - 437248 grids are calculated on Device 1.
+mem_info: unallocated=31282.06 MB, used=16.49 MB, free=281.76 MB, free_blocks=15
+33097.067008 MB memory is available on Device 1, block_size None
+    CPU time for gradient of vxc                                         0.16 sec, wall time      0.14 sec, GPU time    141.12 ms
+    CPU time for gradient of vxc                                         0.17 sec, wall time      0.14 sec, GPU time    143.68 ms
+    CPU time for grad vxc                                                0.17 sec, wall time      0.14 sec, GPU time    144.75 ms
+    CPU time for vxc total                                               0.17 sec, wall time      0.14 sec, GPU time    144.96 ms
+>>>>>>> 3ca1dc8 (asdf)
 Number of shells for each [l, nprim] group
     [0 5] : 2
     [0 3] : 4
@@ -560,6 +1254,7 @@ Number of shells for each [l, nprim] group
     [4 1] : 2
 dm_factor shape (50, 9)
 sp_batches = 1, ksh_batches = 11
+<<<<<<< HEAD
 13.718 GB free memory. nao_pair=1329 naux=262 batch_size=262 blksize=262
     CPU time for contract dm                                             0.85 sec, wall time      0.86 sec, GPU time    864.66 ms
 int2c2e_kernel, nimgs = 1
@@ -579,10 +1274,42 @@ Computing Gradients of NR-HF Coulomb repulsion
 3 H    -0.0017310632     0.0067001766     0.0008920192
 4 H     0.0052295564    -0.0001830844     0.0043129855
 5 H    -0.0033202580    -0.0056777477    -0.0048329492
+=======
+32.791 GB free memory. nao_pair=13966 naux=945 batch_size=945 blksize=945
+    CPU time for contract dm                                             0.04 sec, wall time      0.28 sec, GPU time    275.38 ms
+int2c2e_kernel, nimgs = 1
+int2c2e_kernel, nimgs = 1
+    CPU time for contract int2c2e_ip1                                    0.03 sec, wall time      0.28 sec, GPU time    284.70 ms
+    CPU time for contract int3c2e_ejk_ip1                                0.29 sec, wall time      0.29 sec, GPU time    289.08 ms
+    CPU time for gradients of veff                                       0.53 sec, wall time      1.00 sec, GPU time   1003.75 ms
+Computing Gradients of NR-HF Coulomb repulsion
+    CPU time for gradients of 2e part                                    0.53 sec, wall time      1.00 sec, GPU time   1003.80 ms
+    CPU time for gradients of electronic part                            0.90 sec, wall time      1.03 sec, GPU time   1034.94 ms
+    CPU time for SCF gradients                                           0.90 sec, wall time      1.04 sec, GPU time   1035.12 ms
+--------------- DFRKS gradients ---------------
+         x                y                z
+0 C    -0.0011500987     0.0138688833    -0.0049463456
+1 H    -0.0004461425    -0.0069269565     0.0028497045
+2 C    -0.0090031499     0.0100607996     0.0013427139
+3 H     0.0065858644    -0.0051381601    -0.0014307277
+4 C    -0.0122313068    -0.0076780943     0.0085831400
+5 H     0.0060505752     0.0030136153    -0.0042987137
+6 C    -0.0007552400    -0.0133082446     0.0065121598
+7 H    -0.0003891484     0.0083112080    -0.0028157231
+8 C     0.0092729028    -0.0078361200    -0.0000056938
+9 C     0.0128492742     0.0065832756    -0.0088447096
+10 H    -0.0071027287    -0.0024613477     0.0052244526
+11 C    -0.0017244033     0.0028164774     0.0005615624
+12 H     0.0005493711     0.0062079659     0.0024705117
+13 H    -0.0039613657    -0.0059187694     0.0013626139
+14 C    -0.0133022706     0.0045099361     0.0409647369
+15 N     0.0147595231    -0.0061061270    -0.0475301951
+>>>>>>> 3ca1dc8 (asdf)
 ----------------------------------------------
 
 
 ******** <class 'gpu4pyscf.df.hessian.rks.Hessian'> for <class 'gpu4pyscf.df.df_jk.DFRKS'> ********
+<<<<<<< HEAD
 Max_memory 4000 MB (current use 1439 MB)
 Partial Hessian with density fitting approximation
 Memory available 14.00633192062378 GB
@@ -590,6 +1317,15 @@ Psi4 predefined JKFIT basis set def2-svp-jkfit for HF
 Default auxbasis def2-svp-jkfit is applied universally
 num shells = 74, num cGTOs = 224
     CPU time for intermediate variables with int2c2e and int2c2e_ip1      0.33 sec, wall time      0.02 sec, GPU time     25.61 ms
+=======
+Max_memory 4000 MB (current use 2028 MB)
+Partial Hessian with density fitting approximation
+Memory available 28.19785242062062 GB
+Psi4 predefined JKFIT basis set def2-svp-jkfit for HF
+Default auxbasis def2-svp-jkfit is applied universally
+num shells = 267, num cGTOs = 803
+    CPU time for intermediate variables with int2c2e and int2c2e_ip1      0.07 sec, wall time      0.01 sec, GPU time      9.34 ms
+>>>>>>> 3ca1dc8 (asdf)
 Number of shells for each [l, nctr] group
     [0 1] : 8
     [0 3] : 4
@@ -607,6 +1343,7 @@ Number of shells for each [l, nctr] group
     [2 2] : 1
     [2 3] : 1
     [3 1] : 2
+<<<<<<< HEAD
     [3 2] : 1
     [4 1] : 2
     CPU time for Initialize q_cond                                       0.04 sec, wall time      0.00 sec, GPU time      3.13 ms
@@ -655,6 +1392,66 @@ mem_info: unallocated=12416.94 MB, used=40.54 MB, free=47.42 MB, free_blocks=31
     CPU time for vxc_deriv2 on Device 0                                  0.91 sec, wall time      0.92 sec, GPU time    919.55 ms
     CPU time for RKS partial hessian                                     6.46 sec, wall time      4.13 sec, GPU time   4131.96 ms
     CPU time for hess elec                                               6.46 sec, wall time      4.13 sec, GPU time   4132.01 ms
+=======
+    [3 2] : 8
+    [4 1] : 9
+    CPU time for Initialize q_cond                                       0.00 sec, wall time      0.00 sec, GPU time      1.40 ms
+    CPU time for Get AO pairing                                          0.00 sec, wall time      0.00 sec, GPU time      0.26 ms
+    CPU time for AO indices                                              0.00 sec, wall time      0.00 sec, GPU time      0.10 ms
+    CPU time for Aux AO indices                                          0.00 sec, wall time      0.00 sec, GPU time      0.23 ms
+    CPU time for Get AO pairs                                            0.00 sec, wall time      0.00 sec, GPU time      0.40 ms
+    CPU time for Initialize GPU cache on Device 0                        0.00 sec, wall time      0.00 sec, GPU time      0.35 ms
+    CPU time for Initialize GPU cache on Device 1                        0.07 sec, wall time      0.00 sec, GPU time      0.34 ms
+    CPU time for int3c2e_vjk on Device 1                                 0.19 sec, wall time      0.08 sec, GPU time     84.13 ms
+    CPU time for int3c2e_vjk on Device 0                                 0.27 sec, wall time      0.09 sec, GPU time     87.45 ms
+    CPU time for intermediate variables with int3c2e                     0.56 sec, wall time      0.12 sec, GPU time    118.84 ms
+    CPU time for Initialize GPU cache on Device 0                        0.00 sec, wall time      0.00 sec, GPU time      0.40 ms
+    CPU time for Initialize GPU cache on Device 1                        0.00 sec, wall time      0.00 sec, GPU time      0.43 ms
+    CPU time for int3c2e_ipip on Device 1                                1.36 sec, wall time      0.79 sec, GPU time    788.69 ms
+    CPU time for int3c2e_ipip on Device 0                                1.59 sec, wall time      1.02 sec, GPU time   1022.88 ms
+    CPU time for intermediate variables with int3c2e_ipip                1.60 sec, wall time      1.02 sec, GPU time   1023.77 ms
+    CPU time for int3c2e_ip2_wjk on Device 1                             0.23 sec, wall time      0.20 sec, GPU time    196.22 ms
+    CPU time for int3c2e_ip2_wjk on Device 0                             0.24 sec, wall time      0.20 sec, GPU time    199.59 ms
+    CPU time for intermediate variables with int3c2e_ip2                 0.24 sec, wall time      0.20 sec, GPU time    202.73 ms
+    CPU time for int3c2e_ip1_wjk on Device 1                             0.14 sec, wall time      0.09 sec, GPU time     90.48 ms
+    CPU time for int3c2e_ip1_wjk on Device 0                             0.15 sec, wall time      0.10 sec, GPU time     96.69 ms
+    CPU time for intermediate variables with int3c2e_ip1                 0.17 sec, wall time      0.12 sec, GPU time    115.58 ms
+GPU Memory 28.1 GB available, 3371 aux AOs per block
+    CPU time for contract int3c2e_ip1 with int2c_ip1                     0.08 sec, wall time      0.08 sec, GPU time     84.91 ms
+    CPU time for contract int3c2e_ip1 with int3c2e_ip1                   0.09 sec, wall time      0.09 sec, GPU time     92.15 ms
+    CPU time for intermediate variables with int2c_*                     0.55 sec, wall time      0.05 sec, GPU time     47.79 ms
+    CPU time for contract int2c_*                                        0.02 sec, wall time      0.02 sec, GPU time     51.63 ms
+Number of shells for each [l, nctr] group
+    [0 1] : 25
+    [0 3] : 7
+    [0 5] : 9
+    [1 1] : 16
+    [1 3] : 9
+    [2 1] : 9
+    CPU time for Initialize q_cond                                       0.00 sec, wall time      0.00 sec, GPU time      0.91 ms
+    CPU time for Get AO pairing                                          0.00 sec, wall time      0.00 sec, GPU time      0.43 ms
+    CPU time for AO indices                                              0.00 sec, wall time      0.00 sec, GPU time      0.13 ms
+    CPU time for Initialize GPU cache                                    0.00 sec, wall time      0.00 sec, GPU time      0.90 ms
+    CPU time for hess_nuc_elec                                           0.32 sec, wall time      0.18 sec, GPU time    184.25 ms
+    CPU time for get_hcore                                               0.12 sec, wall time      0.01 sec, GPU time      6.06 ms
+    CPU time for hcore generate                                          0.48 sec, wall time      0.22 sec, GPU time    191.31 ms
+    CPU time for hcore contribution                                      0.26 sec, wall time      0.06 sec, GPU time     56.94 ms
+    CPU time for RHF partial hessian                                     4.13 sec, wall time      2.00 sec, GPU time   1995.70 ms
+    CPU time for computing ej, ek                                        4.13 sec, wall time      2.00 sec, GPU time   1996.13 ms
+0 - 437248 grids are calculated on Device 0.
+mem_info: unallocated=28012.06 MB, used=36.59 MB, free=419.81 MB, free_blocks=27
+29812.978176 MB memory is available on Device 0, block_size None
+0 - 221184 grids are calculated on Device 0.
+mem_info: unallocated=27948.06 MB, used=134.94 MB, free=321.46 MB, free_blocks=28
+29642.740224 MB memory is available on Device 0, block_size None
+221184 - 437248 grids are calculated on Device 1.
+mem_info: unallocated=28728.06 MB, used=109.58 MB, free=109.84 MB, free_blocks=18
+30238.728704 MB memory is available on Device 1, block_size None
+    CPU time for vxc_deriv2 on Device 1                                  1.71 sec, wall time      1.39 sec, GPU time   1392.26 ms
+    CPU time for vxc_deriv2 on Device 0                                  1.72 sec, wall time      1.40 sec, GPU time   1409.84 ms
+    CPU time for RKS partial hessian                                     6.15 sec, wall time      3.69 sec, GPU time   3693.16 ms
+    CPU time for hess elec                                               6.15 sec, wall time      3.69 sec, GPU time   3693.20 ms
+>>>>>>> 3ca1dc8 (asdf)
 Generate JK for RHF partial hessian
 GPU memory 14.0 GB available
 Psi4 predefined JKFIT basis set def2-svp-jkfit for HF
@@ -678,6 +1475,7 @@ Number of shells for each [l, nctr] group
     [2 2] : 1
     [2 3] : 1
     [3 1] : 2
+<<<<<<< HEAD
     [3 2] : 1
     [4 1] : 2
     CPU time for Initialize q_cond                                       0.04 sec, wall time      0.00 sec, GPU time      2.98 ms
@@ -715,6 +1513,52 @@ mem_info: unallocated=13016.94 MB, used=37.68 MB, free=1.30 MB, free_blocks=13
 GPU memory 14.0 GB available
 27184 atoms in each block CPHF equation
 Solving CPHF equation for atoms [0:6]
+=======
+    [3 2] : 8
+    [4 1] : 9
+    CPU time for Initialize q_cond                                       0.00 sec, wall time      0.00 sec, GPU time      1.28 ms
+    CPU time for Get AO pairing                                          0.00 sec, wall time      0.00 sec, GPU time      0.26 ms
+    CPU time for AO indices                                              0.00 sec, wall time      0.00 sec, GPU time      0.10 ms
+    CPU time for Aux AO indices                                          0.00 sec, wall time      0.00 sec, GPU time      0.23 ms
+    CPU time for Get AO pairs                                            0.00 sec, wall time      0.00 sec, GPU time      0.38 ms
+    CPU time for Initialize GPU cache on Device 0                        0.00 sec, wall time      0.00 sec, GPU time      0.26 ms
+    CPU time for Fock matrix due to int3c2e                              0.54 sec, wall time      0.12 sec, GPU time    122.91 ms
+    CPU time for Initialize GPU cache on Device 1                        0.00 sec, wall time      0.00 sec, GPU time      0.29 ms
+    CPU time for Initialize GPU cache on Device 0                        0.00 sec, wall time      0.00 sec, GPU time      0.47 ms
+    CPU time for int3c2e_ip2_vjk on Device 0                             0.15 sec, wall time      0.10 sec, GPU time    100.14 ms
+    CPU time for int3c2e_ip2_vjk on Device 1                             0.15 sec, wall time      0.10 sec, GPU time    101.71 ms
+    CPU time for Fock matrix due to int3c2e_ip2                          0.16 sec, wall time      0.11 sec, GPU time    104.19 ms
+GPU Memory 28.1 GB available, 10080 AOs per block
+    CPU time for Fock matrix due to int2c2e_ip1                          0.20 sec, wall time      0.01 sec, GPU time     26.81 ms
+    CPU time for int3c2e_ip1_vjk on Device 1                             0.22 sec, wall time      0.17 sec, GPU time    172.99 ms
+    CPU time for int3c2e_ip1_vjk on Device 0                             0.23 sec, wall time      0.18 sec, GPU time    180.28 ms
+    CPU time for Fock matrix due to int3c2e_ip1                          0.26 sec, wall time      0.20 sec, GPU time    184.09 ms
+Number of shells for each [l, nctr] group
+    [0 1] : 25
+    [0 3] : 7
+    [0 5] : 9
+    [1 1] : 16
+    [1 3] : 9
+    [2 1] : 9
+    CPU time for Initialize q_cond                                       0.00 sec, wall time      0.00 sec, GPU time      1.07 ms
+    CPU time for Get AO pairing                                          0.00 sec, wall time      0.00 sec, GPU time      0.43 ms
+    CPU time for AO indices                                              0.00 sec, wall time      0.00 sec, GPU time      0.12 ms
+    CPU time for Aux AO indices                                          0.00 sec, wall time      0.00 sec, GPU time      0.06 ms
+    CPU time for Get AO pairs                                            0.00 sec, wall time      0.00 sec, GPU time      0.61 ms
+    CPU time for Initialize GPU cache on Device 0                        0.00 sec, wall time      0.00 sec, GPU time      0.41 ms
+221184 - 437248 grids are calculated on Device 1.
+mem_info: unallocated=28538.06 MB, used=101.82 MB, free=300.40 MB, free_blocks=22
+30239.324672 MB memory is available on Device 1, block_size None
+0 - 221184 grids are calculated on Device 0.
+mem_info: unallocated=31014.06 MB, used=126.95 MB, free=10.21 MB, free_blocks=16
+32531.311616 MB memory is available on Device 0, block_size None
+    CPU time for vxc_deriv1 on Device 1                                  1.41 sec, wall time      1.06 sec, GPU time   1064.35 ms
+    CPU time for vxc_deriv1 on Device 0                                  1.43 sec, wall time      1.08 sec, GPU time   1077.96 ms
+    CPU time for making H1                                               2.92 sec, wall time      1.56 sec, GPU time   1557.68 ms
+GPU memory 28.2 GB available
+4864 atoms in each block CPHF equation
+Solving CPHF equation for atoms [0:16]
+>>>>>>> 3ca1dc8 (asdf)
 Secondary grids defined for CPHF in Hessian
 atom C rad-grids = 50, ang-grids = [  6   6   6   6   6   6   6   6   6   6   6   6   6   6   6  38  38  38
   38  38  38  86  86  86  86 194 194 194 194 194 194 194 194 194 194 194
@@ -725,6 +1569,7 @@ atom O rad-grids = 50, ang-grids = [  6   6   6   6   6   6   6   6   6   6   6 
 atom H rad-grids = 50, ang-grids = [  6   6   6   6   6   6   6   6   6   6   6   6   6   6   6   6   6  38
   38  38  38  38  86  86  86  86  86 194 194 194 194 194 194 194 194 194
  194 194 194 194 194 194  86  86  86  86  86  86  86  86]
+<<<<<<< HEAD
     CPU time for generating atomic grids                                 0.00 sec, wall time      0.00 sec, GPU time      1.99 ms
 Padding 64 grids
     CPU time for sorting grids                                           0.00 sec, wall time      0.00 sec, GPU time      0.67 ms
@@ -742,6 +1587,33 @@ mem_info: unallocated=13042.94 MB, used=16.98 MB, free=9.32 MB, free_blocks=23
     CPU time for nr_rks_fxc                                              0.14 sec, wall time      0.14 sec, GPU time    142.77 ms
 Build CDERI ...
     CPU time for 2c2e                                                    0.02 sec, wall time      0.00 sec, GPU time      1.18 ms
+=======
+atom N rad-grids = 50, ang-grids = [  6   6   6   6   6   6   6   6   6   6   6   6   6   6   6  38  38  38
+  38  38  38  86  86  86  86 194 194 194 194 194 194 194 194 194 194 194
+ 194 194  86  86  86  86  86  86  86  86  86  86  86  86]
+    CPU time for generating atomic grids                                 0.00 sec, wall time      0.00 sec, GPU time      1.97 ms
+Padding 168 grids
+    CPU time for sorting grids                                           0.00 sec, wall time      0.00 sec, GPU time      0.58 ms
+tot grids = 68352
+0 - 68352 grids are calculated on Device 0.
+mem_info: unallocated=31172.06 MB, used=45.26 MB, free=5.52 MB, free_blocks=15
+32692.064768 MB memory is available on Device 0, block_size None
+    CPU time for eval rho in fxc                                         0.02 sec, wall time      0.02 sec, GPU time     24.79 ms
+    CPU time for eval fxc                                                0.00 sec, wall time      0.00 sec, GPU time      0.88 ms
+36864 grids on Device 0
+0 - 36864 grids are calculated on Device 0.
+mem_info: unallocated=31118.06 MB, used=84.35 MB, free=14.52 MB, free_blocks=23
+32644.88192 MB memory is available on Device 0, block_size None
+31488 grids on Device 1
+36864 - 68352 grids are calculated on Device 1.
+mem_info: unallocated=28602.06 MB, used=25.64 MB, free=376.59 MB, free_blocks=24
+30386.3168 MB memory is available on Device 1, block_size None
+    CPU time for vxc on Device 1                                         0.20 sec, wall time      0.12 sec, GPU time    139.63 ms
+    CPU time for vxc on Device 0                                         0.24 sec, wall time      0.14 sec, GPU time    172.13 ms
+    CPU time for nr_rks_fxc                                              0.31 sec, wall time      0.17 sec, GPU time    173.54 ms
+Build CDERI ...
+    CPU time for 2c2e                                                    0.00 sec, wall time      0.00 sec, GPU time      2.21 ms
+>>>>>>> 3ca1dc8 (asdf)
 Number of shells for each [l, nctr] group
     [0 1] : 8
     [0 3] : 4
@@ -759,6 +1631,7 @@ Number of shells for each [l, nctr] group
     [2 2] : 1
     [2 3] : 1
     [3 1] : 2
+<<<<<<< HEAD
     [3 2] : 1
     [4 1] : 2
     CPU time for Initialize q_cond                                       0.05 sec, wall time      0.00 sec, GPU time      1.23 ms
@@ -938,3 +1811,479 @@ Enthalpy [J/mol]                             6197.391   3718.434 134874.588
 Enthalpy [Eh]          -115.44236
 Gibbs free energy [J/mol]                  -39117.165 -20033.491 133503.518
 Gibbs free energy [Eh] -115.46919
+=======
+    [3 2] : 8
+    [4 1] : 9
+    CPU time for Initialize q_cond                                       0.05 sec, wall time      0.00 sec, GPU time      1.55 ms
+    CPU time for Get AO pairing                                          0.00 sec, wall time      0.00 sec, GPU time      0.29 ms
+    CPU time for AO indices                                              0.00 sec, wall time      0.00 sec, GPU time      0.11 ms
+    CPU time for Aux AO indices                                          0.00 sec, wall time      0.00 sec, GPU time      0.26 ms
+    CPU time for Get AO pairs                                            0.00 sec, wall time      0.00 sec, GPU time      0.42 ms
+    CPU time for prepare intopt                                          0.15 sec, wall time      0.00 sec, GPU time      4.88 ms
+size of aux basis 803
+Saving CDERI on GPU
+CDERI size 0.038 GB on Device 0
+CDERI size 0.036 GB on Device 1
+    CPU time for Initialize GPU cache on Device 0                        0.00 sec, wall time      0.00 sec, GPU time      0.22 ms
+    CPU time for Initialize GPU cache on Device 1                        0.00 sec, wall time      0.00 sec, GPU time      0.24 ms
+    CPU time for solve 2 / 21 on Device 1                                0.00 sec, wall time      0.00 sec, GPU time      3.54 ms
+    CPU time for transfer data for 2 / 21 on Device 1                    0.00 sec, wall time      0.00 sec, GPU time      0.39 ms
+    CPU time for solve 5 / 21 on Device 0                                0.04 sec, wall time      0.00 sec, GPU time      5.80 ms
+    CPU time for solve 1 / 21 on Device 1                                0.00 sec, wall time      0.00 sec, GPU time      2.29 ms
+    CPU time for transfer data for 5 / 21 on Device 0                    0.00 sec, wall time      0.00 sec, GPU time      0.56 ms
+    CPU time for transfer data for 1 / 21 on Device 1                    0.00 sec, wall time      0.00 sec, GPU time      0.30 ms
+    CPU time for solve 4 / 21 on Device 0                                0.01 sec, wall time      0.00 sec, GPU time      3.91 ms
+    CPU time for solve 12 / 21 on Device 1                               0.01 sec, wall time      0.00 sec, GPU time      4.74 ms
+    CPU time for transfer data for 4 / 21 on Device 0                    0.00 sec, wall time      0.00 sec, GPU time      1.14 ms
+    CPU time for transfer data for 12 / 21 on Device 1                   0.00 sec, wall time      0.00 sec, GPU time      0.29 ms
+    CPU time for solve 16 / 21 on Device 1                               0.00 sec, wall time      0.00 sec, GPU time      3.61 ms
+    CPU time for solve 11 / 21 on Device 0                               0.01 sec, wall time      0.00 sec, GPU time      4.46 ms
+    CPU time for transfer data for 16 / 21 on Device 1                   0.00 sec, wall time      0.00 sec, GPU time      0.65 ms
+    CPU time for transfer data for 11 / 21 on Device 0                   0.00 sec, wall time      0.00 sec, GPU time      0.29 ms
+    CPU time for solve 7 / 21 on Device 1                                0.00 sec, wall time      0.00 sec, GPU time      3.12 ms
+    CPU time for solve 3 / 21 on Device 0                                0.00 sec, wall time      0.00 sec, GPU time      2.97 ms
+    CPU time for transfer data for 3 / 21 on Device 0                    0.00 sec, wall time      0.00 sec, GPU time      0.31 ms
+    CPU time for transfer data for 7 / 21 on Device 1                    0.00 sec, wall time      0.00 sec, GPU time      0.38 ms
+    CPU time for solve 17 / 21 on Device 0                               0.00 sec, wall time      0.00 sec, GPU time      3.47 ms
+    CPU time for transfer data for 17 / 21 on Device 0                   0.00 sec, wall time      0.00 sec, GPU time      0.22 ms
+    CPU time for solve 14 / 21 on Device 1                               0.01 sec, wall time      0.00 sec, GPU time      5.51 ms
+    CPU time for solve 0 / 21 on Device 0                                0.00 sec, wall time      0.00 sec, GPU time      2.19 ms
+    CPU time for transfer data for 14 / 21 on Device 1                   0.00 sec, wall time      0.00 sec, GPU time      0.45 ms
+    CPU time for transfer data for 0 / 21 on Device 0                    0.00 sec, wall time      0.00 sec, GPU time      0.31 ms
+    CPU time for solve 10 / 21 on Device 1                               0.00 sec, wall time      0.00 sec, GPU time      3.24 ms
+    CPU time for solve 8 / 21 on Device 0                                0.00 sec, wall time      0.00 sec, GPU time      3.32 ms
+    CPU time for transfer data for 10 / 21 on Device 1                   0.00 sec, wall time      0.00 sec, GPU time      0.42 ms
+    CPU time for transfer data for 8 / 21 on Device 0                    0.00 sec, wall time      0.00 sec, GPU time      0.24 ms
+    CPU time for solve 20 / 21 on Device 0                               0.00 sec, wall time      0.00 sec, GPU time      3.14 ms
+    CPU time for solve 15 / 21 on Device 1                               0.00 sec, wall time      0.00 sec, GPU time      3.34 ms
+    CPU time for transfer data for 20 / 21 on Device 0                   0.00 sec, wall time      0.00 sec, GPU time      0.40 ms
+    CPU time for transfer data for 15 / 21 on Device 1                   0.00 sec, wall time      0.00 sec, GPU time      0.35 ms
+    CPU time for solve 9 / 21 on Device 0                                0.00 sec, wall time      0.00 sec, GPU time      3.18 ms
+    CPU time for solve 19 / 21 on Device 1                               0.00 sec, wall time      0.00 sec, GPU time      3.89 ms
+    CPU time for transfer data for 9 / 21 on Device 0                    0.00 sec, wall time      0.00 sec, GPU time      0.83 ms
+    CPU time for transfer data for 19 / 21 on Device 1                   0.00 sec, wall time      0.00 sec, GPU time      0.27 ms
+    CPU time for solve 6 / 21 on Device 0                                0.00 sec, wall time      0.00 sec, GPU time      3.22 ms
+    CPU time for solve 13 / 21 on Device 1                               0.00 sec, wall time      0.00 sec, GPU time      3.78 ms
+    CPU time for transfer data for 6 / 21 on Device 0                    0.00 sec, wall time      0.00 sec, GPU time      0.85 ms
+    CPU time for transfer data for 13 / 21 on Device 1                   0.00 sec, wall time      0.00 sec, GPU time      0.28 ms
+    CPU time for solve 18 / 21 on Device 0                               0.00 sec, wall time      0.00 sec, GPU time      3.00 ms
+    CPU time for transfer data for 18 / 21 on Device 0                   0.00 sec, wall time      0.00 sec, GPU time      0.29 ms
+    CPU time for cholesky_eri                                            0.35 sec, wall time      0.05 sec, GPU time     51.96 ms
+    CPU time for init jk                                                 0.36 sec, wall time      0.05 sec, GPU time     54.25 ms
+30.170 GB memory available on Device 0, block size = 256
+30.361 GB memory available on Device 1, block size = 256
+    CPU time for vj and vk on Device 1                                   0.07 sec, wall time      0.06 sec, GPU time     57.02 ms
+    CPU time for vj and vk on Device 0                                   0.07 sec, wall time      0.06 sec, GPU time     60.57 ms
+    CPU time for vj and vk                                               0.07 sec, wall time      0.06 sec, GPU time     61.64 ms
+krylov cycle 0, r = 2.249e-01, 48 equations
+Secondary grids defined for CPHF in Hessian
+0 - 68352 grids are calculated on Device 0.
+mem_info: unallocated=30864.06 MB, used=87.85 MB, free=256.62 MB, free_blocks=39
+32632.406016 MB memory is available on Device 0, block_size None
+    CPU time for eval rho in fxc                                         0.01 sec, wall time      0.01 sec, GPU time      5.43 ms
+    CPU time for eval fxc                                                0.00 sec, wall time      0.00 sec, GPU time      0.64 ms
+36864 grids on Device 0
+0 - 36864 grids are calculated on Device 0.
+mem_info: unallocated=30864.06 MB, used=118.71 MB, free=225.77 MB, free_blocks=38
+32600.04864 MB memory is available on Device 0, block_size None
+31488 grids on Device 1
+36864 - 68352 grids are calculated on Device 1.
+mem_info: unallocated=28498.06 MB, used=57.64 MB, free=445.84 MB, free_blocks=26
+30349.881344 MB memory is available on Device 1, block_size None
+    CPU time for vxc on Device 1                                         0.09 sec, wall time      0.06 sec, GPU time     84.49 ms
+    CPU time for vxc on Device 0                                         0.11 sec, wall time      0.07 sec, GPU time    100.76 ms
+    CPU time for nr_rks_fxc                                              0.17 sec, wall time      0.10 sec, GPU time    101.98 ms
+30.364 GB memory available on Device 1, block size = 256
+30.182 GB memory available on Device 0, block size = 256
+    CPU time for vj and vk on Device 1                                   0.04 sec, wall time      0.04 sec, GPU time     35.27 ms
+    CPU time for vj and vk on Device 0                                   0.04 sec, wall time      0.04 sec, GPU time     38.03 ms
+    CPU time for vj and vk                                               0.05 sec, wall time      0.04 sec, GPU time     39.03 ms
+krylov cycle 1, r = 4.318e-02, 29 equations
+Secondary grids defined for CPHF in Hessian
+0 - 68352 grids are calculated on Device 0.
+mem_info: unallocated=30864.06 MB, used=83.75 MB, free=260.73 MB, free_blocks=41
+32636.706816 MB memory is available on Device 0, block_size None
+    CPU time for eval rho in fxc                                         0.01 sec, wall time      0.01 sec, GPU time      5.33 ms
+    CPU time for eval fxc                                                0.00 sec, wall time      0.00 sec, GPU time      0.61 ms
+36864 grids on Device 0
+0 - 36864 grids are calculated on Device 0.
+mem_info: unallocated=30864.06 MB, used=104.63 MB, free=239.84 MB, free_blocks=40
+32614.806528 MB memory is available on Device 0, block_size None
+31488 grids on Device 1
+36864 - 68352 grids are calculated on Device 1.
+mem_info: unallocated=28498.06 MB, used=52.21 MB, free=451.26 MB, free_blocks=26
+30355.569152 MB memory is available on Device 1, block_size None
+    CPU time for vxc on Device 1                                         0.02 sec, wall time      0.01 sec, GPU time     19.60 ms
+    CPU time for vxc on Device 0                                         0.02 sec, wall time      0.01 sec, GPU time     23.56 ms
+    CPU time for nr_rks_fxc                                              0.04 sec, wall time      0.02 sec, GPU time     24.77 ms
+30.198 GB memory available on Device 0, block size = 256
+30.370 GB memory available on Device 1, block size = 256
+    CPU time for vj and vk on Device 1                                   0.01 sec, wall time      0.01 sec, GPU time      8.61 ms
+    CPU time for vj and vk on Device 0                                   0.01 sec, wall time      0.01 sec, GPU time      9.49 ms
+    CPU time for vj and vk                                               0.02 sec, wall time      0.01 sec, GPU time     10.56 ms
+krylov cycle 2, r = 7.052e-03, 6 equations
+krylov space size 83
+Secondary grids defined for CPHF in Hessian
+0 - 68352 grids are calculated on Device 0.
+mem_info: unallocated=30864.06 MB, used=89.35 MB, free=255.12 MB, free_blocks=40
+32630.82752 MB memory is available on Device 0, block_size None
+    CPU time for eval rho in fxc                                         0.01 sec, wall time      0.01 sec, GPU time      5.37 ms
+    CPU time for eval fxc                                                0.00 sec, wall time      0.00 sec, GPU time      0.61 ms
+36864 grids on Device 0
+0 - 36864 grids are calculated on Device 0.
+mem_info: unallocated=30864.06 MB, used=128.45 MB, free=216.02 MB, free_blocks=38
+32589.83168 MB memory is available on Device 0, block_size None
+31488 grids on Device 1
+36864 - 68352 grids are calculated on Device 1.
+mem_info: unallocated=28498.06 MB, used=62.12 MB, free=441.36 MB, free_blocks=26
+30345.18272 MB memory is available on Device 1, block_size None
+    CPU time for vxc on Device 1                                         0.19 sec, wall time      0.11 sec, GPU time    136.40 ms
+    CPU time for vxc on Device 0                                         0.22 sec, wall time      0.13 sec, GPU time    163.40 ms
+    CPU time for nr_rks_fxc                                              0.29 sec, wall time      0.16 sec, GPU time    164.59 ms
+30.358 GB memory available on Device 1, block size = 256
+30.170 GB memory available on Device 0, block size = 256
+    CPU time for vj and vk on Device 1                                   0.07 sec, wall time      0.06 sec, GPU time     55.83 ms
+    CPU time for vj and vk on Device 0                                   0.07 sec, wall time      0.06 sec, GPU time     60.14 ms
+    CPU time for vj and vk                                               0.07 sec, wall time      0.06 sec, GPU time     61.30 ms
+    CPU time for CPHF solver                                             1.61 sec, wall time      0.79 sec, GPU time    791.09 ms
+    CPU time for solving MO1                                             1.61 sec, wall time      0.79 sec, GPU time    791.42 ms
+    CPU time for RHF hessian                                            10.84 sec, wall time      6.05 sec, GPU time   6049.65 ms
+    CPU time for SCF hessian     10.84 sec, wall time      6.05 sec
+Mode                                 0                   1                   2
+Irrep
+Freq [cm^-1]                       94.8572            139.9372            253.3605
+Reduced mass [au]                   3.9942              5.8482              3.8588
+Force const [Dyne/A]                0.0212              0.0675              0.1459
+Char temp [K]                     136.4784            201.3385            364.5294
+Normal mode                   x     y     z       x     y     z       x     y     z
+       0   C                 0.00  0.03  0.05   -0.04  0.04  0.06   -0.03  0.01  0.02
+       1   H                -0.00  0.05  0.10   -0.04  0.06  0.12   -0.05  0.00 -0.01
+       2   C                -0.03 -0.03 -0.03   -0.00  0.02  0.10   -0.07 -0.02 -0.06
+       3   H                -0.06 -0.07 -0.06    0.03  0.03  0.20   -0.14 -0.07 -0.18
+       4   C                -0.02 -0.05 -0.08    0.00 -0.00  0.03   -0.01  0.01  0.02
+       5   H                -0.04 -0.10 -0.15    0.03 -0.02  0.06   -0.01 -0.01  0.01
+       6   C                 0.02 -0.01 -0.05   -0.02  0.00 -0.06    0.04  0.05  0.09
+       7   H                 0.03 -0.03 -0.10   -0.01 -0.02 -0.11    0.06  0.06  0.12
+       8   C                 0.05  0.05  0.02   -0.04  0.02 -0.08    0.02  0.04  0.05
+       9   C                 0.04  0.07  0.08   -0.06  0.04 -0.03    0.02  0.05  0.08
+      10   H                 0.07  0.12  0.16   -0.08  0.07 -0.04    0.03  0.08  0.11
+      11   C                 0.06  0.07  0.02   -0.01  0.04 -0.04   -0.06 -0.05 -0.07
+      12   H                 0.09  0.14 -0.08   -0.04  0.08 -0.03   -0.01 -0.19 -0.03
+      13   H                 0.12  0.10  0.11   -0.01  0.05  0.01   -0.16 -0.07 -0.15
+      14   C                -0.04 -0.03 -0.00    0.05 -0.05 -0.01   -0.01 -0.02 -0.07
+      15   N                -0.09 -0.09 -0.01    0.11 -0.12  0.01    0.09 -0.05 -0.04
+Mode                                 3                   4                   5
+Irrep
+Freq [cm^-1]                      337.9264            416.3044            461.2312
+Reduced mass [au]                   2.9015              2.5957              3.8686
+Force const [Dyne/A]                0.1952              0.2651              0.4849
+Char temp [K]                     486.2008            598.9694            663.6091
+Normal mode                   x     y     z       x     y     z       x     y     z
+       0   C                -0.03  0.02 -0.00    0.05  0.04  0.10   -0.00 -0.01 -0.00
+       1   H                -0.10  0.02  0.01    0.12  0.09  0.24   -0.01 -0.02 -0.03
+       2   C                 0.00 -0.04  0.02   -0.00  0.00 -0.00   -0.00  0.01  0.01
+       3   H                -0.02 -0.07  0.05   -0.01 -0.00 -0.02    0.00  0.02  0.01
+       4   C                 0.05 -0.05 -0.01   -0.05 -0.03 -0.10   -0.02  0.00 -0.01
+       5   H                 0.07 -0.11 -0.02   -0.13 -0.09 -0.24   -0.04 -0.01 -0.05
+       6   C                 0.07  0.02 -0.06    0.05  0.04  0.10   -0.01 -0.00 -0.00
+       7   H                 0.13  0.00 -0.10    0.12  0.09  0.24   -0.05 -0.01 -0.03
+       8   C                 0.05  0.07 -0.05   -0.00 -0.00 -0.00    0.01 -0.00  0.02
+       9   C                 0.01  0.07 -0.05   -0.05 -0.04 -0.10   -0.01 -0.01  0.01
+      10   H                -0.03  0.12 -0.09   -0.13 -0.09 -0.25   -0.02 -0.02 -0.02
+      11   C                -0.06 -0.08  0.04    0.00 -0.00 -0.00    0.01 -0.01  0.00
+      12   H                -0.05 -0.28  0.16    0.00  0.00 -0.01   -0.05 -0.19  0.23
+      13   H                -0.30 -0.07 -0.06    0.00 -0.00 -0.00   -0.12 -0.09 -0.26
+      14   C                -0.01 -0.03  0.07   -0.00 -0.00 -0.00    0.13  0.17  0.01
+      15   N                -0.05  0.04  0.05    0.00  0.00 -0.00   -0.07 -0.11 -0.02
+Mode                                 6                   7                   8
+Irrep
+Freq [cm^-1]                      477.1305            480.9131            625.2305
+Reduced mass [au]                   7.9473              2.7933              6.0961
+Force const [Dyne/A]                1.0660              0.3806              1.4041
+Char temp [K]                     686.4846            691.9269            899.5675
+Normal mode                   x     y     z       x     y     z       x     y     z
+       0   C                 0.05 -0.00 -0.03   -0.05 -0.02 -0.04   -0.04  0.13 -0.02
+       1   H                -0.01 -0.00 -0.03   -0.12 -0.09 -0.23    0.05  0.12 -0.03
+       2   C                 0.08 -0.06 -0.00    0.02  0.05  0.10    0.01  0.05 -0.03
+       3   H                 0.08 -0.06  0.00    0.05  0.07  0.14   -0.07 -0.08  0.08
+       4   C                 0.02 -0.05  0.00   -0.04 -0.00 -0.06    0.13  0.01 -0.07
+       5   H                -0.01 -0.01 -0.02   -0.12 -0.08 -0.22    0.12  0.07 -0.05
+       6   C                 0.01 -0.05  0.01   -0.01  0.01 -0.02    0.04 -0.11  0.01
+       7   H                 0.05 -0.07 -0.04   -0.12 -0.04 -0.17   -0.02 -0.09  0.06
+       8   C                -0.03  0.04  0.02    0.09  0.04  0.13   -0.01 -0.05  0.02
+       9   C                 0.04  0.01 -0.03   -0.02 -0.01 -0.00   -0.11 -0.01  0.06
+      10   H                 0.05 -0.06 -0.04   -0.12 -0.05 -0.18   -0.08 -0.05  0.08
+      11   C                -0.09  0.07 -0.02    0.04 -0.03  0.00    0.01 -0.02  0.00
+      12   H                -0.06  0.04 -0.04    0.12 -0.12 -0.07    0.01 -0.04  0.01
+      13   H                -0.07  0.05 -0.07    0.01 -0.03 -0.01   -0.00 -0.03 -0.03
+      14   C                -0.13  0.12 -0.02   -0.05 -0.02 -0.04   -0.02  0.01  0.00
+      15   N                 0.05 -0.05  0.06    0.04  0.00 -0.01    0.00 -0.00  0.02
+Mode                                 9                  10                  11
+Irrep
+Freq [cm^-1]                      633.4681            677.8349            747.5067
+Reduced mass [au]                   3.7799              1.4366              2.7890
+Force const [Dyne/A]                0.8937              0.3889              0.9182
+Char temp [K]                     911.4196            975.2535           1075.4956
+Normal mode                   x     y     z       x     y     z       x     y     z
+       0   C                -0.02 -0.06  0.04   -0.04 -0.01 -0.09    0.03  0.06  0.03
+       1   H                 0.13 -0.01  0.19    0.07  0.09  0.19    0.09  0.14  0.27
+       2   C                -0.09  0.03 -0.01    0.03 -0.01  0.01   -0.01 -0.05 -0.09
+       3   H                -0.00  0.10  0.11    0.27  0.16  0.46    0.06  0.00  0.05
+       4   C                 0.01  0.04 -0.01   -0.06 -0.04 -0.08   -0.01 -0.00  0.07
+       5   H                 0.15 -0.00  0.17    0.06  0.08  0.18    0.08  0.15  0.30
+       6   C                 0.02  0.05 -0.07   -0.00 -0.01  0.04   -0.07 -0.05 -0.04
+       7   H                 0.04  0.11  0.09    0.16  0.09  0.31   -0.06 -0.07 -0.10
+       8   C                 0.06 -0.05 -0.04   -0.01  0.02  0.02    0.04  0.06  0.11
+       9   C                -0.01 -0.05 -0.02    0.01  0.02  0.01   -0.03  0.01 -0.08
+      10   H                 0.01  0.10  0.11    0.17  0.10  0.30   -0.05 -0.05 -0.14
+      11   C                 0.06 -0.05  0.02   -0.01  0.01  0.00    0.04 -0.00  0.03
+      12   H                 0.10 -0.07 -0.03    0.00 -0.04  0.02    0.10 -0.14  0.03
+      13   H                 0.07 -0.08 -0.05   -0.05  0.01 -0.02   -0.05 -0.01 -0.02
+      14   C                -0.11  0.09 -0.01    0.02 -0.02 -0.01    0.00 -0.02 -0.02
+      15   N                 0.03 -0.03  0.05   -0.00  0.00 -0.02    0.01  0.00 -0.03
+Mode                                12                  13                  14
+Irrep
+Freq [cm^-1]                      809.9920            833.1353            890.7638
+Reduced mass [au]                   1.2642              3.2733              1.5915
+Force const [Dyne/A]                0.4887              1.3387              0.7440
+Char temp [K]                    1165.3981           1198.6963           1281.6108
+Normal mode                   x     y     z       x     y     z       x     y     z
+       0   C                -0.03 -0.02 -0.05   -0.01  0.09 -0.03   -0.01  0.03 -0.02
+       1   H                 0.19  0.12  0.36   -0.17  0.09 -0.06   -0.04  0.06  0.06
+       2   C                -0.00  0.00 -0.00    0.06 -0.02  0.03   -0.03 -0.03 -0.06
+       3   H                 0.01  0.01  0.01   -0.06 -0.10 -0.17    0.18  0.10  0.35
+       4   C                 0.03  0.02  0.05   -0.07 -0.02  0.05   -0.03 -0.01 -0.01
+       5   H                -0.17 -0.12 -0.34   -0.19  0.03 -0.09    0.01  0.03  0.07
+       6   C                 0.03  0.02  0.06   -0.04 -0.02  0.02    0.03  0.03  0.07
+       7   H                -0.21 -0.15 -0.41    0.05  0.02  0.13   -0.17 -0.12 -0.33
+       8   C                 0.00  0.00  0.01   -0.02 -0.03 -0.06   -0.01 -0.03 -0.04
+       9   C                -0.03 -0.03 -0.06    0.01  0.07 -0.04    0.05  0.05  0.05
+      10   H                 0.19  0.13  0.38    0.10  0.12  0.12   -0.16 -0.07 -0.34
+      11   C                -0.01  0.00 -0.00    0.10 -0.09  0.05   -0.00 -0.08 -0.02
+      12   H                -0.01 -0.01  0.00    0.12 -0.08  0.01   -0.05  0.16 -0.13
+      13   H                -0.01  0.01  0.01    0.15 -0.13  0.00    0.24 -0.09  0.09
+      14   C                 0.00 -0.00  0.00   -0.04  0.04 -0.02    0.01  0.04  0.01
+      15   N                 0.00  0.00 -0.00    0.02 -0.01 -0.00   -0.01 -0.01  0.02
+Mode                                15                  16                  17
+Irrep
+Freq [cm^-1]                      945.8486            958.4328            960.7802
+Reduced mass [au]                   2.0637              3.3691              1.4517
+Force const [Dyne/A]                1.0878              1.8234              0.7895
+Char temp [K]                    1360.8656           1378.9714           1382.3488
+Normal mode                   x     y     z       x     y     z       x     y     z
+       0   C                -0.00  0.00  0.00   -0.01  0.01 -0.02   -0.04 -0.03 -0.07
+       1   H                -0.02  0.02  0.05    0.02  0.05  0.07    0.18  0.12  0.35
+       2   C                -0.00  0.00  0.03    0.01  0.01  0.02   -0.00 -0.00 -0.01
+       3   H                -0.10 -0.09 -0.09   -0.05 -0.02 -0.12    0.02  0.01  0.05
+       4   C                 0.03  0.00 -0.02   -0.02 -0.00  0.02    0.04  0.03  0.08
+       5   H                 0.08 -0.04  0.02   -0.04  0.03  0.02   -0.20 -0.14 -0.38
+       6   C                -0.00  0.01 -0.05   -0.02 -0.03 -0.02   -0.03 -0.02 -0.07
+       7   H                 0.08  0.06  0.09    0.04  0.02  0.13    0.17  0.11  0.31
+       8   C                 0.01  0.02  0.08    0.04  0.00  0.04   -0.00 -0.00 -0.00
+       9   C                 0.00  0.00 -0.05    0.00  0.01 -0.03    0.03  0.02  0.07
+      10   H                 0.07  0.06  0.10    0.03  0.06  0.04   -0.16 -0.12 -0.32
+      11   C                -0.11 -0.10  0.05   -0.00 -0.02 -0.18   -0.00 -0.00  0.02
+      12   H                -0.17  0.33 -0.17    0.08  0.01 -0.33   -0.01  0.01  0.02
+      13   H                 0.27 -0.06  0.34    0.18 -0.06 -0.17   -0.01  0.00  0.01
+      14   C                 0.05  0.06 -0.02    0.04 -0.01  0.08   -0.00  0.00 -0.01
+      15   N                 0.00 -0.02 -0.04   -0.04  0.02  0.10    0.00 -0.00 -0.01
+Mode                                18                  19                  20
+Irrep
+Freq [cm^-1]                      989.1050           1012.1708           1039.7880
+Reduced mass [au]                   1.4157              5.6635              1.9824
+Force const [Dyne/A]                0.8160              3.4185              1.2628
+Char temp [K]                    1423.1018           1456.2884           1496.0234
+Normal mode                   x     y     z       x     y     z       x     y     z
+       0   C                 0.04  0.03  0.07    0.01  0.04 -0.02   -0.04 -0.09  0.05
+       1   H                -0.20 -0.13 -0.37    0.06  0.03 -0.04   -0.30 -0.05  0.18
+       2   C                -0.04 -0.03 -0.08    0.10 -0.08 -0.02    0.09 -0.07 -0.02
+       3   H                 0.22  0.15  0.42    0.10 -0.09 -0.03    0.10 -0.08 -0.02
+       4   C                 0.03  0.02  0.06   -0.03 -0.02  0.02    0.07  0.07 -0.06
+       5   H                -0.17 -0.12 -0.33    0.00 -0.08  0.03   -0.05  0.34 -0.10
+       6   C                -0.01 -0.01 -0.03    0.01  0.15 -0.06   -0.04  0.02  0.02
+       7   H                 0.08  0.05  0.15    0.07  0.14 -0.09   -0.28  0.06  0.12
+       8   C                 0.01  0.00  0.01    0.02 -0.01  0.00   -0.01  0.00 -0.00
+       9   C                -0.02 -0.01 -0.04   -0.12 -0.07  0.08   -0.02  0.04  0.00
+      10   H                 0.09  0.07  0.18   -0.09 -0.13  0.10   -0.14  0.26 -0.03
+      11   C                -0.01 -0.01 -0.01   -0.00 -0.01 -0.01    0.01 -0.00 -0.01
+      12   H                -0.00  0.02 -0.04    0.00  0.02 -0.04    0.02 -0.02 -0.01
+      13   H                 0.03 -0.01  0.00    0.01  0.00  0.02    0.01 -0.01 -0.02
+      14   C                 0.01  0.00  0.01    0.01  0.00  0.01   -0.00 -0.00  0.00
+      15   N                -0.00  0.00  0.01   -0.00  0.00  0.01   -0.00  0.00  0.00
+Mode                                21                  22                  23
+Irrep
+Freq [cm^-1]                     1084.3496           1146.4894           1166.5514
+Reduced mass [au]                   1.3979              1.0650              1.1031
+Force const [Dyne/A]                0.9684              0.8248              0.8844
+Char temp [K]                    1560.1376           1649.5430           1678.4078
+Normal mode                   x     y     z       x     y     z       x     y     z
+       0   C                -0.01  0.05 -0.01   -0.03  0.00  0.01    0.04  0.00 -0.02
+       1   H                -0.23  0.10  0.08   -0.38  0.07  0.17    0.42 -0.07 -0.19
+       2   C                -0.03 -0.04  0.03    0.03  0.04 -0.03    0.01 -0.01 -0.00
+       3   H                -0.19 -0.29  0.21    0.33  0.51 -0.36   -0.01 -0.04  0.02
+       4   C                 0.05  0.00 -0.03    0.01 -0.03  0.00    0.01 -0.04  0.01
+       5   H                 0.16 -0.22 -0.01    0.20 -0.42  0.04    0.17 -0.38  0.05
+       6   C                -0.04  0.07 -0.00    0.00 -0.02  0.00   -0.04  0.00  0.02
+       7   H                -0.37  0.14  0.14   -0.15  0.01  0.07   -0.45  0.08  0.21
+       8   C                -0.02 -0.02  0.02   -0.00 -0.01  0.00    0.01 -0.01 -0.00
+       9   C                 0.07 -0.02 -0.03   -0.01  0.00  0.01   -0.01  0.04 -0.01
+      10   H                 0.25 -0.37  0.01    0.04 -0.10  0.02   -0.21  0.45 -0.05
+      11   C                 0.02  0.02 -0.01   -0.00 -0.00  0.00   -0.00  0.00  0.00
+      12   H                 0.01 -0.04  0.03   -0.01  0.01 -0.00    0.00  0.00 -0.00
+      13   H                 0.01 -0.01 -0.10   -0.00  0.00  0.01   -0.03  0.02  0.02
+      14   C                -0.00 -0.01  0.00    0.00  0.00  0.00    0.00  0.00 -0.00
+      15   N                -0.00  0.00  0.00   -0.00 -0.00 -0.00    0.00 -0.00 -0.00
+Mode                                24                  25                  26
+Irrep
+Freq [cm^-1]                     1216.8863           1226.0947           1305.7796
+Reduced mass [au]                   1.2734              1.7833              1.4275
+Force const [Dyne/A]                1.1110              1.5795              1.4341
+Char temp [K]                    1750.8285           1764.0772           1878.7262
+Normal mode                   x     y     z       x     y     z       x     y     z
+       0   C                 0.02 -0.02 -0.00   -0.00  0.06 -0.02   -0.04 -0.02  0.03
+       1   H                 0.04 -0.03 -0.01   -0.17  0.10  0.06    0.32 -0.09 -0.13
+       2   C                 0.00 -0.01  0.00   -0.00 -0.00  0.00   -0.01 -0.02  0.01
+       3   H                 0.01  0.00 -0.01   -0.01 -0.01  0.00    0.10  0.15 -0.11
+       4   C                 0.02  0.02 -0.02   -0.05 -0.00  0.03    0.02 -0.04  0.00
+       5   H                 0.11 -0.14  0.00   -0.12  0.13  0.02   -0.10  0.22 -0.02
+       6   C                -0.00  0.03 -0.01    0.03 -0.01 -0.02    0.01 -0.01 -0.01
+       7   H                 0.23 -0.01 -0.11   -0.11  0.02  0.08   -0.30  0.05  0.15
+       8   C                -0.08  0.01  0.06    0.13 -0.10  0.01    0.02  0.10 -0.03
+       9   C                -0.01  0.03 -0.01    0.02 -0.02 -0.01   -0.03  0.04  0.00
+      10   H                -0.04  0.11 -0.01   -0.06  0.18 -0.02    0.18 -0.39  0.06
+      11   C                 0.03  0.00 -0.00   -0.03  0.03 -0.03    0.05 -0.06 -0.04
+      12   H                -0.24  0.12  0.33   -0.41  0.29  0.37   -0.23  0.19  0.21
+      13   H                 0.41 -0.29 -0.47   -0.08  0.04 -0.04    0.00 -0.01  0.02
+      14   C                -0.03 -0.05 -0.00   -0.02 -0.02 -0.01   -0.02  0.00 -0.00
+      15   N                 0.00  0.01  0.00    0.00  0.00 -0.00    0.00 -0.00  0.01
+Mode                                27                  28                  29
+Irrep
+Freq [cm^-1]                     1338.2401           1362.3540           1430.9444
+Reduced mass [au]                   2.3022              3.1859              1.0915
+Force const [Dyne/A]                2.4292              3.4839              1.3168
+Char temp [K]                    1925.4295           1960.1241           2058.8104
+Normal mode                   x     y     z       x     y     z       x     y     z
+       0   C                 0.04  0.01 -0.02    0.09 -0.03 -0.03    0.00 -0.00 -0.00
+       1   H                 0.07  0.00 -0.04   -0.06 -0.01  0.03   -0.02  0.00  0.01
+       2   C                -0.05 -0.06  0.05   -0.03 -0.06  0.04   -0.00  0.01 -0.00
+       3   H                 0.09  0.15 -0.10   -0.00 -0.02  0.01   -0.01 -0.01  0.01
+       4   C                -0.03  0.03  0.01   -0.04  0.10 -0.02   -0.00 -0.00  0.00
+       5   H                -0.10  0.17 -0.01    0.08 -0.15  0.01   -0.00  0.00  0.00
+       6   C                 0.10 -0.01 -0.05    0.06 -0.02 -0.02    0.00 -0.00  0.00
+       7   H                -0.24  0.05  0.09    0.06 -0.02 -0.02   -0.01 -0.00 -0.01
+       8   C                 0.00 -0.07  0.01   -0.07 -0.05  0.06   -0.00  0.01  0.00
+       9   C                -0.03  0.07 -0.01   -0.05  0.09 -0.01   -0.00 -0.01  0.00
+      10   H                 0.06 -0.12  0.01    0.03 -0.06  0.01   -0.00  0.01  0.00
+      11   C                -0.08  0.06  0.07    0.07 -0.04 -0.06    0.03 -0.03  0.07
+      12   H                 0.19 -0.16 -0.17   -0.08  0.08  0.08    0.03  0.54 -0.39
+      13   H                 0.23 -0.13 -0.22   -0.32  0.17  0.24   -0.47 -0.13 -0.47
+      14   C                 0.01 -0.02  0.00   -0.00  0.01 -0.00    0.01 -0.01  0.00
+      15   N                 0.00  0.00 -0.01   -0.00 -0.00  0.01   -0.00  0.00 -0.00
+Mode                                30                  31                  32
+Irrep
+Freq [cm^-1]                     1472.9865           1516.0732           1641.0401
+Reduced mass [au]                   2.5206              2.7628              6.5807
+Force const [Dyne/A]                3.2222              3.7415             10.4415
+Char temp [K]                    2119.2996           2181.2918           2361.0913
+Normal mode                   x     y     z       x     y     z       x     y     z
+       0   C                 0.07 -0.07 -0.01    0.10  0.00 -0.05   -0.04 -0.05  0.04
+       1   H                -0.21 -0.03  0.12   -0.26  0.08  0.10    0.03 -0.08  0.01
+       2   C                 0.04  0.07 -0.05   -0.06  0.04  0.02    0.06  0.12 -0.08
+       3   H                -0.18 -0.27  0.19   -0.06  0.07  0.01   -0.09 -0.11  0.08
+       4   C                -0.08  0.04  0.03    0.03 -0.10  0.02    0.00 -0.11  0.04
+       5   H                 0.03 -0.20  0.06   -0.14  0.24 -0.02   -0.09  0.07  0.02
+       6   C                 0.04 -0.07  0.00    0.06  0.02 -0.04    0.04  0.04 -0.04
+       7   H                -0.15 -0.04  0.09   -0.21  0.09  0.08   -0.05  0.07  0.00
+       8   C                 0.05  0.08 -0.06   -0.09  0.07  0.02   -0.05 -0.10  0.06
+       9   C                -0.07  0.01  0.03   -0.00 -0.08  0.03   -0.01  0.10 -0.03
+      10   H                -0.00 -0.15  0.06   -0.15  0.22 -0.00    0.09 -0.08 -0.01
+      11   C                -0.02 -0.01  0.02    0.03 -0.02 -0.02    0.01  0.01 -0.01
+      12   H                -0.02  0.00  0.02    0.01 -0.03  0.02    0.02 -0.01 -0.01
+      13   H                 0.16 -0.08 -0.07    0.01  0.00  0.04   -0.07  0.03  0.03
+      14   C                -0.00 -0.00  0.00   -0.00  0.00  0.00    0.00 -0.00 -0.00
+      15   N                 0.00  0.00 -0.00   -0.00 -0.00  0.00   -0.00  0.00  0.00
+Mode                                33                  34                  35
+Irrep
+Freq [cm^-1]                     1664.7942           2308.3894           3027.2740
+Reduced mass [au]                   6.7347             12.3777              1.0624
+Force const [Dyne/A]               10.9974             38.8604              5.7365
+Char temp [K]                    2395.2682           3321.2584           4355.5733
+Normal mode                   x     y     z       x     y     z       x     y     z
+       0   C                -0.11  0.04  0.05   -0.00 -0.00  0.00    0.00 -0.00  0.00
+       1   H                 0.11  0.00 -0.06   -0.00  0.00 -0.00   -0.00  0.00 -0.00
+       2   C                 0.06 -0.01 -0.03    0.00  0.00 -0.00    0.00  0.00 -0.00
+       3   H                 0.03 -0.06  0.00   -0.00  0.00  0.00   -0.00  0.00  0.00
+       4   C                -0.08  0.08  0.01   -0.00  0.00  0.00   -0.00 -0.00  0.00
+       5   H                 0.00 -0.10  0.04    0.00  0.00 -0.00    0.02  0.01 -0.01
+       6   C                 0.13 -0.04 -0.05    0.00  0.00 -0.00    0.00  0.00 -0.00
+       7   H                -0.13  0.01  0.07    0.01 -0.00 -0.00    0.00 -0.02  0.00
+       8   C                -0.09  0.04  0.03    0.00 -0.00 -0.00   -0.00 -0.00  0.00
+       9   C                 0.08 -0.09 -0.01   -0.00  0.00 -0.00   -0.00  0.00  0.00
+      10   H                -0.02  0.12 -0.04   -0.00  0.00  0.00    0.01  0.00 -0.00
+      11   C                 0.01 -0.01 -0.01    0.01 -0.00 -0.03    0.04 -0.01  0.05
+      12   H                 0.02 -0.02 -0.00    0.02  0.01 -0.01   -0.65 -0.33 -0.41
+      13   H                -0.01  0.01  0.02   -0.00 -0.04 -0.01    0.11  0.44 -0.18
+      14   C                 0.00  0.00  0.00   -0.06  0.03  0.21   -0.00  0.00  0.01
+      15   N                -0.00 -0.00  0.00    0.05 -0.02 -0.16    0.00 -0.00 -0.01
+Mode                                36                  37                  38
+Irrep
+Freq [cm^-1]                     3068.4850           3309.6339           3318.4164
+Reduced mass [au]                   1.1032              1.0872              1.0895
+Force const [Dyne/A]                6.1200              7.0168              7.0690
+Char temp [K]                    4414.8667           4761.8264           4774.4624
+Normal mode                   x     y     z       x     y     z       x     y     z
+       0   C                 0.00  0.00 -0.00    0.00  0.06 -0.02    0.00  0.01 -0.01
+       1   H                 0.00 -0.00  0.00   -0.02 -0.69  0.26   -0.01 -0.15  0.06
+       2   C                -0.00 -0.00  0.00    0.02 -0.02 -0.01   -0.00  0.00  0.00
+       3   H                -0.00  0.00  0.00   -0.30  0.24  0.07    0.04 -0.03 -0.01
+       4   C                 0.00  0.00 -0.00   -0.02 -0.01  0.01    0.02  0.01 -0.02
+       5   H                -0.01 -0.01  0.01    0.19  0.08 -0.13   -0.29 -0.12  0.19
+       6   C                -0.00 -0.00  0.00    0.00  0.02 -0.01   -0.00 -0.06  0.02
+       7   H                -0.00  0.01 -0.00   -0.01 -0.21  0.08    0.02  0.67 -0.25
+       8   C                 0.00  0.00 -0.00   -0.00  0.00  0.00    0.00  0.00 -0.00
+       9   C                -0.00 -0.00 -0.00   -0.02 -0.01  0.01   -0.03 -0.01  0.02
+      10   H                -0.00 -0.00  0.00    0.25  0.11 -0.17    0.38  0.16 -0.25
+      11   C                 0.04  0.08 -0.01   -0.00  0.00 -0.00   -0.00 -0.00  0.00
+      12   H                -0.37 -0.17 -0.24    0.00  0.00  0.00   -0.00 -0.00 -0.00
+      13   H                -0.17 -0.74  0.31   -0.00 -0.01  0.00    0.00  0.02 -0.01
+      14   C                 0.00 -0.00 -0.01    0.00 -0.00 -0.00   -0.00  0.00  0.00
+      15   N                -0.00  0.00  0.00   -0.00  0.00  0.00    0.00 -0.00 -0.00
+Mode                                39                  40                  41
+Irrep
+Freq [cm^-1]                     3324.4551           3337.4932           3345.3340
+Reduced mass [au]                   1.0928              1.0981              1.0952
+Force const [Dyne/A]                7.1157              7.2063              7.2211
+Char temp [K]                    4783.1507           4801.9097           4813.1909
+Normal mode                   x     y     z       x     y     z       x     y     z
+       0   C                 0.00  0.01 -0.01    0.00  0.05 -0.02   -0.00  0.02 -0.00
+       1   H                -0.01 -0.12  0.04   -0.01 -0.50  0.19   -0.00 -0.18  0.07
+       2   C                -0.04  0.03  0.01   -0.03  0.03  0.01    0.02 -0.02 -0.00
+       3   H                 0.48 -0.39 -0.11    0.38 -0.30 -0.09   -0.25  0.21  0.06
+       4   C                 0.02  0.01 -0.01   -0.01 -0.01  0.01    0.05  0.02 -0.04
+       5   H                -0.26 -0.10  0.17    0.10  0.04 -0.07   -0.61 -0.25  0.41
+       6   C                 0.00  0.04 -0.02   -0.00 -0.02  0.01   -0.00  0.01 -0.00
+       7   H                -0.01 -0.46  0.17    0.01  0.25 -0.09   -0.00 -0.15  0.05
+       8   C                -0.00  0.00  0.00    0.00 -0.00  0.00   -0.00 -0.00  0.00
+       9   C                -0.03 -0.01  0.02    0.04  0.01 -0.03    0.03  0.01 -0.02
+      10   H                 0.30  0.13 -0.20   -0.42 -0.17  0.28   -0.29 -0.12  0.20
+      11   C                -0.00  0.00 -0.00    0.00 -0.00  0.00    0.00 -0.00  0.00
+      12   H                 0.00  0.00  0.00   -0.01 -0.00 -0.00   -0.01 -0.00 -0.01
+      13   H                 0.00 -0.00  0.00    0.00  0.01 -0.00    0.00  0.02 -0.01
+      14   C                 0.00 -0.00  0.00   -0.00  0.00  0.00   -0.00  0.00  0.00
+      15   N                 0.00  0.00 -0.00    0.00 -0.00 -0.00    0.00 -0.00 -0.00
+temperature 298.1500 [K]
+pressure 101325.00 [Pa]
+Rotational constants [GHz] 4.10207 1.01424 0.87350
+Symmetry number 1
+Zero-point energy (ZPE) 0.12848 [Eh]   337333.647 [J/mol]
+                           tot       elec      trans        rot        vib
+Entropy [J/mol/K]       352.838      0.000    168.154    120.798     63.886
+Cv [J/mol/K]            117.595      0.000     12.472     12.472     92.651
+Cp [J/mol/K]            125.909      0.000     20.786     12.472     92.651
+Internal energy [J/mol]                      3718.434   3718.434 348839.169
+Internal energy [Eh]   -362.96652  -363.10222
+Enthalpy [J/mol]                             6197.391   3718.434 348839.169
+Enthalpy [Eh]          -362.96558
+Gibbs free energy [J/mol]                  -43937.803 -32297.415 329791.550
+Gibbs free energy [Eh] -363.00564
+>>>>>>> 3ca1dc8 (asdf)

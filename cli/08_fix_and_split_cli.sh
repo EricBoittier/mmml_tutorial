@@ -9,5 +9,5 @@ cd "$SCRIPT_DIR"
 
 echo "=== 08: fix-and-split (train/valid/test) ==="
 echo "Command: uv run mmml fix-and-split --efd out/07_evaluated.npz --output-dir out/splits"
-uv run mmml fix-and-split --efd out/07_evaluated.npz --output-dir out/splits --atomic-ref pbe0/def2-tzvp
+mmml fix-and-split --efd out/07_evaluated.npz --output-dir out/splits --atomic-ref pbe0/def2-tzvp
 echo "Output: out/splits/energies_forces_dipoles_{train,valid,test}.npz, grids_esp_{train,valid,test}.npz"
