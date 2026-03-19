@@ -6,9 +6,13 @@
 set -e
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
-cd "$REPO_ROOT"
+cd "$REPO_ROOT/examples/mmml_tutorial"
 
 echo "=== 13: PhysNet MD sampling (ASE + JAX-MD) ==="
-echo "Command: uv run python examples/mmml_tutorial/programmatic/13_physnet_md_programmatic.py"
-uv run python examples/mmml_tutorial/programmatic/13_physnet_md_programmatic.py
-echo "Output: programmatic/out/13_physnet_ase.traj, 13_physnet_ase_final.xyz, 13_physnet_jaxmd.xyz"
+echo "Command: uv run mmml physnet-md --checkpoint examples/mmml_tutorial/cli/out/ckpts/cybz_physnet --data examples/mmml_tutorial/cli/out/splits/energies_forces_dipoles_train.npz -o examples/mmml_tutorial/programmatic/out"
+cd "$SCRIPT_DIR"
+uv run mmml physnet-md \
+  --checkpoint cli/out/ckpts/cybz_physnet \
+  --data cli/out/splits/energies_forces_dipoles_train.npz \
+  -o programmatic/out
+echo "Output: programmatic/out/physnet_ase.traj, physnet_ase_final.xyz, physnet_jaxmd.xyz"
