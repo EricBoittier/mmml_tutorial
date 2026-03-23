@@ -9,5 +9,5 @@ cd "$SCRIPT_DIR"
 
 echo "=== 06: Normal mode sampling ==="
 echo "Command: uv run mmml normal-mode-sample -i out/04_results.h5 -o out/06_sampled.npz --amplitude 0.1 --max-samples 10"
-uv run mmml normal-mode-sample -i out/04_results.h5 -o out/06_sampled.npz --amplitude 0.1 --max-samples 1000
+uv run mmml normal-mode-sample -i out/04_results.h5 -o out/06_sampled.npz --amplitude 0.75 --max-samples 1000
 echo "Output: out/06_sampled.npz (R, Z, N)"
