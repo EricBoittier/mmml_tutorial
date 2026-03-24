@@ -1,0 +1,25 @@
+# Shared defaults for mmml_tutorial/cli scripts.
+#
+# Usage: run scripts from this directory (examples/mmml_tutorial/cli), e.g.
+#   cd examples/mmml_tutorial/cli
+#   bash 09_physnet_train_cli.sh
+#
+# Scripts that need these values: source ./shared.source
+#
+# Override any variable before sourcing, or export in your shell.
+
+PHYSNET_TRAINER="${PHYSNET_TRAINER:-$HOME/mmml/examples/other/co2/physnet_train/trainer.py}"
+PHYSNET_CKPT_DIR="${PHYSNET_CKPT_DIR:-$HOME/ckpts}"
+PHYSNET_NAME="${PHYSNET_NAME:-cybz_physnet}"
+PHYSNET_CHECKPOINT="${PHYSNET_CHECKPOINT:-$PHYSNET_CKPT_DIR/cybz_physnet-145ff5d7-02fb-4cae-8c2e-a5633fd1c4af}"
+
+PHYSNET_NATOMS="${PHYSNET_NATOMS:-16}"
+PHYSNET_EPOCHS="${PHYSNET_EPOCHS:-1000}"
+PHYSNET_BATCH="${PHYSNET_BATCH:-1}"
+
+PHYSNET_TRAIN_NPZ="${PHYSNET_TRAIN_NPZ:-out/splits/energies_forces_dipoles_train.npz}"
+PHYSNET_VALID_NPZ="${PHYSNET_VALID_NPZ:-out/splits/energies_forces_dipoles_valid.npz}"
+
+PHYSNET_MD_OUT="${PHYSNET_MD_OUT:-out/physnet_md}"
+PHYSNET_MD_TRAJ="${PHYSNET_MD_TRAJ:-$PHYSNET_MD_OUT/physnet_ase.traj}"
+ACTIVE_LEARNING_OUT="${ACTIVE_LEARNING_OUT:-out/activate_learning.npz}"

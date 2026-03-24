@@ -1,22 +1,23 @@
 #!/usr/bin/env bash
 # Example: Train PhysNet on energies, forces, dipoles (section 03 – PhysNet)
-# Run from project root: bash examples/mmml_tutorial/cli/09_physnet_train_cli.sh
-# Requires: Step 08 run first (out/splits/).
+# Run from this directory: cd examples/mmml_tutorial/cli && bash 09_physnet_train_cli.sh
+# Requires: Step 08 run first (out/splits/). Edit shared.source for trainer path and ckpt dir.
 
 set -e
-SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+. ./shared.source
 
 echo "=== 09: PhysNet training ==="
-echo "Command: python trainer.py --train examples/mmml_tutorial/cli/out/splits/energies_forces_dipoles_train.npz --valid examples/mmml_tutorial/cli/out/splits/energies_forces_dipoles_valid.npz --natoms 16 --epochs 50 --batch-size 1 --name cybz_physnet --ckpt-dir examples/mmml_tutorial/cli/out/ckpts"
-cd "$SCRIPT_DIR"
-python ~/mmml/examples/other/co2/physnet_train/trainer.py \
-  --train out/splits/energies_forces_dipoles_train.npz \
-  --valid out/splits/energies_forces_dipoles_valid.npz \
-  --natoms 16 \
-  --epochs 1000 \
-  --batch-size 1 \
+echo "Command: python \"\$PHYSNET_TRAINER\" --train \"\$PHYSNET_TRAIN_NPZ\" --valid \"\$PHYSNET_VALID_NPZ\" --natoms \$PHYSNET_NATOMS --epochs \$PHYSNET_EPOCHS ..."
+
+python "$PHYSNET_TRAINER" \
+  --train "$PHYSNET_TRAIN_NPZ" \
+  --valid "$PHYSNET_VALID_NPZ" \
+  --natoms "$PHYSNET_NATOMS" \
+  --epochs "$PHYSNET_EPOCHS" \
+  --batch-size "$PHYSNET_BATCH" \
   --charges \
   --zbl \
-  --name cybz_physnet \
-  --ckpt-dir ~/ckpts
-echo "Output: examples/mmml_tutorial/cli/out/ckpts/cybz_physnet/"
+  --name "$PHYSNET_NAME" \
+  --ckpt-dir "$PHYSNET_CKPT_DIR"
+
+echo "Output: $PHYSNET_CKPT_DIR/$PHYSNET_NAME/ (checkpoint run id may include a UUID suffix)"

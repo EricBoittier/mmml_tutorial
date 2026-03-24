@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 # Full training workflow: 1000 structures -> split -> PhysNet -> PhysNet+DCMNet
-# Run from project root: bash examples/mmml_tutorial/cli/run_full_training.sh
+# Run from this directory: cd examples/mmml_tutorial/cli && bash run_full_training.sh
 # Requires: Steps 01-04 run first (make_res, make_box, pyscf-dft full).
 
 set -e
-SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-cd "$SCRIPT_DIR"
+PHYSNET_EPOCHS=50
+PHYSNET_CKPT_DIR=out/ckpts
+. ./shared.source
 
 echo "=== Full training workflow (1000 structures) ==="
 echo ""
@@ -26,25 +27,21 @@ uv run mmml fix-and-split --efd out/07_evaluated.npz --output-dir out/splits
 
 echo ""
 echo "--- 09: PhysNet training ---"
-REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
-cd "$REPO_ROOT"
-uv run python examples/other/co2/physnet_train/trainer.py \
-  --train examples/mmml_tutorial/cli/out/splits/energies_forces_dipoles_train.npz \
-  --valid examples/mmml_tutorial/cli/out/splits/energies_forces_dipoles_valid.npz \
-  --natoms 16 \
-  --epochs 50 \
-  --batch-size 1 \
-  --name cybz_physnet \
-  --ckpt-dir examples/mmml_tutorial/cli/out/ckpts \
+uv run python "$PHYSNET_TRAINER" \
+  --train "$PHYSNET_TRAIN_NPZ" \
+  --valid "$PHYSNET_VALID_NPZ" \
+  --natoms "$PHYSNET_NATOMS" \
+  --epochs "$PHYSNET_EPOCHS" \
+  --batch-size "$PHYSNET_BATCH" \
+  --name "$PHYSNET_NAME" \
+  --ckpt-dir "$PHYSNET_CKPT_DIR" \
   --charges
 
 echo ""
 echo "--- 10: PhysNet+DCMNet joint training ---"
-cd "$SCRIPT_DIR"
-# Load PhysNet from step 09 if available (latest cybz_physnet-* dir)
-PHYSNET_CKPT=$(ls -d out/ckpts/cybz_physnet-* 2>/dev/null | tail -1)
 PHYSNET_ARG=""
-if [ -n "$PHYSNET_CKPT" ] && [ -d "$PHYSNET_CKPT" ]; then
+if ls -d out/ckpts/"$PHYSNET_NAME"-* >/dev/null 2>&1; then
+  PHYSNET_CKPT=$(ls -d out/ckpts/"$PHYSNET_NAME"-* 2>/dev/null | tail -1)
   PHYSNET_ARG="--physnet-checkpoint $PHYSNET_CKPT"
   echo "Using PhysNet checkpoint: $PHYSNET_CKPT"
 fi
@@ -61,5 +58,5 @@ uv run python -m mmml.cli.misc.train_joint \
 
 echo ""
 echo "=== Full training workflow complete ==="
-echo "  PhysNet: out/ckpts/cybz_physnet/"
+echo "  PhysNet: out/ckpts/$PHYSNET_NAME/"
 echo "  PhysNet+DCMNet: out/ckpts/cybz_joint/"

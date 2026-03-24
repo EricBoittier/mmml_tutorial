@@ -1,22 +1,22 @@
 #!/usr/bin/env bash
-# Example: Train PhysNet on energies, forces, dipoles (section 03 – PhysNet)
-# Run from project root: bash examples/mmml_tutorial/cli/09_physnet_train_cli.sh
-# Requires: Step 08 run first (out/splits/).
+# Example: PhysNet retrain with multiple extended splits (section 03 – PhysNet)
+# Run from this directory: cd examples/mmml_tutorial/cli && bash 15.1_physnet_retrain_cli.sh
+# Requires: splits_extended/, splits_extended2/. Edit shared.source for trainer and checkpoint.
 
 set -e
-SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-cd "$SCRIPT_DIR"
+. ./shared.source
 
-echo "=== 09: PhysNet training ==="
-echo "Command: python trainer.py --train examples/mmml_tutorial/cli/out/splits/energies_forces_dipoles_train.npz --valid examples/mmml_tutorial/cli/out/splits/energies_forces_dipoles_valid.npz --natoms 16 --epochs 50 --batch-size 1 --name cybz_physnet --ckpt-dir examples/mmml_tutorial/cli/out/ckpts"
-cd "$REPO_ROOT"
-python ~/mmml/examples/other/co2/physnet_train/trainer.py \
+echo "=== 15.1: PhysNet retrain (multi extended splits) ==="
+
+python "$PHYSNET_TRAINER" \
   --train out/splits/energies_forces_dipoles_train.npz splits_extended/energies_forces_dipoles_train.npz splits_extended2/energies_forces_dipoles_train.npz \
   --valid out/splits/energies_forces_dipoles_valid.npz splits_extended/energies_forces_dipoles_valid.npz splits_extended2/energies_forces_dipoles_valid.npz \
-  --natoms 16 \
-  --batch-size 1 \
+  --natoms "$PHYSNET_NATOMS" \
+  --batch-size "$PHYSNET_BATCH" \
   --epochs 1500 \
-  --charges  --name cybz_physnet \
-  --ckpt-dir ~/ckpts --restart ~/ckpts/cybz_physnet-145ff5d7-02fb-4cae-8c2e-a5633fd1c4af 
+  --charges \
+  --name "$PHYSNET_NAME" \
+  --ckpt-dir "$PHYSNET_CKPT_DIR" \
+  --restart "$PHYSNET_CHECKPOINT"
 
-echo "Output: examples/mmml_tutorial/cli/out/ckpts/cybz_physnet/"
+echo "Output: $PHYSNET_CKPT_DIR/$PHYSNET_NAME/"
