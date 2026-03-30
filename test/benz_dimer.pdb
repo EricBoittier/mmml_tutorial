@@ -1,0 +1,28 @@
+REMARK  EXECUTING CHARMM SCRIPT FROM PYTHON                                           
+REMARK   DATE:     3/27/26     12:38:50      CREATED BY USER: ericb                   
+ATOM      1  CG  BENZ    1      -1.298  -8.273  -3.966  1.00  0.00      BENZ
+ATOM      2  HG  BENZ    1      -0.601  -9.077  -3.797  1.00  0.00      BENZ
+ATOM      3  CD1 BENZ    1      -2.242  -8.366  -5.000  1.00  0.00      BENZ
+ATOM      4  HD1 BENZ    1      -2.270  -9.245  -5.626  1.00  0.00      BENZ
+ATOM      5  CD2 BENZ    1      -1.262  -7.132  -3.154  1.00  0.00      BENZ
+ATOM      6  HD2 BENZ    1      -0.536  -7.058  -2.356  1.00  0.00      BENZ
+ATOM      7  CE1 BENZ    1      -3.149  -7.322  -5.214  1.00  0.00      BENZ
+ATOM      8  HE1 BENZ    1      -3.882  -7.395  -6.011  1.00  0.00      BENZ
+ATOM      9  CE2 BENZ    1      -2.170  -6.083  -3.373  1.00  0.00      BENZ
+ATOM     10  HE2 BENZ    1      -2.146  -5.207  -2.745  1.00  0.00      BENZ
+ATOM     11  CZ  BENZ    1      -3.114  -6.181  -4.403  1.00  0.00      BENZ
+ATOM     12  HZ  BENZ    1      -3.822  -5.380  -4.562  1.00  0.00      BENZ
+ATOM     13  CG  BENZ    1      -5.644  -7.084  -1.885  1.00  0.00      BENZ
+ATOM     14  HG  BENZ    1      -5.272  -8.092  -1.797  1.00  0.00      BENZ
+ATOM     15  CD1 BENZ    1      -6.828  -6.828  -2.591  1.00  0.00      BENZ
+ATOM     16  HD1 BENZ    1      -7.373  -7.647  -3.041  1.00  0.00      BENZ
+ATOM     17  CD2 BENZ    1      -4.937  -6.024  -1.300  1.00  0.00      BENZ
+ATOM     18  HD2 BENZ    1      -4.023  -6.220  -0.761  1.00  0.00      BENZ
+ATOM     19  CE1 BENZ    1      -7.304  -5.518  -2.712  1.00  0.00      BENZ
+ATOM     20  HE1 BENZ    1      -8.219  -5.322  -3.256  1.00  0.00      BENZ
+ATOM     21  CE2 BENZ    1      -5.412  -4.709  -1.425  1.00  0.00      BENZ
+ATOM     22  HE2 BENZ    1      -4.864  -3.894  -0.978  1.00  0.00      BENZ
+ATOM     23  CZ  BENZ    1      -6.595  -4.457  -2.132  1.00  0.00      BENZ
+ATOM     24  HZ  BENZ    1      -6.962  -3.445  -2.227  1.00  0.00      BENZ
+TER      25      BENZ     1
+END
