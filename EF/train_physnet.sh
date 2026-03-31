@@ -1,0 +1,1 @@
+ python ~/mmml/examples/other/co2/physnet_train/trainer.py   --train out/splits/energies_forces_dipoles_train.npz   --valid out/splits/energies_forces_dipoles_valid.npz    --epochs 1000   --batch-size 1   --charges   --zbl   --name physnet --natoms 13
