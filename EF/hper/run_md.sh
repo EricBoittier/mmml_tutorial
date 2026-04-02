@@ -22,7 +22,23 @@ extra=3
 
 
 uuid=30b3a438-c568-4670-bc4c-0f4b78b655a4
+uuid=9ae5fddb-f1b2-4ab4-953b-c3f7f97d3639
 extra="0ef0"
 ell=0
+uuid=bce45991-ffe5-4f4b-b4c6-1d6584a809e0
+extra="0"
+
+#uuid=451cfa65-55ac-4c90-a0a3-afb57bc3cc44
+#ell=1
+#extra="1ef0"
+
+#uuid=cc27f596-4003-470f-b119-3218f6c9abad
+
+uuid=1b81054f-fdbd-46ef-8c2e-e7308a557727
+ell=4
+
 params=/mmhome/boittier/home/ckpts/ef_run$ell/params-$uuid.json
-mmml ef-md --params $params --data $data -b ase --dt 0.5 --n-replicas 10 --steps 2000000 --output md$extra.traj --temperature 100.0
+#params=/mmhome/boittier/home/ckpts/ef0_run$ell/params-$uuid.json
+data=out/splits_ef_sim/energies_forces_dipoles_test.npz
+
+mmml ef-md --params $params --data $data -b ase --dt 0.5 --n-replicas 10 --steps 2000000 --output md$extra.traj #--temperature 100.0
