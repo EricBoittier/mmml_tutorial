@@ -1,0 +1,92 @@
+#INFO: **** input file is /mmhome/boittier/home/mmml/.venv/bin/mmml ****
+#!/mmhome/boittier/home/mmml/.venv/bin/python3
+# -*- coding: utf-8 -*-
+import sys
+from mmml.cli.__main__ import main
+if __name__ == "__main__":
+    if sys.argv[0].endswith("-script.pyw"):
+        sys.argv[0] = sys.argv[0][:-11]
+    elif sys.argv[0].endswith(".exe"):
+        sys.argv[0] = sys.argv[0][:-4]
+    sys.exit(main())
+#INFO: ******************** input file end ********************
+
+
+System: uname_result(system='Linux', node='gpu09', release='5.15.0-118-generic', version='#128-Ubuntu SMP Fri Jul 5 09:28:59 UTC 2024', machine='x86_64')  Threads 32
+Python 3.13.12 | packaged by conda-forge | (main, Feb  5 2026, 05:53:46) [GCC 14.3.0]
+numpy 2.4.3  scipy 1.17.1  h5py 3.16.0
+Date: Tue Apr 21 11:43:27 2026
+PySCF version 2.12.1
+PySCF path  /mmhome/boittier/home/mmml/.venv/lib/python3.13/site-packages/pyscf/__init__.py
+CUDA Environment
+    CuPy 14.0.1
+    CUDA Path None
+    CUDA Build Version 12090
+    CUDA Driver Version 13000
+    CUDA Runtime Version 12090
+CUDA toolkit
+    cuSolver (11, 7, 5)
+    cuBLAS 120902
+    cuTENSOR None
+Device info
+    Device name b'NVIDIA GeForce RTX 5090'
+    Device global memory 31.36 GB
+    CuPy memory fraction 0.9
+    Num. Devices 2
+GPU4PySCF 1.6.1
+GPU4PySCF path  /mmhome/boittier/home/mmml/.venv/lib/python3.13/site-packages/gpu4pyscf
+
+[CONFIG] conf_file None
+[INPUT] verbose = 6
+[INPUT] max_memory = 4000 
+[INPUT] num. atoms = 15
+[INPUT] num. electrons = 40
+[INPUT] charge = 0
+[INPUT] spin (= nelec alpha-beta = 2S) = 0
+[INPUT] symmetry False subgroup None
+[INPUT] Mole.unit = Ang
+[INPUT] Symbol           X                Y                Z      unit          X                Y                Z       unit  Magmom
+[INPUT]  1 C      1.734320100000   1.286228790000   0.376821430000 AA    3.277390001328   2.430620146631   0.712089300567 Bohr   0.0
+[INPUT]  2 H      2.543116070000   1.334046890000  -0.366838610000 AA    4.805792875280   2.520983259428  -0.693224504816 Bohr   0.0
+[INPUT]  3 H      1.956585710000   2.062808990000   1.125404100000 AA    3.697411131138   3.898144038391   2.126705528463 Bohr   0.0
+[INPUT]  4 C      0.427584240000   1.497442240000  -0.330728050000 AA    0.808017108780   2.829755720955  -0.624985436211 Bohr   0.0
+[INPUT]  5 H      0.386334720000   1.189483930000  -1.389150610000 AA    0.730066813211   2.247798857271  -2.625114198672 Bohr   0.0
+[INPUT]  6 H      0.204371520000   2.572454000000  -0.309516500000 AA    0.386206200461   4.861233528042  -0.584901416034 Bohr   0.0
+[INPUT]  7 C     -0.478839610000   0.353004900000   0.017775830000 AA   -0.904875720494   0.667082581629   0.033591450337 Bohr   0.0
+[INPUT]  8 H     -1.131291080000   0.988333940000   0.640286030000 AA   -2.137830308363   1.867680466212   1.209965238085 Bohr   0.0
+[INPUT]  9 H     -1.126874040000  -0.158377960000  -0.705833140000 AA   -2.129483312482  -0.299290968567  -1.333831324242 Bohr   0.0
+[INPUT] 10 C      0.267695500000  -0.565509720000   0.940712560000 AA    0.505871179779  -1.068658491579   1.777689100338 Bohr   0.0
+[INPUT] 11 H     -0.356765730000  -0.995528860000   1.733915240000 AA   -0.674189520331  -1.881276894500   3.276624926809 Bohr   0.0
+[INPUT] 12 H      0.665376870000  -1.411914980000   0.354263670000 AA    1.257380053920  -2.668132623371   0.669461312183 Bohr   0.0
+[INPUT] 13 C      1.635503420000   0.011254360000   1.162614930000 AA    3.090653539590   0.021267658107   2.197023806030 Bohr   0.0
+[INPUT] 14 H      2.547505660000  -0.583323290000   1.019664430000 AA    4.814087998179  -1.102321260180   1.926886511661 Bohr   0.0
+[INPUT] 15 H      1.550618970000   0.193970800000   2.247636170000 AA    2.930245176855   0.366551688163   4.247416788966 Bohr   0.0
+[INPUT] ---------------- BASIS SET ---------------- 
+[INPUT] l, kappa, [nprim/nctr], expnt,             c_1 c_2 ...
+[INPUT] C
+[INPUT] 0    0    [5    /1   ]  1238.4016938      0.0054568832082
+                                186.29004992      0.040638409211
+                                42.251176346      0.18025593888
+                                11.676557932      0.46315121755
+                                3.5930506482      0.44087173314
+[INPUT] 0    0    [1    /1   ]  0.40245147363        1
+[INPUT] 0    0    [1    /1   ]  0.13090182668        1
+[INPUT] 1    0    [3    /1   ]  9.4680970621      0.038387871728
+                                2.0103545142      0.21117025112
+                                0.54771004707     0.51328172114
+[INPUT] 1    0    [1    /1   ]  0.15268613795        1
+[INPUT] 2    0    [1    /1   ]  0.8                  1
+[INPUT] H
+[INPUT] 0    0    [3    /1   ]  13.010701         0.019682158
+                                1.9622572         0.13796524
+                                0.44453796        0.47831935
+[INPUT] 0    0    [1    /1   ]  0.12194962           1
+[INPUT] 1    0    [1    /1   ]  0.8                  1
+
+nuclear repulsion = 189.93340608424
+number of shells = 60
+number of NR pGTOs = 190
+number of NR cGTOs = 120
+basis = def2-SVP
+ecp = {}
+CPU time:         4.83

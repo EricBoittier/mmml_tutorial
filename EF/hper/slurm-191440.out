@@ -1,0 +1,156 @@
+Wed Apr  8 16:50:47 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.107.02             Driver Version: 550.107.02     CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 3080        On  |   00000000:03:00.0 Off |                  N/A |
+| 30%   33C    P8             22W /  320W |       2MiB /  10240MiB |      0%   E. Process |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Command: uv run mmml pyscf-dft --mol xyz/initial.xyz --energy --gradient --hessian --harmonic --thermo --output out/04_results
+/mmhome/boittier/home/mmml/.venv/lib/python3.13/site-packages/gpu4pyscf/lib/cutensor.py:154: UserWarning: using cupy as the tensor contraction engine.
+  warnings.warn(f'using {contract_engine} as the tensor contraction engine.')
+mol: hyper_a.xyz
+output: out/hyper_a.npz
+log_file: pyscf.log
+monomer_a: 
+monomer_b: 
+basis: def2-SVP
+xc: PBE0
+spin: 0
+charge: 0
+energy: True
+optimize: False
+gradient: False
+hessian: False
+harmonic: False
+thermo: False
+interaction: False
+dens_esp: False
+ir: False
+shielding: False
+polarizability: True
+ir_efield: False
+efield_points: 0,0,0
+efield_fd_axis: 2
+efield_scf: False
+efield_scf_no_forces: False
+efield_dipole_unit: DEBYE
+efield_include_nuclear_energy: True
+save_option: hdf5
+output file: ./pyscf.log
+Traceback (most recent call last):
+  File "/mmhome/boittier/home/mmml/.venv/bin/mmml", line 10, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/mmhome/boittier/home/mmml/mmml/cli/__main__.py", line 154, in main
+    return pyscf_dft.main()
+           ~~~~~~~~~~~~~~^^
+  File "/mmhome/boittier/home/mmml/mmml/cli/misc/pyscf_dft.py", line 45, in main
+    output = compute_dft(args, calcs, extra)
+  File "/mmhome/boittier/home/mmml/mmml/interfaces/pyscf4gpuInterface/calcs.py", line 87, in compute_dft
+    engine, mol = setup_mol(args.mol, args.basis, args.xc, args.spin, args.charge)
+                  ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mmhome/boittier/home/mmml/mmml/interfaces/pyscf4gpuInterface/calcs.py", line 59, in setup_mol
+    mol = pyscf.M(
+    atom=atoms,                         # water molecule
+    ...<4 lines>...
+    verbose=verbose                          # control the level of print info
+    )
+  File "/mmhome/boittier/home/mmml/.venv/lib/python3.13/site-packages/pyscf/__init__.py", line 112, in M
+    return gto.M(**kwargs)
+           ~~~~~^^^^^^^^^^
+  File "/mmhome/boittier/home/mmml/.venv/lib/python3.13/site-packages/pyscf/gto/mole.py", line 117, in M
+    mol.build(*args, **kwargs)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/mmhome/boittier/home/mmml/.venv/lib/python3.13/site-packages/pyscf/gto/mole.py", line 2555, in build
+    self._atom = self.format_atom(self.atom, unit=self.unit)
+                 ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mmhome/boittier/home/mmml/.venv/lib/python3.13/site-packages/pyscf/gto/mole.py", line 390, in format_atom
+    fmt_atoms = from_zmatrix('\n'.join(fmt_atoms))
+  File "/mmhome/boittier/home/mmml/.venv/lib/python3.13/site-packages/pyscf/gto/mole.py", line 4083, in from_zmatrix
+    atoms = list(zip([_atom_symbol(x) for x in symbols], coord))
+                      ~~~~~~~~~~~~^^^
+  File "/mmhome/boittier/home/mmml/.venv/lib/python3.13/site-packages/pyscf/data/elements.py", line 1218, in _atom_symbol
+    raise RuntimeError('Unsupported atom symbol %s' % a)
+RuntimeError: Unsupported atom symbol HYPER_A.XYZ
+Output: out/04_results.npz and .h5
+Command: uv run mmml pyscf-dft --mol xyz/initial.xyz --energy --gradient --hessian --harmonic --thermo --output out/04_results
+/mmhome/boittier/home/mmml/.venv/lib/python3.13/site-packages/gpu4pyscf/lib/cutensor.py:154: UserWarning: using cupy as the tensor contraction engine.
+  warnings.warn(f'using {contract_engine} as the tensor contraction engine.')
+mol: hyper_b.xyz
+output: out/hyper_b.npz
+log_file: pyscf.log
+monomer_a: 
+monomer_b: 
+basis: def2-SVP
+xc: PBE0
+spin: 0
+charge: 0
+energy: True
+optimize: False
+gradient: False
+hessian: False
+harmonic: False
+thermo: False
+interaction: False
+dens_esp: False
+ir: False
+shielding: False
+polarizability: True
+ir_efield: False
+efield_points: 0,0,0
+efield_fd_axis: 2
+efield_scf: False
+efield_scf_no_forces: False
+efield_dipole_unit: DEBYE
+efield_include_nuclear_energy: True
+save_option: hdf5
+overwrite output file: ./pyscf.log
+Traceback (most recent call last):
+  File "/mmhome/boittier/home/mmml/.venv/bin/mmml", line 10, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/mmhome/boittier/home/mmml/mmml/cli/__main__.py", line 154, in main
+    return pyscf_dft.main()
+           ~~~~~~~~~~~~~~^^
+  File "/mmhome/boittier/home/mmml/mmml/cli/misc/pyscf_dft.py", line 45, in main
+    output = compute_dft(args, calcs, extra)
+  File "/mmhome/boittier/home/mmml/mmml/interfaces/pyscf4gpuInterface/calcs.py", line 87, in compute_dft
+    engine, mol = setup_mol(args.mol, args.basis, args.xc, args.spin, args.charge)
+                  ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mmhome/boittier/home/mmml/mmml/interfaces/pyscf4gpuInterface/calcs.py", line 59, in setup_mol
+    mol = pyscf.M(
+    atom=atoms,                         # water molecule
+    ...<4 lines>...
+    verbose=verbose                          # control the level of print info
+    )
+  File "/mmhome/boittier/home/mmml/.venv/lib/python3.13/site-packages/pyscf/__init__.py", line 112, in M
+    return gto.M(**kwargs)
+           ~~~~~^^^^^^^^^^
+  File "/mmhome/boittier/home/mmml/.venv/lib/python3.13/site-packages/pyscf/gto/mole.py", line 117, in M
+    mol.build(*args, **kwargs)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/mmhome/boittier/home/mmml/.venv/lib/python3.13/site-packages/pyscf/gto/mole.py", line 2555, in build
+    self._atom = self.format_atom(self.atom, unit=self.unit)
+                 ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mmhome/boittier/home/mmml/.venv/lib/python3.13/site-packages/pyscf/gto/mole.py", line 390, in format_atom
+    fmt_atoms = from_zmatrix('\n'.join(fmt_atoms))
+  File "/mmhome/boittier/home/mmml/.venv/lib/python3.13/site-packages/pyscf/gto/mole.py", line 4083, in from_zmatrix
+    atoms = list(zip([_atom_symbol(x) for x in symbols], coord))
+                      ~~~~~~~~~~~~^^^
+  File "/mmhome/boittier/home/mmml/.venv/lib/python3.13/site-packages/pyscf/data/elements.py", line 1218, in _atom_symbol
+    raise RuntimeError('Unsupported atom symbol %s' % a)
+RuntimeError: Unsupported atom symbol HYPER_B.XYZ
+Output: out/04_results.npz and .h5

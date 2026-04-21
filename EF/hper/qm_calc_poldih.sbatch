@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#SBATCH --mail-user=ericdavid.boittier@unibas.ch
+#SBATCH --job-name=run
+#SBATCH --nodes=1
+#SBATCH --ntasks=4
+#SBATCH --mem-per-cpu=3000
+#SBATCH --partition=gpu
+#SBATCH --gres=gpu:1
+##SBATCH --nodelist=gpu08
+
+nvidia-smi
+source /mmhome/boittier/home/mmml/.venv/bin/activate
+
+echo "Command: uv run mmml pyscf-dft --mol xyz/initial.xyz --energy --gradient --hessian --harmonic --thermo --output out/04_results"
+mmml pyscf-dft --i dih_scan.npz  --energy --gradient --polarizability  --output out/pol_dih_scan.npz
