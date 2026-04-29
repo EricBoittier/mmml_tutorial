@@ -171,6 +171,26 @@ uv run python examples/other/co2/physnet_train/trainer.py \
 
 Checkpoints: `out/ckpts/cybz_physnet/`.
 
+### Optional: SO(3) rotational augmentation
+
+New augmentation controls are available in batch builders and EF CLI training:
+
+- `--rot-augment`: enable random rotation augmentation
+- `--rot-perturbation`: strength in `[0, 1]` (`1.0` = full random rotations, `0.0` = identity)
+
+Example (EF CLI):
+
+```bash
+mmml ef-train \
+  --train-npz out/splits_ef_sim/energies_forces_dipoles_train.npz \
+  --valid-npz out/splits_ef_sim/energies_forces_dipoles_valid.npz \
+  --rot-augment \
+  --rot-perturbation 1.0 \
+  --output-dir ~/ckpts/ef_run_rotaug
+```
+
+When enabled, positions and vector targets are rotated consistently; scalar targets stay unchanged.
+
 ---
 
 ## 04 – DCMNet
@@ -210,6 +230,16 @@ python train.py model=base training=bootstrap
 See `examples/other/co2/dcmnet_physnet_train/` for joint PhysNet–DCMNet training.
 
 DCMNet predicts monopoles and dipoles per atom for improved ESP and charge fitting.
+
+### Plot and print checkpoint training metrics
+
+For Orbax checkpoint runs, you can now extract and plot training metrics directly from the CLI:
+
+```bash
+mmml extract-checkpoint-metrics /path/to/checkpoint_run_dir -o training_metrics.png --log-loss
+```
+
+This prints a text summary and writes a figure with loss/MAE trends.
 
 ---
 

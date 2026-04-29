@@ -7,6 +7,14 @@
 This document is a practical walkthrough of the scripts in `cli_water/`.
 It is meant as a living tutorial that you can expand while you run the pipeline.
 
+== Recent CLI updates
+
+- EF training now supports rotational augmentation flags:
+  - `--rot-augment`
+  - `--rot-perturbation` (range `0.0` to `1.0`)
+- Orbax checkpoint runs can be summarized/plotted with:
+  - `mmml extract-checkpoint-metrics <run_dir> -o training_metrics.png --log-loss`
+
 == What this tutorial covers
 
 - The script-driven workflow from structure setup to model retraining.
@@ -174,6 +182,13 @@ python "$PHYSNET_TRAINER" \
 Main output:
 - `"$PHYSNET_CKPT_DIR/$PHYSNET_NAME/"` (run directory)
 
+You can analyze Orbax training checkpoints with:
+
+```bash
+mmml extract-checkpoint-metrics "$PHYSNET_CKPT_DIR/$PHYSNET_NAME" \
+  -o physnet_training_metrics.png --log-loss
+```
+
 === Step 10: Joint PhysNet + DCMNet training
 
 Purpose: co-train on E/F/D and ESP grid data.
@@ -192,6 +207,25 @@ python -m mmml.cli.misc.train_joint \
 
 Notes:
 - `run_full_training.sh` can optionally pass `--physnet-checkpoint` if a matching PhysNet run exists.
+- The same checkpoint metrics command can be used for joint training run directories.
+
+=== EF training: rotational augmentation example
+
+Use this when training EF models and you want random SO(3) data augmentation:
+
+```bash
+mmml ef-train \
+  --train-npz out/splits_ef_sim/energies_forces_dipoles_train.npz \
+  --valid-npz out/splits_ef_sim/energies_forces_dipoles_valid.npz \
+  --test-npz out/splits_ef_sim/energies_forces_dipoles_test.npz \
+  --rot-augment \
+  --rot-perturbation 1.0 \
+  --output-dir ~/ckpts/ef_run_rotaug
+```
+
+Behavior summary:
+- vector quantities (positions/forces/dipoles/field vectors) are co-rotated
+- scalar targets (energies, scalar losses) remain unchanged
 
 === Step 11: Pure CHARMM equilibration
 
