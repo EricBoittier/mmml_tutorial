@@ -10,10 +10,13 @@ echo "=== 14: Active learning (extract frames for pyscf-evaluate) ==="
 echo "Extract frames with T < 300 K from PhysNet MD trajectory"
 echo ""
 
+PHYSNET_MD_TRAJ=nve24.traj
+ACTIVE_LEARNING_OUT=nve_out24.npz
+
 mmml active-learning \
   -i "$PHYSNET_MD_TRAJ" \
   -o "$ACTIVE_LEARNING_OUT" \
-  --max-temp 300
+  --max-temp 500
 
 echo ""
 echo "Output: $ACTIVE_LEARNING_OUT"

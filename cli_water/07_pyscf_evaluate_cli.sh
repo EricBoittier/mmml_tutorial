@@ -9,8 +9,10 @@ echo "=== 07: pyscf-evaluate (energy, forces, dipoles, ESP) ==="
 echo "Command: uv run mmml pyscf-evaluate -i out/06_sampled.npz -o out/07_evaluated.npz --esp"
 #mmml pyscf-evaluate -i out/06_sampled.npz -o out/07_evaluated.npz --esp
 #mmml pyscf-evaluate -i out/06_sampled1.npz -o out/07_evaluated1.npz --esp
-mmml pyscf-evaluate -i out/06_sampled2.npz -o out/07_evaluated2.npz --esp
-mmml pyscf-evaluate -i out/06_sampled3.npz -o out/07_evaluated3.npz --esp
-mmml pyscf-evaluate -i out/06_sampled4.npz -o out/07_evaluated4.npz --esp
-mmml pyscf-evaluate -i out/06_sampled5.npz -o out/07_evaluated5.npz --esp
+for x in out/xyz_split/*sampled.npz; do
+mmml pyscf-evaluate -i $x -o $x.eval.npz --esp
+done
+#mmml pyscf-evaluate -i out/06_sampled3.npz -o out/07_evaluated3.npz --esp
+#mmml pyscf-evaluate -i out/06_sampled4.npz -o out/07_evaluated4.npz --esp
+#mmml pyscf-evaluate -i out/06_sampled5.npz -o out/07_evaluated5.npz --esp
 echo "Output: out/07_evaluated.npz (R, Z, N, E, F, Dxyz, esp, esp_grid)"

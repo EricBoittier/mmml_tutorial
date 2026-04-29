@@ -1,0 +1,13 @@
+uv run python -m mmml.cli.misc.train_joint \
+   --train-efd out/splits_mono_dimer/energies_forces_dipoles_train.npz \
+  --train-esp out/splits_mono_dimer/grids_esp_train.npz \
+  --valid-efd out/splits_mono_dimer/energies_forces_dipoles_valid.npz \
+  --valid-esp out/splits_mono_dimer/grids_esp_valid.npz \
+  --natoms 6 --n-dcm 2   \
+  --restart ~/ckpts/water_mono_dimer_md_joint_ndc2_zbl/best_params.pkl \
+  --mix-coulomb-energy \
+  --learning-rate 5e-5 \
+  --esp-weight 10 --mono-weight 5 \
+  --epochs 150 \
+  --name water_ndc2_stage2_mix \
+  --ckpt-dir ~/ckpts --plot-freq 0

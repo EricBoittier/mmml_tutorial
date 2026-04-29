@@ -1,0 +1,12 @@
+uv run python -m mmml.cli.misc.train_joint \
+  --train-efd out/splits_mono_dimer/energies_forces_dipoles_train.npz \
+  --train-esp out/splits_mono_dimer/grids_esp_train.npz \
+  --valid-efd out/splits_mono_dimer/energies_forces_dipoles_valid.npz \
+  --valid-esp out/splits_mono_dimer/grids_esp_valid.npz \
+  --natoms 6 \
+  --epochs 1000 \
+  --batch-size 1 \
+  --n-dcm 2 --name water_mono_dimer_joint_ndc2_zbl \
+  --ckpt-dir ~/ckpts \
+  --plot-results \
+  --plot-freq 0

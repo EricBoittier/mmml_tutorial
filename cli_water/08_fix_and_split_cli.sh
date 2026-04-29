@@ -4,8 +4,8 @@
 # Requires: Step 07 run first (out/07_evaluated.npz with E, F, Dxyz, esp, esp_grid).
 
 set -e
-
+#out/xyz_split/frame_00035.xyz.h5.sampled.npz.eval.npz
 echo "=== 08: fix-and-split (train/valid/test) ==="
 echo "Command: uv run mmml fix-and-split --efd out/07_evaluated.npz --output-dir out/splits"
-mmml fix-and-split --efd out/07_eval*.npz --output-dir out/splits --atomic-ref pbe0/def2-tzvp
+mmml fix-and-split --efd mdout/*.npz --output-dir out/splits_md --atomic-ref pbe0/def2-tzvp
 echo "Output: out/splits/energies_forces_dipoles_{train,valid,test}.npz, grids_esp_{train,valid,test}.npz"
