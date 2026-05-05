@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Build PNG figures under typst_docs/tutorial/assets/cli/ for tutorial.typ.
 
+Structure images use ASE `plot_atoms` (2D matplotlib projection), not RDKit.
+
 Run from repo root or from this directory after executing pipeline steps 01+:
 
   cd mmml_tutorial/cli
@@ -33,6 +35,33 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
+
+try:
+    from ase.visualize.plot import plot_atoms as _ase_plot_atoms
+except ImportError:
+    _ase_plot_atoms = None  # type: ignore[misc, assignment]
+
+
+def _save_plot_atoms(
+    atoms,
+    dest: Path,
+    *,
+    title: str | None = None,
+    rotation: str = "45x,-35y,0z",
+    radii: float = 0.45,
+    figsize: tuple[float, float] = (4.6, 4.6),
+) -> None:
+    """Render `atoms` with ASE plot_atoms and save PNG."""
+    if _ase_plot_atoms is None:
+        raise RuntimeError("ase.visualize.plot.plot_atoms not available")
+    fig, ax = plt.subplots(figsize=figsize)
+    _ase_plot_atoms(atoms, ax=ax, radii=radii, rotation=rotation)
+    ax.set_axis_off()
+    if title:
+        fig.suptitle(title, fontsize=10, y=0.98)
+    fig.tight_layout()
+    fig.savefig(dest, dpi=150, bbox_inches="tight")
+    plt.close(fig)
 
 
 def _placeholder(path: Path, msg: str) -> None:
@@ -82,46 +111,36 @@ def _harmonic_freqs_cm(h5_path: Path) -> np.ndarray | None:
 
 
 def _step01_monomer(cli: Path, dest: Path, allow_ph: bool) -> None:
-    ok = False
-    try:
-        from rdkit import Chem
-        from rdkit.Chem import Draw
-
-        mol2d = Chem.MolFromSmiles("c1ccccc1")
-        if mol2d is not None:
-            img = Draw.MolToImage(mol2d, size=(420, 420))
-            img.save(dest)
-            ok = True
-            print(f"wrote {dest} (RDKit 2D, benzene)")
-    except Exception as e:
-        print(f"step01 RDKit: {e}")
-
-    if ok:
-        return
-
     xyz = cli / "xyz" / "initial.xyz"
-    if xyz.is_file():
-        try:
-            from ase.io import read
+    try:
+        from ase.build import molecule
+        from ase.io import read
 
+        if xyz.is_file():
             atoms = read(xyz)
-            pos = atoms.get_positions()
-            z = atoms.get_atomic_numbers()
-            fig = plt.figure(figsize=(4.2, 4.2))
-            ax = fig.add_subplot(111, projection="3d")
-            ax.scatter(pos[:, 0], pos[:, 1], pos[:, 2], c=z, s=85, cmap="tab10")
-            ax.set_title("xyz/initial.xyz")
-            fig.savefig(dest, dpi=150, bbox_inches="tight")
-            plt.close(fig)
-            print(f"wrote {dest} (ASE)")
-            return
-        except Exception as e:
-            print(f"step01 ASE: {e}")
+            label = "xyz/initial.xyz"
+        else:
+            atoms = molecule("C6H6")
+            label = "C6H6 (ASE built-in; run 01 for real RES)"
+        _save_plot_atoms(
+            atoms,
+            dest,
+            title=label,
+            rotation="35x,-25y,0z",
+            radii=0.5,
+        )
+        print(f"wrote {dest} (ASE plot_atoms, {label})")
+        return
+    except Exception as e:
+        print(f"step01: {e}")
 
     if allow_ph:
-        _placeholder(dest, "Install RDKit or run 01_make_res_cli.sh\nto generate xyz/initial.xyz")
+        _placeholder(
+            dest,
+            "Install ASE; run 01_make_res_cli.sh\nfor xyz/initial.xyz, or use built-in C6H6.",
+        )
     else:
-        print("skip step01: no RDKit/xyz", file=sys.stderr)
+        print("skip step01: ASE/xyz", file=sys.stderr)
 
 
 def _step02_packed(cli: Path, dest: Path, allow_ph: bool) -> None:
@@ -136,23 +155,16 @@ def _step02_packed(cli: Path, dest: Path, allow_ph: bool) -> None:
         from ase.io import read
 
         atoms = read(str(pdb))
-        pos = atoms.get_positions()
-        z = atoms.get_atomic_numbers()
-        fig = plt.figure(figsize=(5.2, 4.2))
-        ax = fig.add_subplot(111, projection="3d")
-        n = min(len(pos), 600)
-        ax.scatter(
-            pos[:n, 0],
-            pos[:n, 1],
-            pos[:n, 2],
-            c=z[:n],
-            s=10,
-            cmap="tab10",
-            alpha=0.65,
+        n = min(len(atoms), 140)
+        sub = atoms[:n] if n < len(atoms) else atoms
+        _save_plot_atoms(
+            sub,
+            dest,
+            title=f"init-packmol.pdb ({len(sub)} of {len(atoms)} atoms)",
+            rotation="25x,-40y,0z",
+            radii=0.35,
+            figsize=(5.0, 4.2),
         )
-        ax.set_title("init-packmol.pdb (subset of atoms)")
-        fig.savefig(dest, dpi=150, bbox_inches="tight")
-        plt.close(fig)
         print(f"wrote {dest}")
     except Exception as e:
         print(f"step02: {e}")
@@ -361,14 +373,13 @@ def _step13_md_frame(cli: Path, dest: Path, allow_ph: bool) -> None:
         from ase.io import read
 
         atoms = read(str(path), index=-1)
-        pos = atoms.get_positions()
-        z = atoms.get_atomic_numbers()
-        fig = plt.figure(figsize=(4.2, 4.2))
-        ax = fig.add_subplot(111, projection="3d")
-        ax.scatter(pos[:, 0], pos[:, 1], pos[:, 2], c=z, s=55, cmap="tab10")
-        ax.set_title(path.name + " (last frame)")
-        fig.savefig(dest, dpi=150, bbox_inches="tight")
-        plt.close(fig)
+        _save_plot_atoms(
+            atoms,
+            dest,
+            title=f"{path.name} (last frame)",
+            rotation="35x,-30y,0z",
+            radii=0.48,
+        )
         print(f"wrote {dest}")
     except Exception as e:
         print(f"step13: {e}")

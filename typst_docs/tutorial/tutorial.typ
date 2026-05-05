@@ -221,7 +221,7 @@ cd mmml_tutorial/cli
 bash 01_make_res_cli.sh
 ```
 
-#stepfig("step01_monomer.png", [Study system (`BENZ` by default): 2D depiction or `xyz/initial.xyz` after step 01.])
+#stepfig("step01_monomer.png", [Study system (`BENZ` by default): ASE `plot_atoms` on `xyz/initial.xyz` (asset script falls back to built-in C6H6 if missing).])
 
 Main outputs: `pdb/initial.pdb`, `psf/initial.psf`, `xyz/initial.xyz`, `out/01_last_command.txt`.
 
@@ -251,7 +251,7 @@ Purpose: Pack copies into a cubic cell for classical equilibration or visualizat
 bash 02_make_box_cli.sh
 ```
 
-#stepfig("step02_packed.png", [Subset of atoms from `pdb/init-packmol.pdb` (two `BENZ` molecules in the default script).])
+#stepfig("step02_packed.png", [ASE `plot_atoms` on a subset of `pdb/init-packmol.pdb` (large cells are truncated for clarity).])
 
 #figure(
   align(left)[

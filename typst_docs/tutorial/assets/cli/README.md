@@ -1,6 +1,6 @@
 # Tutorial figures (`assets/cli/`)
 
-PNG assets for [`tutorial.typ`](../tutorial.typ). Regenerate after running CLI steps so plots match your machine:
+PNG assets for [`tutorial.typ`](../tutorial.typ). Molecular structure panels use **ASE** `plot_atoms` (matplotlib), not RDKit. Regenerate after running CLI steps so plots match your machine:
 
 ```bash
 cd mmml_tutorial/cli
