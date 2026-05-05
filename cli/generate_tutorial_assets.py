@@ -368,6 +368,214 @@ def _resolve_ckpt_dir(manifest: Path | None, glob_pat: str) -> str | None:
     return paths[0] if paths else None
 
 
+def _find_joint_history_json(run_root: Path) -> Path | None:
+    """`train_joint` writes `history.json` under `ckpt_dir / name` (the run root)."""
+    direct = run_root / "history.json"
+    if direct.is_file():
+        return direct
+    nested = list(run_root.glob("*/history.json"))
+    if nested:
+        return max(nested, key=lambda p: p.stat().st_mtime)
+    return None
+
+
+def _plot_joint_history_dict(
+    history: dict,
+    dest: Path,
+    *,
+    ckpt_name: str,
+    log_loss: bool = True,
+) -> None:
+    """Plot curves from `train_joint` history.json (same units as training logs)."""
+    train_loss = history.get("train_loss") or []
+    val_loss = history.get("val_loss") or []
+    if not train_loss or not val_loss:
+        raise ValueError("history.json needs non-empty train_loss and val_loss")
+
+    def _series(key: str) -> list[float]:
+        v = history.get(key)
+        if not v:
+            return []
+        return [float(x) for x in v]
+
+    val_e = _series("val_energy_mae")
+    val_f = _series("val_forces_mae")
+    val_d = _series("val_dipole_mae")
+    val_esp = _series("val_esp_mae")
+    epoch_times = _series("epoch_times")
+
+    lengths = [len(train_loss), len(val_loss)]
+    for s in (val_e, val_f, val_d, val_esp, epoch_times):
+        if s:
+            lengths.append(len(s))
+    m = min(lengths)
+    if m < 1:
+        raise ValueError("no aligned epoch rows in history")
+
+    train_loss = np.asarray(train_loss[:m], dtype=float)
+    val_loss = np.asarray(val_loss[:m], dtype=float)
+    epochs = np.arange(1, m + 1)
+
+    eV_to_kcal = 23.0605
+    Ha_to_kcal = 627.503
+
+    def _take(s: list[float], fill: float = np.nan) -> np.ndarray:
+        if not s:
+            return np.full(m, fill)
+        a = np.asarray(s[:m], dtype=float)
+        if a.size < m:
+            pad = np.full(m - a.size, fill)
+            a = np.concatenate([a, pad])
+        return a
+
+    energy_kcal = _take(val_e) * eV_to_kcal
+    forces_kcal = _take(val_f) * eV_to_kcal
+    dipole_ea = _take(val_d)
+    esp_kcal = _take(val_esp) * Ha_to_kcal
+    times = _take(epoch_times, fill=0.0)
+
+    best_so_far = np.minimum.accumulate(val_loss)
+    improvement = (val_loss[0] - val_loss) / max(val_loss[0], 1e-12) * 100.0
+
+    fig = plt.figure(figsize=(18, 12))
+    gs = fig.add_gridspec(3, 3, hspace=0.35, wspace=0.3)
+
+    ax1 = fig.add_subplot(gs[0, :2])
+    ax1.plot(epochs, train_loss, "o-", color="#0072B2", linewidth=2.5, markersize=6, alpha=0.8, label="Training loss")
+    ax1.plot(epochs, val_loss, "s-", color="#D55E00", linewidth=2.5, markersize=6, alpha=0.8, label="Validation loss")
+    bi = int(np.argmin(val_loss))
+    ax1.scatter(
+        epochs[bi],
+        val_loss[bi],
+        s=300,
+        color="gold",
+        edgecolor="black",
+        linewidth=3,
+        zorder=5,
+        marker="*",
+        label="Best val",
+    )
+    ax1.set_xlabel("Epoch", fontsize=13, fontweight="bold")
+    ax1.set_ylabel("Loss", fontsize=13, fontweight="bold")
+    ax1.set_title("Training progress (train_joint history.json)", fontsize=14, fontweight="bold")
+    if log_loss:
+        ax1.set_yscale("log")
+    ax1.legend(fontsize=11, loc="best")
+    ax1.grid(True, alpha=0.3)
+
+    ax2 = fig.add_subplot(gs[0, 2])
+    ax2.plot(epochs, best_so_far, "o-", color="#009E73", linewidth=2.5, markersize=6, alpha=0.8)
+    ax2.set_xlabel("Epoch", fontsize=11)
+    ax2.set_ylabel("Best val loss so far", fontsize=11)
+    ax2.set_title("Best model (cum. min)", fontsize=12, fontweight="bold")
+    ax2.grid(True, alpha=0.3)
+    if log_loss:
+        ax2.set_yscale("log")
+
+    ax3 = fig.add_subplot(gs[1, 0])
+    if np.any(np.isfinite(energy_kcal) & (energy_kcal > 0)):
+        ax3.plot(epochs, energy_kcal, "s-", color="#E69F00", linewidth=2.5, markersize=6, alpha=0.8)
+        bj = int(np.nanargmin(np.where(energy_kcal > 0, energy_kcal, np.inf)))
+        ax3.scatter(epochs[bj], energy_kcal[bj], s=200, color="gold", edgecolor="black", linewidth=2, zorder=5, marker="*")
+    ax3.set_xlabel("Epoch", fontsize=11)
+    ax3.set_ylabel("Energy MAE (kcal/mol)", fontsize=11)
+    ax3.set_title("Energy (val)", fontsize=12, fontweight="bold")
+    ax3.grid(True, alpha=0.3)
+    if log_loss:
+        ax3.set_yscale("log")
+
+    ax4 = fig.add_subplot(gs[1, 1])
+    if np.any(np.isfinite(forces_kcal) & (forces_kcal > 0)):
+        ax4.plot(epochs, forces_kcal, "s-", color="#CC79A7", linewidth=2.5, markersize=6, alpha=0.8)
+        bj = int(np.nanargmin(np.where(forces_kcal > 0, forces_kcal, np.inf)))
+        ax4.scatter(epochs[bj], forces_kcal[bj], s=200, color="gold", edgecolor="black", linewidth=2, zorder=5, marker="*")
+    ax4.set_xlabel("Epoch", fontsize=11)
+    ax4.set_ylabel("Forces MAE (kcal/mol/Å)", fontsize=11)
+    ax4.set_title("Forces (val)", fontsize=12, fontweight="bold")
+    ax4.grid(True, alpha=0.3)
+    if log_loss:
+        ax4.set_yscale("log")
+
+    ax5 = fig.add_subplot(gs[1, 2])
+    if np.any(np.isfinite(dipole_ea) & (dipole_ea > 0)):
+        ax5.plot(epochs, dipole_ea, "s-", color="#56B4E9", linewidth=2.5, markersize=6, alpha=0.8)
+        bj = int(np.nanargmin(np.where(dipole_ea > 0, dipole_ea, np.inf)))
+        ax5.scatter(epochs[bj], dipole_ea[bj], s=200, color="gold", edgecolor="black", linewidth=2, zorder=5, marker="*")
+    ax5.set_xlabel("Epoch", fontsize=11)
+    ax5.set_ylabel("Dipole MAE (e·Å)", fontsize=11)
+    ax5.set_title("Dipole PhysNet (val)", fontsize=12, fontweight="bold")
+    ax5.grid(True, alpha=0.3)
+    if log_loss:
+        ax5.set_yscale("log")
+
+    ax6 = fig.add_subplot(gs[2, 0])
+    if np.any(np.isfinite(esp_kcal) & (esp_kcal > 0)):
+        ax6.plot(epochs, esp_kcal, "s-", color="#999999", linewidth=2.5, markersize=6, alpha=0.8)
+        bj = int(np.nanargmin(np.where(esp_kcal > 0, esp_kcal, np.inf)))
+        ax6.scatter(epochs[bj], esp_kcal[bj], s=200, color="gold", edgecolor="black", linewidth=2, zorder=5, marker="*")
+    ax6.set_xlabel("Epoch", fontsize=11)
+    ax6.set_ylabel("ESP RMSE DCMNet ((kcal/mol)/e)", fontsize=11)
+    ax6.set_title("ESP (val)", fontsize=12, fontweight="bold")
+    ax6.grid(True, alpha=0.3)
+    if log_loss:
+        ax6.set_yscale("log")
+
+    ax7 = fig.add_subplot(gs[2, 1])
+    if np.any(times > 0):
+        ax7.bar(epochs, times, color="#F0E442", alpha=0.85, width=0.6)
+    ax7.set_xlabel("Epoch", fontsize=11)
+    ax7.set_ylabel("Wall time (s)", fontsize=11)
+    ax7.set_title("Epoch duration", fontsize=12, fontweight="bold")
+    ax7.grid(True, axis="y", alpha=0.3)
+
+    ax8 = fig.add_subplot(gs[2, 2])
+    if m > 1:
+        ax8.plot(epochs, improvement, "o-", color="#009E73", linewidth=2.5, markersize=6, alpha=0.8)
+        ax8.axhline(0, color="red", linestyle="--", linewidth=2, alpha=0.5)
+        ax8.fill_between(epochs, 0, improvement, alpha=0.2, color="#009E73")
+    ax8.set_xlabel("Epoch", fontsize=11)
+    ax8.set_ylabel("Improvement from start (%)", fontsize=11)
+    ax8.set_title("Val loss improvement", fontsize=12, fontweight="bold")
+    ax8.grid(True, alpha=0.3)
+
+    plt.suptitle(f"Joint training: {ckpt_name}\n{m} epochs (history.json)", fontsize=16, fontweight="bold")
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    fig.savefig(dest, dpi=300, bbox_inches="tight")
+    plt.close(fig)
+
+
+def _try_joint_training_metrics(
+    ckpt: str | None,
+    dest: Path,
+    *,
+    manifest_out: Path | None,
+    force: bool,
+) -> None:
+    """Prefer train_joint `history.json`; fall back to Orbax extract-checkpoint-metrics."""
+    if not ckpt:
+        return
+    if force and dest.is_file():
+        dest.unlink()
+    if dest.is_file():
+        print(f"keep existing {dest}")
+        return
+    root = Path(ckpt).resolve()
+    hist_path = _find_joint_history_json(root)
+    if hist_path is not None:
+        try:
+            history = json.loads(hist_path.read_text(encoding="utf-8"))
+            _plot_joint_history_dict(history, dest, ckpt_name=root.name)
+            print(f"wrote {dest} from train_joint history ({hist_path})")
+            if manifest_out is not None:
+                manifest_out.parent.mkdir(parents=True, exist_ok=True)
+                manifest_out.write_text(str(root) + "\n", encoding="utf-8")
+                print(f"wrote manifest for scripts: {manifest_out.resolve()}")
+            return
+        except (OSError, json.JSONDecodeError, ValueError, TypeError) as e:
+            print(f"train_joint history plot failed ({hist_path}): {e}", file=sys.stderr)
+    _try_checkpoint_plot(ckpt, dest, manifest_out=manifest_out, force=False)
+
+
 def _step14_active_learning(cli: Path, dest: Path, allow_ph: bool) -> None:
     cands = list(cli.glob("out/*activate_learning*.npz")) + list(cli.glob("out/*active_learning*.npz"))
     p = cands[0] if cands else None
@@ -535,7 +743,7 @@ def main() -> int:
         manifest_out=manifest_physnet,
         force=args.force_metrics,
     )
-    _try_checkpoint_plot(
+    _try_joint_training_metrics(
         joint_ckpt,
         out / "step10_training_metrics.png",
         manifest_out=manifest_joint,
@@ -550,7 +758,8 @@ def main() -> int:
     if not (out / "step10_training_metrics.png").is_file() and ph:
         _placeholder(
             out / "step10_training_metrics.png",
-            "After joint training:\nmmml extract-checkpoint-metrics <run_dir> -o step10_training_metrics.png --log-loss",
+            "After joint training:\nensure <run_dir>/history.json exists, or\n"
+            "mmml extract-checkpoint-metrics <run_dir> -o step10_training_metrics.png --log-loss",
         )
 
     s12 = out / "step12_comparison.png"
