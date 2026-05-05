@@ -13,9 +13,11 @@ so `typst compile tutorial.typ` still succeeds.
 
 Training runs can pass `--write-checkpoint-path out/last_joint_checkpoint.txt` to
 `train_joint` (see `10_physnet_dcmnet_train_cli.sh`). This script reads that
-one-line manifest before falling back to globs, and refreshes it after a
-successful `extract-checkpoint-metrics`. Use `--force-metrics` to rebuild
-step09/step10 PNGs even when they already exist.
+one-line manifest before falling back to globs. For step10 (joint), it prefers
+`history.json` in that run directory (written each epoch by `train_joint`); if
+that is missing, it falls back to `mmml extract-checkpoint-metrics`. The manifest
+is refreshed after a successful step10 or step09 plot. Use `--force-metrics` to
+rebuild step09/step10 PNGs even when they already exist.
 
 Optional: save metrics as typst_docs/tutorial/assets/cli/step{09,10}_training_metrics.png
 
@@ -27,6 +29,7 @@ from __future__ import annotations
 
 import argparse
 import glob
+import json
 import os
 import re
 import shutil
