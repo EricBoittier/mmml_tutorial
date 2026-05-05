@@ -309,6 +309,8 @@ mmml md-system --setup pbc_nvt --composition MEOH:5,TIP3:5 --temperature 300 --t
 For long simulations, use `--traj-chunk-frames` to avoid a single very large trajectory file.  
 When enabled, output is split as `*.part0000.traj`, `*.part0001.traj`, etc.
 
+For mixed compositions that include non-MEOH residues (e.g. TIP3), the suite defaults to MM-only fallback (`doML=False`) for stability with the bundled MEOH checkpoint. Use `--extra-args --allow-ml-on-mixed` only if you intentionally want to test unsupported ML behavior.
+
 Equivalent direct argparse script usage:
 
 ```bash
