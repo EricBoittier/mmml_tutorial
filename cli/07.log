@@ -1,0 +1,3 @@
+=== 07: pyscf-evaluate (energy, forces, dipoles, ESP) ===
+Command: uv run mmml pyscf-evaluate -i out/06_sampled.npz -o out/07_evaluated.npz --esp
+Evaluating 200 geometries with pyscf-dft (GPU)...

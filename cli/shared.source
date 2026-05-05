@@ -8,7 +8,7 @@
 #
 # Override any variable before sourcing, or export in your shell.
 
-RES="${RES:-PCRO}"
+RES="${RES:-BENZ}"
 
 PHYSNET_TRAINER="${PHYSNET_TRAINER:-$HOME/mmml/examples/other/co2/physnet_train/trainer.py}"
 PHYSNET_CKPT_DIR="${PHYSNET_CKPT_DIR:-$HOME/ckpts}"

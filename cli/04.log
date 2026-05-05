@@ -1,0 +1,144 @@
+=== 04: DFT full (energy, gradient, hessian, harmonic, thermo) ===
+Command: uv run mmml pyscf-dft --mol xyz/initial.xyz --energy --gradient --hessian --harmonic --thermo --output out/04_results
+mol: xyz/initial.xyz
+output: out/04_results
+log_file: pyscf.log
+monomer_a: 
+monomer_b: 
+basis: def2-SVP
+xc: PBE0
+spin: 0
+charge: 0
+energy: True
+optimize: False
+gradient: True
+hessian: True
+harmonic: True
+thermo: True
+interaction: False
+dens_esp: False
+ir: False
+shielding: False
+polarizability: False
+ir_efield: False
+efield_points: 0,0,0
+efield_fd_axis: 2
+efield_scf: False
+efield_scf_no_forces: False
+efield_dipole_unit: DEBYE
+efield_include_nuclear_energy: True
+save_option: hdf5
+overwrite output file: pyscf.log
+<pyscf.gto.mole.Mole object at 0x7f8faba88590>
+total number of shells 54, total number of AO functions 114
+(0, 'C', '2p', 'z')
+(1, 'H', '2p', 'z')
+(2, 'C', '2p', 'z')
+(3, 'H', '2p', 'z')
+(4, 'C', '2p', 'z')
+(5, 'H', '2p', 'z')
+(6, 'C', '2p', 'z')
+(7, 'H', '2p', 'z')
+(8, 'C', '2p', 'z')
+(9, 'H', '2p', 'z')
+(10, 'C', '2p', 'z')
+(11, 'H', '2p', 'z')
+0 C 2pz   
+1 H 2pz   
+2 C 2pz   
+3 H 2pz   
+4 C 2pz   
+5 H 2pz   
+6 C 2pz   
+7 H 2pz   
+8 C 2pz   
+9 H 2pz   
+10 C 2pz   
+11 H 2pz   
+shell 0 on atom 0 l = 0 has 1 contracted GTOs
+shell 1 on atom 0 l = 0 has 1 contracted GTOs
+shell 2 on atom 0 l = 0 has 1 contracted GTOs
+shell 3 on atom 0 l = 1 has 1 contracted GTOs
+shell 4 on atom 0 l = 1 has 1 contracted GTOs
+shell 5 on atom 0 l = 2 has 1 contracted GTOs
+shell 6 on atom 1 l = 0 has 1 contracted GTOs
+shell 7 on atom 1 l = 0 has 1 contracted GTOs
+shell 8 on atom 1 l = 1 has 1 contracted GTOs
+shell 9 on atom 2 l = 0 has 1 contracted GTOs
+shell 10 on atom 2 l = 0 has 1 contracted GTOs
+shell 11 on atom 2 l = 0 has 1 contracted GTOs
+shell 12 on atom 2 l = 1 has 1 contracted GTOs
+shell 13 on atom 2 l = 1 has 1 contracted GTOs
+shell 14 on atom 2 l = 2 has 1 contracted GTOs
+shell 15 on atom 3 l = 0 has 1 contracted GTOs
+shell 16 on atom 3 l = 0 has 1 contracted GTOs
+shell 17 on atom 3 l = 1 has 1 contracted GTOs
+shell 18 on atom 4 l = 0 has 1 contracted GTOs
+shell 19 on atom 4 l = 0 has 1 contracted GTOs
+shell 20 on atom 4 l = 0 has 1 contracted GTOs
+shell 21 on atom 4 l = 1 has 1 contracted GTOs
+shell 22 on atom 4 l = 1 has 1 contracted GTOs
+shell 23 on atom 4 l = 2 has 1 contracted GTOs
+shell 24 on atom 5 l = 0 has 1 contracted GTOs
+shell 25 on atom 5 l = 0 has 1 contracted GTOs
+shell 26 on atom 5 l = 1 has 1 contracted GTOs
+shell 27 on atom 6 l = 0 has 1 contracted GTOs
+shell 28 on atom 6 l = 0 has 1 contracted GTOs
+shell 29 on atom 6 l = 0 has 1 contracted GTOs
+shell 30 on atom 6 l = 1 has 1 contracted GTOs
+shell 31 on atom 6 l = 1 has 1 contracted GTOs
+shell 32 on atom 6 l = 2 has 1 contracted GTOs
+shell 33 on atom 7 l = 0 has 1 contracted GTOs
+shell 34 on atom 7 l = 0 has 1 contracted GTOs
+shell 35 on atom 7 l = 1 has 1 contracted GTOs
+shell 36 on atom 8 l = 0 has 1 contracted GTOs
+shell 37 on atom 8 l = 0 has 1 contracted GTOs
+shell 38 on atom 8 l = 0 has 1 contracted GTOs
+shell 39 on atom 8 l = 1 has 1 contracted GTOs
+shell 40 on atom 8 l = 1 has 1 contracted GTOs
+shell 41 on atom 8 l = 2 has 1 contracted GTOs
+shell 42 on atom 9 l = 0 has 1 contracted GTOs
+shell 43 on atom 9 l = 0 has 1 contracted GTOs
+shell 44 on atom 9 l = 1 has 1 contracted GTOs
+shell 45 on atom 10 l = 0 has 1 contracted GTOs
+shell 46 on atom 10 l = 0 has 1 contracted GTOs
+shell 47 on atom 10 l = 0 has 1 contracted GTOs
+shell 48 on atom 10 l = 1 has 1 contracted GTOs
+shell 49 on atom 10 l = 1 has 1 contracted GTOs
+shell 50 on atom 10 l = 2 has 1 contracted GTOs
+shell 51 on atom 11 l = 0 has 1 contracted GTOs
+shell 52 on atom 11 l = 0 has 1 contracted GTOs
+shell 53 on atom 11 l = 1 has 1 contracted GTOs
+
+AOs that contains oxygen p orbitals and hydrogen s orbitals
+14 1 H 1s    
+15 1 H 2s    
+33 3 H 1s    
+34 3 H 2s    
+52 5 H 1s    
+53 5 H 2s    
+71 7 H 1s    
+72 7 H 2s    
+90 9 H 1s    
+91 9 H 2s    
+109 11 H 1s    
+110 11 H 2s    
+----------------------------------------------------------------------------------------------------
+Computing Energy
+----------------------------------------------------------------------------------------------------
+total energy = -231.8013573798481
+----------------------------------------------------------------------------------------------------
+Computing Gradient
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+Computing Hessian
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+Computing Harmonic Analysis
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+Computing Thermodynamics
+----------------------------------------------------------------------------------------------------
+Results saved to out/04_results.npz (ML keys) and out/04_results.h5 (all arrays)
+Elapsed: 16.68 s
+Output: out/04_results.npz and .h5

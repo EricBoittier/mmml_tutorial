@@ -1,0 +1,514 @@
+=== 02: make_box (CLI) ===
+Command: mmml make-box --res BENZ --n 2 --side_length 25.0
+
+################################################################################
+
+ PACKMOL - Packing optimization for the automated generation of
+ starting configurations for molecular dynamics simulations.
+ 
+                                                             Version 21.1.0 
+
+################################################################################
+
+  Packmol must be run with: packmol < inputfile.inp 
+
+  Userguide at: http://m3g.iqm.unicamp.br/packmol 
+
+  Reading input file... (Control-C aborts)
+  Types of coordinate files specified: pdb
+  Seed for random number generator:        94044
+  Output file: pdb/init-packmol.pdb
+  Reading coordinate file: pdb/initial.pdb
+  Number of independent structures:            1
+  The structures are: 
+  Structure            1 :pdb/initial.pdb(          12  atoms)
+  Maximum number of GENCAN loops for all molecule packing:          200
+  Distance tolerance:    2.0000000000000000     
+  Warning: Type of residue numbering not set for structure            1
+  Residue numbering set for structure            1 :           0
+  Swap chains of molecules of structure            1 : F
+  Specific chain identifier set for structure            1 :A
+  Number of molecules of type            1 :            2
+  Total number of restrictions:            1
+  Total number of atoms:           24
+  Total number of molecules:            2
+  Number of fixed molecules:            0
+  Number of free molecules:            2
+  Number of variables:           12
+  Total number of fixed atoms:            0
+  Maximum internal distance of type            1 :    4.9670212401398084     
+  All atoms must be within these coordinates: 
+   x: [   -997.26464096749805      ,    1002.7353590325019       ] 
+   y: [   -996.79999999999995      ,    1003.2000000000000       ] 
+   z: [   -996.80822373393801      ,    1003.1917762660620       ] 
+  If the system is larger than this, increase the sidemax parameter. 
+
+################################################################################
+
+  Building initial approximation ... 
+
+################################################################################
+
+  Adjusting initial point to fit the constraints 
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+  Molecules of type:            1
+
+  Packing:|0                                                        100%|
+          |******************
+
+  Restraint-only function value:    0.0000000000000000     
+  Maximum violation of the restraints:    0.0000000000000000     
+
+--------------------------------------------------------------------------------
+
+  Rescaling maximum and minimum coordinates... 
+  Mininum and maximum coordinates after constraint fitting: 
+   x: [    2.3807366067605973E-002 ,    5.1337071966429066       ] 
+   y: [    22.149733659719292      ,    24.949375264771898       ] 
+   z: [    2.1214761796369253      ,    6.6428771198108629       ] 
+  Computing size of patches... 
+  Number of cells in each direction and cell sides: 
+   x:            4  cells of size    2.3774749576438250     
+   y:            3  cells of size    2.3998805350175352     
+   z:            4  cells of size    2.2303502350434847     
+  Cell-system length:    9.50990   7.19964   8.92140
+  Reseting center of mass... 
+
+--------------------------------------------------------------------------------
+
+  Setting initial trial coordinates ... 
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+  Molecules of type:            1
+  Adjusting random positions to fit the constraints. 
+  Packing:|0                                                        100%|
+          |******
+  Restraint-only function value:    0.0000000000000000     
+  Maximum violation of the restraints:    0.0000000000000000     
+
+################################################################################
+
+  Objective function at initial point:    140.76534741769984     
+
+################################################################################
+
+  Packing molecules of type:            1
+
+################################################################################
+
+
+--------------------------------------------------------------------------------
+
+  Starting GENCAN loop:            0
+  Scaling radii by:    1.1000000000000001     
+
+  Packing:|0                                                        100%|
+          |***************
+
+  Function value from last GENCAN loop: f = .00000E+00
+  Best function value before: f = .14077E+03
+  Improvement from best function value:    99.99 %
+  Improvement from last loop:    99.99 %
+  Maximum violation of target distance:     0.000000
+  Maximum violation of the constraints: .00000E+00
+  Current structure written to file: pdb/init-packmol.pdb
+--------------------------------------------------------------------------------
+  Packing solved for molecules of type           1
+  Objective function value:    0.0000000000000000     
+  Maximum violation of target distance:    0.0000000000000000     
+  Max. constraint violation:    0.0000000000000000     
+--------------------------------------------------------------------------------
+
+################################################################################
+
+  Packing all molecules together 
+
+################################################################################
+
+
+  Initial approximation is a solution. Nothing to do. 
+
+  Solution written to file: pdb/init-packmol.pdb
+
+################################################################################
+
+                                 Success! 
+              Final objective function value: .00000E+00
+              Maximum violation of target distance:   0.000000
+              Maximum violation of the constraints: .00000E+00
+
+--------------------------------------------------------------------------------
+
+              Please cite this work if Packmol was useful: 
+
+           L. Martinez, R. Andrade, E. G. Birgin, J. M. Martinez, 
+         PACKMOL: A package for building initial configurations for
+                   molecular dynamics simulations. 
+        Journal of Computational Chemistry, 30(13) pp. 2157-2164, 2009.
+                  https://doi.org/10.1002/jcc.21224
+
+################################################################################
+
+   Running time:    7.92999752E-04  seconds. 
+
+--------------------------------------------------------------------------------
+
+
+  
+ CHARMM>     BLOCK
+ WARNING from DECODI -- Zero length string being converted to 0
+ Block structure initialized with   3 blocks.
+ All atoms have been assigned to block 1.
+ All interaction coefficients have been set to unity.
+  Setting number of block exclusions nblock_excldPairs=0
+  
+  BLOCK>            CALL 1 SELE ALL END
+ SELRPN>      0 atoms have been selected out of      0
+ The selected atoms have been reassigned to block   1
+  
+  BLOCK>              COEFF 1 1 1.0
+  
+  BLOCK>            END
+ Matrix of Interaction Coefficients
+ 
+    1.00000
+    1.00000   1.00000
+    1.00000   1.00000   1.00000
+ Matrix of BOND Interaction Coefficients
+ 
+    1.00000
+    1.00000   1.00000
+    1.00000   1.00000   1.00000
+ Matrix of ANGLE Interaction Coefficients
+ 
+    1.00000
+    1.00000   1.00000
+    1.00000   1.00000   1.00000
+ Matrix of DIHE Interaction Coefficients
+ 
+    1.00000
+    1.00000   1.00000
+    1.00000   1.00000   1.00000
+ Matrix of CROSS Interaction Coefficients
+ 
+    1.00000
+    1.00000   1.00000
+    1.00000   1.00000   1.00000
+ Matrix of ELEC Interaction Coefficients
+ 
+    1.00000
+    1.00000   1.00000
+    1.00000   1.00000   1.00000
+ Matrix of VDW Interaction Coefficients
+ 
+    1.00000
+    1.00000   1.00000
+    1.00000   1.00000   1.00000
+  
+ CHARMM>     
+  
+  
+ CHARMM>     PRNLev 0
+
+ DRUDES PARTICLES WILL BE GENERATED AUTOMATICALLY FOR ALL ATOMS WITH NON-ZERO ALPHA
+ Thole-type dipole screening, Slater-Delta shape {S(u) = 1 - (1+u/2)*exp(-u)}, default radius =  1.300000
+  
+ CHARMM>        wrnlev 4
+  
+ CHARMM>        OPEN UNIT 1 READ FORM NAME pdb/init-packmol.pdb
+ VOPEN> Attempting to open::pdb/init-packmol.pdb::
+ OPNLGU> Unit  1 opened for READONLY access to pdb/init-packmol.pdb
+  
+ CHARMM>        READ SEQU PDB UNIT 1
+ MAINIO> Sequence information being read from unit   1.
+ TITLE>  *
+
+          RESIDUE SEQUENCE --     2 RESIDUES
+          BENZBENZ
+  
+ CHARMM>        CLOSE UNIT 1
+ VCLOSE: Closing unit    1 with status "KEEP"
+  
+ CHARMM>        GENERATE SYS FIRST NONE LAST NONE SETUP
+ NO PATCHING WILL BE DONE ON THE FIRST RESIDUE
+ NO PATCHING WILL BE DONE ON THE LAST  RESIDUE
+ AUTGEN: Autogenerating specified angles and dihedrals.
+ GENPSF> Segment   1 has been generated. Its identifier is SYS.
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        1   Number of residues   =        2
+         Number of atoms         =       24   Number of groups     =        2
+         Number of bonds         =       24   Number of angles     =       36
+         Number of dihedrals     =       48   Number of impropers  =        0
+         Number of cross-terms   =        0   Number of autogens   =        0
+         Number of HB acceptors  =        0   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    0.00000
+ QXFORM> Expanded format used.
+         More than 4 character atom type used.
+  
+ CHARMM>     
+  
+ CHARMM>        OPEN UNIT 1 READ FORM NAME pdb/init-packmol.pdb
+ VOPEN> Attempting to open::pdb/init-packmol.pdb::
+ OPNLGU> Unit  1 opened for READONLY access to pdb/init-packmol.pdb
+  
+ CHARMM>        READ COOR PDB UNIT 1
+  read CHARMM-pdb format
+          SPATIAL COORDINATES BEING READ FROM UNIT  1
+ TITLE>  *
+  
+ CHARMM>        CLOSE UNIT 1
+ VCLOSE: Closing unit    1 with status "KEEP"
+  
+ CHARMM>     
+  
+ CHARMM>     
+  
+  
+ CHARMM>      SET BOXTYPE  = RECT
+ Parameter: BOXTYPE <- "RECT"
+  
+ CHARMM>     SET XTLTYPE  = CUBIC
+ Parameter: XTLTYPE <- "CUBIC"
+  
+ CHARMM>     SET A = 25.0
+ Parameter: A <- "25.0"
+  
+ CHARMM>     SET B = 25.0
+ Parameter: B <- "25.0"
+  
+ CHARMM>     SET C = 25.0
+ Parameter: C <- "25.0"
+  
+ CHARMM>     SET ALPHA = 90.0
+ Parameter: ALPHA <- "90.0"
+  
+ CHARMM>     SET BETA  = 90.0
+ Parameter: BETA <- "90.0"
+  
+ CHARMM>     SET GAMMA = 90.0
+ Parameter: GAMMA <- "90.0"
+  
+ CHARMM>     SET IMPATCH = NO
+ Parameter: IMPATCH <- "NO"
+  
+ CHARMM>     SET FFTX  = 40
+ Parameter: FFTX <- "40"
+  
+ CHARMM>     SET FFTY  = 40
+ Parameter: FFTY <- "40"
+  
+ CHARMM>     SET FFTZ  = 40
+ Parameter: FFTZ <- "40"
+  
+ CHARMM>     SET XCEN  = 0
+ Parameter: XCEN <- "0"
+  
+ CHARMM>     SET YCEN  = 0
+ Parameter: YCEN <- "0"
+  
+ CHARMM>     SET ZCEN  = 0
+ Parameter: ZCEN <- "0"
+  
+ CHARMM>     
+  
+  
+ CHARMM>     nbonds atom cutnb 14.0 ctofnb 12.0 ctonnb 10.0 fswitch vswitch NBXMOD 5 inbfrq -1 imgfrq -1
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  FSWItch  VATOm    VSWItch 
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 14.000 CTEXNB =999.000 CTONNB = 10.000 CTOFNB = 12.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are        0 atom  pairs and        0 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ <MAKINB> with mode   5 found     60 exclusions and     42 interactions(1-4)
+ <MAKGRP> found      0 group exclusions.
+  
+  
+ CHARMM>     !#########################################
+  
+ CHARMM>    ! Setup PBC (Periodic Boundary Condition)
+ CHARMM>    !#########################################
+ CHARMM>     
+  
+ CHARMM>    coor stat sele all end
+ SELRPN>     24 atoms have been selected out of     24
+ STATISTICS FOR        24 SELECTED ATOMS:
+    XMIN =    0.026000 XMAX =    5.403000 XAVE =    2.775958
+    YMIN =   20.007000 YMAX =   24.915000 YAVE =   22.783833
+    ZMIN =    0.087000 ZMAX =    7.403000 ZAVE =    4.374417
+    WMIN =    0.000000 WMAX =    0.000000 WAVE =    0.000000
+  
+ CHARMM>     
+  
+ CHARMM>    calc xdim = int ( ( ?xmax - ?xmin + 0.0 ) ) + 1
+ RDCMND substituted energy or value "?XMAX" to "5.403"
+ RDCMND substituted energy or value "?XMIN" to "2.6E-02"
+Evaluating: INT((5.403-2.6E-02+0.0))+1
+ Parameter: XDIM <- "6"
+  
+ CHARMM>    calc ydim = int ( ( ?ymax - ?ymin + 0.0 ) ) + 1
+ RDCMND substituted energy or value "?YMAX" to "24.915"
+ RDCMND substituted energy or value "?YMIN" to "20.007"
+Evaluating: INT((24.915-20.007+0.0))+1
+ Parameter: YDIM <- "5"
+  
+ CHARMM>    calc zdim = int ( ( ?zmax - ?zmin + 0.0 ) ) + 1
+ RDCMND substituted energy or value "?ZMAX" to "7.403"
+ RDCMND substituted energy or value "?ZMIN" to "8.7E-02"
+Evaluating: INT((7.403-8.7E-02+0.0))+1
+ Parameter: ZDIM <- "8"
+  
+ CHARMM>     
+  
+ CHARMM>    set bsiz = 0
+ Parameter: BSIZ <- "0"
+  
+ CHARMM>     
+  
+ CHARMM>    if @xdim .gt. @bsiz then
+ Parameter: XDIM -> "6"
+ Parameter: BSIZ -> "0"
+ Comparing "6" and "0".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>       set bsiz = @xdim
+ Parameter: XDIM -> "6"
+ Parameter: BSIZ <- "6"
+  
+ CHARMM>    endif
+  
+ CHARMM>    if @ydim .gt. @bsiz then
+ Parameter: YDIM -> "5"
+ Parameter: BSIZ -> "6"
+ Comparing "5" and "6".
+ IF test evaluated as false.  Skip to ELSE or ENDIF
+  
+ CHARMM>    if @zdim .gt. @bsiz then
+ Parameter: ZDIM -> "8"
+ Parameter: BSIZ -> "6"
+ Comparing "8" and "6".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>       set bsiz = @zdim
+ Parameter: ZDIM -> "8"
+ Parameter: BSIZ <- "8"
+  
+ CHARMM>    endif
+  
+ CHARMM>     
+  
+ CHARMM>    open read unit 10 card name crystal_image.str
+ VOPEN> Attempting to open::crystal_image.str::
+ OPNLGU> Unit 10 opened for READONLY access to crystal_image.str
+  
+ CHARMM>    crystal defi cubic @bsiz @bsiz @bsiz 90. 90. 90.
+ Parameter: BSIZ -> "8"
+ Parameter: BSIZ -> "8"
+ Parameter: BSIZ -> "8"
+ Crystal Parameters : Crystal Type = CUBI
+           A     =    8.00000 B    =    8.00000 C     =    8.00000
+           Alpha =   90.00000 Beta =   90.00000 Gamma =   90.00000
+  
+ CHARMM>    CRYSTAL READ UNIT 10 CARD
+ CRYSTAL FILE BEING READ FROM UNIT    10
+ TITLE> * GENERATED BY CHARMM-GUI (HTTP://WWW.CHARMM-GUI.ORG) V1.8 ON FEB, 06. 2017. JOBID=1486388593
+ TITLE> * STREAM FILE FOR CRYSTAL SYMMETRY OPERATION
+ TITLE> *
+ TITLE>  * GENERATED BY CHARMM-GUI (HTTP://WWW.CHARMM-GUI.ORG) V1.8 ON FEB, 06. 2017. JOB
+ TITLE>  * STREAM FILE FOR CRYSTAL SYMMETRY OPERATION
+ TITLE>  *
+                     THERE ARE NO ROTATIONS FOR THIS TRANSFORMATION SET
+    26 Transformations have been processed.
+
+  
+ CHARMM>     
+  
+ CHARMM>    image byres xcen 0.0 ycen 0.0 zcen 0.0 sele all end
+ SELRPN>     24 atoms have been selected out of     24
+ IMAGE CENTERING ON FOR SOME ATOMS
+/home/ericb/mmml/mmml/data/charmm/top_all36_cgenff.rtf
+/home/ericb/mmml/mmml/data/charmm/par_all36_cgenff.prm
+CHARMM_HOME /home/ericb/mmml/setup/charmm
+CHARMM_LIB_DIR /home/ericb/mmml/setup/charmm
+/home/ericb/mmml/setup/charmm
+/home/ericb/mmml/setup/charmm
+n: 2 <class 'int'>
+res: BENZ <class 'str'>
+side_length: 25.0 <class 'float'>
+pdb: None <class 'NoneType'>
+solvent: None <class 'NoneType'>
+density: None <class 'NoneType'>
+Atoms(symbols='CHgCdHCdHCeHeCeHeCH', pbc=False, atomtypes=..., bfactor=..., occupancy=..., residuenames=..., residuenumbers=...)
+['C', 'Hg', 'Cd', 'H', 'Cd', 'H', 'Ce', 'He', 'Ce', 'He', 'C', 'H']
+Atoms(symbols='CHCHCHCHCHCH', pbc=False, atomtypes=..., bfactor=..., occupancy=..., residuenames=..., residuenumbers=...)
+['C', 'H', 'C', 'H', 'C', 'H', 'C', 'H', 'C', 'H', 'C', 'H']
+/home/ericb/mmml/mmml/generate/packmol/packmol < packmol/packmol.inp
+0
+Generated initial.pdb
+wrote pdb/init-benz.pdb
+Output: pdb/init-packmol.pdb (or pdb/init-TIP3box.pdb if solvated)
+Elapsed: 0.82 s
+  
+
+ SELECTED IMAGES ATOMS BEING CENTERED ABOUT  0.000000  0.000000  0.000000
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  FSWItch  VATOm    VSWItch 
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 14.000 CTEXNB =999.000 CTONNB = 10.000 CTOFNB = 12.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are      216 atom  pairs and      102 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ENER ENR:  Eval#     ENERgy      Delta-E         GRMS
+ ----------       ---------    ---------    ---------    ---------    ---------
+ENER>        0      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>     write name psf/system-benz.psf -
+ CHARMM>     psf card
+ VOPEN> Attempting to open::psf/system-benz.psf::
+ RDTITL>  
+ RDTITL> No title read.
+ VCLOSE: Closing unit   91 with status "KEEP"
+ VCLOSE: Closing unit   91 with status "KEEP"
+  
+ CHARMM>     
+  
+  
+ CHARMM>     write name pdb/init-benz.pdb -
+ CHARMM>     coor pdb
+ VOPEN> Attempting to open::pdb/init-benz.pdb::
+ RDTITL>  
+ RDTITL> No title read.
+  Write CHARMM-pdb format
+ VCLOSE: Closing unit   91 with status "KEEP"
+  
+ CHARMM>     
+  
+  
+ CHARMM>     PRNLev 0
+$$$$$$  New timer profile $$$$$
+      NBONDS                          0.00 Other:            0.00
+   List time                       0.00 Other:            0.00
+      Nonbond force                   0.00 Other:            0.00
+         Bond energy                     0.00 Other:            0.00
+         Angle energy                    0.00 Other:            0.00
+         Dihedral energy                 0.00 Other:            0.00
+         Restraints energy               0.00 Other:            0.00
+      INTRNL energy                   0.00 Other:            0.00
+   Energy time                     0.00 Other:            0.00
+ Total time                      0.44 Other:            0.43
+Saved command: out/02_last_command.txt
