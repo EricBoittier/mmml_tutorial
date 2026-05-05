@@ -2,28 +2,94 @@
 #set page(numbering: "1")
 #set text(font: "Libertinus Serif", size: 9.5pt)
 
+// --- Page 1: compact two-column command index (fits one sheet) ---
+#set text(size: 8.7pt)
+#set par(leading: 0.55em, justify: false)
+
 = MMML CLI Cheat Sheet
 
-```bash
-mmml --help
-mmml <command> --help
-```
+#align(center)[
+  ```bash
+  mmml --help
+  mmml <command> --help
+  ```
+]
 
-The CLI has five main jobs:
+#v(0.35em)
+#text(size: 8.3pt, style: "italic")[
+  Five jobs: build systems · QM/ML data · train/eval · dynamics · inspect/convert/visualize.
+]
 
-- Build molecular systems: `make-res`, `make-box`, `run-pycharmm`
-- Generate QM/ML data: `pyscf-dft`, `pyscf-mp2`, `normal-mode-sample`, `pyscf-evaluate`, `fix-and-split`
-- Train and evaluate models: `physnet-*`, `ef-*`, `train`, `evaluate`, `extract-checkpoint-metrics`
-- Run dynamics: `run`, `md-system`, `physnet-md`, `ef-md`
-- Inspect, convert, and visualize: `validate`, `xml2npz`, `unwrap-traj`, `gui`, `kernel-fit`
+#v(0.5em)
+#grid(
+  columns: 2,
+  column-gutter: 1.4em,
+  row-gutter: 0.55em,
+)[
+  #block(breakable: false)[
+    === System building
+    - `mmml make-res` — residue/topology (PyCHARMM/CGENFF)
+    - `mmml make-box` — pack box (PackMol)
+    - `mmml run-pycharmm` — classical heat/equi baseline
 
-Common file conventions:
+    === QM generation
+    - `mmml pyscf-dft` — GPU DFT, optional harmonic
+    - `mmml pyscf-mp2` — GPU MP2 reference
+    - `mmml normal-mode-sample` — sample from normal modes
+    - `mmml pyscf-evaluate` — batch QM (+ESP, E-field)
+    - `mmml verify-esp-alignment` — check ESP grid vs geometry
 
-- Geometry samples: NPZ with `R`, `Z`, `N`
-- E/F/D training data: NPZ with `R`, `Z`, `N`, `E`, `F`, `Dxyz`
-- ESP data: NPZ with `esp`, `esp_grid` or split `grids_esp_*.npz`
-- PhysNet checkpoints: Orbax run directories or portable JSON checkpoints
-- EF checkpoints: usually `params.json` plus config in an output directory
+    === Data prep & I/O
+    - `mmml fix-and-split` — units, splits, ESP grids
+    - `mmml validate` — NPZ schema check
+    - `mmml xml2npz` — Molpro XML → NPZ
+  ]
+  #block(breakable: false)[
+    === PhysNet / generic train
+    - `mmml physnet-md` — MD from PhysNet ckpt
+    - `mmml physnet-evaluate` — test-set metrics
+    - `python -m mmml.cli.misc.train_joint` — PhysNet+DCMNet joint
+    - `mmml train` — generic DCMNet/PhysNetJAX API
+    - `mmml evaluate` — generic eval API
+
+    === Electric-field model
+    - `mmml ef-train` — equivariant EF training
+    - `mmml ef-evaluate` — EF metrics / GUI H5
+    - `mmml ef-md` — MD (`ase` or `jax`)
+
+    === Hybrid MD & workflows
+    - `mmml run` — PyCHARMM + ML hybrid
+    - `mmml md-system` — preset mixed setups
+    - `mmml active-learning` — traj → QM relabel frames
+
+    === Geometry, traj, GUI, MDCM
+    - `mmml interpolate-xyz` — reaction path NPZ
+    - `mmml unwrap-traj` — PBC unwrap
+    - `mmml sample-diverse-xyz` — SOAP diversity pick
+    - `mmml gui` — molecular viewer
+    - `mmml kernel-fit` — kernel → MDCM charges
+    - `mmml extract-checkpoint-metrics` — Orbax plots
+    - `python -m mmml.cli.misc.compare_charmm_ml` — CHARMM vs ML
+    - `mmml downstream` — misc analysis (see `--help`)
+  ]
+]
+
+#v(0.35em)
+#line(length: 100%, stroke: 0.4pt + gray)
+#v(0.25em)
+#text(size: 7.9pt)[
+  *Files:* geometries `R,Z,N` · training `E,F,Dxyz` · ESP `esp`,`esp_grid` · PhysNet Orbax/JSON · EF `params.json` + config.
+]
+
+#pagebreak()
+
+// --- Following pages: same typography as before for narrative detail ---
+#set text(size: 9.5pt)
+#set par(leading: 0.65em)
+
+= MMML CLI — reference detail
+
+The sections below expand options, outputs, and tutorial paths. Page~1 is the at-a-glance index.
 
 == Tutorial One-Liners
 
@@ -56,7 +122,7 @@ JAX_PLATFORMS=cpu uv run python -m mmml.cli.misc.train_joint \
   --ckpt-dir /tmp/mmml_ckpts \
   --plot-freq 0
 ```
-
+#pagebreak()
 == System-Building Commands
 
 === `mmml make-res`
@@ -114,7 +180,7 @@ Typical outputs:
 - `pdb/heat.pdb`, `pdb/equi.pdb`
 - `dcd/heat.dcd`, `dcd/equi.dcd`
 - `res/heat.res`, `res/equi.res`
-
+#pagebreak()
 == QM Data Generation
 
 === `mmml pyscf-dft`
@@ -264,6 +330,7 @@ mmml xml2npz inputs/*.xml -o dataset.npz --validate
 
 Use this for legacy Molpro-generated datasets.
 
+#pagebreak()
 == PhysNet and DCMNet
 
 === `mmml physnet-md`
@@ -561,6 +628,7 @@ Useful options:
 - `--port`, `--host`
 - `--model-params`, `--model-config`: hidden-state inspection.
 
+#pagebreak()
 == DCM/MDCM and Analysis Utilities
 
 === `mmml kernel-fit`
@@ -608,6 +676,7 @@ python -m mmml.cli.misc.compare_charmm_ml \
 This is module-level, not a top-level `mmml` command. Use it for diagnostic
 plots and HDF5 files that can feed `kernel-fit`.
 
+#pagebreak()
 == Lower-Priority or Transitional Commands
 
 === `mmml downstream`
@@ -628,6 +697,7 @@ when they exist:
 - EF: `mmml ef-train`, `mmml ef-evaluate`, `mmml ef-md`
 - Joint DCMNet: `python -m mmml.cli.misc.train_joint`
 
+#pagebreak()
 == Troubleshooting Quick Hits
 
 === `JAX` / CUDA fails before the CLI starts
@@ -680,4 +750,3 @@ Do not combine it with:
 - `--restart`
 
 Healthy startup should mention the loaded PhysNet config and parameter merge.
-
