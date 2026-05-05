@@ -28,48 +28,63 @@
 )[
   #block(breakable: false)[
     === System building
-    - `mmml make-res` — residue/topology (PyCHARMM/CGENFF)
-    - `mmml make-box` — pack box (PackMol)
-    - `mmml run-pycharmm` — classical heat/equi baseline
+    ```bash
+    mmml make-res        # residue/topology (PyCHARMM/CGENFF)
+    mmml make-box        # pack box (PackMol)
+    mmml run-pycharmm    # classical heat/equi baseline
+    ```
 
     === QM generation
-    - `mmml pyscf-dft` — GPU DFT, optional harmonic
-    - `mmml pyscf-mp2` — GPU MP2 reference
-    - `mmml normal-mode-sample` — sample from normal modes
-    - `mmml pyscf-evaluate` — batch QM (+ESP, E-field)
+    ```bash
+    mmml pyscf-dft              # GPU DFT, optional harmonic
+    mmml pyscf-mp2              # GPU MP2 reference
+    mmml normal-mode-sample     # sample from normal modes
+    mmml pyscf-evaluate         # batch QM (+ESP, E-field)
+    mmml verify-esp-alignment   # check ESP grid vs geometry
+    ```
 
     === Data prep & I/O
-    - `mmml fix-and-split` — units, splits, ESP grids
-    - `mmml validate` — NPZ schema check
-    - `mmml xml2npz` — Molpro XML → NPZ
+    ```bash
+    mmml fix-and-split   # units, splits, ESP grids
+    mmml validate        # NPZ schema check
+    mmml xml2npz         # Molpro XML → NPZ
+    ```
   ]
   #block(breakable: false)[
     === PhysNet / generic train
-    - `mmml physnet-md` — MD from PhysNet ckpt
-    - `mmml physnet-evaluate` — test-set metrics
-    - `python -m mmml.cli.misc.train_joint` — PhysNet+DCMNet joint
-    - `mmml train` — generic DCMNet/PhysNetJAX API
-    - `mmml evaluate` — generic eval API
+    ```bash
+    mmml physnet-md                              # MD from PhysNet ckpt
+    mmml physnet-evaluate                        # test-set metrics
+    python -m mmml.cli.misc.train_joint          # PhysNet+DCMNet joint
+    mmml train                                   # generic DCMNet/PhysNetJAX API
+    mmml evaluate                                # generic eval API
+    ```
 
     === Electric-field model
-    - `mmml ef-train` — equivariant EF training
-    - `mmml ef-evaluate` — EF metrics / GUI H5
-    - `mmml ef-md` — MD (`ase` or `jax`)
+    ```bash
+    mmml ef-train      # equivariant EF training
+    mmml ef-evaluate   # EF metrics / GUI H5
+    mmml ef-md         # MD (ase or jax)
+    ```
 
     === Hybrid MD & workflows
-    - `mmml run` — PyCHARMM + ML hybrid
-    - `mmml md-system` — preset mixed setups
-    - `mmml active-learning` — traj → QM relabel frames
+    ```bash
+    mmml run              # PyCHARMM + ML hybrid
+    mmml md-system        # preset mixed setups
+    mmml active-learning  # traj → QM relabel frames
+    ```
 
     === Geometry, traj, GUI, MDCM
-    - `mmml interpolate-xyz` — reaction path NPZ
-    - `mmml unwrap-traj` — PBC unwrap
-    - `mmml sample-diverse-xyz` — SOAP diversity pick
-    - `mmml gui` — molecular viewer
-    - `mmml kernel-fit` — kernel → MDCM charges
-    - `mmml extract-checkpoint-metrics` — Orbax plots
-    - `python -m mmml.cli.misc.compare_charmm_ml` — CHARMM vs ML
-    - `mmml downstream` — misc analysis (see `--help`)
+    ```bash
+    mmml interpolate-xyz                        # reaction path NPZ
+    mmml unwrap-traj                            # PBC unwrap
+    mmml sample-diverse-xyz                     # SOAP diversity pick
+    mmml gui                                    # molecular viewer
+    mmml kernel-fit                             # kernel → MDCM charges
+    mmml extract-checkpoint-metrics             # Orbax plots
+    python -m mmml.cli.misc.compare_charmm_ml     # CHARMM vs ML
+    mmml downstream                             # misc analysis (see --help)
+    ```
   ]
 ]
 
