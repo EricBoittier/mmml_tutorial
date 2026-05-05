@@ -8,6 +8,10 @@ Run from repo root or from this directory after executing pipeline steps 01+:
   cd mmml_tutorial/cli
   uv run python generate_tutorial_assets.py
 
+If `mmml` is not on your PATH, step09 uses ``uv run --directory <mmml-repo> mmml``.
+The repo is resolved from ``MMML_REPO``, ``--mmml-repo``, or a sibling ``../mmml``
+next to ``mmml_tutorial`` (typical checkout layout).
+
 If outputs are missing, pass --allow-placeholders to emit labeled placeholder PNGs
 so `typst compile tutorial.typ` still succeeds.
 
@@ -326,9 +330,32 @@ def _copy_cutoff_from_log(log_path: Path, dest: Path, allow_ph: bool) -> None:
         _placeholder(dest, f"Cutoff PNG not found:\n{src}")
 
 
-def _mmml_prefix() -> list[str]:
+def _resolve_mmml_repo(cli_dir: Path, mmml_repo: Path | None) -> Path | None:
+    """Directory containing mmml's pyproject.toml (for `uv run --directory`)."""
+    if mmml_repo is not None:
+        p = mmml_repo.expanduser().resolve()
+        if (p / "pyproject.toml").is_file():
+            return p
+        print(f"warn: --mmml-repo has no pyproject.toml: {p}", file=sys.stderr)
+    env = os.environ.get("MMML_REPO", "").strip()
+    if env:
+        p = Path(env).expanduser().resolve()
+        if (p / "pyproject.toml").is_file():
+            return p
+    # Default: sibling checkout mmml_tutorial/.. /mmml (common Cursor workspace layout)
+    sibling = cli_dir.resolve().parent.parent / "mmml"
+    if (sibling / "pyproject.toml").is_file():
+        return sibling.resolve()
+    return None
+
+
+def _mmml_prefix(cli_dir: Path, mmml_repo: Path | None = None) -> list[str]:
+    """Invoke the `mmml` CLI: PATH, else `uv run` from the mmml package repo."""
     if shutil.which("mmml"):
         return ["mmml"]
+    repo = _resolve_mmml_repo(cli_dir, mmml_repo)
+    if repo is not None and shutil.which("uv"):
+        return ["uv", "run", "--directory", str(repo), "mmml"]
     if shutil.which("uv"):
         return ["uv", "run", "mmml"]
     return []
@@ -548,6 +575,8 @@ def _try_joint_training_metrics(
     ckpt: str | None,
     dest: Path,
     *,
+    cli_dir: Path,
+    mmml_repo: Path | None,
     manifest_out: Path | None,
     force: bool,
 ) -> None:
@@ -573,7 +602,14 @@ def _try_joint_training_metrics(
             return
         except (OSError, json.JSONDecodeError, ValueError, TypeError) as e:
             print(f"train_joint history plot failed ({hist_path}): {e}", file=sys.stderr)
-    _try_checkpoint_plot(ckpt, dest, manifest_out=manifest_out, force=False)
+    _try_checkpoint_plot(
+        ckpt,
+        dest,
+        cli_dir=cli_dir,
+        mmml_repo=mmml_repo,
+        manifest_out=manifest_out,
+        force=False,
+    )
 
 
 def _step14_active_learning(cli: Path, dest: Path, allow_ph: bool) -> None:
@@ -640,6 +676,8 @@ def _try_checkpoint_plot(
     ckpt: str | None,
     dest: Path,
     *,
+    cli_dir: Path,
+    mmml_repo: Path | None = None,
     manifest_out: Path | None,
     force: bool,
 ) -> None:
@@ -650,9 +688,13 @@ def _try_checkpoint_plot(
     if dest.is_file():
         print(f"keep existing {dest}")
         return
-    prefix = _mmml_prefix()
+    prefix = _mmml_prefix(cli_dir, mmml_repo)
     if not prefix:
-        print("skip checkpoint plot: mmml/uv not on PATH", file=sys.stderr)
+        print(
+            "skip checkpoint plot: install mmml on PATH, or install uv and set "
+            "MMML_REPO / use --mmml-repo / place mmml next to mmml_tutorial",
+            file=sys.stderr,
+        )
         return
     ckpt_resolved = str(Path(ckpt).resolve())
     try:
@@ -666,7 +708,7 @@ def _try_checkpoint_plot(
                 "--log-loss",
             ],
             check=True,
-            timeout=180,
+            timeout=900,
             capture_output=True,
             text=True,
         )
@@ -676,7 +718,14 @@ def _try_checkpoint_plot(
             manifest_out.write_text(ckpt_resolved + "\n", encoding="utf-8")
             print(f"wrote manifest for scripts: {manifest_out.resolve()}")
     except (subprocess.CalledProcessError, subprocess.TimeoutExpired) as e:
-        print(f"skip checkpoint plot ({ckpt_resolved}): {e}")
+        err = getattr(e, "stderr", None) or ""
+        out = getattr(e, "stdout", None) or ""
+        detail = ""
+        for label, chunk in (("stderr", err), ("stdout", out)):
+            c = (chunk or "").strip()
+            if c:
+                detail += f"\n{label}: {c[:4000]}"
+        print(f"skip checkpoint plot ({ckpt_resolved}): {e}{detail}", file=sys.stderr)
 
 
 def main() -> int:
@@ -712,6 +761,15 @@ def main() -> int:
         action="store_true",
         help="Regenerate step09/step10 PNGs even if they already exist",
     )
+    ap.add_argument(
+        "--mmml-repo",
+        type=Path,
+        default=None,
+        help=(
+            "Path to mmml package root (pyproject.toml). Overrides MMML_REPO. "
+            "Default when mmml is not on PATH: sibling ../mmml next to mmml_tutorial."
+        ),
+    )
     args = ap.parse_args()
     cli: Path = args.cli_dir
     out: Path = args.assets_dir
@@ -740,12 +798,16 @@ def main() -> int:
     _try_checkpoint_plot(
         phys_ckpt,
         out / "step09_training_metrics.png",
+        cli_dir=cli,
+        mmml_repo=args.mmml_repo,
         manifest_out=manifest_physnet,
         force=args.force_metrics,
     )
     _try_joint_training_metrics(
         joint_ckpt,
         out / "step10_training_metrics.png",
+        cli_dir=cli,
+        mmml_repo=args.mmml_repo,
         manifest_out=manifest_joint,
         force=args.force_metrics,
     )
