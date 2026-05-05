@@ -279,6 +279,49 @@ args = argparse.Namespace(
 run(args)
 ```
 
+### md_10mer CLI setups (free-space + periodic)
+
+The `md_10mer` workflows are exposed in two ways:
+
+- MMML library CLI wrapper: `mmml md-10mer ...`
+- Direct script argparse entrypoints in `scripts/`
+
+Examples using the MMML CLI wrapper:
+
+```bash
+# Free-space MD
+mmml md-10mer --setup free_nve --output-dir out/md10mer/free_nve
+mmml md-10mer --setup free_nvt --temperature 300 --output-dir out/md10mer/free_nvt
+
+# Periodic MD
+mmml md-10mer --setup pbc_nve --output-dir out/md10mer/pbc_nve
+mmml md-10mer --setup pbc_nvt --temperature 300 --output-dir out/md10mer/pbc_nvt
+mmml md-10mer --setup pbc_npt --temperature 300 --pressure 1.0 --output-dir out/md10mer/pbc_npt
+```
+
+Equivalent direct argparse script usage:
+
+```bash
+# ASE-based md_10mer suite (free-space + periodic NVE/NVT)
+python ~/mmml/scripts/md_10mer_mmml_pbc_suite.py --only vac_nve
+python ~/mmml/scripts/md_10mer_mmml_pbc_suite.py --only vac_nvt_nhc --nvt-temp-K 300
+python ~/mmml/scripts/md_10mer_mmml_pbc_suite.py --only pbc_nve
+python ~/mmml/scripts/md_10mer_mmml_pbc_suite.py --only pbc_nvt_nhc --nvt-temp-K 300
+
+# JAX-MD periodic NPT setup (NHC thermostat + barostat)
+python ~/mmml/scripts/md_10mer_mmml_pbc_suite_jaxmd.py --ensemble npt --temperature 300 --pressure 1.0
+```
+
+Tutorial helper scripts (from `mmml_tutorial/cli`):
+
+```bash
+bash 16_md_10mer_free_nve.sh
+bash 17_md_10mer_free_nvt.sh
+bash 18_md_10mer_pbc_nve.sh
+bash 19_md_10mer_pbc_nvt.sh
+bash 20_md_10mer_pbc_npt.sh
+```
+
 ### Test calculator (energy, forces, charges, dipole)
 
 ```bash
@@ -303,5 +346,10 @@ python -m mmml.cli.calculator --checkpoint <path-to-checkpoint> --test-molecule 
 | 08 | fix-and-split | `mmml fix-and-split --efd out/07_evaluated.npz --output-dir out/splits` | `cli/08_fix_and_split_cli.sh` |
 | 09 | PhysNet train | `python examples/other/co2/physnet_train/trainer.py --train ... --valid ...` | `cli/09_physnet_train_cli.sh` |
 | 10 | PhysNet+DCMNet | `python -m mmml.cli.misc.train_joint --train-efd ... --train-esp ...` | `cli/10_physnet_dcmnet_train_cli.sh` |
+| 16 | md_10mer free NVE | `mmml md-10mer --setup free_nve` | `cli/16_md_10mer_free_nve.sh` |
+| 17 | md_10mer free NVT | `mmml md-10mer --setup free_nvt --temperature 300` | `cli/17_md_10mer_free_nvt.sh` |
+| 18 | md_10mer pbc NVE | `mmml md-10mer --setup pbc_nve` | `cli/18_md_10mer_pbc_nve.sh` |
+| 19 | md_10mer pbc NVT | `mmml md-10mer --setup pbc_nvt --temperature 300` | `cli/19_md_10mer_pbc_nvt.sh` |
+| 20 | md_10mer pbc NPT | `mmml md-10mer --setup pbc_npt --temperature 300 --pressure 1.0` | `cli/20_md_10mer_pbc_npt.sh` |
 | — | Full workflow | `bash examples/mmml_tutorial/cli/run_full_training.sh` | 1000 structures, split, PhysNet, PhysNet+DCMNet |
 | — | DCMNet only | — | `examples/dcm-net/train.py` |
