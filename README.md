@@ -281,22 +281,25 @@ run(args)
 
 ### md_10mer CLI setups (free-space + periodic)
 
-The `md_10mer` workflows are exposed in two ways:
+The generalized MD workflows are exposed in two ways:
 
-- MMML library CLI wrapper: `mmml md-10mer ...`
+- MMML library CLI wrapper: `mmml md-system ...`
 - Direct script argparse entrypoints in `scripts/`
 
 Examples using the MMML CLI wrapper:
 
 ```bash
 # Free-space MD
-mmml md-10mer --setup free_nve --output-dir out/md10mer/free_nve
-mmml md-10mer --setup free_nvt --temperature 300 --output-dir out/md10mer/free_nvt
+mmml md-system --setup free_nve --output-dir out/md/free_nve
+mmml md-system --setup free_nvt --temperature 300 --output-dir out/md/free_nvt
 
 # Periodic MD
-mmml md-10mer --setup pbc_nve --output-dir out/md10mer/pbc_nve
-mmml md-10mer --setup pbc_nvt --temperature 300 --output-dir out/md10mer/pbc_nvt
-mmml md-10mer --setup pbc_npt --temperature 300 --pressure 1.0 --output-dir out/md10mer/pbc_npt
+mmml md-system --setup pbc_nve --output-dir out/md/pbc_nve
+mmml md-system --setup pbc_nvt --temperature 300 --output-dir out/md/pbc_nvt
+mmml md-system --setup pbc_npt --temperature 300 --pressure 1.0 --output-dir out/md/pbc_npt
+
+# Mixed composition (methanol:water = 1:1, TIP3 water)
+mmml md-system --setup pbc_nvt --composition MEOH:5,TIP3:5 --temperature 300 --output-dir out/md/meoh_tip3_1to1
 ```
 
 Equivalent direct argparse script usage:
@@ -320,6 +323,7 @@ bash 17_md_10mer_free_nvt.sh
 bash 18_md_10mer_pbc_nve.sh
 bash 19_md_10mer_pbc_nvt.sh
 bash 20_md_10mer_pbc_npt.sh
+bash 21_md_system_meoh_tip3_1to1.sh
 ```
 
 ### Test calculator (energy, forces, charges, dipole)
@@ -346,10 +350,11 @@ python -m mmml.cli.calculator --checkpoint <path-to-checkpoint> --test-molecule 
 | 08 | fix-and-split | `mmml fix-and-split --efd out/07_evaluated.npz --output-dir out/splits` | `cli/08_fix_and_split_cli.sh` |
 | 09 | PhysNet train | `python examples/other/co2/physnet_train/trainer.py --train ... --valid ...` | `cli/09_physnet_train_cli.sh` |
 | 10 | PhysNet+DCMNet | `python -m mmml.cli.misc.train_joint --train-efd ... --train-esp ...` | `cli/10_physnet_dcmnet_train_cli.sh` |
-| 16 | md_10mer free NVE | `mmml md-10mer --setup free_nve` | `cli/16_md_10mer_free_nve.sh` |
-| 17 | md_10mer free NVT | `mmml md-10mer --setup free_nvt --temperature 300` | `cli/17_md_10mer_free_nvt.sh` |
-| 18 | md_10mer pbc NVE | `mmml md-10mer --setup pbc_nve` | `cli/18_md_10mer_pbc_nve.sh` |
-| 19 | md_10mer pbc NVT | `mmml md-10mer --setup pbc_nvt --temperature 300` | `cli/19_md_10mer_pbc_nvt.sh` |
-| 20 | md_10mer pbc NPT | `mmml md-10mer --setup pbc_npt --temperature 300 --pressure 1.0` | `cli/20_md_10mer_pbc_npt.sh` |
+| 16 | md-system free NVE | `mmml md-system --setup free_nve` | `cli/16_md_10mer_free_nve.sh` |
+| 17 | md-system free NVT | `mmml md-system --setup free_nvt --temperature 300` | `cli/17_md_10mer_free_nvt.sh` |
+| 18 | md-system pbc NVE | `mmml md-system --setup pbc_nve` | `cli/18_md_10mer_pbc_nve.sh` |
+| 19 | md-system pbc NVT | `mmml md-system --setup pbc_nvt --temperature 300` | `cli/19_md_10mer_pbc_nvt.sh` |
+| 20 | md-system pbc NPT | `mmml md-system --setup pbc_npt --temperature 300 --pressure 1.0` | `cli/20_md_10mer_pbc_npt.sh` |
+| 21 | md-system mixed 1:1 | `mmml md-system --setup pbc_nvt --composition MEOH:5,TIP3:5 --temperature 300` | `cli/21_md_system_meoh_tip3_1to1.sh` |
 | — | Full workflow | `bash examples/mmml_tutorial/cli/run_full_training.sh` | 1000 structures, split, PhysNet, PhysNet+DCMNet |
 | — | DCMNet only | — | `examples/dcm-net/train.py` |

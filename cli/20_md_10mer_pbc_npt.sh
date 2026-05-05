@@ -6,9 +6,9 @@ set -e
 . ./shared.source
 
 echo "=== 20: md_10mer periodic NPT ==="
-echo "Command: mmml md-10mer --setup pbc_npt --temperature \"$MD10MER_TEMP_K\" --pressure \"$MD10MER_PRESSURE_ATM\" --n-molecules \"$MD10MER_N_MOLECULES\" --ps \"$MD10MER_PS\" --dt-fs \"$MD10MER_DT_FS\" --output-dir \"$MD10MER_OUT/pbc_npt\""
+echo "Command: mmml md-system --setup pbc_npt --temperature \"$MD10MER_TEMP_K\" --pressure \"$MD10MER_PRESSURE_ATM\" --n-molecules \"$MD10MER_N_MOLECULES\" --ps \"$MD10MER_PS\" --dt-fs \"$MD10MER_DT_FS\" --output-dir \"$MD10MER_OUT/pbc_npt\""
 
-mmml md-10mer \
+mmml md-system \
   --setup pbc_npt \
   --temperature "$MD10MER_TEMP_K" \
   --pressure "$MD10MER_PRESSURE_ATM" \

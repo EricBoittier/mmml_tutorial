@@ -6,9 +6,9 @@ set -e
 . ./shared.source
 
 echo "=== 16: md_10mer free-space NVE ==="
-echo "Command: mmml md-10mer --setup free_nve --n-molecules \"$MD10MER_N_MOLECULES\" --ps \"$MD10MER_PS\" --dt-fs \"$MD10MER_DT_FS\" --output-dir \"$MD10MER_OUT/free_nve\""
+echo "Command: mmml md-system --setup free_nve --n-molecules \"$MD10MER_N_MOLECULES\" --ps \"$MD10MER_PS\" --dt-fs \"$MD10MER_DT_FS\" --output-dir \"$MD10MER_OUT/free_nve\""
 
-mmml md-10mer \
+mmml md-system \
   --setup free_nve \
   --n-molecules "$MD10MER_N_MOLECULES" \
   --ps "$MD10MER_PS" \
