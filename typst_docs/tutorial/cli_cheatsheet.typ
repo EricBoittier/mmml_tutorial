@@ -37,7 +37,6 @@
     - `mmml pyscf-mp2` — GPU MP2 reference
     - `mmml normal-mode-sample` — sample from normal modes
     - `mmml pyscf-evaluate` — batch QM (+ESP, E-field)
-    - `mmml verify-esp-alignment` — check ESP grid vs geometry
 
     === Data prep & I/O
     - `mmml fix-and-split` — units, splits, ESP grids
@@ -266,16 +265,9 @@ Typical output:
 - plus `esp`, `esp_grid` when `--esp` is set
 - plus `Ef` / e-field keys when electric fields are enabled
 
-=== `mmml verify-esp-alignment`
 
-Check that ESP grids and molecular coordinates are aligned.
 
-```bash
-mmml verify-esp-alignment out/07_evaluated.npz
-```
-
-Use this when ESP errors look suspicious or when converting external data.
-
+#pagebreak()
 == Data Preparation and Validation
 
 === `mmml fix-and-split`

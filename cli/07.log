@@ -1,3 +1,8 @@
 === 07: pyscf-evaluate (energy, forces, dipoles, ESP) ===
 Command: uv run mmml pyscf-evaluate -i out/06_sampled.npz -o out/07_evaluated.npz --esp
 Evaluating 200 geometries with pyscf-dft (GPU)...
+Output exists, using out/07_evaluated_2.npz instead of out/07_evaluated.npz
+Saved to out/07_evaluated_2.npz
+  R: (200, 12, 3), E: (200,), F: (200, 12, 3)
+Elapsed: 502.56 s
+Output: out/07_evaluated.npz (R, Z, N, E, F, Dxyz, esp, esp_grid)
