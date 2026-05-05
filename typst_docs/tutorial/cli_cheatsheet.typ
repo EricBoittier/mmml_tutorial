@@ -4,17 +4,10 @@
 
 = MMML CLI Cheat Sheet
 
-This cheat sheet explains the `mmml` command-line interface at the level needed
-for running and teaching the tutorial workflow. Use:
-
 ```bash
 mmml --help
 mmml <command> --help
 ```
-
-for the authoritative option list on your installed version.
-
-== Mental Model
 
 The CLI has five main jobs:
 
