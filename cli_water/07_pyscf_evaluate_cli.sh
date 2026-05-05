@@ -6,17 +6,13 @@
 set -e
 
 echo "=== 07: pyscf-evaluate (energy, forces, dipoles, ESP) ==="
-echo "Command: uv run mmml pyscf-evaluate -i out/06_sampled.npz -o out/07_evaluated.npz --esp"
-<<<<<<< HEAD
+echo "Command: loop over out/xyz_split/*.sampled.npz with mmml pyscf-evaluate --esp"
 #mmml pyscf-evaluate -i out/06_sampled.npz -o out/07_evaluated.npz --esp
 #mmml pyscf-evaluate -i out/06_sampled1.npz -o out/07_evaluated1.npz --esp
 for x in out/xyz_split/*sampled.npz; do
-mmml pyscf-evaluate -i $x -o $x.eval.npz --esp
+  mmml pyscf-evaluate -i "$x" -o "$x.eval.npz" --esp
 done
 #mmml pyscf-evaluate -i out/06_sampled3.npz -o out/07_evaluated3.npz --esp
 #mmml pyscf-evaluate -i out/06_sampled4.npz -o out/07_evaluated4.npz --esp
 #mmml pyscf-evaluate -i out/06_sampled5.npz -o out/07_evaluated5.npz --esp
-=======
-mmml pyscf-evaluate -i out/06_sampled.npz -o out/07_evaluated.npz --esp
->>>>>>> cb640ba (Refactor CLI scripts in cli_water directory for improved usability: update execution commands to run from the current directory, streamline output messages, and enhance clarity in requirements and paths. Adjust shared configurations for resource names and ensure consistent command usage across scripts.)
-echo "Output: out/07_evaluated.npz (R, Z, N, E, F, Dxyz, esp, esp_grid)"
+echo "Output: out/xyz_split/*.sampled.npz.eval.npz (R, Z, N, E, F, Dxyz, esp, esp_grid)"
