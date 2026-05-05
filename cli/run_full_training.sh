@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Full training workflow: 1000 structures -> split -> PhysNet -> PhysNet+DCMNet
-# Run from this directory: cd examples/mmml_tutorial/cli && bash run_full_training.sh
+# Run from this directory: cd cli && bash run_full_training.sh
 # Requires: Steps 01-04 run first (make_res, make_box, pyscf-dft full).
 
 set -e

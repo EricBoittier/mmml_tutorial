@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Example: Pure PyCHARMM heating and equilibration (no MM/ML)
-# Run from this directory: cd examples/mmml_tutorial/cli && bash 11_run_pycharmm_cli.sh
+# Run from this directory: cd cli_water && bash 11_run_pycharmm_cli.sh
 # Requires: Steps 01–02 run first (make_res, make_box). CHARMM/PyCHARMM.
 
 set -e

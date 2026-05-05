@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Example: Fix units and create train/valid/test splits (section 03 – PhysNet)
-# Run from this directory: cd examples/mmml_tutorial/cli && bash 08_fix_and_split_cli.sh
+# Run from this directory: cd cli_water && bash 08_fix_and_split_cli.sh
 # Requires: Step 07 run first (out/07_evaluated.npz with E, F, Dxyz, esp, esp_grid).
 
 set -e

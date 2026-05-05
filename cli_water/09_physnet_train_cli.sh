@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Example: Train PhysNet on energies, forces, dipoles (section 03 – PhysNet)
-# Run from this directory: cd examples/mmml_tutorial/cli && bash 09_physnet_train_cli.sh
+# Run from this directory: cd cli_water && bash 09_physnet_train_cli.sh
 # Requires: Step 08 run first (out/splits/). Edit shared.source for trainer path and ckpt dir.
 
 set -e

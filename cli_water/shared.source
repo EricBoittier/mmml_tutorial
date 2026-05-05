@@ -1,12 +1,14 @@
 # Shared defaults for mmml_tutorial/cli scripts.
 #
-# Usage: run scripts from this directory (examples/mmml_tutorial/cli), e.g.
-#   cd examples/mmml_tutorial/cli
+# Usage: run scripts from this directory (cli_water), e.g.
+#   cd cli_water
 #   bash 09_physnet_train_cli.sh
 #
 # Scripts that need these values: source ./shared.source
 #
 # Override any variable before sourcing, or export in your shell.
+
+RES="${RES:-TIP3}"
 
 PHYSNET_TRAINER="${PHYSNET_TRAINER:-$HOME/mmml/examples/other/co2/physnet_train/trainer.py}"
 PHYSNET_CKPT_DIR="${PHYSNET_CKPT_DIR:-$HOME/ckpts}"

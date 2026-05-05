@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Example: Active learning - extract MD frames for pyscf-evaluate (section 03 – PhysNet)
-# Run from this directory: cd examples/mmml_tutorial/cli && bash 14_active_learning.sh
+# Run from this directory: cd cli_water && bash 14_active_learning.sh
 # Requires: Step 13 (trajectory at PHYSNET_MD_TRAJ). Edit shared.source for paths.
 
 set -e

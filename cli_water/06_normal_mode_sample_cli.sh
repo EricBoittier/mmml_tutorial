@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 # Example: Normal mode sampling from pyscf-dft harmonic output (section 02 – QM/DFT)
-# Run from this directory: cd examples/mmml_tutorial/cli && bash 06_normal_mode_sample_cli.sh
+# Run from this directory: cd cli_water && bash 06_normal_mode_sample_cli.sh
 # Requires: Step 04 run first (out/04_results.h5 with harmonic data).
 
 set -e
 
 echo "=== 06: Normal mode sampling ==="
+<<<<<<< HEAD
 echo "Command: mmml normal-mode-sample -i out/04_results.h5 -o out/06_sampled.npz --amplitude 0.1 --max-samples 10"
 #mmml normal-mode-sample -i out/04_results.h5 -o out/06_sampled.npz --amplitude 0.1 --max-samples 200
 for x in out/xyz_split/*h5; do
@@ -14,4 +15,8 @@ done
 #mmml normal-mode-sample -i out/04_results.h5 -o out/06_sampled3.npz --amplitude 0.3 --max-samples 200
 #mmml normal-mode-sample -i out/04_results.h5 -o out/06_sampled4.npz --amplitude 0.4 --max-samples 200
 #mmml normal-mode-sample -i out/04_results.h5 -o out/06_sampled5.npz --amplitude 0.5 --max-samples 200
+=======
+echo "Command: mmml normal-mode-sample -i out/04_results.h5 -o out/06_sampled.npz --amplitude 0.2 --max-samples 200"
+mmml normal-mode-sample -i out/04_results.h5 -o out/06_sampled.npz --amplitude 0.2 --max-samples 200
+>>>>>>> cb640ba (Refactor CLI scripts in cli_water directory for improved usability: update execution commands to run from the current directory, streamline output messages, and enhance clarity in requirements and paths. Adjust shared configurations for resource names and ensure consistent command usage across scripts.)
 echo "Output: out/06_sampled.npz (R, Z, N)"

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Example: PhysNet retrain with multiple extended splits (section 03 – PhysNet)
-# Run from this directory: cd examples/mmml_tutorial/cli && bash 15.1_physnet_retrain_cli.sh
+# Run from this directory: cd cli && bash 15.1_physnet_retrain_cli.sh
 # Requires: splits_extended/, splits_extended2/. Edit shared.source for trainer and checkpoint.
 
 set -e

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Example: PhysNet MD sampling with ASE and JAX-MD (section 03 – PhysNet)
-# Run from this directory: cd examples/mmml_tutorial/cli && bash 13_physnet_md.sh
+# Run from this directory: cd cli && bash 13_physnet_md.sh
 # Requires: Step 09 run first. Edit shared.source for checkpoint path and data NPZ.
 
 set -e

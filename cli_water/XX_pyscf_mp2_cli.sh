@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Example: MP2 (post-HF) energy + gradient via CLI (section 02 – QM/DFT)
-# Run from this directory: cd examples/mmml_tutorial/cli && bash XX_pyscf_mp2_cli.sh
+# Run from this directory: cd cli_water && bash XX_pyscf_mp2_cli.sh
 
 set -e
 

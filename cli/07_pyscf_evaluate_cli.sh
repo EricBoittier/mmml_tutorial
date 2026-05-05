@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Example: Evaluate sampled geometries with pyscf-dft (E, F, D, optionally ESP)
-# Run from this directory: cd examples/mmml_tutorial/cli && bash 07_pyscf_evaluate_cli.sh
+# Run from this directory: cd cli && bash 07_pyscf_evaluate_cli.sh
 # Requires: Step 06 run first (out/06_sampled.npz).
 
 set -e
