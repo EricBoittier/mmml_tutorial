@@ -1,0 +1,52 @@
+=== 19: md_10mer periodic NVT ===
+Command: mmml md-system --setup pbc_nvt --temperature "300.0" --n-molecules "10" --ps "1.0" --dt-fs "0.25" --traj-chunk-frames "0" --output-dir "out/mdsys/pbc_nvt"
+/home/ericb/mmml/mmml/data/charmm/top_all36_cgenff.rtf
+/home/ericb/mmml/mmml/data/charmm/par_all36_cgenff.prm
+CHARMM_HOME /home/ericb/mmml/setup/charmm
+CHARMM_LIB_DIR /home/ericb/mmml/setup/charmm
+[21:59:18] cluster_build: 0.240 s
+[setup_calculator] Cutoff inputs -> ml_cutoff=0.1000, mm_switch_on=5.5000, mm_cutoff=2.0000, complementary_handoff=True
+[setup_calculator] mm_r_min=4.86 (exclude pairs with dimer COM < this)
+[setup_calculator] atoms_per_monomer=[6, 6, 6, 6, 6, 6, 6, 6, 6, 6], total_atoms=60
+[setup_calculator] lambda_monomer=[1. 1. 1. 1. 1. 1. 1. 1. 1. 1.]
+len(dimer_perms) 45
+[setup_calculator] max_atoms (model natoms)=12 (max monomer/dimer size)
+✓ Loaded checkpoint from /home/ericb/mmml/mmml/models/physnetjax/defaults
+[setup_calculator] Model loaded: EF(
+    # attributes
+    features = 64
+    max_degree = 1
+    num_iterations = 2
+    num_basis_functions = 32
+    cutoff = 6.0
+    max_atomic_number = 55
+    charges = True
+    natoms = 12
+    total_charge = 0
+    n_res = 3
+    zbl = True
+    debug = False
+    efa = False
+    use_energy_bias = False
+    use_pbc = True
+    include_electrostatics = True
+)
+[21:59:19] cutoff plot: /home/ericb/mmml/out/mdsys/pbc_nvt/cutoffs_schematic_0.10_5.50_2.00_complementary.png
+[21:59:19] pbc_nvt_nhc: mmml setup_calculator 0.747 s, factory_call 0.000 s
+[21:59:29] pbc_nvt_nhc: JIT warmup (first potential energy) 9.684 s
+[21:59:29] pbc_nvt_nhc: BFGS starting (max 50 steps, fmax=0.1; this is pre-MD minimization, not dynamics yet)
+      Step     Time          Energy          fmax
+BFGS:    0 21:59:29     -249.311142        0.907516
+BFGS:    1 21:59:29     -249.494553        0.591817
+BFGS:    2 21:59:29     -249.647507        0.412352
+BFGS:    3 21:59:29     -249.686295        0.404600
+BFGS:    4 21:59:29     -249.669479        0.160172
+BFGS:    5 21:59:29     -249.692245        0.188263
+BFGS:    6 21:59:29     -249.704620        0.190897
+BFGS:    7 21:59:29     -249.710388        0.180330
+BFGS:    8 21:59:29     -249.700073        0.217669
+BFGS:    9 21:59:30     -249.714630        0.193817
+BFGS:   10 21:59:30     -249.712082        0.106797
+BFGS:   11 21:59:30     -249.715393        0.077789
+[21:59:30] pbc_nvt_nhc: BFGS 0.955 s (11 iters)
+Running: /home/ericb/mmml/.venv/bin/python3 /home/ericb/mmml/scripts/md_10mer_mmml_pbc_suite.py --spacing 5.0 --ps 1.0 --dt-fs 0.25 --traj-chunk-frames 0 --only pbc_nvt_nhc --nvt-temp-K 300.0 --n-molecules 10 --output-dir out/mdsys/pbc_nvt

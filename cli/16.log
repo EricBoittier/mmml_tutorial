@@ -1,0 +1,195 @@
+=== 16: md_10mer free-space NVE ===
+Command: mmml md-system --setup free_nve --n-molecules "10" --ps "1.0" --dt-fs "0.25" --traj-chunk-frames "0" --output-dir "out/mdsys/free_nve"
+/home/ericb/mmml/mmml/data/charmm/top_all36_cgenff.rtf
+/home/ericb/mmml/mmml/data/charmm/par_all36_cgenff.prm
+CHARMM_HOME /home/ericb/mmml/setup/charmm
+CHARMM_LIB_DIR /home/ericb/mmml/setup/charmm
+[21:47:46] cluster_build: 0.243 s
+[setup_calculator] Cutoff inputs -> ml_cutoff=0.1000, mm_switch_on=5.5000, mm_cutoff=2.0000, complementary_handoff=True
+[setup_calculator] mm_r_min=4.86 (exclude pairs with dimer COM < this)
+[setup_calculator] atoms_per_monomer=[6, 6, 6, 6, 6, 6, 6, 6, 6, 6], total_atoms=60
+[setup_calculator] lambda_monomer=[1. 1. 1. 1. 1. 1. 1. 1. 1. 1.]
+len(dimer_perms) 45
+[setup_calculator] max_atoms (model natoms)=12 (max monomer/dimer size)
+✓ Loaded checkpoint from /home/ericb/mmml/mmml/models/physnetjax/defaults
+[setup_calculator] Model loaded: EF(
+    # attributes
+    features = 64
+    max_degree = 1
+    num_iterations = 2
+    num_basis_functions = 32
+    cutoff = 6.0
+    max_atomic_number = 55
+    charges = True
+    natoms = 12
+    total_charge = 0
+    n_res = 3
+    zbl = True
+    debug = False
+    efa = False
+    use_energy_bias = False
+    use_pbc = False
+    include_electrostatics = True
+)
+[21:47:47] cutoff plot: /home/ericb/mmml/out/mdsys/free_nve/cutoffs_schematic_0.10_5.50_2.00_complementary.png
+[21:47:47] vac_nve: mmml setup_calculator 0.753 s, factory_call 0.000 s
+[21:47:55] vac_nve: JIT warmup (first potential energy) 8.126 s
+[21:47:55] vac_nve: BFGS starting (max 50 steps, fmax=0.1; this is pre-MD minimization, not dynamics yet)
+      Step     Time          Energy          fmax
+BFGS:    0 21:47:55     -248.812088        0.914446
+BFGS:    1 21:47:55     -249.025192        0.702813
+BFGS:    2 21:47:55     -249.154251        0.605547
+BFGS:    3 21:47:55     -249.199554        0.584904
+BFGS:    4 21:47:55     -249.237625        0.583036
+BFGS:    5 21:47:55     -249.296341        0.548038
+BFGS:    6 21:47:55     -249.319885        0.501857
+BFGS:    7 21:47:55     -249.386246        0.496042
+BFGS:    8 21:47:55     -249.437302        0.497853
+BFGS:    9 21:47:55     -249.487503        0.486771
+BFGS:   10 21:47:55     -249.499588        0.551794
+BFGS:   11 21:47:55     -249.524765        0.402465
+BFGS:   12 21:47:55     -249.559723        0.448893
+BFGS:   13 21:47:55     -249.605011        0.534336
+BFGS:   14 21:47:55     -249.637482        0.510828
+BFGS:   15 21:47:55     -249.661423        0.451973
+BFGS:   16 21:47:55     -249.695297        0.396208
+BFGS:   17 21:47:55     -249.714096        0.444903
+BFGS:   18 21:47:55     -249.736160        0.480777
+BFGS:   19 21:47:55     -249.783066        0.500988
+BFGS:   20 21:47:55     -249.818314        0.474605
+BFGS:   21 21:47:55     -249.896652        0.451067
+BFGS:   22 21:47:55     -249.941452        0.433943
+BFGS:   23 21:47:55     -250.011139        0.417065
+BFGS:   24 21:47:55     -250.036789        1.394607
+BFGS:   25 21:47:55     -250.128220        1.069572
+BFGS:   26 21:47:55     -250.212509        0.851290
+BFGS:   27 21:47:55     -250.299301        0.676568
+BFGS:   28 21:47:55     -250.376312        0.504758
+BFGS:   29 21:47:55     -250.456177        0.420001
+BFGS:   30 21:47:55     -250.539108        0.423639
+BFGS:   31 21:47:55     -250.605164        0.424711
+BFGS:   32 21:47:55     -250.673813        0.432349
+BFGS:   33 21:47:55     -250.745041        0.438608
+BFGS:   34 21:47:55     -250.811539        0.454546
+BFGS:   35 21:47:55     -250.889633        0.479997
+BFGS:   36 21:47:55     -250.968033        0.528521
+BFGS:   37 21:47:55     -251.042938        0.758416
+BFGS:   38 21:47:55     -251.111786        0.880120
+BFGS:   39 21:47:55     -251.191345        0.919248
+BFGS:   40 21:47:55     -251.260269        0.938065
+BFGS:   41 21:47:55     -251.333542        0.923721
+BFGS:   42 21:47:55     -251.390457        0.888425
+BFGS:   43 21:47:55     -251.443893        0.829193
+BFGS:   44 21:47:55     -251.495575        0.763447
+BFGS:   45 21:47:55     -251.537491        0.675858
+BFGS:   46 21:47:55     -251.570755        0.593996
+BFGS:   47 21:47:55     -251.589127        0.491704
+BFGS:   48 21:47:56     -251.620346        0.431707
+BFGS:   49 21:47:56     -251.630035        0.359002
+BFGS:   50 21:47:56     -251.663864        0.331409
+[21:47:56] vac_nve: BFGS 0.279 s (50 iters)
+[21:48:03] vac_nve: MD integrator 7.088 s (1.7720 ms/step mean)
+{
+  "vac_nve": {
+    "traj": "vac_nve.traj",
+    "traj_parts": [
+      "vac_nve.traj"
+    ],
+    "traj_part_count": 1,
+    "log": "vac_nve.log",
+    "mode": "nve",
+    "frames_traj": 4002,
+    "log_samples": 82,
+    "etot_start_eV": -251.5988323993351,
+    "etot_end_eV": -233.58048043389343,
+    "etot_drift_eV": 18.018351965441667,
+    "etot_span_eV": 25.877766348114022,
+    "temp_start_K": 8.385135775138396,
+    "temp_end_K": 3113.485088686968,
+    "temp_mean_K": 943.141089179578,
+    "timings_s": {
+      "mmml_setup_calculator_s": 0.7533789289882407,
+      "mmml_factory_call_s": 3.9680046029388905e-05,
+      "jit_warmup_first_potential_s": 8.125603583990596,
+      "pre_bfgs_energy_eV": -248.8120880126953,
+      "pre_bfgs_fmax_eVA": 0.8010148406028748,
+      "bfgs_wall_s": 0.2785845540347509,
+      "bfgs_traj": "vac_nve_min.traj",
+      "bfgs_iterations": 50.0,
+      "md_entry_to_integrator_ready_s": 0.0006675559561699629,
+      "md_first_observable_snapshot_s": 0.007012158050201833,
+      "md_attach_overhead_s": 5.3899711929261684e-06,
+      "md_integrator_loop_s": 7.087864555011038,
+      "md_per_step_mean_ms": 1.7719661387527594
+    },
+    "pbc": false,
+    "box_A": null,
+    "fmax_after_min_eVA": 0.28441911935806274
+  }
+}
+Wrote /home/ericb/mmml/out/mdsys/free_nve/suite_summary.json
+Wrote /home/ericb/mmml/out/mdsys/free_nve/suite_timing.json and /home/ericb/mmml/out/mdsys/free_nve/timing_log.txt
+  
+ CHARMM>     BLOCK
+ WARNING from DECODI -- Zero length string being converted to 0
+ Block structure initialized with   3 blocks.
+ All atoms have been assigned to block 1.
+ All interaction coefficients have been set to unity.
+  Setting number of block exclusions nblock_excldPairs=0
+  
+  BLOCK>            CALL 1 SELE ALL END
+ SELRPN>      0 atoms have been selected out of      0
+ The selected atoms have been reassigned to block   1
+  
+  BLOCK>              COEFF 1 1 1.0
+  
+  BLOCK>            END
+ Matrix of Interaction Coefficients
+ 
+    1.00000
+    1.00000   1.00000
+    1.00000   1.00000   1.00000
+ Matrix of BOND Interaction Coefficients
+ 
+    1.00000
+    1.00000   1.00000
+    1.00000   1.00000   1.00000
+ Matrix of ANGLE Interaction Coefficients
+ 
+    1.00000
+    1.00000   1.00000
+    1.00000   1.00000   1.00000
+ Matrix of DIHE Interaction Coefficients
+ 
+    1.00000
+    1.00000   1.00000
+    1.00000   1.00000   1.00000
+ Matrix of CROSS Interaction Coefficients
+ 
+    1.00000
+    1.00000   1.00000
+    1.00000   1.00000   1.00000
+ Matrix of ELEC Interaction Coefficients
+ 
+    1.00000
+    1.00000   1.00000
+    1.00000   1.00000   1.00000
+ Matrix of VDW Interaction Coefficients
+ 
+    1.00000
+    1.00000   1.00000
+    1.00000   1.00000   1.00000
+  
+ CHARMM>     
+  
+  
+ CHARMM>     PRNLev 0
+
+ DRUDES PARTICLES WILL BE GENERATED AUTOMATICALLY FOR ALL ATOMS WITH NON-ZERO ALPHA
+ Thole-type dipole screening, Slater-Delta shape {S(u) = 1 - (1+u/2)*exp(-u)}, default radius =  1.300000
+
+ DRUDES PARTICLES WILL BE GENERATED AUTOMATICALLY FOR ALL ATOMS WITH NON-ZERO ALPHA
+ Thole-type dipole screening, Slater-Delta shape {S(u) = 1 - (1+u/2)*exp(-u)}, default radius =  1.300000
+$$$$$$  New timer profile $$$$$
+ Total time                     21.31 Other:            0.00
+Running: /home/ericb/mmml/.venv/bin/python3 /home/ericb/mmml/scripts/md_10mer_mmml_pbc_suite.py --spacing 5.0 --ps 1.0 --dt-fs 0.25 --traj-chunk-frames 0 --only vac_nve --n-molecules 10 --output-dir out/mdsys/free_nve

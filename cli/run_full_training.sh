@@ -22,8 +22,9 @@ uv run mmml pyscf-evaluate -i out/06_sampled.npz -o out/07_evaluated.npz --esp
 
 echo ""
 echo "--- 08: fix-and-split ---"
-echo "Command: uv run mmml fix-and-split --efd out/07_evaluated.npz --output-dir out/splits"
-uv run mmml fix-and-split --efd out/07_evaluated.npz --output-dir out/splits
+EVAL_NPZ="$(ls -t out/07_evaluated*.npz | head -1)"
+echo "Command: uv run mmml fix-and-split --efd \"$EVAL_NPZ\" --output-dir out/splits"
+uv run mmml fix-and-split --efd "$EVAL_NPZ" --output-dir out/splits
 
 echo ""
 echo "--- 09: PhysNet training ---"
