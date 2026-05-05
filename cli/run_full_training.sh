@@ -55,6 +55,7 @@ uv run python -m mmml.cli.misc.train_joint \
   --batch-size 1 \
   --name cybz_joint \
   --ckpt-dir out/ckpts \
+  --write-checkpoint-path out/last_joint_checkpoint.txt \
   $PHYSNET_ARG
 
 echo ""

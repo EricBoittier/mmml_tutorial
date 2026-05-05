@@ -11,9 +11,13 @@ Run from repo root or from this directory after executing pipeline steps 01+:
 If outputs are missing, pass --allow-placeholders to emit labeled placeholder PNGs
 so `typst compile tutorial.typ` still succeeds.
 
-Optional: after training, generate metrics with mmml and save as:
-  typst_docs/tutorial/assets/cli/step10_training_metrics.png
-This script will not overwrite an existing step10_training_metrics.png.
+Training runs can pass `--write-checkpoint-path out/last_joint_checkpoint.txt` to
+`train_joint` (see `10_physnet_dcmnet_train_cli.sh`). This script reads that
+one-line manifest before falling back to globs, and refreshes it after a
+successful `extract-checkpoint-metrics`. Use `--force-metrics` to rebuild
+step09/step10 PNGs even when they already exist.
+
+Optional: save metrics as typst_docs/tutorial/assets/cli/step{09,10}_training_metrics.png
 
 Cutoff schematics: logs (16–19.log) may contain absolute paths to PNGs from mmml;
 those files are copied when present.
@@ -327,6 +331,40 @@ def _mmml_prefix() -> list[str]:
     return []
 
 
+def _read_ckpt_manifest(manifest: Path) -> str | None:
+    """First line of manifest if it points to an existing directory."""
+    if not manifest.is_file():
+        return None
+    try:
+        text = manifest.read_text(encoding="utf-8").strip()
+    except OSError:
+        return None
+    if not text:
+        return None
+    line = text.splitlines()[0].strip()
+    if not line:
+        return None
+    p = Path(line).expanduser()
+    if p.is_dir():
+        return str(p.resolve())
+    return None
+
+
+def _resolve_ckpt_dir(manifest: Path | None, glob_pat: str) -> str | None:
+    """Prefer manifest from training (`train_joint --write-checkpoint-path`); else newest glob match."""
+    if manifest is not None:
+        got = _read_ckpt_manifest(manifest)
+        if got:
+            print(f"checkpoint dir (manifest {manifest.name}): {got}")
+            return got
+    paths = sorted(
+        glob.glob(os.path.expanduser(glob_pat)),
+        key=os.path.getmtime,
+        reverse=True,
+    )
+    return paths[0] if paths else None
+
+
 def _step14_active_learning(cli: Path, dest: Path, allow_ph: bool) -> None:
     cands = list(cli.glob("out/*activate_learning*.npz")) + list(cli.glob("out/*active_learning*.npz"))
     p = cands[0] if cands else None
@@ -387,24 +425,31 @@ def _step13_md_frame(cli: Path, dest: Path, allow_ph: bool) -> None:
             _placeholder(dest, "Could not read MD xyz")
 
 
-def _try_checkpoint_plot(ckpt_glob: str, dest: Path) -> None:
+def _try_checkpoint_plot(
+    ckpt: str | None,
+    dest: Path,
+    *,
+    manifest_out: Path | None,
+    force: bool,
+) -> None:
+    if not ckpt:
+        return
+    if force and dest.is_file():
+        dest.unlink()
     if dest.is_file():
         print(f"keep existing {dest}")
         return
-    paths = sorted(glob.glob(ckpt_glob), key=os.path.getmtime, reverse=True)
-    if not paths:
-        return
-    ckpt = paths[0]
     prefix = _mmml_prefix()
     if not prefix:
         print("skip checkpoint plot: mmml/uv not on PATH", file=sys.stderr)
         return
+    ckpt_resolved = str(Path(ckpt).resolve())
     try:
         subprocess.run(
             prefix
             + [
                 "extract-checkpoint-metrics",
-                ckpt,
+                ckpt_resolved,
                 "-o",
                 str(dest),
                 "--log-loss",
@@ -414,9 +459,13 @@ def _try_checkpoint_plot(ckpt_glob: str, dest: Path) -> None:
             capture_output=True,
             text=True,
         )
-        print(f"wrote {dest} via extract-checkpoint-metrics")
+        print(f"wrote {dest} via extract-checkpoint-metrics ({ckpt_resolved})")
+        if manifest_out is not None:
+            manifest_out.parent.mkdir(parents=True, exist_ok=True)
+            manifest_out.write_text(ckpt_resolved + "\n", encoding="utf-8")
+            print(f"wrote manifest for scripts: {manifest_out.resolve()}")
     except (subprocess.CalledProcessError, subprocess.TimeoutExpired) as e:
-        print(f"skip checkpoint plot ({ckpt}): {e}")
+        print(f"skip checkpoint plot ({ckpt_resolved}): {e}")
 
 
 def main() -> int:
@@ -447,11 +496,18 @@ def main() -> int:
         default=os.path.expanduser("~/ckpts/eg_joint*"),
         help="Glob for joint training run dir (optional metrics figure)",
     )
+    ap.add_argument(
+        "--force-metrics",
+        action="store_true",
+        help="Regenerate step09/step10 PNGs even if they already exist",
+    )
     args = ap.parse_args()
     cli: Path = args.cli_dir
     out: Path = args.assets_dir
     out.mkdir(parents=True, exist_ok=True)
     ph = args.allow_placeholders
+    manifest_physnet = cli / "out" / "last_physnet_checkpoint.txt"
+    manifest_joint = cli / "out" / "last_joint_checkpoint.txt"
 
     _step01_monomer(cli, out / "step01_monomer.png", ph)
     _step02_packed(cli, out / "step02_packed.png", ph)
@@ -468,8 +524,20 @@ def main() -> int:
     _step13_md_frame(cli, out / "step13_md_frame.png", ph)
     _step14_active_learning(cli, out / "step14_active_learning.png", ph)
 
-    _try_checkpoint_plot(args.physnet_ckpt_glob, out / "step09_training_metrics.png")
-    _try_checkpoint_plot(args.joint_ckpt_glob, out / "step10_training_metrics.png")
+    phys_ckpt = _resolve_ckpt_dir(manifest_physnet, args.physnet_ckpt_glob)
+    joint_ckpt = _resolve_ckpt_dir(manifest_joint, args.joint_ckpt_glob)
+    _try_checkpoint_plot(
+        phys_ckpt,
+        out / "step09_training_metrics.png",
+        manifest_out=manifest_physnet,
+        force=args.force_metrics,
+    )
+    _try_checkpoint_plot(
+        joint_ckpt,
+        out / "step10_training_metrics.png",
+        manifest_out=manifest_joint,
+        force=args.force_metrics,
+    )
 
     if not (out / "step09_training_metrics.png").is_file() and ph:
         _placeholder(

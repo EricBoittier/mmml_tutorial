@@ -4,7 +4,8 @@
 # Requires: Step 08 run first (out/splits/).
 
 echo "=== 10: PhysNet+DCMNet joint training ==="
-echo "Command: python -m mmml.cli.misc.train_joint --train-efd out/splits/energies_forces_dipoles_train.npz --train-esp out/splits/grids_esp_train.npz --valid-efd out/splits/energies_forces_dipoles_valid.npz --valid-esp out/splits/grids_esp_valid.npz --use-repo-physnet-params --epochs 1000 --batch-size 1 --name eg_joint --ckpt-dir ~/ckpts --plot-results --plot-freq 0"
+echo "Command: python -m mmml.cli.misc.train_joint ... --write-checkpoint-path out/last_joint_checkpoint.txt"
+mkdir -p out
 python -m mmml.cli.misc.train_joint \
   --train-efd out/splits/energies_forces_dipoles_train.npz \
   --train-esp out/splits/grids_esp_train.npz \
@@ -14,5 +15,6 @@ python -m mmml.cli.misc.train_joint \
   --epochs 1000 \
   --batch-size 1 \
   --name eg_joint \
-  --ckpt-dir ~/ckpts --plot-results --plot-freq 0
-echo "Output: ~/ckpts/eg_joint/"
+  --ckpt-dir ~/ckpts --plot-results --plot-freq 0 \
+  --write-checkpoint-path out/last_joint_checkpoint.txt
+echo "Output: ~/ckpts/eg_joint/ (path also in out/last_joint_checkpoint.txt)"
