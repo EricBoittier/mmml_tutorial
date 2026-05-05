@@ -481,7 +481,7 @@ The script runs `compare_charmm_ml` against `~/ckpts/eg_joint` and `out/splits/*
 bash 13_physnet_md.sh
 ```
 
-#stepfig("step13_md_frame.png", [Last frame of ASE or JAX-MD output under `out/physnet_md/` when trajectories exist.])
+#stepfig("step13_md_frame.png", [ASE `plot_atoms` on the last frame of ASE or JAX-MD `xyz` under `out/physnet_md/` when trajectories exist.])
 
 === Step 14: Active learning extraction
 
