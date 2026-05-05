@@ -300,7 +300,13 @@ mmml md-system --setup pbc_npt --temperature 300 --pressure 1.0 --output-dir out
 
 # Mixed composition (methanol:water = 1:1, TIP3 water)
 mmml md-system --setup pbc_nvt --composition MEOH:5,TIP3:5 --temperature 300 --output-dir out/md/meoh_tip3_1to1
+
+# Long runs: split trajectory into multiple files (e.g., 5000 frames per file)
+mmml md-system --setup pbc_nvt --composition MEOH:5,TIP3:5 --temperature 300 --traj-chunk-frames 5000
 ```
+
+For long simulations, use `--traj-chunk-frames` to avoid a single very large trajectory file.  
+When enabled, output is split as `*.part0000.traj`, `*.part0001.traj`, etc.
 
 Equivalent direct argparse script usage:
 

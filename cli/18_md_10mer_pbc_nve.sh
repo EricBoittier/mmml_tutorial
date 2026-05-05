@@ -6,11 +6,12 @@ set -e
 . ./shared.source
 
 echo "=== 18: md_10mer periodic NVE ==="
-echo "Command: mmml md-system --setup pbc_nve --n-molecules \"$MD10MER_N_MOLECULES\" --ps \"$MD10MER_PS\" --dt-fs \"$MD10MER_DT_FS\" --output-dir \"$MD10MER_OUT/pbc_nve\""
+echo "Command: mmml md-system --setup pbc_nve --n-molecules \"$MDSYS_N_MOLECULES\" --ps \"$MDSYS_PS\" --dt-fs \"$MDSYS_DT_FS\" --traj-chunk-frames \"$MDSYS_TRAJ_CHUNK_FRAMES\" --output-dir \"$MDSYS_OUT/pbc_nve\""
 
 mmml md-system \
   --setup pbc_nve \
-  --n-molecules "$MD10MER_N_MOLECULES" \
-  --ps "$MD10MER_PS" \
-  --dt-fs "$MD10MER_DT_FS" \
-  --output-dir "$MD10MER_OUT/pbc_nve"
+  --n-molecules "$MDSYS_N_MOLECULES" \
+  --ps "$MDSYS_PS" \
+  --dt-fs "$MDSYS_DT_FS" \
+  --traj-chunk-frames "$MDSYS_TRAJ_CHUNK_FRAMES" \
+  --output-dir "$MDSYS_OUT/pbc_nve"

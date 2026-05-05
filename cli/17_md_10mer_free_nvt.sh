@@ -6,12 +6,13 @@ set -e
 . ./shared.source
 
 echo "=== 17: md_10mer free-space NVT ==="
-echo "Command: mmml md-system --setup free_nvt --temperature \"$MD10MER_TEMP_K\" --n-molecules \"$MD10MER_N_MOLECULES\" --ps \"$MD10MER_PS\" --dt-fs \"$MD10MER_DT_FS\" --output-dir \"$MD10MER_OUT/free_nvt\""
+echo "Command: mmml md-system --setup free_nvt --temperature \"$MDSYS_TEMP_K\" --n-molecules \"$MDSYS_N_MOLECULES\" --ps \"$MDSYS_PS\" --dt-fs \"$MDSYS_DT_FS\" --traj-chunk-frames \"$MDSYS_TRAJ_CHUNK_FRAMES\" --output-dir \"$MDSYS_OUT/free_nvt\""
 
 mmml md-system \
   --setup free_nvt \
-  --temperature "$MD10MER_TEMP_K" \
-  --n-molecules "$MD10MER_N_MOLECULES" \
-  --ps "$MD10MER_PS" \
-  --dt-fs "$MD10MER_DT_FS" \
-  --output-dir "$MD10MER_OUT/free_nvt"
+  --temperature "$MDSYS_TEMP_K" \
+  --n-molecules "$MDSYS_N_MOLECULES" \
+  --ps "$MDSYS_PS" \
+  --dt-fs "$MDSYS_DT_FS" \
+  --traj-chunk-frames "$MDSYS_TRAJ_CHUNK_FRAMES" \
+  --output-dir "$MDSYS_OUT/free_nvt"
