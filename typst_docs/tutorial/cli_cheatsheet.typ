@@ -792,6 +792,7 @@ Key options:
 - `--checkpoint`, `--output-dir`, `--template-pdb`
 - `--spacing`, `--box-size`, `--seed`, `--ps`, `--dt-fs`
 - `--temperature`, `--pressure`
+- `--min-intermonomer-atom-distance`: abort if atoms from different monomers overlap (default `0.5 A`).
 - `--extra-args ...`: forward raw args to the underlying script; put this option last.
 
 Generated molecules are placed at random 3D COM positions using `--seed` for
@@ -812,6 +813,11 @@ minimizer and MD start. The `fmax=0.1` value is the optimizer target; the
 default abort threshold is looser at `--max-fmax-after-min 2.0`. The best force
 and best energy structures from the ASE pre-minimization are saved, and the
 JAX-MD handoff continues from the best-force structure.
+
+Between setup, minimization, and MD recording blocks, `md-system` checks that no
+two atoms from different monomers are closer than
+`--min-intermonomer-atom-distance`; use `0` only to disable this guard for
+debugging.
 
 ```bash
 mmml md-system --setup pbc_npt --backend jaxmd --extra-args --pre-min-steps 200 --fire-min-steps 500

@@ -681,8 +681,10 @@ threshold, ASE FIRE is used before the JAX-MD minimizer starts. The optimizer
 target remains `0.1`, while the default abort threshold is looser at
 `--max-fmax-after-min 2.0`. The best force and best energy structures from this
 ASE pre-minimization are saved, and the JAX-MD handoff continues from the
-best-force structure. Tune these lower-level knobs by putting `--extra-args`
-last, for example:
+best-force structure. Between setup, minimization, and MD recording blocks,
+`md-system` checks that atoms from different monomers do not overlap
+(`--min-intermonomer-atom-distance`, default `0.5 A`). Tune these lower-level
+knobs by putting `--extra-args` last, for example:
 
 ```bash
 mmml md-system --setup pbc_npt --backend jaxmd --extra-args --pre-min-steps 200 --fire-min-steps 500
