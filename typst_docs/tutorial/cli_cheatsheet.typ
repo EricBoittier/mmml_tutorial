@@ -820,7 +820,9 @@ For JAX-MD periodic runs, the setup now pre-minimizes before dynamics: CHARMM
 SD/ABNR warms up the internal force-field terms, then the MMML calculator runs
 ASE BFGS to `fmax=0.1`. If BFGS misses that target, ASE FIRE is run before the
 JAX-MD minimizer and MD start. The `fmax=0.1` value is the optimizer target;
-the default abort threshold is looser at `--max-fmax-after-min 0.5`.
+the default abort threshold is looser at `--max-fmax-after-min 2.0`. The best
+force and best energy structures from the ASE pre-minimization are saved, and
+the JAX-MD handoff continues from the best-force structure.
 
 ```bash
 mmml md-system --setup pbc_npt --backend jaxmd --extra-args --pre-min-steps 200 --fire-min-steps 500
