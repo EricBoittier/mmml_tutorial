@@ -793,7 +793,7 @@ Run predefined mixed-composition MD setup scripts.
 ```bash
 mmml md-system --setup pbc_npt --composition MEOH:5,TIP3:5 --temperature 300 --pressure 1.0
 mmml md-system --setup pbc_nve --backend jaxmd --n-molecules 10 --ps 1.0
-mmml md-system --setup pbc_npt --n-molecules 100 --box-size 60.0 --ps 10
+mmml md-system --setup pbc_npt --n-molecules 100 --box-size 60.0 --seed 7 --ps 10
 mmml md-system --setup all --n-molecules 10 --ps 1.0 --dt-fs 0.25
 ```
 
@@ -802,16 +802,18 @@ Key options:
 - `--backend`: `auto`, `ase`, or `jaxmd`. `auto` uses ASE except for `pbc_npt`, which uses JAX-MD.
 - `--composition`: residue counts such as `MEOH:5,TIP3:5`.
 - `--checkpoint`, `--output-dir`, `--template-pdb`
-- `--spacing`, `--box-size`, `--ps`, `--dt-fs`
+- `--spacing`, `--box-size`, `--seed`, `--ps`, `--dt-fs`
 - `--temperature`, `--pressure`
 - `--extra-args ...`: forward raw args to the underlying script; put this option last.
 
-If `--box-size` is omitted, periodic runs choose a cubic box from the initial
-cluster extent plus padding. In the tutorial shell scripts, set `MDSYS_BOX_A`
-to pass the same override:
+Generated molecules are placed at random 3D COM positions using `--seed` for
+reproducibility; `--spacing` is the target minimum COM spacing. If `--box-size`
+is omitted, periodic runs choose a cubic box from the initial cluster extent
+plus padding. In the tutorial shell scripts, set `MDSYS_BOX_A` to pass the same
+box override and `MDSYS_SEED` to reshuffle placement:
 
 ```bash
-MDSYS_PS=10 MDSYS_N_MOLECULES=100 MDSYS_BOX_A=60 bash 20_md_10mer_pbc_npt.sh
+MDSYS_PS=10 MDSYS_N_MOLECULES=100 MDSYS_BOX_A=60 MDSYS_SEED=7 bash 20_md_10mer_pbc_npt.sh
 ```
 
 For JAX-MD periodic runs, the setup now pre-minimizes before dynamics: CHARMM
