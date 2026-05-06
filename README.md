@@ -296,12 +296,12 @@ mmml md-system --setup free_nvt --temperature 300 --output-dir out/md/free_nvt
 
 # Periodic MD
 mmml md-system --setup pbc_nve --output-dir out/md/pbc_nve
-mmml md-system --setup pbc_nvt --temperature 300 --output-dir out/md/pbc_nvt
+mmml md-system --setup pbc_nvt --backend jaxmd --temperature 300 --output-dir out/md/pbc_nvt
 mmml md-system --setup pbc_npt --temperature 300 --pressure 1.0 --output-dir out/md/pbc_npt
 mmml md-system --setup pbc_npt --n-molecules 100 --box-size 60.0 --seed 7 --output-dir out/md/pbc_npt_60A
 
 # Mixed composition (methanol:water = 1:1, TIP3 water)
-mmml md-system --setup pbc_nvt --nvt-integrator langevin --composition MEOH:5,TIP3:5 --temperature 300 --output-dir out/md/meoh_tip3_1to1
+mmml md-system --setup pbc_nvt --backend jaxmd --composition MEOH:5,TIP3:5 --temperature 300 --output-dir out/md/meoh_tip3_1to1
 
 # Long runs: split trajectory into multiple files (e.g., 5000 frames per file)
 mmml md-system --setup pbc_nvt --composition MEOH:5,TIP3:5 --temperature 300 --traj-chunk-frames 5000
@@ -310,7 +310,7 @@ mmml md-system --setup pbc_nvt --composition MEOH:5,TIP3:5 --temperature 300 --t
 For long simulations, use `--traj-chunk-frames` to avoid a single very large trajectory file.  
 When enabled, output is split as `*.part0000.traj`, `*.part0001.traj`, etc.
 
-For mixed compositions that include non-MEOH residues (e.g. TIP3), the suite defaults to MM-only fallback (`doML=False`) for stability with the bundled MEOH checkpoint. Use `--extra-args --allow-ml-on-mixed` only if you intentionally want to test unsupported ML behavior.
+The periodic tutorial shell scripts default to the JAX-MD backend via `MDSYS_BACKEND=jaxmd`; set `MDSYS_BACKEND=ase` to compare against the ASE route. During JAX-MD production, inter-monomer overlap detections warn and continue by default. Use `--extra-args --dynamics-overlap-action error` for hard aborts or `off` to disable that diagnostic.
 
 Equivalent direct argparse script usage:
 
@@ -321,7 +321,8 @@ python ~/mmml/scripts/md_10mer_mmml_pbc_suite.py --only vac_nvt_nhc --nvt-temp-K
 python ~/mmml/scripts/md_10mer_mmml_pbc_suite.py --only pbc_nve
 python ~/mmml/scripts/md_10mer_mmml_pbc_suite.py --only pbc_nvt_nhc --nvt-temp-K 300
 
-# JAX-MD periodic NPT setup (NHC thermostat + barostat)
+# JAX-MD periodic setup (NHC thermostat; NPT adds a barostat)
+python ~/mmml/scripts/md_10mer_mmml_pbc_suite_jaxmd.py --ensemble nvt --temperature 300
 python ~/mmml/scripts/md_10mer_mmml_pbc_suite_jaxmd.py --ensemble npt --temperature 300 --pressure 1.0
 ```
 

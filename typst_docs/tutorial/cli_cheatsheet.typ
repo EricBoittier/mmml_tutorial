@@ -788,21 +788,25 @@ mmml md-system --setup all --n-molecules 10 --ps 1.0 --dt-fs 0.25
 Key options:
 - `--setup`: `free_nve`, `free_nvt`, `pbc_nve`, `pbc_nvt`, `pbc_npt`, or `all`.
 - `--backend`: `auto`, `ase`, or `jaxmd`. `auto` uses ASE except for `pbc_npt`, which uses JAX-MD.
+- Tutorial periodic scripts (`18`-`21`) set `MDSYS_BACKEND=jaxmd` by default; use `MDSYS_BACKEND=ase` to force the ASE route.
 - `--composition`: residue counts such as `MEOH:5,TIP3:5`.
 - `--checkpoint`, `--output-dir`, `--template-pdb`
 - `--spacing`, `--box-size`, `--seed`, `--ps`, `--dt-fs`
 - `--temperature`, `--pressure`
-- `--min-intermonomer-atom-distance`: abort if atoms from different monomers overlap (default `0.1 A`).
+- `--min-intermonomer-atom-distance`: diagnostic distance for atoms from different monomers (default `0.1 A`).
+- `--dynamics-overlap-action`: JAX-MD production handling for that diagnostic: `warn` (default), `error`, or `off`.
 - `--extra-args ...`: forward raw args to the underlying script; put this option last.
 
 Generated molecules are placed at random 3D COM positions using `--seed` for
 reproducibility; `--spacing` is the target minimum COM spacing. If `--box-size`
 is omitted, periodic runs choose a cubic box from the initial cluster extent
 plus padding. In the tutorial shell scripts, set `MDSYS_BOX_A` to pass the same
-box override and `MDSYS_SEED` to reshuffle placement:
+box override, `MDSYS_SEED` to reshuffle placement, and `MDSYS_BACKEND` to choose
+`jaxmd` (default for periodic scripts) or `ase`:
 
 ```bash
 MDSYS_PS=10 MDSYS_N_MOLECULES=100 MDSYS_BOX_A=60 MDSYS_SEED=7 bash 20_md_10mer_pbc_npt.sh
+MDSYS_BACKEND=ase bash 19_md_10mer_pbc_nvt.sh
 ```
 
 For JAX-MD periodic runs, the setup now pre-minimizes before dynamics: CHARMM
@@ -816,11 +820,14 @@ JAX-MD handoff continues from the best-force structure.
 
 Between setup, minimization, and MD recording blocks, `md-system` checks that no
 two atoms from different monomers are closer than
-`--min-intermonomer-atom-distance`; setup and pre-minimization failures try a
-CHARMM SD/ABNR rescue before aborting. Use `0` only to disable this guard for debugging.
+`--min-intermonomer-atom-distance`. Setup and pre-minimization failures try a
+CHARMM SD/ABNR rescue before aborting. During JAX-MD production, the same check
+warns and continues by default; use `--extra-args --dynamics-overlap-action error`
+for hard aborts, or `off` to disable the diagnostic.
 
 ```bash
 mmml md-system --setup pbc_npt --backend jaxmd --extra-args --pre-min-steps 200 --fire-min-steps 500
+mmml md-system --setup pbc_nvt --backend jaxmd --extra-args --dynamics-overlap-action error
 ```
 
 JAX-MD periodic runs record every 100 steps by default (`--steps-per-recording

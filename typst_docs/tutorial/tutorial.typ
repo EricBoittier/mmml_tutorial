@@ -659,8 +659,9 @@ bash 19_md_10mer_pbc_nvt.sh
 Periodic NPT and mixed-solvent examples: `20_md_10mer_pbc_npt.sh`, `21_md_system_meoh_tip3_1to1.sh`.
 The `md-system` wrapper has an explicit `--backend auto|ase|jaxmd` selector:
 `auto` keeps ASE for the free/PBC NVE/NVT presets and routes `pbc_npt` through
-JAX-MD. Use `--backend jaxmd` when you want the periodic NVE/NVT presets to use
-the JAX-MD runner too.
+JAX-MD. The tutorial periodic shell scripts (`18`-`21`) set
+`MDSYS_BACKEND=jaxmd` by default, so they use the JAX-MD runner unless you
+override with `MDSYS_BACKEND=ase`.
 
 Generated molecules are placed at random 3D COM positions rather than on a
 single plane. Use `--seed` (or `MDSYS_SEED` in the tutorial scripts) to
@@ -671,6 +672,7 @@ the tutorial shell scripts, with `MDSYS_BOX_A`:
 
 ```bash
 MDSYS_PS=10 MDSYS_N_MOLECULES=100 MDSYS_BOX_A=60 MDSYS_SEED=7 bash 20_md_10mer_pbc_npt.sh
+MDSYS_BACKEND=ase bash 19_md_10mer_pbc_nvt.sh
 ```
 
 JAX-MD preset runs now do a staged pre-MD minimization. CHARMM SD/ABNR runs
@@ -683,12 +685,16 @@ target remains `0.1`, while the default abort threshold is looser at
 ASE pre-minimization are saved, and the JAX-MD handoff continues from the
 best-force structure. Between setup, minimization, and MD recording blocks,
 `md-system` checks that atoms from different monomers do not overlap
-(`--min-intermonomer-atom-distance`, default `0.1 A`); if a setup or
-pre-minimization check fails, CHARMM SD/ABNR is tried first as a rescue before
-the run aborts. Tune these lower-level knobs by putting `--extra-args` last, for example:
+(`--min-intermonomer-atom-distance`, default `0.1 A`). Setup and
+pre-minimization failures try CHARMM SD/ABNR as a rescue before aborting. During
+JAX-MD production, overlap detections warn and continue by default; use
+`--extra-args --dynamics-overlap-action error` for hard aborts or `off` to
+disable that diagnostic. Tune these lower-level knobs by putting `--extra-args`
+last, for example:
 
 ```bash
 mmml md-system --setup pbc_npt --backend jaxmd --extra-args --pre-min-steps 200 --fire-min-steps 500
+mmml md-system --setup pbc_nvt --backend jaxmd --extra-args --dynamics-overlap-action error
 ```
 
 JAX-MD periodic runs record every 100 steps by default (`--steps-per-recording
@@ -708,7 +714,7 @@ progress logs include density as `rho (g/cm³)`, and the HDF5 output stores
 - `PHYSNET_NATOMS`, `PHYSNET_EPOCHS`, `PHYSNET_BATCH`
 - `PHYSNET_TRAIN_NPZ`, `PHYSNET_VALID_NPZ`
 - `PHYSNET_MD_OUT`, `PHYSNET_MD_TRAJ`, `ACTIVE_LEARNING_OUT`
-- `MDSYS_*` knobs for `md-system` demos
+- `MDSYS_*` knobs for `md-system` demos, including `MDSYS_BACKEND` (default `jaxmd`)
 
 == Fast start options
 
