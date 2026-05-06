@@ -792,7 +792,7 @@ Key options:
 - `--checkpoint`, `--output-dir`, `--template-pdb`
 - `--spacing`, `--box-size`, `--seed`, `--ps`, `--dt-fs`
 - `--temperature`, `--pressure`
-- `--min-intermonomer-atom-distance`: abort if atoms from different monomers overlap (default `0.5 A`).
+- `--min-intermonomer-atom-distance`: abort if atoms from different monomers overlap (default `0.1 A`).
 - `--extra-args ...`: forward raw args to the underlying script; put this option last.
 
 Generated molecules are placed at random 3D COM positions using `--seed` for
@@ -816,8 +816,8 @@ JAX-MD handoff continues from the best-force structure.
 
 Between setup, minimization, and MD recording blocks, `md-system` checks that no
 two atoms from different monomers are closer than
-`--min-intermonomer-atom-distance`; use `0` only to disable this guard for
-debugging.
+`--min-intermonomer-atom-distance`; setup and pre-minimization failures try a
+CHARMM SD/ABNR rescue before aborting. Use `0` only to disable this guard for debugging.
 
 ```bash
 mmml md-system --setup pbc_npt --backend jaxmd --extra-args --pre-min-steps 200 --fire-min-steps 500
