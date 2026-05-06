@@ -114,7 +114,7 @@
     inset: (x: 10pt, y: 5pt),
   )[
     #text(font: "DejaVu Sans Mono", size: 8pt, fill: white)[
-      mmml --help  #h(1.5em)  mmml <command> --help
+      mmml --help  #h(1.5em)  mmml command --help
     ]
   ]
 ]
