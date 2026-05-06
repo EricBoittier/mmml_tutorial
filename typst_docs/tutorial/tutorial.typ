@@ -693,7 +693,7 @@ mmml md-system --setup pbc_npt --backend jaxmd --extra-args --pre-min-steps 200 
 
 JAX-MD periodic runs record every 100 steps by default (`--steps-per-recording
 100`). Fixed-box NVT/NVE neighbor reuse defaults to `--jax-md-update-interval
-5` with a `0.2 A` skin; NPT keeps the safer every-recording-block refresh. NPT
+1` with a `0.2 A` skin; NPT keeps the safer every-recording-block refresh. NPT
 progress logs include density as `rho (g/cm³)`, and the HDF5 output stores
 `density_g_cm3`.
 
