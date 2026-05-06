@@ -1,100 +1,212 @@
 // MMML command-line cheat sheet for tutorial delivery.
-#set page(numbering: "1")
-#set text(font: "Libertinus Serif", size: 9.5pt)
 
-// --- Page 1: compact two-column command index (fits one sheet) ---
-#set text(size: 8.7pt)
-#set par(leading: 0.55em, justify: false)
+#set page(
+  paper: "a4",
+  margin: (x: 1.25cm, y: 1.15cm),
+  numbering: "1",
+)
 
-= MMML CLI Cheat Sheet
+#set text(font: "Libertinus Serif", size: 8.6pt)
+#set par(leading: 0.58em, justify: false)
+
+#let ink = rgb("#1f2937")
+#let muted = rgb("#64748b")
+#let accent = rgb("#2563eb")
+#let soft = rgb("#eff6ff")
+#let rule = rgb("#cbd5e1")
+#let code-bg = rgb("#f8fafc")
+
+#let pill(body) = box(
+  radius: 4pt,
+  inset: (x: 5pt, y: 2pt),
+  fill: soft,
+  stroke: 0.4pt + rgb("#bfdbfe"),
+  text(size: 7.5pt, fill: accent, weight: "bold")[#body],
+)
+
+#let cmd(name, desc) = block[
+  #box(
+    width: 100%,
+    fill: code-bg,
+    radius: 3pt,
+    inset: (x: 4pt, y: 2.2pt),
+    stroke: 0.3pt + rgb("#e2e8f0"),
+  )[
+    #text(font: "DejaVu Sans Mono", size: 7.35pt, fill: ink)[#name]
+    #h(1fr)
+    #text(size: 7.15pt, fill: muted)[#desc]
+  ]
+]
+
+#let env-note(body) = block(
+  width: 100%,
+  above: 0.35em,
+  below: 0.55em,
+)[
+  #box(
+    width: 100%,
+    radius: 4pt,
+    inset: (x: 5pt, y: 3pt),
+    fill: rgb("#fefce8"),
+    stroke: 0.35pt + rgb("#fde68a"),
+  )[
+    #text(size: 8.2pt, weight: "bold", fill: ink)[Environment]
+    #v(0.15em)
+    #text(size: 7.9pt, fill: ink)[#body]
+  ]
+]
+
+#let section(title, body) = block(
+  width: 100%,
+  breakable: false,
+  above: 0.25em,
+  below: 0.55em,
+)[
+  #box(
+    width: 100%,
+    radius: 6pt,
+    inset: 6pt,
+    fill: white,
+    stroke: 0.45pt + rule,
+  )[
+    #text(size: 8.7pt, weight: "bold", fill: ink)[#title]
+    #v(0.35em)
+    #body
+  ]
+]
 
 #align(center)[
-  ```bash
-  mmml --help
-  mmml <command> --help
-  ```
+  #text(size: 18pt, weight: "bold", fill: ink)[MMML CLI Cheat Sheet]
+  #v(0.25em)
+  #text(size: 8.4pt, fill: muted)[Tutorial command index for molecular modelling and machine-learning workflows]
 ]
 
-#v(0.35em)
-#text(size: 8.3pt, style: "italic")[
-  Five jobs: build systems · QM/ML data · train/eval · dynamics · inspect/convert/visualize.
-]
+#v(0.55em)
 
-#v(0.5em)
-#grid(
-  columns: 2,
-  column-gutter: 1.4em,
-  row-gutter: 0.55em,
-)[
-  #block(breakable: false)[
-    === System building
-    ```bash
-    mmml make-res        # residue/topology (PyCHARMM/CGENFF)
-    mmml make-box        # pack box (PackMol)
-    mmml run-pycharmm    # classical heat/equi baseline
-    ```
-
-    === QM generation
-    ```bash
-    mmml pyscf-dft              # GPU DFT, optional harmonic
-    mmml pyscf-mp2              # GPU MP2 reference
-    mmml normal-mode-sample     # sample from normal modes
-    mmml pyscf-evaluate         # batch QM (+ESP, E-field)
-    mmml verify-esp-alignment   # check ESP grid vs geometry
-    ```
-
-    === Data prep & I/O
-    ```bash
-    mmml fix-and-split   # units, splits, ESP grids
-    mmml validate        # NPZ schema check
-    mmml xml2npz         # Molpro XML → NPZ
-    ```
-  ]
-  #block(breakable: false)[
-    === PhysNet / generic train
-    ```bash
-    mmml physnet-md                              # MD from PhysNet ckpt
-    mmml physnet-evaluate                        # test-set metrics
-    python -m mmml.cli.misc.train_joint          # PhysNet+DCMNet joint
-    mmml train                                   # generic DCMNet/PhysNetJAX API
-    mmml evaluate                                # generic eval API
-    ```
-
-    === Electric-field model
-    ```bash
-    mmml ef-train      # equivariant EF training
-    mmml ef-evaluate   # EF metrics / GUI H5
-    mmml ef-md         # MD (ase or jax)
-    ```
-
-    === Hybrid MD & workflows
-    ```bash
-    mmml run              # PyCHARMM + ML hybrid
-    mmml md-system        # preset mixed setups
-    mmml active-learning  # traj → QM relabel frames
-    ```
-
-    === Geometry, traj, GUI, MDCM
-    ```bash
-    mmml interpolate-xyz                        # reaction path NPZ
-    mmml unwrap-traj                            # PBC unwrap
-    mmml sample-diverse-xyz                     # SOAP diversity pick
-    mmml gui                                    # molecular viewer
-    mmml kernel-fit                             # kernel → MDCM charges
-    mmml extract-checkpoint-metrics             # Orbax plots
-    python -m mmml.cli.misc.compare_charmm_ml     # CHARMM vs ML
-    mmml downstream                             # misc analysis (see --help)
-    ```
+#align(center)[
+  #box(
+    radius: 6pt,
+    fill: rgb("#0f172a"),
+    inset: (x: 10pt, y: 5pt),
+  )[
+    #text(font: "DejaVu Sans Mono", size: 8pt, fill: white)[
+      mmml --help  #h(1.5em)  mmml <command> --help
+    ]
   ]
 ]
 
+#v(0.55em)
+
+#align(center)[
+  #pill[build systems]
+  #h(0.35em)
+  #pill[QM / ML data]
+  #h(0.35em)
+  #pill[train / eval]
+  #h(0.35em)
+  #pill[dynamics]
+  #h(0.35em)
+  #pill[inspect / convert / visualize]
+]
+
+#v(0.75em)
+
+#columns(2, gutter: 1.05em)[
+
+  #section[System building][
+    #cmd[`mmml make-res`][residue/topology, PyCHARMM/CGENFF]
+    #cmd[`mmml make-box`][pack box, PackMol]
+    #cmd[`mmml run-pycharmm`][classical heat/equi baseline]
+  ]
+
+  #section[QM generation][
+    #cmd[`mmml pyscf-dft`][GPU DFT, optional harmonic]
+    #cmd[`mmml pyscf-mp2`][GPU MP2 reference]
+    #cmd[`mmml normal-mode-sample`][sample from normal modes]
+    #cmd[`mmml pyscf-evaluate`][batch QM, ESP, E-field]
+    #cmd[`mmml verify-esp-alignment`][ESP grid vs geometry]
+  ]
+
+  #section[Data prep & I/O][
+    #cmd[`mmml fix-and-split`][units, splits, ESP grids]
+    #cmd[`mmml validate`][NPZ schema check]
+    #cmd[`mmml xml2npz`][Molpro XML to NPZ]
+  ]
+
+  #section[PhysNet / generic train][
+    #cmd[`mmml physnet-md`][MD from PhysNet checkpoint]
+    #cmd[`mmml physnet-evaluate`][test-set metrics]
+    #cmd[`python -m mmml.cli.misc.train_joint`][PhysNet + DCMNet joint]
+    #cmd[`mmml train`][generic DCMNet/PhysNetJAX API]
+    #cmd[`mmml evaluate`][generic evaluation API]
+  ]
+
+  #section[Electric-field model][
+    #cmd[`mmml ef-train`][equivariant EF training]
+    #cmd[`mmml ef-evaluate`][EF metrics / GUI H5]
+    #cmd[`mmml ef-md`][MD with ASE or JAX]
+  ]
+
+  #section[Hybrid MD & workflows][
+    #cmd[`mmml run`][PyCHARMM + ML hybrid]
+    #cmd[`mmml md-system`][preset mixed setups]
+    #cmd[`mmml active-learning`][trajectory to QM relabel frames]
+  ]
+
+  #section[Geometry, trajectories, GUI, MDCM][
+    #cmd[`mmml interpolate-xyz`][reaction-path NPZ]
+    #cmd[`mmml unwrap-traj`][PBC unwrap]
+    #cmd[`mmml sample-diverse-xyz`][SOAP diversity pick]
+    #cmd[`mmml gui`][molecular viewer]
+    #cmd[`mmml kernel-fit`][kernel to MDCM charges]
+    #cmd[`mmml extract-checkpoint-metrics`][Orbax plots]
+    #cmd[`python -m mmml.cli.misc.compare_charmm_ml`][CHARMM vs ML]
+    #cmd[`mmml downstream`][misc analysis; see --help]
+  ]
+]
+
 #v(0.35em)
-#line(length: 100%, stroke: 0.4pt + gray)
+#line(length: 100%, stroke: 0.45pt + rule)
 #v(0.25em)
-#text(size: 7.9pt)[
-  *Files:* geometries `R,Z,N` · training `E,F,Dxyz` · ESP `esp`,`esp_grid` · PhysNet Orbax/JSON · EF `params.json` + config.
+
+#text(size: 7.1pt, weight: "bold", fill: ink)[Environment quick table]
+#v(0.2em)
+#text(size: 5.95pt)[
+  #table(
+    columns: (13%, 33%, 34%, 20%),
+    inset: (x: 2.2pt, y: 1.7pt),
+    stroke: 0.25pt + rule,
+    align: left,
+    table.header(
+      [Area],
+      [Variables],
+      [Use],
+      [Example],
+    ),
+    [System],
+    [`CHARMM_HOME`, `CHARMM_LIB_DIR`, `SKIP_CHARMM_ENERGY_SHOW`, `RUN_CHARMM_ENERGY_SHOW`],
+    [PyCHARMM location and cluster-safe CHARMM energy display.],
+    [`SKIP_CHARMM_ENERGY_SHOW=1`],
+    [QM / GPU],
+    [`CUDA_VISIBLE_DEVICES`, `OMP_NUM_THREADS`, `MKL_NUM_THREADS`, `TMPDIR`],
+    [Choose GPU, limit CPU BLAS threads, and put scratch on fast storage.],
+    [`CUDA_VISIBLE_DEVICES=0`],
+    [JAX train / MD],
+    [`JAX_PLATFORMS`, `XLA_PYTHON_CLIENT_PREALLOCATE`, `XLA_PYTHON_CLIENT_MEM_FRACTION`],
+    [CPU smoke tests and GPU-memory behavior for JAX workloads.],
+    [`JAX_PLATFORMS=cpu`],
+    [MMML paths],
+    [`MMML_DATA`, `MMML_CKPT`, `MMML_CHECKPOINT_DIR`, `MMML_REPO`],
+    [Default data/checkpoint roots and tutorial asset repo discovery.],
+    [`MMML_CKPT=~/ckpts/run`],
+  )
 ]
 
+#v(0.3em)
+
+#text(size: 7.6pt, fill: muted)[
+  #strong[Files:] geometries `R,Z,N` · training `E,F,Dxyz` · ESP `esp`, `esp_grid` · PhysNet Orbax/JSON · EF `params.json` + config.
+]
 #pagebreak()
 
 // --- Following pages: same typography as before for narrative detail ---
@@ -121,6 +233,11 @@ bash 08_fix_and_split_cli.sh
 bash 10_physnet_dcmnet_train_cli.sh
 ```
 
+Environment shortcuts:
+- `JAX_PLATFORMS=cpu`: force CPU for smoke tests when CUDA/JAX initialization fails.
+- `CUDA_VISIBLE_DEVICES=0`: select one GPU on shared nodes.
+- `MMML_REPO=/path/to/mmml`: used by tutorial asset generation when the package repo is not next to `mmml_tutorial`.
+
 Fast DCMNet smoke test with prepared `out/splits_dimer/` files:
 
 ```bash
@@ -138,6 +255,12 @@ JAX_PLATFORMS=cpu uv run python -m mmml.cli.misc.train_joint \
 ```
 #pagebreak()
 == System-Building Commands
+
+These commands depend on PyCHARMM/CGENFF, and `make-box` also uses PackMol.
+
+#env-note[
+  `CHARMM_HOME` and `CHARMM_LIB_DIR` identify the CHARMM/PyCHARMM installation. MMML normally reads them from `CHARMMSETUP`, then exports them for PyCHARMM. On clusters, set `SKIP_CHARMM_ENERGY_SHOW=1` to avoid fragile CHARMM `energy.show()` calls; use `RUN_CHARMM_ENERGY_SHOW=1` only when you explicitly want to force them.
+]
 
 === `mmml make-res`
 
@@ -196,6 +319,12 @@ Typical outputs:
 - `res/heat.res`, `res/equi.res`
 #pagebreak()
 == QM Data Generation
+
+These commands are usually the most sensitive to GPU choice, BLAS threading, and scratch space.
+
+#env-note[
+  `CUDA_VISIBLE_DEVICES=0` selects the PySCF/CuPy GPU. `OMP_NUM_THREADS` and `MKL_NUM_THREADS` keep CPU linear-algebra helpers from oversubscribing a node. Use `TMPDIR=/fast/scratch/$USER` if a cluster provides local scratch. `JAX_PLATFORMS` is mostly for downstream JAX commands, not PySCF itself.
+]
 
 === `mmml pyscf-dft`
 
@@ -285,6 +414,12 @@ Typical output:
 #pagebreak()
 == Data Preparation and Validation
 
+These commands are mostly NumPy/HDF5 I/O, so the useful environment settings are about reproducibility and throughput rather than model behavior.
+
+#env-note[
+  `OMP_NUM_THREADS=1` and `MKL_NUM_THREADS=1` are good defaults for large split jobs launched many times in parallel. `TMPDIR` can keep temporary HDF5/NPZ work off slow shared home directories. For tutorial asset generation outside this CLI, `MMML_REPO` points to the local `mmml` checkout.
+]
+
 === `mmml fix-and-split`
 
 Convert raw QM units and create train/valid/test splits.
@@ -339,6 +474,12 @@ Use this for legacy Molpro-generated datasets.
 
 #pagebreak()
 == PhysNet and DCMNet
+
+PhysNet and DCMNet commands are JAX-heavy; set the accelerator environment before importing the CLI.
+
+#env-note[
+  `JAX_PLATFORMS=cpu` is the fastest way to run a CPU smoke test. `CUDA_VISIBLE_DEVICES=0` selects one GPU. `XLA_PYTHON_CLIENT_PREALLOCATE=false` avoids grabbing all GPU memory up front; `XLA_PYTHON_CLIENT_MEM_FRACTION=.80` caps the JAX allocator. `MMML_CKPT` is used by checkpoint-loading helpers, and `train_joint.py` prints `MMML_CHECKPOINT_DIR=...` for the run it created.
+]
 
 === `mmml physnet-md`
 
@@ -450,7 +591,14 @@ mmml evaluate --model dcmnet --checkpoint checkpoints/dcmnet --data test.npz
 
 Use model-specific evaluation commands when available.
 
+#pagebreak()
 == Electric-Field Model Commands
+
+The EF commands also use JAX, so use the same CPU/GPU and XLA memory controls as PhysNet/DCMNet.
+
+#env-note[
+  `CUDA_VISIBLE_DEVICES=0` selects the GPU for EF training/evaluation/MD. `JAX_PLATFORMS=cpu` is useful for CLI validation and tiny tests. `XLA_PYTHON_CLIENT_MEM_FRACTION=.80` or `XLA_PYTHON_CLIENT_PREALLOCATE=false` can prevent memory contention on shared GPUs.
+]
 
 === `mmml ef-train`
 
@@ -501,6 +649,12 @@ Key options:
 
 #pagebreak()
 == MD and Sampling Commands
+
+Hybrid MD combines PyCHARMM, JAX, ASE, and trajectory I/O, so both CHARMM and accelerator variables matter.
+
+#env-note[
+  Set `CHARMM_HOME` and `CHARMM_LIB_DIR` through `CHARMMSETUP` for PyCHARMM-backed runs. Use `MMML_CKPT=/path/to/checkpoint` when examples default to an environment checkpoint. `CUDA_VISIBLE_DEVICES`, `JAX_PLATFORMS`, `XLA_PYTHON_CLIENT_PREALLOCATE`, and `XLA_PYTHON_CLIENT_MEM_FRACTION` control the JAX side. `SKIP_CHARMM_ENERGY_SHOW=1` is still useful on SLURM nodes.
+]
 
 === `mmml run`
 
@@ -572,7 +726,14 @@ mmml pyscf-evaluate -i md_sampled.npz -o md_evaluated.npz --esp
 mmml fix-and-split --efd original_train.npz md_evaluated.npz -o out/splits_extended
 ```
 
+#pagebreak()
 == Geometry, Trajectory, and Visualization Utilities
+
+These utilities are mostly CPU and I/O bound, but a few GUI/model-inspection paths can load checkpoints.
+
+#env-note[
+  Use `OMP_NUM_THREADS` and `MKL_NUM_THREADS` to control descriptor or NumPy-heavy jobs. `MMML_CKPT` can provide a default checkpoint for utilities that inspect model outputs. For GUI work on remote machines, pair CLI flags like `--host` and `--port` with your SSH forwarding setup rather than relying on an environment variable.
+]
 
 === `mmml interpolate-xyz`
 
@@ -639,6 +800,12 @@ Useful options:
 #pagebreak()
 == DCM/MDCM and Analysis Utilities
 
+Analysis commands often reuse trained checkpoints and may import JAX.
+
+#env-note[
+  `MMML_CKPT` is convenient for scripts that default to a trained model path. `CUDA_VISIBLE_DEVICES` and `JAX_PLATFORMS=cpu` choose GPU or CPU evaluation. Use `XLA_PYTHON_CLIENT_PREALLOCATE=false` for lightweight analysis on a shared GPU.
+]
+
 === `mmml kernel-fit`
 
 Fit a kernel mapping geometry descriptors to MDCM charge positions.
@@ -687,6 +854,12 @@ plots and HDF5 files that can feed `kernel-fit`.
 #pagebreak()
 == Lower-Priority or Transitional Commands
 
+Most transitional commands defer to their subcommand help; use the same environment variables as the concrete workflow they call.
+
+#env-note[
+  For generic `mmml train` / `mmml evaluate`, start with `JAX_PLATFORMS`, `CUDA_VISIBLE_DEVICES`, and the XLA memory variables. For checkpoint-based helpers, set `MMML_CKPT`. For data defaults used by older demo interfaces, set `MMML_DATA`.
+]
+
 === `mmml downstream`
 
 Runs downstream analysis utilities. Use command help to inspect the current
@@ -707,6 +880,8 @@ when they exist:
 
 #pagebreak()
 == Troubleshooting Quick Hits
+
+When a command fails before argparse prints help, check the environment before changing CLI flags.
 
 === `JAX` / CUDA fails before the CLI starts
 
@@ -758,3 +933,16 @@ Do not combine it with:
 - `--restart`
 
 Healthy startup should mention the loaded PhysNet config and parameter merge.
+
+=== Useful environment checklist
+
+```bash
+env | grep -E '^(CHARMM|MMML|JAX|XLA|CUDA|OMP|MKL|TMPDIR)='
+```
+
+Common fixes:
+- PyCHARMM cannot import: confirm `CHARMM_HOME` and `CHARMM_LIB_DIR`.
+- CHARMM segfaults during display/energy checks on a cluster: set `SKIP_CHARMM_ENERGY_SHOW=1`.
+- JAX grabs too much GPU memory: set `XLA_PYTHON_CLIENT_PREALLOCATE=false` or lower `XLA_PYTHON_CLIENT_MEM_FRACTION`.
+- Wrong GPU is used: set `CUDA_VISIBLE_DEVICES`.
+- Tutorial scripts cannot find the package checkout: set `MMML_REPO`.
