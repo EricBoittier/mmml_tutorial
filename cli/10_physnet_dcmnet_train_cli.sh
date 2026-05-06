@@ -12,9 +12,9 @@ python -m mmml.cli.misc.train_joint \
   --valid-efd out/splits/energies_forces_dipoles_valid.npz \
   --valid-esp out/splits/grids_esp_valid.npz \
   --use-repo-physnet-params \
-  --epochs 1000 \
-  --batch-size 1 \
+  --epochs 10000 \
+  --batch-size 5 \
   --name eg_joint \
-  --ckpt-dir ~/ckpts --plot-results --plot-freq 0 \
+  --ckpt-dir ~/ckpts --plot-results --plot-freq 500 \
   --write-checkpoint-path out/last_joint_checkpoint.txt
 echo "Output: ~/ckpts/eg_joint/ (path also in out/last_joint_checkpoint.txt)"
