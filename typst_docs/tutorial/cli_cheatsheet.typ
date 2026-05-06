@@ -113,10 +113,20 @@
 
 #columns(2, gutter: 1.05em)[
 
+  #section[Install / setup][
+    #cmd[`curl -LsSf https://astral.sh/uv/install.sh | sh`][install uv]
+    #cmd[`uv python install 3.13`][MMML Python]
+    #cmd[`uv sync --extra plotting --extra quantum`][install MMML env]
+    #cmd[`./configure --as-library`][CHARMM for PyCHARMM]
+    #cmd[`MMML_REPO=/path/to/mmml`][tutorial asset repo path]
+  ]
+
   #section[System building][
     #cmd[`mmml make-res`][residue/topology, PyCHARMM/CGENFF]
     #cmd[`mmml make-box`][pack box, PackMol]
     #cmd[`mmml run-pycharmm`][classical heat/equi baseline]
+    #cmd[`CHARMM_HOME`, `CHARMM_LIB_DIR`][PyCHARMM library paths]
+    #cmd[`SKIP_CHARMM_ENERGY_SHOW=1`][cluster-safe CHARMM]
   ]
 
   #section[QM generation][
@@ -125,12 +135,16 @@
     #cmd[`mmml normal-mode-sample`][sample from normal modes]
     #cmd[`mmml pyscf-evaluate`][batch QM, ESP, E-field]
     #cmd[`mmml verify-esp-alignment`][ESP grid vs geometry]
+    #cmd[`CUDA_VISIBLE_DEVICES=0`][select GPU]
+    #cmd[`OMP_NUM_THREADS=1`, `MKL_NUM_THREADS=1`][cap BLAS threads]
+    #cmd[`TMPDIR=/fast/scratch/$USER`][local scratch]
   ]
 
   #section[Data prep & I/O][
     #cmd[`mmml fix-and-split`][units, splits, ESP grids]
     #cmd[`mmml validate`][NPZ schema check]
     #cmd[`mmml xml2npz`][Molpro XML to NPZ]
+    #cmd[`MMML_DATA=/path/data.npz`][legacy data default]
   ]
 
   #section[PhysNet / generic train][
@@ -139,18 +153,17 @@
     #cmd[`python -m mmml.cli.misc.train_joint`][PhysNet + DCMNet joint]
     #cmd[`mmml train`][generic DCMNet/PhysNetJAX API]
     #cmd[`mmml evaluate`][generic evaluation API]
-  ]
-
-  #section[Electric-field model][
-    #cmd[`mmml ef-train`][equivariant EF training]
-    #cmd[`mmml ef-evaluate`][EF metrics / GUI H5]
-    #cmd[`mmml ef-md`][MD with ASE or JAX]
+    #cmd[`JAX_PLATFORMS=cpu`][CPU smoke test]
+    #cmd[`CUDA_VISIBLE_DEVICES=0`][select training GPU]
+    #cmd[`XLA_PYTHON_CLIENT_PREALLOCATE=false`][share GPU memory]
+    #cmd[`MMML_CKPT=~/ckpts/run`][checkpoint default]
   ]
 
   #section[Hybrid MD & workflows][
     #cmd[`mmml run`][PyCHARMM + ML hybrid]
     #cmd[`mmml md-system`][preset mixed setups]
     #cmd[`mmml active-learning`][trajectory to QM relabel frames]
+    #cmd[`MMML_CHECKPOINT_DIR=...`][printed run directory]
   ]
 
   #section[Geometry, trajectories, GUI, MDCM][
@@ -165,44 +178,9 @@
   ]
 ]
 
-#v(0.35em)
+#v(0.25em)
 #line(length: 100%, stroke: 0.45pt + rule)
 #v(0.25em)
-
-#text(size: 7.1pt, weight: "bold", fill: ink)[Environment quick table]
-#v(0.2em)
-#text(size: 5.95pt)[
-  #table(
-    columns: (13%, 33%, 34%, 20%),
-    inset: (x: 2.2pt, y: 1.7pt),
-    stroke: 0.25pt + rule,
-    align: left,
-    table.header(
-      [Area],
-      [Variables],
-      [Use],
-      [Example],
-    ),
-    [System],
-    [`CHARMM_HOME`, `CHARMM_LIB_DIR`, `SKIP_CHARMM_ENERGY_SHOW`, `RUN_CHARMM_ENERGY_SHOW`],
-    [PyCHARMM location and cluster-safe CHARMM energy display.],
-    [`SKIP_CHARMM_ENERGY_SHOW=1`],
-    [QM / GPU],
-    [`CUDA_VISIBLE_DEVICES`, `OMP_NUM_THREADS`, `MKL_NUM_THREADS`, `TMPDIR`],
-    [Choose GPU, limit CPU BLAS threads, and put scratch on fast storage.],
-    [`CUDA_VISIBLE_DEVICES=0`],
-    [JAX train / MD],
-    [`JAX_PLATFORMS`, `XLA_PYTHON_CLIENT_PREALLOCATE`, `XLA_PYTHON_CLIENT_MEM_FRACTION`],
-    [CPU smoke tests and GPU-memory behavior for JAX workloads.],
-    [`JAX_PLATFORMS=cpu`],
-    [MMML paths],
-    [`MMML_DATA`, `MMML_CKPT`, `MMML_CHECKPOINT_DIR`, `MMML_REPO`],
-    [Default data/checkpoint roots and tutorial asset repo discovery.],
-    [`MMML_CKPT=~/ckpts/run`],
-  )
-]
-
-#v(0.3em)
 
 #text(size: 7.6pt, fill: muted)[
   #strong[Files:] geometries `R,Z,N` · training `E,F,Dxyz` · ESP `esp`, `esp_grid` · PhysNet Orbax/JSON · EF `params.json` + config.
@@ -217,6 +195,76 @@
 
 The sections below expand options, outputs, and tutorial paths. Page~1 is the at-a-glance index.
 
+== Install and Build Setup
+
+Install `uv` once per machine:
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+export PATH="$HOME/.local/bin:$PATH"
+uv --version
+```
+
+Clone MMML and create the project environment. The package currently targets
+Python 3.13:
+
+```bash
+git clone https://github.com/EricBoittier/mmml.git
+cd mmml
+uv python install 3.13
+uv sync --extra plotting --extra quantum
+uv run mmml --help
+```
+
+GPU/QM installs depend on the CUDA runtime available on the node:
+
+```bash
+# CUDA 12 nodes
+uv sync --extra plotting --extra quantum-gpu-cuda12 --extra gpu-cuda12
+
+# CUDA 13 nodes
+uv sync --extra plotting --extra quantum-gpu --extra gpu
+```
+
+Editable install from an already active environment:
+
+```bash
+uv pip install -e ".[plotting,quantum]"
+```
+
+=== Compile CHARMM for PyCHARMM
+
+MMML's PyCHARMM commands need CHARMM built as a shared library:
+
+```bash
+cd /path/to/charmm
+./configure --as-library
+make -j "$(nproc)"
+```
+
+Create `CHARMMSETUP` in the MMML repo root:
+
+```bash
+cat > CHARMMSETUP <<'EOF'
+CHARMM_HOME=/path/to/charmm
+CHARMM_LIB_DIR=/path/to/charmm/build/cmake
+EOF
+```
+
+Check the import path:
+
+```bash
+uv run python - <<'PY'
+from mmml.interfaces.pycharmmInterface.import_pycharmm import CHARMM_HOME, CHARMM_LIB_DIR
+print("CHARMM_HOME", CHARMM_HOME)
+print("CHARMM_LIB_DIR", CHARMM_LIB_DIR)
+PY
+```
+
+On clusters where CHARMM `energy.show()` is fragile, use
+`SKIP_CHARMM_ENERGY_SHOW=1` or `--skip-energy-show`.
+
+#pagebreak()
 == Tutorial One-Liners
 
 These are the commands people usually need during the water-dimer tutorial:

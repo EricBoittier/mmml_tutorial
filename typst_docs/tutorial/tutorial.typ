@@ -44,6 +44,79 @@ room can show expected console output without re-running long jobs.
 
 For a flat command index, see `cli_cheatsheet.typ`.
 
+== Setup: `uv`, MMML, and PyCHARMM
+
+Install `uv` once per machine:
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+export PATH="$HOME/.local/bin:$PATH"
+uv --version
+```
+
+Clone and install MMML into a project-managed environment. The package currently
+targets Python 3.13, so let `uv` create that interpreter/environment:
+
+```bash
+git clone https://github.com/EricBoittier/mmml.git
+cd mmml
+uv python install 3.13
+uv sync --extra plotting --extra quantum
+uv run mmml --help
+```
+
+For GPU-enabled JAX/PySCF, choose the CUDA extra that matches the node:
+
+```bash
+# CUDA 12 nodes
+uv sync --extra plotting --extra quantum-gpu-cuda12 --extra gpu-cuda12
+
+# CUDA 13 nodes
+uv sync --extra plotting --extra quantum-gpu --extra gpu
+```
+
+For editable development from an already active environment, the equivalent
+install is:
+
+```bash
+uv pip install -e ".[plotting,quantum]"
+```
+
+=== Compile CHARMM for PyCHARMM
+
+MMML's system-building and hybrid-MD paths import PyCHARMM and expect CHARMM to
+be built as a shared library. From a licensed CHARMM source tree:
+
+```bash
+cd /path/to/charmm
+./configure --as-library
+make -j "$(nproc)"
+```
+
+Then point MMML at that build with a `CHARMMSETUP` file in the MMML repository
+root:
+
+```bash
+cat > CHARMMSETUP <<'EOF'
+CHARMM_HOME=/path/to/charmm
+CHARMM_LIB_DIR=/path/to/charmm/build/cmake
+EOF
+```
+
+Quick check:
+
+```bash
+uv run python - <<'PY'
+from mmml.interfaces.pycharmmInterface.import_pycharmm import CHARMM_HOME, CHARMM_LIB_DIR
+print("CHARMM_HOME", CHARMM_HOME)
+print("CHARMM_LIB_DIR", CHARMM_LIB_DIR)
+PY
+```
+
+If a cluster build segfaults during CHARMM energy display calls, run tutorial
+commands with `SKIP_CHARMM_ENERGY_SHOW=1` or pass `--skip-energy-show` where the
+CLI exposes it.
+
 == Tutorial map: core path, options, and extras
 
 The figure below is the *contract* for the rest of the document: a linear
@@ -159,8 +232,9 @@ bash 10_physnet_dcmnet_train_cli.sh
 == Environment checklist
 
 - Work from `mmml_tutorial/cli` (paths below are relative to that directory).
-- `uv run …` when the project uses `uv`.
+- Install `uv`, run `uv python install 3.13`, and use `uv sync` from the MMML repo.
 - PyCHARMM + PackMol for steps 01–02; PySCF/GPU stack for 04 and 07.
+- Compile CHARMM with `./configure --as-library`, then set `CHARMM_HOME` and `CHARMM_LIB_DIR` in `CHARMMSETUP`.
 - `JAX_PLATFORMS=cpu` if CUDA init breaks before argparse.
 
 == Directory map (`mmml_tutorial/cli/`)
