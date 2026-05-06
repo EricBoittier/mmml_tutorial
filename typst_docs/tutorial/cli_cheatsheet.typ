@@ -816,6 +816,10 @@ the JAX-MD handoff continues from the best-force structure.
 mmml md-system --setup pbc_npt --backend jaxmd --extra-args --pre-min-steps 200 --fire-min-steps 500
 ```
 
+JAX-MD periodic runs record every 100 steps by default (`--steps-per-recording
+100`). Fixed-box NVT/NVE neighbor reuse defaults to `--jax-md-update-interval
+5` with a `0.2 A` skin; NPT keeps the safer every-recording-block refresh.
+
 === `mmml active-learning`
 
 Extract useful frames from trajectories for QM relabeling.
