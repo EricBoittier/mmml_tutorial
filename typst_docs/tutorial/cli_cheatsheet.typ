@@ -1,5 +1,7 @@
 // MMML command-line cheat sheet for tutorial delivery.
 
+#import "@preview/cades:0.3.1": qr-code
+
 #set page(
   paper: "a4",
   margin: (x: 1.25cm, y: 1.15cm),
@@ -15,6 +17,24 @@
 #let soft = rgb("#eff6ff")
 #let rule = rgb("#cbd5e1")
 #let code-bg = rgb("#f8fafc")
+
+#let repo-qr(label, url, qr-width: 1.25cm) = align(center)[
+  #qr-code(url, width: qr-width)
+  #v(0.12em)
+  #text(size: 6.8pt, weight: "bold", fill: ink)[#label]
+  #v(0.02em)
+  #text(size: 5.8pt, fill: muted)[#url]
+]
+
+#let github-qr-codes(qr-width: 1.25cm) = align(center)[
+  #grid(
+    columns: (auto, auto),
+    gutter: 1.0cm,
+    align: center,
+    repo-qr("MMML", "https://github.com/EricBoittier/mmml", qr-width: qr-width),
+    repo-qr("mmml_tutorial", "https://github.com/EricBoittier/mmml_tutorial", qr-width: qr-width),
+  )
+]
 
 #let pill(body) = box(
   radius: 4pt,
@@ -81,7 +101,11 @@
   #text(size: 8.4pt, fill: muted)[Tutorial command index for molecular modelling and machine-learning workflows]
 ]
 
-#v(0.55em)
+#v(0.4em)
+
+#github-qr-codes()
+
+#v(0.4em)
 
 #align(center)[
   #box(
@@ -95,7 +119,7 @@
   ]
 ]
 
-#v(0.55em)
+#v(0.4em)
 
 #align(center)[
   #pill[build systems]
@@ -109,7 +133,7 @@
   #pill[inspect / convert / visualize]
 ]
 
-#v(0.75em)
+#v(0.55em)
 
 #columns(2, gutter: 1.05em)[
 

@@ -1,8 +1,28 @@
 // MMML tutorial: `mmml_tutorial/cli` workflow (default residue BENZ in shared.source).
 // Figures: `cd mmml_tutorial/cli && uv run python generate_tutorial_assets.py`
 // (optional `--allow-placeholders`). Then `typst compile tutorial.typ`.
+#import "@preview/cades:0.3.1": qr-code
+
 #set page(numbering: "1")
 #set text(font: "Libertinus Serif", size: 10pt)
+
+#let repo-qr(label, url, qr-width: 2.15cm) = align(center)[
+  #qr-code(url, width: qr-width)
+  #v(0.22em)
+  #text(size: 8.8pt, weight: "bold")[#label]
+  #v(0.05em)
+  #text(size: 7.4pt)[#url]
+]
+
+#let github-qr-codes(qr-width: 2.15cm) = align(center)[
+  #grid(
+    columns: (auto, auto),
+    gutter: 1.4cm,
+    align: center,
+    repo-qr("MMML", "https://github.com/EricBoittier/mmml", qr-width: qr-width),
+    repo-qr("mmml_tutorial", "https://github.com/EricBoittier/mmml_tutorial", qr-width: qr-width),
+  )
+]
 
 #let stepfig(file, cap) = figure(
   image("assets/cli/" + file, width: 82%),
@@ -43,6 +63,9 @@ excerpt* from the checked-in `*.log` files in `cli/`, so a prepared tutorial
 room can show expected console output without re-running long jobs.
 
 For a flat command index, see `cli_cheatsheet.typ`.
+
+#v(0.8em)
+#github-qr-codes()
 
 == Setup: `uv`, MMML, and PyCHARMM
 
