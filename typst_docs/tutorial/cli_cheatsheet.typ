@@ -139,15 +139,18 @@
 
   #section[Install / setup][
     #cmd[`curl -LsSf https://astral.sh/uv/install.sh | sh`][install uv]
+    #cmd[`python -m pip install --user uv`][pip uv option]
+    #cmd[`conda install -c conda-forge uv`][conda uv option]
     #cmd[`uv python install 3.13`][MMML Python]
-    #cmd[`uv sync --extra plotting --extra quantum`][install MMML env]
+    #cmd[`uv sync --extra all`][preferred full MMML env]
     #cmd[`./configure --as-library`][CHARMM for PyCHARMM]
+    #cmd[`conda install -c conda-forge packmol`][Packmol binary]
     #cmd[`MMML_REPO=/path/to/mmml`][tutorial asset repo path]
   ]
 
   #section[System building][
     #cmd[`mmml make-res`][residue/topology, PyCHARMM/CGENFF]
-    #cmd[`mmml make-box`][pack box, PackMol]
+    #cmd[`mmml make-box`][pack box, Packmol]
     #cmd[`mmml run-pycharmm`][classical heat/equi baseline]
     #cmd[`CHARMM_HOME`, `CHARMM_LIB_DIR`][PyCHARMM library paths]
     #cmd[`SKIP_CHARMM_ENERGY_SHOW=1`][cluster-safe CHARMM]
@@ -221,39 +224,44 @@ The sections below expand options, outputs, and tutorial paths. Page~1 is the at
 
 == Install and Build Setup
 
-Install `uv` once per machine:
+Install `uv` once per machine. The standalone installer is simplest; `pip` or
+`conda` are good alternatives when those tools are already managed:
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
 export PATH="$HOME/.local/bin:$PATH"
 uv --version
+
+# Alternatives
+python -m pip install --user uv
+conda install -c conda-forge uv
 ```
 
 Clone MMML and create the project environment. The package currently targets
-Python 3.13:
+Python 3.13. Prefer the full extra for tutorial machines:
 
 ```bash
 git clone https://github.com/EricBoittier/mmml.git
 cd mmml
 uv python install 3.13
-uv sync --extra plotting --extra quantum
+uv sync --extra all
 uv run mmml --help
 ```
 
-GPU/QM installs depend on the CUDA runtime available on the node:
+Choose a narrower full extra only when the hardware requires it:
 
 ```bash
-# CUDA 12 nodes
-uv sync --extra plotting --extra quantum-gpu-cuda12 --extra gpu-cuda12
+# CPU-only machines or laptops
+uv sync --extra all-cpu
 
-# CUDA 13 nodes
-uv sync --extra plotting --extra quantum-gpu --extra gpu
+# CUDA 12 nodes
+uv sync --extra all-cuda12
 ```
 
 Editable install from an already active environment:
 
 ```bash
-uv pip install -e ".[plotting,quantum]"
+uv pip install -e ".[all]"
 ```
 
 === Compile CHARMM for PyCHARMM
@@ -287,6 +295,27 @@ PY
 
 On clusters where CHARMM `energy.show()` is fragile, use
 `SKIP_CHARMM_ENERGY_SHOW=1` or `--skip-energy-show`.
+
+=== Install or compile Packmol
+
+`mmml make-box` shells out to the `packmol` executable. Install the binary with
+conda when possible:
+
+```bash
+conda install -c conda-forge packmol
+command -v packmol
+```
+
+If conda is not available, compile Packmol from source and put the executable on
+`PATH`:
+
+```bash
+git clone https://github.com/m3g/packmol.git
+cd packmol
+make
+export PATH="$PWD:$PATH"
+command -v packmol
+```
 
 #pagebreak()
 == Tutorial One-Liners
@@ -328,7 +357,7 @@ JAX_PLATFORMS=cpu uv run python -m mmml.cli.misc.train_joint \
 #pagebreak()
 == System-Building Commands
 
-These commands depend on PyCHARMM/CGENFF, and `make-box` also uses PackMol.
+These commands depend on PyCHARMM/CGENFF, and `make-box` also uses Packmol.
 
 #env-note[
   `CHARMM_HOME` and `CHARMM_LIB_DIR` identify the CHARMM/PyCHARMM installation. MMML normally reads them from `CHARMMSETUP`, then exports them for PyCHARMM. On clusters, set `SKIP_CHARMM_ENERGY_SHOW=1` to avoid fragile CHARMM `energy.show()` calls; use `RUN_CHARMM_ENERGY_SHOW=1` only when you explicitly want to force them.
@@ -373,7 +402,7 @@ Key options:
 Typical output:
 - `pdb/init-packmol.pdb`
 
-Requires CHARMM/PyCHARMM and PackMol.
+Requires CHARMM/PyCHARMM and Packmol.
 
 === `mmml run-pycharmm`
 

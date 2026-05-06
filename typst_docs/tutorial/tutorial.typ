@@ -67,42 +67,47 @@ For a flat command index, see `cli_cheatsheet.typ`.
 #v(0.8em)
 #github-qr-codes()
 
-== Setup: `uv`, MMML, and PyCHARMM
+== Setup: `uv`, MMML, PyCHARMM, and Packmol
 
-Install `uv` once per machine:
+Install `uv` once per machine. The standalone installer is simplest; `pip` or
+`conda` are fine when those tools are already managed on the machine:
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
 export PATH="$HOME/.local/bin:$PATH"
 uv --version
+
+# Alternatives
+python -m pip install --user uv
+conda install -c conda-forge uv
 ```
 
 Clone and install MMML into a project-managed environment. The package currently
-targets Python 3.13, so let `uv` create that interpreter/environment:
+targets Python 3.13. Prefer the full extra for tutorial machines:
 
 ```bash
 git clone https://github.com/EricBoittier/mmml.git
 cd mmml
 uv python install 3.13
-uv sync --extra plotting --extra quantum
+uv sync --extra all
 uv run mmml --help
 ```
 
-For GPU-enabled JAX/PySCF, choose the CUDA extra that matches the node:
+Choose a narrower full extra only when the hardware requires it:
 
 ```bash
-# CUDA 12 nodes
-uv sync --extra plotting --extra quantum-gpu-cuda12 --extra gpu-cuda12
+# CPU-only machines or laptops
+uv sync --extra all-cpu
 
-# CUDA 13 nodes
-uv sync --extra plotting --extra quantum-gpu --extra gpu
+# CUDA 12 nodes
+uv sync --extra all-cuda12
 ```
 
 For editable development from an already active environment, the equivalent
 install is:
 
 ```bash
-uv pip install -e ".[plotting,quantum]"
+uv pip install -e ".[all]"
 ```
 
 === Compile CHARMM for PyCHARMM
@@ -140,6 +145,27 @@ If a cluster build segfaults during CHARMM energy display calls, run tutorial
 commands with `SKIP_CHARMM_ENERGY_SHOW=1` or pass `--skip-energy-show` where the
 CLI exposes it.
 
+=== Install or compile Packmol
+
+`mmml make-box` shells out to the `packmol` executable. Install the binary with
+conda when possible:
+
+```bash
+conda install -c conda-forge packmol
+command -v packmol
+```
+
+If conda is not available, compile Packmol from source and put the executable on
+`PATH`:
+
+```bash
+git clone https://github.com/m3g/packmol.git
+cd packmol
+make
+export PATH="$PWD:$PATH"
+command -v packmol
+```
+
 == Tutorial map: core path, options, and extras
 
 The figure below is the *contract* for the rest of the document: a linear
@@ -152,7 +178,7 @@ The figure below is the *contract* for the rest of the document: a linear
     #set text(size: 9.2pt)
     #flow-stack(
       flow-box([Core: system setup (01–02)], [
-        Residue / topology / `xyz/initial.xyz` → optional periodic box (`make-box`, PackMol). \
+        Residue / topology / `xyz/initial.xyz` → optional periodic box (`make-box`, Packmol). \
         *Extras:* change `RES`, `n`, `side_length`; skip 02 for gas-phase QM on `initial.xyz` only.
       ]),
       flow-arrow,
@@ -255,16 +281,17 @@ bash 10_physnet_dcmnet_train_cli.sh
 == Environment checklist
 
 - Work from `mmml_tutorial/cli` (paths below are relative to that directory).
-- Install `uv`, run `uv python install 3.13`, and use `uv sync` from the MMML repo.
-- PyCHARMM + PackMol for steps 01–02; PySCF/GPU stack for 04 and 07.
+- Install `uv`, run `uv python install 3.13`, and prefer `uv sync --extra all` from the MMML repo.
+- PyCHARMM + Packmol for steps 01–02; PySCF/GPU stack for 04 and 07.
 - Compile CHARMM with `./configure --as-library`, then set `CHARMM_HOME` and `CHARMM_LIB_DIR` in `CHARMMSETUP`.
+- Install Packmol with `conda install -c conda-forge packmol` or compile it from source and add it to `PATH`.
 - `JAX_PLATFORMS=cpu` if CUDA init breaks before argparse.
 
 == Directory map (`mmml_tutorial/cli/`)
 
 - `shared.source` — `RES`, PhysNet trainer path, checkpoint dirs, NPZ paths, MD defaults.
 - `01_make_res_cli.sh` — residue/topology + `xyz/initial.xyz`.
-- `02_make_box_cli.sh` — PackMol box `pdb/init-packmol.pdb`.
+- `02_make_box_cli.sh` — Packmol box `pdb/init-packmol.pdb`.
 - `04_pyscf_dft_cli_full.sh` — DFT + Hessian + harmonic + thermo → `out/04_results.{npz,h5}`.
 - `06_normal_mode_sample_cli.sh` — `out/06_sampled.npz`.
 - `07_pyscf_evaluate_cli.sh` — batched QM + ESP → `out/07_evaluated*.npz`.

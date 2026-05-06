@@ -11,7 +11,7 @@ if [[ -n "$MDSYS_BOX_A" ]]; then
   box_args=(--box-size "$MDSYS_BOX_A")
 fi
 
-echo "Command: mmml md-system --setup pbc_nvt --temperature \"$MDSYS_TEMP_K\" --n-molecules \"$MDSYS_N_MOLECULES\" ${box_args[*]} --ps \"$MDSYS_PS\" --dt-fs \"$MDSYS_DT_FS\" --traj-chunk-frames \"$MDSYS_TRAJ_CHUNK_FRAMES\" --output-dir \"$MDSYS_OUT/pbc_nvt\""
+echo "Command: mmml md-system --setup pbc_nvt --temperature \"$MDSYS_TEMP_K\" --n-molecules \"$MDSYS_N_MOLECULES\" ${box_args[*]} --ps \"$MDSYS_PS\" --dt-fs \"$MDSYS_DT_FS\" --traj-chunk-frames \"$MDSYS_TRAJ_CHUNK_FRAMES\" --seed \"$MDSYS_SEED\" --output-dir \"$MDSYS_OUT/pbc_nvt\""
 
 mmml md-system \
   --setup pbc_nvt \
@@ -21,4 +21,5 @@ mmml md-system \
   --ps "$MDSYS_PS" \
   --dt-fs "$MDSYS_DT_FS" \
   --traj-chunk-frames "$MDSYS_TRAJ_CHUNK_FRAMES" \
+  --seed "$MDSYS_SEED" \
   --output-dir "$MDSYS_OUT/pbc_nvt"
