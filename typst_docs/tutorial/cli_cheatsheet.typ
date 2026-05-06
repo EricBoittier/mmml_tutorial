@@ -153,7 +153,6 @@
     #cmd[`mmml make-box`][pack box, Packmol]
     #cmd[`mmml run-pycharmm`][classical heat/equi baseline]
     #cmd[`CHARMM_HOME`, `CHARMM_LIB_DIR`][PyCHARMM library paths]
-    #cmd[`SKIP_CHARMM_ENERGY_SHOW=1`][cluster-safe CHARMM]
   ]
 
   #section[QM generation][
@@ -161,17 +160,13 @@
     #cmd[`mmml pyscf-mp2`][GPU MP2 reference]
     #cmd[`mmml normal-mode-sample`][sample from normal modes]
     #cmd[`mmml pyscf-evaluate`][batch QM, ESP, E-field]
-    #cmd[`mmml verify-esp-alignment`][ESP grid vs geometry]
     #cmd[`CUDA_VISIBLE_DEVICES=0`][select GPU]
-    #cmd[`OMP_NUM_THREADS=1`, `MKL_NUM_THREADS=1`][cap BLAS threads]
-    #cmd[`TMPDIR=/fast/scratch/$USER`][local scratch]
   ]
 
   #section[Data prep & I/O][
     #cmd[`mmml fix-and-split`][units, splits, ESP grids]
     #cmd[`mmml validate`][NPZ schema check]
     #cmd[`mmml xml2npz`][Molpro XML to NPZ]
-    #cmd[`MMML_DATA=/path/data.npz`][legacy data default]
   ]
 
   #section[PhysNet / generic train][
@@ -180,9 +175,7 @@
     #cmd[`python -m mmml.cli.misc.train_joint`][PhysNet + DCMNet joint]
     #cmd[`mmml train`][generic DCMNet/PhysNetJAX API]
     #cmd[`mmml evaluate`][generic evaluation API]
-    #cmd[`JAX_PLATFORMS=cpu`][CPU smoke test]
     #cmd[`CUDA_VISIBLE_DEVICES=0`][select training GPU]
-    #cmd[`XLA_PYTHON_CLIENT_PREALLOCATE=false`][share GPU memory]
     #cmd[`MMML_CKPT=~/ckpts/run`][checkpoint default]
   ]
 
@@ -204,11 +197,6 @@
     #cmd[`mmml downstream`][misc analysis; see --help]
   ]
 ]
-
-#v(0.25em)
-#line(length: 100%, stroke: 0.45pt + rule)
-#v(0.25em)
-
 #text(size: 7.6pt, fill: muted)[
   #strong[Files:] geometries `R,Z,N` · training `E,F,Dxyz` · ESP `esp`, `esp_grid` · PhysNet Orbax/JSON · EF `params.json` + config.
 ]
