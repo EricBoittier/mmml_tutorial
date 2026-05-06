@@ -6,11 +6,17 @@ set -e
 . ./shared.source
 
 echo "=== 18: md_10mer periodic NVE ==="
-echo "Command: mmml md-system --setup pbc_nve --n-molecules \"$MDSYS_N_MOLECULES\" --ps \"$MDSYS_PS\" --dt-fs \"$MDSYS_DT_FS\" --traj-chunk-frames \"$MDSYS_TRAJ_CHUNK_FRAMES\" --output-dir \"$MDSYS_OUT/pbc_nve\""
+box_args=()
+if [[ -n "$MDSYS_BOX_A" ]]; then
+  box_args=(--box-size "$MDSYS_BOX_A")
+fi
+
+echo "Command: mmml md-system --setup pbc_nve --n-molecules \"$MDSYS_N_MOLECULES\" ${box_args[*]} --ps \"$MDSYS_PS\" --dt-fs \"$MDSYS_DT_FS\" --traj-chunk-frames \"$MDSYS_TRAJ_CHUNK_FRAMES\" --output-dir \"$MDSYS_OUT/pbc_nve\""
 
 mmml md-system \
   --setup pbc_nve \
   --n-molecules "$MDSYS_N_MOLECULES" \
+  "${box_args[@]}" \
   --ps "$MDSYS_PS" \
   --dt-fs "$MDSYS_DT_FS" \
   --traj-chunk-frames "$MDSYS_TRAJ_CHUNK_FRAMES" \

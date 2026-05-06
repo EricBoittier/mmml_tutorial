@@ -298,6 +298,7 @@ mmml md-system --setup free_nvt --temperature 300 --output-dir out/md/free_nvt
 mmml md-system --setup pbc_nve --output-dir out/md/pbc_nve
 mmml md-system --setup pbc_nvt --temperature 300 --output-dir out/md/pbc_nvt
 mmml md-system --setup pbc_npt --temperature 300 --pressure 1.0 --output-dir out/md/pbc_npt
+mmml md-system --setup pbc_npt --n-molecules 100 --box-size 60.0 --output-dir out/md/pbc_npt_60A
 
 # Mixed composition (methanol:water = 1:1, TIP3 water)
 mmml md-system --setup pbc_nvt --nvt-integrator langevin --composition MEOH:5,TIP3:5 --temperature 300 --output-dir out/md/meoh_tip3_1to1

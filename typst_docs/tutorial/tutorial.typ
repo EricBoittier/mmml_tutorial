@@ -635,6 +635,14 @@ The `md-system` wrapper has an explicit `--backend auto|ase|jaxmd` selector:
 JAX-MD. Use `--backend jaxmd` when you want the periodic NVE/NVT presets to use
 the JAX-MD runner too.
 
+Periodic presets choose a cubic box automatically from the initial cluster
+extent plus padding. Override it with `--box-size <angstrom>` or, in the
+tutorial shell scripts, with `MDSYS_BOX_A`:
+
+```bash
+MDSYS_PS=10 MDSYS_N_MOLECULES=100 MDSYS_BOX_A=60 bash 20_md_10mer_pbc_npt.sh
+```
+
 JAX-MD preset runs now do a staged pre-MD minimization. CHARMM SD/ABNR runs
 first, including an energy/force warmup with the internal force-field terms
 active. The MMML calculator then runs ASE BFGS to `fmax=0.1`; if BFGS does not
