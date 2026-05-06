@@ -675,9 +675,10 @@ MDSYS_PS=10 MDSYS_N_MOLECULES=100 MDSYS_BOX_A=60 MDSYS_SEED=7 bash 20_md_10mer_p
 
 JAX-MD preset runs now do a staged pre-MD minimization. CHARMM SD/ABNR runs
 first, including an energy/force warmup with the internal force-field terms
-active. The MMML calculator then runs ASE BFGS to `fmax=0.1`; if BFGS does not
-reach that threshold, ASE FIRE is used before the JAX-MD minimizer starts. The
-optimizer target remains `0.1`, while the default abort threshold is looser at
+active (defaults: `--charmm-sd-steps 200`, `--charmm-abnr-steps 1000`). The MMML
+calculator then runs ASE BFGS to `fmax=0.1`; if BFGS does not reach that
+threshold, ASE FIRE is used before the JAX-MD minimizer starts. The optimizer
+target remains `0.1`, while the default abort threshold is looser at
 `--max-fmax-after-min 2.0`. The best force and best energy structures from this
 ASE pre-minimization are saved, and the JAX-MD handoff continues from the
 best-force structure. Tune these lower-level knobs by putting `--extra-args`
@@ -689,7 +690,9 @@ mmml md-system --setup pbc_npt --backend jaxmd --extra-args --pre-min-steps 200 
 
 JAX-MD periodic runs record every 100 steps by default (`--steps-per-recording
 100`). Fixed-box NVT/NVE neighbor reuse defaults to `--jax-md-update-interval
-5` with a `0.2 A` skin; NPT keeps the safer every-recording-block refresh.
+5` with a `0.2 A` skin; NPT keeps the safer every-recording-block refresh. NPT
+progress logs include density as `rho (g/cm³)`, and the HDF5 output stores
+`density_g_cm3`.
 
 == Optional scripts (`XX_*`)
 
