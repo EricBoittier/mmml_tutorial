@@ -607,6 +607,20 @@ bash 19_md_10mer_pbc_nvt.sh
 )
 
 Periodic NPT and mixed-solvent examples: `20_md_10mer_pbc_npt.sh`, `21_md_system_meoh_tip3_1to1.sh`.
+The `md-system` wrapper has an explicit `--backend auto|ase|jaxmd` selector:
+`auto` keeps ASE for the free/PBC NVE/NVT presets and routes `pbc_npt` through
+JAX-MD. Use `--backend jaxmd` when you want the periodic NVE/NVT presets to use
+the JAX-MD runner too.
+
+JAX-MD preset runs now do a staged pre-MD minimization. CHARMM SD/ABNR runs
+first, including an energy/force warmup with the internal force-field terms
+active. The MMML calculator then runs ASE BFGS to `fmax=0.1`; if BFGS does not
+reach that threshold, ASE FIRE is used before the JAX-MD minimizer starts. Tune
+these lower-level knobs by putting `--extra-args` last, for example:
+
+```bash
+mmml md-system --setup pbc_npt --backend jaxmd --extra-args --pre-min-steps 200 --fire-min-steps 500
+```
 
 == Optional scripts (`XX_*`)
 

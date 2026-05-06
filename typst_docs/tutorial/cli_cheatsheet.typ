@@ -739,16 +739,27 @@ Run predefined mixed-composition MD setup scripts.
 
 ```bash
 mmml md-system --setup pbc_npt --composition MEOH:5,TIP3:5 --temperature 300 --pressure 1.0
+mmml md-system --setup pbc_nve --backend jaxmd --n-molecules 10 --ps 1.0
 mmml md-system --setup all --n-molecules 10 --ps 1.0 --dt-fs 0.25
 ```
 
 Key options:
 - `--setup`: `free_nve`, `free_nvt`, `pbc_nve`, `pbc_nvt`, `pbc_npt`, or `all`.
+- `--backend`: `auto`, `ase`, or `jaxmd`. `auto` uses ASE except for `pbc_npt`, which uses JAX-MD.
 - `--composition`: residue counts such as `MEOH:5,TIP3:5`.
 - `--checkpoint`, `--output-dir`, `--template-pdb`
 - `--spacing`, `--ps`, `--dt-fs`
 - `--temperature`, `--pressure`
-- `--extra-args -- ...`: forward raw args to the underlying script.
+- `--extra-args ...`: forward raw args to the underlying script; put this option last.
+
+For JAX-MD periodic runs, the setup now pre-minimizes before dynamics: CHARMM
+SD/ABNR warms up the internal force-field terms, then the MMML calculator runs
+ASE BFGS to `fmax=0.1`. If BFGS misses that target, ASE FIRE is run before the
+JAX-MD minimizer and MD start.
+
+```bash
+mmml md-system --setup pbc_npt --backend jaxmd --extra-args --pre-min-steps 200 --fire-min-steps 500
+```
 
 === `mmml active-learning`
 
