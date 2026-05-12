@@ -15,6 +15,7 @@ echo "Command: mmml md-system --setup pbc_nvt --backend \"$MDSYS_BACKEND\" --tem
 
 mmml md-system \
   --setup pbc_nvt \
+  --composition "DCM:${MDSYS_N_MOLECULES}" \
   --backend "$MDSYS_BACKEND" \
   --temperature "$MDSYS_TEMP_K" \
   --n-molecules "$MDSYS_N_MOLECULES" \
