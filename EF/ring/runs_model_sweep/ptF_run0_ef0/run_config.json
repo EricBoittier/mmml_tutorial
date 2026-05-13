@@ -1,0 +1,32 @@
+{
+  "xyz": "qP_samples/q_0.100_P_288.0.xyz",
+  "config_path": "/mmhome/boittier/home/ckpts/ring_ef2_ptF_run0/config.json",
+  "params_path": "/mmhome/boittier/home/ckpts/ring_ef2_ptF_run0/params.json",
+  "run_name": "ptF_run0_ef0",
+  "output_root": "runs_model_sweep",
+  "field_x": 0.0,
+  "field_y": 0.0,
+  "field_z": 0.0,
+  "field_scale": 100.0,
+  "optimize": true,
+  "fmax": 0.003,
+  "opt_steps": 1000,
+  "maxstep": 0.04,
+  "temperature_K": 300.0,
+  "dt_fs": 0.5,
+  "nsteps": 500000,
+  "write_every": 1000,
+  "seed": 7,
+  "ring_idx": [
+    0,
+    3,
+    6,
+    9,
+    12
+  ],
+  "electric_field": [
+    0.0,
+    0.0,
+    0.0
+  ]
+}
