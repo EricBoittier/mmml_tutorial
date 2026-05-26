@@ -1,0 +1,39 @@
+# Shared defaults for mmml_tutorial/cli scripts.
+#
+# Usage: run scripts from this directory (cli), e.g.
+#   cd cli
+#   bash 09_physnet_train_cli.sh
+#
+# Scripts that need these values: source ./shared.source
+#
+# Override any variable before sourcing, or export in your shell.
+
+RES="${RES:-BENZ}"
+
+PHYSNET_TRAINER="${PHYSNET_TRAINER:-$HOME/mmml/examples/other/co2/physnet_train/trainer.py}"
+PHYSNET_CKPT_DIR="${PHYSNET_CKPT_DIR:-$HOME/ckpts}"
+PHYSNET_NAME="${PHYSNET_NAME:-cybz_physnet}"
+PHYSNET_CHECKPOINT="${PHYSNET_CHECKPOINT:-$PHYSNET_CKPT_DIR/cybz_physnet-145ff5d7-02fb-4cae-8c2e-a5633fd1c4af}"
+
+PHYSNET_NATOMS="${PHYSNET_NATOMS:-16}"
+PHYSNET_EPOCHS="${PHYSNET_EPOCHS:-1000}"
+PHYSNET_BATCH="${PHYSNET_BATCH:-1}"
+
+PHYSNET_TRAIN_NPZ="${PHYSNET_TRAIN_NPZ:-out/splits/energies_forces_dipoles_train.npz}"
+PHYSNET_VALID_NPZ="${PHYSNET_VALID_NPZ:-out/splits/energies_forces_dipoles_valid.npz}"
+
+PHYSNET_MD_OUT="${PHYSNET_MD_OUT:-out/physnet_md}"
+PHYSNET_MD_TRAJ="${PHYSNET_MD_TRAJ:-$PHYSNET_MD_OUT/physnet_ase.traj}"
+ACTIVE_LEARNING_OUT="${ACTIVE_LEARNING_OUT:-out/activate_learning.npz}"
+
+MDSYS_OUT="${MDSYS_OUT:-out/mdsys}"
+MDSYS_N_MOLECULES="${MDSYS_N_MOLECULES:-10}"
+MDSYS_PS="${MDSYS_PS:-1.0}"
+MDSYS_DT_FS="${MDSYS_DT_FS:-0.25}"
+MDSYS_TEMP_K="${MDSYS_TEMP_K:-300.0}"
+MDSYS_PRESSURE_ATM="${MDSYS_PRESSURE_ATM:-1.0}"
+MDSYS_TRAJ_CHUNK_FRAMES="${MDSYS_TRAJ_CHUNK_FRAMES:-0}"
+MDSYS_BOX_A="${MDSYS_BOX_A:-}"
+MDSYS_SEED="${MDSYS_SEED:-123}"
+MDSYS_BACKEND="${MDSYS_BACKEND:-jaxmd}"
+MDSYS_NVT_INTEGRATOR="${MDSYS_NVT_INTEGRATOR:-langevin}"

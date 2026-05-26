@@ -8,16 +8,16 @@ PYTHON=${PYTHON:-python}
 SCRIPT=${SCRIPT:-reproducible_ring_simulations.py}
 
 XYZ=${XYZ:-qP_samples/q_0.100_P_288.0.xyz}
-OUTPUT_ROOT=${OUTPUT_ROOT:-runs_model_sweep}
+OUTPUT_ROOT=${OUTPUT_ROOT:-runs_model_sweep0}
 
 # MD / optimization settings.
 # Override any of these from the shell if needed, e.g.
 #   NSTEPS=100000 WRITE_EVERY=500 ./run_all_ring_models.sh
 TEMPERATURE_K=${TEMPERATURE_K:-300.0}
 DT_FS=${DT_FS:-0.5}
-NSTEPS=${NSTEPS:-500000}
+NSTEPS=${NSTEPS:-5000000}
 WRITE_EVERY=${WRITE_EVERY:-1000}
-SEED=${SEED:-7}
+SEED=${SEED:-8}
 FMAX=${FMAX:-0.003}
 OPT_STEPS=${OPT_STEPS:-1000}
 MAXSTEP=${MAXSTEP:-0.04}

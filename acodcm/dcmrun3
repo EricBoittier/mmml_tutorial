@@ -1,0 +1,1121 @@
+/mmhome/boittier/home/mmml/mmml/data/charmm/top_all36_cgenff.rtf
+/mmhome/boittier/home/mmml/mmml/data/charmm/par_all36_cgenff.prm
+CHARMM_HOME /mmhome/boittier/home/mmml/setup/charmm
+CHARMM_LIB_DIR /mmhome/boittier/home/mmml/setup/charmm
+Using MMML checkpoint: /mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/aco1-ef1bd9eb-c9d1-438c-97ec-a6b692aeeba3
+[17:36:38] PSF charge validation: total=-0.000000 e, charged_atoms=300, ACO:-0.000000 e
+  
+ CHARMM>     BLOCK
+ WARNING from DECODI -- Zero length string being converted to 0
+ Block structure initialized with   3 blocks.
+ All atoms have been assigned to block 1.
+ All interaction coefficients have been set to unity.
+  Setting number of block exclusions nblock_excldPairs=0
+  
+  BLOCK>            CALL 1 SELE ALL END
+ SELRPN>      0 atoms have been selected out of      0
+ The selected atoms have been reassigned to block   1
+  
+  BLOCK>              COEFF 1 1 1.0
+  
+  BLOCK>            END
+ Matrix of Interaction Coefficients
+ 
+    1.00000
+    1.00000   1.00000
+    1.00000   1.00000   1.00000
+ Matrix of BOND Interaction Coefficients
+ 
+    1.00000
+    1.00000   1.00000
+    1.00000   1.00000   1.00000
+ Matrix of ANGLE Interaction Coefficients
+ 
+    1.00000
+    1.00000   1.00000
+    1.00000   1.00000   1.00000
+ Matrix of DIHE Interaction Coefficients
+ 
+    1.00000
+    1.00000   1.00000
+    1.00000   1.00000   1.00000
+ Matrix of CROSS Interaction Coefficients
+ 
+    1.00000
+    1.00000   1.00000
+    1.00000   1.00000   1.00000
+ Matrix of ELEC Interaction Coefficients
+ 
+    1.00000
+    1.00000   1.00000
+    1.00000   1.00000   1.00000
+ Matrix of VDW Interaction Coefficients
+ 
+    1.00000
+    1.00000   1.00000
+    1.00000   1.00000   1.00000
+  
+ CHARMM>     
+  
+  
+ CHARMM>     PRNLev 0
+
+ DRUDES PARTICLES WILL BE GENERATED AUTOMATICALLY FOR ALL ATOMS WITH NON-ZERO ALPHA
+ Thole-type dipole screening, Slater-Delta shape {S(u) = 1 - (1+u/2)*exp(-u)}, default radius =  1.300000
+
+ DRUDES PARTICLES WILL BE GENERATED AUTOMATICALLY FOR ALL ATOMS WITH NON-ZERO ALPHA
+ Thole-type dipole screening, Slater-Delta shape {S(u) = 1 - (1+u/2)*exp(-u)}, default radius =  1.300000
+  
+ CHARMM>    WRNLev 9
+  
+  
+ CHARMM>     ENER
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  FSWItch  VATOm    VFSWIt  
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 18.000 CTEXNB =999.000 CTONNB = 13.000 CTOFNB = 17.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are    33603 atom  pairs and     1080 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR    44701 ATOM PAIRS AND        0 GROUP PAIRS
+ NBONDS: Using routine NBONDA for list generation.
+
+ General atom nonbond list generation found:
+    33603 ATOM PAIRS WERE FOUND FOR ATOM LIST
+      115 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  FSWItch  VATOm    VFSWIt  
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 18.000 CTEXNB =999.000 CTONNB = 13.000 CTOFNB = 17.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are    33603 atom  pairs and     1080 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ PRNHBD: CUToff Hydrogen Bond  distance =    0.5000   Angle =   90.0000
+         CuT switching ON HB dist. =     3.5000  OFf HB dist. =    4.0000
+         CuT switching ON Hb Angle =    50.0000  OFf Hb Angle =   70.0000
+         ACCEptor antecedents included
+         All hydrogen bonds for each hydrogen will be found
+         Hydrogen bonds between excluded atoms will be kept
+
+ MAKPHI:: From   360 dihedrals, a total of   360 fast primitive dihedral elements were produced.
+ EBONDC: Using routine EBONDFS for energy calculation.
+ EBONDC: returned from EBONDFS
+ EANGLC: QANGTYPE =            1
+ EANGLC: Using routine EANGLFS for energy calculation.
+ EBONDC: Using routine EBONDFS for energy calculation.
+ EBONDC: returned from EBONDFS
+ EPHIC: Using routine EPHIFS for energy calculation.
+ EIMPHIC: Using routine EIPHIFS for energy calculation.
+ ENBAEXP: Using routine  ENBAV2E3B1  for energy calculation.
+ ENBOND: Using routine ENBAEXP for energy calculation.
+ENER ENR:  Eval#     ENERgy      Delta-E         GRMS
+ENER INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+ENER EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+ENER>        0 1202194001.7          0.0  136794667.6
+ENER INTERN>    23128.34279  21862.39841    813.79451     11.01275   3153.42554
+ENER EXTERN>   1202147704.2      -2671.5          0.0          0.0          0.0
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  FSWItch  VATOm    VFSWIt  
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 18.000 CTEXNB =999.000 CTONNB = 13.000 CTOFNB = 17.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are    33603 atom  pairs and     1080 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR    44701 ATOM PAIRS AND        0 GROUP PAIRS
+ NBONDS: Using routine NBONDA for list generation.
+
+ General atom nonbond list generation found:
+    33603 ATOM PAIRS WERE FOUND FOR ATOM LIST
+      115 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  FSWItch  VATOm    VFSWIt  
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 18.000 CTEXNB =999.000 CTONNB = 13.000 CTOFNB = 17.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are    33603 atom  pairs and     1080 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ PRNHBD: CUToff Hydrogen Bond  distance =    0.5000   Angle =   90.0000
+         CuT switching ON HB dist. =     3.5000  OFf HB dist. =    4.0000
+         CuT switching ON Hb Angle =    50.0000  OFf Hb Angle =   70.0000
+         ACCEptor antecedents included
+         All hydrogen bonds for each hydrogen will be found
+         Hydrogen bonds between excluded atoms will be kept
+
+ EBONDC: Using routine EBONDFS for energy calculation.
+ EBONDC: returned from EBONDFS
+ EANGLC: QANGTYPE =            1
+ EANGLC: Using routine EANGLFS for energy calculation.
+ EBONDC: Using routine EBONDFS for energy calculation.
+ EBONDC: returned from EBONDFS
+ EPHIC: Using routine EPHIFS for energy calculation.
+ EIMPHIC: Using routine EIPHIFS for energy calculation.
+ ENBAEXP: Using routine  ENBAV2E3B1  for energy calculation.
+ ENBOND: Using routine ENBAEXP for energy calculation.
+ENER ENR:  Eval#     ENERgy      Delta-E         GRMS
+ENER INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+ENER EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+ENER>        0 1202194001.7          0.0  136794667.6
+ENER INTERN>    23128.34279  21862.39841    813.79451     11.01275   3153.42554
+ENER EXTERN>   1202147704.2      -2671.5          0.0          0.0          0.0
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>     PRNLev 0
+  
+ CHARMM>    WRNLev 9
+  
+  
+ CHARMM>     ENER
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  FSWItch  VATOm    VFSWIt  
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 18.000 CTEXNB =999.000 CTONNB = 13.000 CTOFNB = 17.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are    40488 atom  pairs and     1080 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR    44701 ATOM PAIRS AND        0 GROUP PAIRS
+ NBONDS: Using routine NBONDA for list generation.
+
+ General atom nonbond list generation found:
+    40647 ATOM PAIRS WERE FOUND FOR ATOM LIST
+      169 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  FSWItch  VATOm    VFSWIt  
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 18.000 CTEXNB =999.000 CTONNB = 13.000 CTOFNB = 17.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are    40647 atom  pairs and     1080 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ PRNHBD: CUToff Hydrogen Bond  distance =    0.5000   Angle =   90.0000
+         CuT switching ON HB dist. =     3.5000  OFf HB dist. =    4.0000
+         CuT switching ON Hb Angle =    50.0000  OFf Hb Angle =   70.0000
+         ACCEptor antecedents included
+         All hydrogen bonds for each hydrogen will be found
+         Hydrogen bonds between excluded atoms will be kept
+
+ EBONDC: Using routine EBONDFS for energy calculation.
+ EBONDC: returned from EBONDFS
+ EANGLC: QANGTYPE =            1
+ EANGLC: Using routine EANGLFS for energy calculation.
+ EBONDC: Using routine EBONDFS for energy calculation.
+ EBONDC: returned from EBONDFS
+ EPHIC: Using routine EPHIFS for energy calculation.
+ EIMPHIC: Using routine EIPHIFS for energy calculation.
+ ENBAEXP: Using routine  ENBAV2E3B1  for energy calculation.
+ ENBOND: Using routine ENBAEXP for energy calculation.
+ENER ENR:  Eval#     ENERgy      Delta-E         GRMS
+ENER INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+ENER EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+ENER>        0      -1023.0 1202195024.7          0.5
+ENER INTERN>        2.31998      3.25053      0.06792      0.46849      0.05935
+ENER EXTERN>      -66.99722   -962.16736      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  FSWItch  VATOm    VFSWIt  
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 18.000 CTEXNB =999.000 CTONNB = 13.000 CTOFNB = 17.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are    40647 atom  pairs and     1080 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR    44701 ATOM PAIRS AND        0 GROUP PAIRS
+ NBONDS: Using routine NBONDA for list generation.
+
+ General atom nonbond list generation found:
+    40647 ATOM PAIRS WERE FOUND FOR ATOM LIST
+      169 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  FSWItch  VATOm    VFSWIt  
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 18.000 CTEXNB =999.000 CTONNB = 13.000 CTOFNB = 17.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are    40647 atom  pairs and     1080 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ PRNHBD: CUToff Hydrogen Bond  distance =    0.5000   Angle =   90.0000
+         CuT switching ON HB dist. =     3.5000  OFf HB dist. =    4.0000
+         CuT switching ON Hb Angle =    50.0000  OFf Hb Angle =   70.0000
+         ACCEptor antecedents included
+         All hydrogen bonds for each hydrogen will be found
+         Hydrogen bonds between excluded atoms will be kept
+
+ EBONDC: Using routine EBONDFS for energy calculation.
+ EBONDC: returned from EBONDFS
+ EANGLC: QANGTYPE =            1
+ EANGLC: Using routine EANGLFS for energy calculation.
+ EBONDC: Using routine EBONDFS for energy calculation.
+ EBONDC: returned from EBONDFS
+ EPHIC: Using routine EPHIFS for energy calculation.
+ EIMPHIC: Using routine EIPHIFS for energy calculation.
+ ENBAEXP: Using routine  ENBAV2E3B1  for energy calculation.
+ ENBOND: Using routine ENBAEXP for energy calculation.
+ENER ENR:  Eval#     ENERgy      Delta-E         GRMS
+ENER INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+ENER EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+ENER>        0      -1023.0 1202195024.7          0.5
+ENER INTERN>        2.31998      3.25053      0.06792      0.46849      0.05935
+ENER EXTERN>      -66.99722   -962.16736      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+/mmhome/boittier/home/mmml/.venv/lib/python3.13/site-packages/orbax/checkpoint/_src/serialization/jax_array_handlers.py:712: UserWarning: Sharding info not provided when restoring. Populating sharding info from sharding file. Please note restoration time will be slightly increased due to reading from file. Note also that this option is unsafe when restoring on a different topology than the checkpoint was saved with.
+  warnings.warn(
+CHARMM pre-minimization starting (SD=200, ABNR=1000)
+CHARMM energy before minimization:
+CHARMM energy after minimization:
+CHARMM pre-minimization complete (0.393 s)
+[setup_calculator] Cutoff inputs -> ml_cutoff=0.1000, mm_switch_on=5.5000, mm_cutoff=2.0000, complementary_handoff=True
+[setup_calculator] mm_r_min=4.86 (exclude pairs with dimer COM < this)
+[setup_calculator] atoms_per_monomer=[10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10], total_atoms=300
+[setup_calculator] lambda_monomer=[1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1.]
+len(dimer_perms) 435
+[setup_calculator] max_atoms (model natoms)=20 (max monomer/dimer size)
+[setup_calculator] model_restart_path=/mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/aco1-ef1bd9eb-c9d1-438c-97ec-a6b692aeeba3
+dict_keys(['opt_state', 'params', 'step'])
+                                        Model Attributes                                        
+┏━━━━━┳━━━━━┳━━━━━┳━━━━━┳━━━━━┳━━━━━┳━━━━━┳━━━━━┳━━━━━┳━━━━━┳━━━━━┳━━━━━┳━━━━━┳━━━━━┳━━━━┳━━━━━┓
+┃ ch… ┃ cu… ┃ de… ┃ efa ┃ fe… ┃ in… ┃ ma… ┃ ma… ┃ n_… ┃ na… ┃ nu… ┃ nu… ┃ to… ┃ us… ┃ u… ┃ zbl ┃
+┡━━━━━╇━━━━━╇━━━━━╇━━━━━╇━━━━━╇━━━━━╇━━━━━╇━━━━━╇━━━━━╇━━━━━╇━━━━━╇━━━━━╇━━━━━╇━━━━━╇━━━━╇━━━━━┩
+│ Fa… │ 6.0 │ Fa… │ Fa… │ 64  │ Tr… │ 118 │ 0   │ 3   │ 20  │ 64  │ 5   │ 0.0 │ Tr… │ F… │ Tr… │
+└─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴────┴─────┘
+                                        Last Checkpoint                                         
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Checkpoint                    ┃ name       ┃ epoch ┃ best_loss  ┃ Save Time                  ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ /mmhome/boittier/home/mmml_t… │ epoch-1262 │ 1262  │ 0.08363779 │ 2026-05-23 15:11:26.011617 │
+└───────────────────────────────┴────────────┴───────┴────────────┴────────────────────────────┘
+E0525 17:36:53.967692 1100226 cuda_timer.cc:87] Delay kernel timed out: measured time has sub-optimal accuracy. There may be a missing warmup execution, please investigate in Nsight Systems.
+E0525 17:36:54.039069 1100247 cuda_timer.cc:87] Delay kernel timed out: measured time has sub-optimal accuracy. There may be a missing warmup execution, please investigate in Nsight Systems.
+E0525 17:36:54.141887 1100231 cuda_timer.cc:87] Delay kernel timed out: measured time has sub-optimal accuracy. There may be a missing warmup execution, please investigate in Nsight Systems.
+E0525 17:36:54.216655 1100250 cuda_timer.cc:87] Delay kernel timed out: measured time has sub-optimal accuracy. There may be a missing warmup execution, please investigate in Nsight Systems.
+E0525 17:36:54.293108 1100239 cuda_timer.cc:87] Delay kernel timed out: measured time has sub-optimal accuracy. There may be a missing warmup execution, please investigate in Nsight Systems.
+E0525 17:36:54.416562 1100249 cuda_timer.cc:87] Delay kernel timed out: measured time has sub-optimal accuracy. There may be a missing warmup execution, please investigate in Nsight Systems.
+E0525 17:36:54.591469 1100222 cuda_timer.cc:87] Delay kernel timed out: measured time has sub-optimal accuracy. There may be a missing warmup execution, please investigate in Nsight Systems.
+E0525 17:36:54.660443 1100237 cuda_timer.cc:87] Delay kernel timed out: measured time has sub-optimal accuracy. There may be a missing warmup execution, please investigate in Nsight Systems.
+E0525 17:36:54.756632 1100223 cuda_timer.cc:87] Delay kernel timed out: measured time has sub-optimal accuracy. There may be a missing warmup execution, please investigate in Nsight Systems.
+E0525 17:36:54.935143 1100229 cuda_timer.cc:87] Delay kernel timed out: measured time has sub-optimal accuracy. There may be a missing warmup execution, please investigate in Nsight Systems.
+E0525 17:36:55.005725 1100253 cuda_timer.cc:87] Delay kernel timed out: measured time has sub-optimal accuracy. There may be a missing warmup execution, please investigate in Nsight Systems.
+E0525 17:36:55.096765 1100223 cuda_timer.cc:87] Delay kernel timed out: measured time has sub-optimal accuracy. There may be a missing warmup execution, please investigate in Nsight Systems.
+E0525 17:36:55.175114 1100235 cuda_timer.cc:87] Delay kernel timed out: measured time has sub-optimal accuracy. There may be a missing warmup execution, please investigate in Nsight Systems.
+[setup_calculator] Model loaded: EF(
+    # attributes
+    features = 64
+    max_degree = 0
+    num_iterations = 5
+    num_basis_functions = 64
+    cutoff = 6.0
+    max_atomic_number = 118
+    charges = False
+    natoms = 20
+    total_charge = 0.0
+    n_res = 3
+    zbl = True
+    debug = False
+    efa = False
+    use_energy_bias = True
+    use_pbc = False
+    include_electrostatics = True
+)
+ASE BFGS pre-minimization starting (max 50 steps, fmax=0.1)
+      Step     Time          Energy          fmax
+BFGS:    0 17:37:03    -1240.658081        6.131793
+BFGS:    1 17:37:03    -1239.742920       25.239780
+BFGS:    2 17:37:03    -1240.341919       16.681527
+BFGS:    3 17:37:03    -1240.930786       14.102636
+BFGS:    4 17:37:03    -1240.826416       22.005945
+BFGS:    5 17:37:03    -1240.144653       29.651049
+BFGS:    6 17:37:03    -1240.896240       21.431182
+BFGS:    7 17:37:03    -1240.859619       30.260558
+BFGS:    8 17:37:03    -1240.235962       26.883593
+BFGS:    9 17:37:03    -1240.551880       15.376140
+BFGS:   10 17:37:04    -1239.246948       20.290306
+BFGS:   11 17:37:04    -1240.991455        9.736792
+BFGS:   12 17:37:04    -1240.025757       27.101748
+BFGS:   13 17:37:04    -1240.655151       17.237936
+BFGS:   14 17:37:04    -1241.030518       20.426333
+BFGS:   15 17:37:04    -1240.666992       13.894336
+BFGS:   16 17:37:04    -1241.050903       11.460978
+BFGS:   17 17:37:04    -1240.485229       32.032262
+BFGS:   18 17:37:04    -1240.826416       12.817275
+BFGS:   19 17:37:04    -1241.303589       19.452937
+BFGS:   20 17:37:04    -1241.021851       13.400211
+BFGS:   21 17:37:04    -1241.028687       22.934231
+BFGS:   22 17:37:04    -1240.940308       17.211293
+BFGS:   23 17:37:04    -1240.884888       14.446696
+BFGS:   24 17:37:04    -1241.075195        9.749435
+BFGS:   25 17:37:04    -1241.247803       14.739002
+BFGS:   26 17:37:04    -1241.081055       12.480303
+BFGS:   27 17:37:04    -1240.674561       22.235178
+BFGS:   28 17:37:04    -1241.215332       10.640080
+BFGS:   29 17:37:04    -1240.874023       19.645777
+BFGS:   30 17:37:04    -1241.023560       13.065148
+BFGS:   31 17:37:04    -1240.966064       12.413234
+BFGS:   32 17:37:04    -1241.086182       12.844554
+BFGS:   33 17:37:04    -1240.979980       19.369045
+BFGS:   34 17:37:05    -1241.343506        6.223528
+BFGS:   35 17:37:05    -1240.863892       13.825439
+BFGS:   36 17:37:05    -1241.364380        9.909713
+BFGS:   37 17:37:05    -1240.976562       11.751543
+BFGS:   38 17:37:05    -1241.341797       10.685689
+BFGS:   39 17:37:05    -1241.022827       12.112891
+BFGS:   40 17:37:05    -1241.110474       21.238293
+BFGS:   41 17:37:05    -1241.253540       10.894017
+BFGS:   42 17:37:05    -1240.688965       17.056987
+BFGS:   43 17:37:05    -1241.365112        8.305972
+BFGS:   44 17:37:05    -1241.240479       10.878719
+BFGS:   45 17:37:05    -1241.290894       11.067179
+BFGS:   46 17:37:05    -1241.041504       15.032418
+BFGS:   47 17:37:05    -1241.385864        7.063900
+BFGS:   48 17:37:05    -1241.082031       15.234711
+BFGS:   49 17:37:05    -1241.360596        9.785918
+BFGS:   50 17:37:05    -1241.272339        9.494636
+ASE BFGS pre-minimization complete, fmax=8.336711 eV/A
+ASE FIRE rescue starting from best BFGS frame (bfgs, fmax=5.526099 > 0.100000)
+      Step     Time          Energy          fmax
+FIRE:    0 17:37:05    -1241.387817        7.063934
+FIRE:    1 17:37:05    -1241.515259        6.005136
+FIRE:    2 17:37:05    -1241.607788        4.831329
+FIRE:    3 17:37:05    -1241.674561        3.544975
+FIRE:    4 17:37:05    -1241.709351        2.205219
+FIRE:    5 17:37:05    -1241.724976        2.521304
+FIRE:    6 17:37:05    -1241.731689        2.779482
+FIRE:    7 17:37:05    -1241.757080        0.808300
+FIRE:    8 17:37:05    -1241.753418        0.396870
+FIRE:    9 17:37:05    -1241.756470        0.308647
+FIRE:   10 17:37:05    -1241.757812        0.514512
+FIRE:   11 17:37:05    -1241.759155        0.438384
+FIRE:   12 17:37:05    -1241.758057        0.293036
+FIRE:   13 17:37:05    -1241.759521        0.174990
+FIRE:   14 17:37:05    -1241.756226        0.171043
+FIRE:   15 17:37:05    -1241.756592        0.257181
+FIRE:   16 17:37:05    -1241.759155        0.341101
+FIRE:   17 17:37:05    -1241.761108        0.338510
+FIRE:   18 17:37:05    -1241.756836        0.255401
+FIRE:   19 17:37:05    -1241.759277        0.172168
+FIRE:   20 17:37:05    -1241.758423        0.171527
+FIRE:   21 17:37:05    -1241.762207        0.243732
+FIRE:   22 17:37:05    -1241.761719        0.211403
+FIRE:   23 17:37:05    -1241.760986        0.176562
+FIRE:   24 17:37:05    -1241.764648        0.195871
+FIRE:   25 17:37:05    -1241.761719        0.195371
+FIRE:   26 17:37:05    -1241.758789        0.172430
+FIRE:   27 17:37:05    -1241.761963        0.228394
+FIRE:   28 17:37:05    -1241.758667        0.169648
+FIRE:   29 17:37:05    -1241.758179        0.224199
+FIRE:   30 17:37:05    -1241.754395        0.183306
+FIRE:   31 17:37:05    -1241.755249        0.163651
+FIRE:   32 17:37:05    -1241.751709        0.160875
+FIRE:   33 17:37:05    -1241.753540        0.251603
+FIRE:   34 17:37:05    -1241.745117        0.846674
+FIRE:   35 17:37:05    -1241.748169        2.809950
+FIRE:   36 17:37:06    -1241.745972        0.421338
+FIRE:   37 17:37:06    -1241.745728        0.295102
+FIRE:   38 17:37:06    -1241.747192        0.152542
+FIRE:   39 17:37:06    -1241.747559        0.152762
+FIRE:   40 17:37:06    -1241.747681        0.273142
+FIRE:   41 17:37:06    -1241.745605        0.296739
+FIRE:   42 17:37:06    -1241.748413        0.199700
+FIRE:   43 17:37:06    -1241.747437        0.151379
+FIRE:   44 17:37:06    -1241.744751        0.167079
+FIRE:   45 17:37:06    -1241.746338        0.246238
+FIRE:   46 17:37:06    -1241.744751        0.149597
+FIRE:   47 17:37:06    -1241.740234        0.148084
+FIRE:   48 17:37:06    -1241.736816        0.208131
+FIRE:   49 17:37:06    -1241.742065        0.147234
+FIRE:   50 17:37:06    -1241.736694        0.212569
+FIRE:   51 17:37:06    -1241.737427        0.143401
+FIRE:   52 17:37:06    -1241.734253        0.203096
+FIRE:   53 17:37:06    -1241.731323        0.233589
+FIRE:   54 17:37:06    -1241.731445        0.178368
+FIRE:   55 17:37:06    -1241.733276        0.244684
+FIRE:   56 17:37:06    -1241.727661        0.584870
+FIRE:   57 17:37:06    -1241.722534        1.704775
+FIRE:   58 17:37:06    -1241.721313        0.097509
+ASE FIRE rescue complete, fmax=0.094373 eV/A
+Restored best-force pre-MD structure (fire, fmax=0.094373 eV/A, E=-1241.721313 eV)
+╭─────────────────────────────────────────── JAX-MD ───────────────────────────────────────────╮
+│ Compiling JAX energy/force (first run may take minutes)...                                   │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────────────── JAX ─────────────────────────────────────────────╮
+│ Compilation done in 13.45 s                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────── Forces ───────────────────────────────────────────╮
+│          Forces Summary                                                                      │
+│ ┏━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┓                                                             │
+│ ┃ Statistic     ┃ Value        ┃                                                             │
+│ ┡━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━┩                                                             │
+│ │ Energy (eV)   │ -1241.722290 │                                                             │
+│ │ Shape         │ (300, 3)     │                                                             │
+│ │ Min component │ -0.0941 eV/Å │                                                             │
+│ │ Max component │ 0.0829 eV/Å  │                                                             │
+│ │ Mean |F|      │ 0.0158 eV/Å  │                                                             │
+│ │ Max |F|       │ 0.0974 eV/Å  │                                                             │
+│ │ Std |F|       │ 0.0156 eV/Å  │                                                             │
+│ └───────────────┴──────────────┘                                                             │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+╭───────────────────────────────────────── JAX-MD PBC ─────────────────────────────────────────╮
+│ free space (no PBC), pbc_map: False                                                          │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+/mmhome/boittier/home/mmml/.venv/lib/python3.13/site-packages/jax/_src/numpy/scalar_types.py:55: UserWarning: Explicitly requested dtype float64 requested in asarray is not available, and will be truncated to dtype float32. To enable more dtypes, set the jax_enable_x64 configuration option or the JAX_ENABLE_X64 shell environment variable. See https://github.com/jax-ml/jax#current-gotchas for more.
+  return asarray(x, dtype=self.dtype)
+╭───────────────────────────────────── JAX-MD Simulation ──────────────────────────────────────╮
+│ Ensemble: NVT | dt=0.0005 ps (0.5 fs) | kT=0.02154332585632801 (250.0 K) |                   │
+│ steps_per_recording=100                                                                      │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+╭────────────────────────────────────── NVT Nose-Hoover ───────────────────────────────────────╮
+│ chain_length=3 | chain_steps=2 | sy_steps=3 | tau=0.050000 ps                                │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+[jaxmd_nbr] internal updater settings (NVT fixed-box reuse): update_interval_calls=10, skin_distance=0.200 A
+╭──────────────────────────────────── JAX-MD Minimization ─────────────────────────────────────╮
+│ FIRE minimization (200 steps)                                                                │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+  0/200: E=-1241.889893 eV, max|F|=5.152505
+  20/200: E=-1241.889282 eV, max|F|=5.093822
+  40/200: E=-1241.881348 eV, max|F|=4.996677
+  60/200: E=-1241.868530 eV, max|F|=4.863146
+  80/200: E=-1241.856445 eV, max|F|=4.657994
+  100/200: E=-1241.843384 eV, max|F|=4.382162
+  120/200: E=-1241.824951 eV, max|F|=3.942902
+  140/200: E=-1241.812744 eV, max|F|=3.508082
+  160/200: E=-1241.788940 eV, max|F|=3.022589
+  180/200: E=-1241.777832 eV, max|F|=2.469767
+╭────────────────────────────────────── PBC Minimization ──────────────────────────────────────╮
+│ No cell: skipping PBC minimization                                                           │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+/mmhome/boittier/home/mmml/.venv/lib/python3.13/site-packages/jax/_src/numpy/reductions.py:226: UserWarning: Explicitly requested dtype float64 requested in sum is not available, and will be truncated to dtype float32. To enable more dtypes, set the jax_enable_x64 configuration option or the JAX_ENABLE_X64 shell environment variable. See https://github.com/jax-ml/jax#current-gotchas for more.
+  return _reduction(a, "sum", lax.add, 0, preproc=_cast_to_numeric,
+/mmhome/boittier/home/mmml/.venv/lib/python3.13/site-packages/jax/_src/numpy/reductions.py:159: UserWarning: Explicitly requested dtype float64 requested in convert_element_type is not available, and will be truncated to dtype float32. To enable more dtypes, set the jax_enable_x64 configuration option or the JAX_ENABLE_X64 shell environment variable. See https://github.com/jax-ml/jax#current-gotchas for more.
+  return lax.convert_element_type(result, dtype or result_dtype)
+╭─────────────────────────────────────────── JAX-MD ───────────────────────────────────────────╮
+│ Momentum initialized for 250.0 K                                                             │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────── Forces ───────────────────────────────────────────╮
+│          Forces Summary                                                                      │
+│ ┏━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┓                                                             │
+│ ┃ Statistic     ┃ Value        ┃                                                             │
+│ ┡━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━┩                                                             │
+│ │ Energy (eV)   │ -1241.762817 │                                                             │
+│ │ Shape         │ (300, 3)     │                                                             │
+│ │ Min component │ -0.4389 eV/Å │                                                             │
+│ │ Max component │ 1.9600 eV/Å  │                                                             │
+│ │ Mean |F|      │ 0.0369 eV/Å  │                                                             │
+│ │ Max |F|       │ 2.2321 eV/Å  │                                                             │
+│ │ Std |F|       │ 0.1510 eV/Å  │                                                             │
+│ └───────────────┴──────────────┘                                                             │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+╭───────────────────────────────────── JAX-MD First Step ──────────────────────────────────────╮
+│                          First-step kinematics                                               │
+│ ┏━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓                     │
+│ ┃ Property            ┃ Value                                          ┃                     │
+│ ┡━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩                     │
+│ │ velocity sample [0] │ [-0.04794877  0.00873948 -0.00140373]          │                     │
+│ │ disp dt*v [0]       │ [-2.3974386e-05  4.3697387e-06 -7.0186348e-07] │                     │
+│ │ max|disp|           │ 0.000224                                       │                     │
+│ └─────────────────────┴────────────────────────────────────────────────┘                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────── JAX-MD ───────────────────────────────────────────╮
+│ First step OK: E_pot=-1241.765137 eV                                                         │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────── JAX-MD ───────────────────────────────────────────╮
+│ Starting NVT simulation                                                                      │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+                Time (ps)       Steps   E_pot (eV)      E_tot (eV)      T (K)   avg(ns/day)
+    0.0500	   100	-1241.5490	-1232.4646	    234.26	    0.3674
+    0.5500	  1100	-1239.3740	-1229.6646	    250.38	    3.3648
+    1.0500	  2100	-1239.5286	-1229.0407	    270.46	    5.5025
+    1.5500	  3100	-1239.7542	-1230.1916	    246.60	    7.1039
+    2.0500	  4100	-1239.4987	-1229.4170	    259.98	    8.3483
+    2.5500	  5100	-1239.3219	-1230.3488	    231.40	    9.3433
+    3.0500	  6100	-1238.8390	-1229.5685	    239.07	   10.1575
+    3.5500	  7100	-1238.8674	-1228.7903	    259.87	   10.8344
+    4.0500	  8100	-1238.8074	-1228.9436	    254.36	   11.4072
+    4.5500	  9100	-1238.8210	-1227.9210	    281.09	   11.8984
+    5.0500	 10100	-1238.3447	-1229.5326	    227.25	   12.3223
+    5.5500	 11100	-1238.4456	-1229.1764	    239.03	   12.6937
+    6.0500	 12100	-1238.1349	-1228.1904	    256.45	   13.0205
+    6.5500	 13100	-1238.4888	-1228.8770	    247.87	   13.3113
+    7.0500	 14100	-1238.2034	-1228.3031	    255.31	   13.5695
+    7.5500	 15100	-1238.0677	-1228.3525	    250.54	   13.8030
+    8.0500	 16100	-1238.0176	-1228.0994	    255.77	   14.0153
+    8.5500	 17100	-1237.7120	-1226.9381	    277.84	   14.2081
+    9.0500	 18100	-1237.8940	-1228.2988	    247.44	   14.3851
+    9.5500	 19100	-1237.3389	-1227.6418	    250.07	   14.5437
+   10.0500	 20100	-1237.1628	-1227.3447	    253.19	   14.6922
+   10.5500	 21100	-1236.9647	-1227.0939	    254.55	   14.8297
+   11.0500	 22100	-1236.6414	-1226.4170	    263.66	   14.9572
+   11.5500	 23100	-1236.3795	-1227.3841	    231.97	   15.0756
+   12.0500	 24100	-1236.2590	-1226.2790	    257.36	   15.1857
+   12.5500	 25100	-1236.4875	-1226.3543	    261.31	   15.2876
+   13.0500	 26100	-1235.8771	-1226.2450	    248.39	   15.3835
+   13.5500	 27100	-1236.1438	-1226.5914	    246.34	   15.4738
+   14.0500	 28100	-1236.0363	-1225.9960	    258.92	   15.5585
+   14.5500	 29100	-1235.6096	-1224.8661	    277.05	   15.6382
+   15.0500	 30100	-1235.8065	-1226.4431	    241.46	   15.7134
+   15.5500	 31100	-1234.9771	-1225.1389	    253.70	   15.7843
+   16.0500	 32100	-1235.4740	-1226.3512	    235.26	   15.8515
+   16.5500	 33100	-1235.3884	-1225.5509	    253.69	   15.9148
+   17.0500	 34100	-1235.9392	-1226.2387	    250.16	   15.9746
+   17.5500	 35100	-1235.8534	-1226.4506	    242.48	   16.0319
+   18.0500	 36100	-1235.7477	-1225.6045	    261.57	   16.0865
+   18.5500	 37100	-1234.7938	-1225.1586	    248.47	   16.1375
+   19.0500	 38100	-1235.6267	-1225.5005	    261.13	   16.1872
+   19.5500	 39100	-1235.4744	-1226.0955	    241.86	   16.2345
+   20.0500	 40100	-1234.9562	-1225.5045	    243.74	   16.2795
+   20.5500	 41100	-1235.2104	-1225.3300	    254.80	   16.3228
+   21.0500	 42100	-1234.5648	-1224.7255	    253.74	   16.3642
+   21.5500	 43100	-1235.0549	-1224.5749	    270.26	   16.4041
+   22.0500	 44100	-1234.6238	-1225.2871	    240.77	   16.4423
+   22.5500	 45100	-1234.2795	-1225.1190	    236.23	   16.4789
+   23.0500	 46100	-1234.4182	-1223.5192	    281.06	   16.5141
+   23.5500	 47100	-1234.7356	-1226.0164	    224.85	   16.5481
+   24.0500	 48100	-1234.0934	-1223.7704	    266.21	   16.5808
+   24.5500	 49100	-1234.8842	-1224.7348	    261.73	   16.6120
+   25.0500	 50100	-1234.9086	-1226.0231	    229.14	   16.6423
+   25.5500	 51100	-1234.1195	-1223.9226	    262.96	   16.6711
+   26.0500	 52100	-1234.5513	-1225.4153	    235.60	   16.6991
+   26.5500	 53100	-1234.8181	-1224.8844	    256.17	   16.7260
+   27.0500	 54100	-1234.8115	-1225.8659	    230.69	   16.7521
+   27.5500	 55100	-1402.2321	-1387.8849	    369.98	   16.7770
+   28.0500	 56100	-2895.6187	-2863.1917	    836.22	   16.8011
+   28.5500	 57100	-6336.8247	-6322.3264	    373.88	   16.8244
+   29.0500	 58100	-6376.3462	-6368.0120	    214.92	   16.8473
+   29.5500	 59100	-6400.5322	-6391.3860	    235.86	   16.8696
+   30.0500	 60100	-6434.1230	-6421.1181	    335.37	   16.8907
+   30.5500	 61100	-6377.6680	-6368.4268	    238.31	   16.9114
+   31.0500	 62100	-6412.0933	-6401.5723	    271.31	   16.9316
+   31.5500	 63100	-6393.2651	-6384.6255	    222.80	   16.9514
+   32.0500	 64100	-6421.7529	-6405.8128	    411.06	   16.9705
+   32.5500	 65100	-6661.4097	-6648.4135	    335.14	   16.9892
+   33.0500	 66100	-1079.3939	 -954.2193	   3227.98	   17.0072
+   33.5500	 67100	-1310.3097	 -995.4925	   8118.45	   17.0245
+   34.0500	 68100	-1640.3181	 -890.0632	  19347.44	   17.0415
+   34.5500	 69100	       nan	       nan	       nan	   17.0574
+Numerical instability at step 69100; stopping.
+╭─────────────────────────────────── HDF5 trajectory saved ────────────────────────────────────╮
+│ /mmhome/boittier/home/mmml/acetone/N30/T250/R1/vac_nvt_jaxmd_nvt.h5                          │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────── Simulation complete ─────────────────────────────────────╮
+│ 69000 steps (34.50 ps)                                                                       │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+{
+  "ensemble": "nvt",
+  "nsteps_requested": 200000,
+  "nsteps_completed": 69000,
+  "frames": 690,
+  "status": "complete",
+  "error": null,
+  "h5": "vac_nvt_jaxmd_nvt.h5",
+  "traj": "vac_nvt.part0000.traj",
+  "traj_parts": [
+    "vac_nvt.part0000.traj"
+  ],
+  "traj_part_count": 1,
+  "box_A": null,
+  "free_space": true,
+  "pressure_atm": 1.0,
+  "temperature_K": 250.0,
+  "composition": {
+    "ACO": 30
+  },
+  "psf_charges": {
+    "total_charge_e": -1.2212453270876722e-15,
+    "n_charged_atoms": 300,
+    "min_charge_e": -0.48,
+    "max_charge_e": 0.4,
+    "residues": {
+      "ACO": {
+        "n_atoms": 10,
+        "charge_sum_e": -5.551115123125783e-17,
+        "atom_types": [
+          "O1",
+          "C1",
+          "C2",
+          "C3",
+          "H21",
+          "H22",
+          "H23",
+          "H31",
+          "H32",
+          "H33"
+        ],
+        "charges_e": [
+          -0.48,
+          0.4,
+          -0.23,
+          -0.23,
+          0.09,
+          0.09,
+          0.09,
+          0.09,
+          0.09,
+          0.09
+        ]
+      }
+    }
+  },
+  "charmm_minimization": {
+    "nbxmod": 5,
+    "sd_steps": 200,
+    "abnr_steps": 1000
+  },
+  "placement": "random_3d",
+  "placement_seed": 130250,
+  "neighbor_update_interval_steps": null,
+  "neighbor_expected_updates": null,
+  "neighbor_internal_update_interval_calls": 10,
+  "neighbor_internal_skin_distance_A": 0.2,
+  "pre_md_minimization": {
+    "charmm_min_wall_s": 0.39337480580434203,
+    "pre_bfgs_fmax_eVA": 6.072309494018555,
+    "bfgs_iterations": 50.0,
+    "bfgs_fmax_eVA": 8.336710929870605,
+    "bfgs_traj": "vac_nvt_bfgs_min.traj",
+    "bfgs_best_force_fmax_eVA": 5.526098728179932,
+    "fire_fmax_eVA": 0.0943732038140297,
+    "fire_traj": "vac_nvt_fire_min.traj",
+    "best_force_xyz": "vac_nvt_pre_md_best_force.xyz",
+    "best_force_energy_eV": -1241.7213134765625,
+    "best_force_fmax_eVA": 0.0943732038140297,
+    "best_force_label": "fire",
+    "best_energy_xyz": "vac_nvt_pre_md_best_energy.xyz",
+    "best_energy_eV": -1241.7646484375,
+    "best_energy_fmax_eVA": 0.18810534477233887,
+    "best_energy_label": "fire",
+    "restored_best_force_fmax_eVA": 0.0943732038140297
+  },
+  "dynamics_overlap_action": "warn",
+  "dynamics_overlap_charmm_rescue_enabled": true,
+  "dynamics_overlap_charmm_sd_steps": 200,
+  "dynamics_overlap_charmm_abnr_steps": 400,
+  "dynamics_overlap_charmm_rescue_count": 0,
+  "traj_export_molecular_wrap": false,
+  "dynamics_overlap_warning_count": 0,
+  "dynamics_min_intermonomer_distance_A": 0.8920003058440203
+}
+Wrote /mmhome/boittier/home/mmml/acetone/N30/T250/R1/vac_nvt.part0000.traj
+Wrote /mmhome/boittier/home/mmml/acetone/N30/T250/R1/suite_summary_jaxmd.json
+  
+ CHARMM>     PRNLev 0
+
+ DRUDES PARTICLES WILL BE GENERATED AUTOMATICALLY FOR ALL ATOMS WITH NON-ZERO ALPHA
+ Thole-type dipole screening, Slater-Delta shape {S(u) = 1 - (1+u/2)*exp(-u)}, default radius =  1.300000
+      $$$$$$  New timer profile Local node$$$$$
+      Heuristic check                 0.00 Other:            0.00
+      NBONDS                          0.00 Other:            0.00
+   List time                       0.01 Other:            0.00
+      Nonbond force                   0.30 Other:            0.00
+         Bond energy                     0.00 Other:            0.00
+         Angle energy                    0.01 Other:            0.00
+         Dihedral energy                 0.01 Other:            0.00
+         Restraints energy               0.00 Other:            0.00
+      INTRNL energy                   0.04 Other:            0.01
+      Comm energy                     0.00 Other:            0.00
+      Comm force                      0.00 Other:            0.00
+   Energy time                     0.36 Other:            0.01
+ Total time                    267.71 Other:          267.35
+         $$$$$$  Average   profile $$$$$
+      Heuristic check                 0.00 Other:            0.00
+      NBONDS                          0.00 Other:            0.00
+   List time                       0.01 Other:            0.00
+      Nonbond force                   0.30 Other:            0.00
+         Bond energy                     0.00 Other:            0.00
+         Angle energy                    0.01 Other:            0.00
+         Dihedral energy                 0.01 Other:            0.00
+         Restraints energy               0.00 Other:            0.00
+      INTRNL energy                   0.04 Other:            0.01
+      Comm energy                     0.00 Other:            0.00
+      Comm force                      0.00 Other:            0.00
+   Energy time                     0.36 Other:            0.01
+ Total time                    267.71 Other:          267.35
+Running: /mmhome/boittier/home/mmml/.venv/bin/python3 /mmhome/boittier/home/mmml/scripts/md_10mer_mmml_pbc_suite_jaxmd.py --ensemble nvt --spacing 1.0 --ps 100.0 --dt-fs 0.5 --temperature 250.0 --pressure 1.0 --traj-chunk-frames 1000 --free-space --composition ACO:30 --checkpoint /mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/aco1-ef1bd9eb-c9d1-438c-97ec-a6b692aeeba3 --output-dir acetone/N30/T250/R1 --seed 130250 --min-intermonomer-atom-distance 0.1 --flat-bottom-radius 20.0 --flat-bottom-k 10.0
+/mmhome/boittier/home/mmml/mmml/data/charmm/top_all36_cgenff.rtf
+/mmhome/boittier/home/mmml/mmml/data/charmm/par_all36_cgenff.prm
+CHARMM_HOME /mmhome/boittier/home/mmml/setup/charmm
+CHARMM_LIB_DIR /mmhome/boittier/home/mmml/setup/charmm
+Using MMML checkpoint: /mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/aco1-ef1bd9eb-c9d1-438c-97ec-a6b692aeeba3
+[17:41:09] PSF charge validation: total=-0.000000 e, charged_atoms=300, ACO:-0.000000 e
+  
+ CHARMM>     BLOCK
+ WARNING from DECODI -- Zero length string being converted to 0
+ Block structure initialized with   3 blocks.
+ All atoms have been assigned to block 1.
+ All interaction coefficients have been set to unity.
+  Setting number of block exclusions nblock_excldPairs=0
+  
+  BLOCK>            CALL 1 SELE ALL END
+ SELRPN>      0 atoms have been selected out of      0
+ The selected atoms have been reassigned to block   1
+  
+  BLOCK>              COEFF 1 1 1.0
+  
+  BLOCK>            END
+ Matrix of Interaction Coefficients
+ 
+    1.00000
+    1.00000   1.00000
+    1.00000   1.00000   1.00000
+ Matrix of BOND Interaction Coefficients
+ 
+    1.00000
+    1.00000   1.00000
+    1.00000   1.00000   1.00000
+ Matrix of ANGLE Interaction Coefficients
+ 
+    1.00000
+    1.00000   1.00000
+    1.00000   1.00000   1.00000
+ Matrix of DIHE Interaction Coefficients
+ 
+    1.00000
+    1.00000   1.00000
+    1.00000   1.00000   1.00000
+ Matrix of CROSS Interaction Coefficients
+ 
+    1.00000
+    1.00000   1.00000
+    1.00000   1.00000   1.00000
+ Matrix of ELEC Interaction Coefficients
+ 
+    1.00000
+    1.00000   1.00000
+    1.00000   1.00000   1.00000
+ Matrix of VDW Interaction Coefficients
+ 
+    1.00000
+    1.00000   1.00000
+    1.00000   1.00000   1.00000
+  
+ CHARMM>     
+  
+  
+ CHARMM>     PRNLev 0
+
+ DRUDES PARTICLES WILL BE GENERATED AUTOMATICALLY FOR ALL ATOMS WITH NON-ZERO ALPHA
+ Thole-type dipole screening, Slater-Delta shape {S(u) = 1 - (1+u/2)*exp(-u)}, default radius =  1.300000
+
+ DRUDES PARTICLES WILL BE GENERATED AUTOMATICALLY FOR ALL ATOMS WITH NON-ZERO ALPHA
+ Thole-type dipole screening, Slater-Delta shape {S(u) = 1 - (1+u/2)*exp(-u)}, default radius =  1.300000
+  
+ CHARMM>    WRNLev 9
+  
+  
+ CHARMM>     ENER
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  FSWItch  VATOm    VFSWIt  
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 18.000 CTEXNB =999.000 CTONNB = 13.000 CTOFNB = 17.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are    32863 atom  pairs and     1080 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR    44701 ATOM PAIRS AND        0 GROUP PAIRS
+ NBONDS: Using routine NBONDA for list generation.
+
+ General atom nonbond list generation found:
+    32863 ATOM PAIRS WERE FOUND FOR ATOM LIST
+      114 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  FSWItch  VATOm    VFSWIt  
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 18.000 CTEXNB =999.000 CTONNB = 13.000 CTOFNB = 17.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are    32863 atom  pairs and     1080 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ PRNHBD: CUToff Hydrogen Bond  distance =    0.5000   Angle =   90.0000
+         CuT switching ON HB dist. =     3.5000  OFf HB dist. =    4.0000
+         CuT switching ON Hb Angle =    50.0000  OFf Hb Angle =   70.0000
+         ACCEptor antecedents included
+         All hydrogen bonds for each hydrogen will be found
+         Hydrogen bonds between excluded atoms will be kept
+
+ MAKPHI:: From   360 dihedrals, a total of   360 fast primitive dihedral elements were produced.
+ EBONDC: Using routine EBONDFS for energy calculation.
+ EBONDC: returned from EBONDFS
+ EANGLC: QANGTYPE =            1
+ EANGLC: Using routine EANGLFS for energy calculation.
+ EBONDC: Using routine EBONDFS for energy calculation.
+ EBONDC: returned from EBONDFS
+ EPHIC: Using routine EPHIFS for energy calculation.
+ EIMPHIC: Using routine EIPHIFS for energy calculation.
+ ENBAEXP: Using routine  ENBAV2E3B1  for energy calculation.
+ ENBOND: Using routine ENBAEXP for energy calculation.
+ENER ENR:  Eval#     ENERgy      Delta-E         GRMS
+ENER INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+ENER EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+ENER>        0 1202194003.5          0.0  136794667.6
+ENER INTERN>    23128.34279  21862.39841    813.79451     11.01275   3153.42554
+ENER EXTERN>   1202147704.5      -2670.0          0.0          0.0          0.0
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  FSWItch  VATOm    VFSWIt  
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 18.000 CTEXNB =999.000 CTONNB = 13.000 CTOFNB = 17.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are    32863 atom  pairs and     1080 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR    44701 ATOM PAIRS AND        0 GROUP PAIRS
+ NBONDS: Using routine NBONDA for list generation.
+
+ General atom nonbond list generation found:
+    32863 ATOM PAIRS WERE FOUND FOR ATOM LIST
+      114 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  FSWItch  VATOm    VFSWIt  
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 18.000 CTEXNB =999.000 CTONNB = 13.000 CTOFNB = 17.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are    32863 atom  pairs and     1080 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ PRNHBD: CUToff Hydrogen Bond  distance =    0.5000   Angle =   90.0000
+         CuT switching ON HB dist. =     3.5000  OFf HB dist. =    4.0000
+         CuT switching ON Hb Angle =    50.0000  OFf Hb Angle =   70.0000
+         ACCEptor antecedents included
+         All hydrogen bonds for each hydrogen will be found
+         Hydrogen bonds between excluded atoms will be kept
+
+ EBONDC: Using routine EBONDFS for energy calculation.
+ EBONDC: returned from EBONDFS
+ EANGLC: QANGTYPE =            1
+ EANGLC: Using routine EANGLFS for energy calculation.
+ EBONDC: Using routine EBONDFS for energy calculation.
+ EBONDC: returned from EBONDFS
+ EPHIC: Using routine EPHIFS for energy calculation.
+ EIMPHIC: Using routine EIPHIFS for energy calculation.
+ ENBAEXP: Using routine  ENBAV2E3B1  for energy calculation.
+ ENBOND: Using routine ENBAEXP for energy calculation.
+ENER ENR:  Eval#     ENERgy      Delta-E         GRMS
+ENER INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+ENER EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+ENER>        0 1202194003.5          0.0  136794667.6
+ENER INTERN>    23128.34279  21862.39841    813.79451     11.01275   3153.42554
+ENER EXTERN>   1202147704.5      -2670.0          0.0          0.0          0.0
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>     PRNLev 0
+  
+ CHARMM>    WRNLev 9
+  
+  
+ CHARMM>     ENER
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  FSWItch  VATOm    VFSWIt  
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 18.000 CTEXNB =999.000 CTONNB = 13.000 CTOFNB = 17.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are    37618 atom  pairs and     1080 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR    44701 ATOM PAIRS AND        0 GROUP PAIRS
+ NBONDS: Using routine NBONDA for list generation.
+
+ General atom nonbond list generation found:
+    37653 ATOM PAIRS WERE FOUND FOR ATOM LIST
+      205 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  FSWItch  VATOm    VFSWIt  
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 18.000 CTEXNB =999.000 CTONNB = 13.000 CTOFNB = 17.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are    37653 atom  pairs and     1080 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ PRNHBD: CUToff Hydrogen Bond  distance =    0.5000   Angle =   90.0000
+         CuT switching ON HB dist. =     3.5000  OFf HB dist. =    4.0000
+         CuT switching ON Hb Angle =    50.0000  OFf Hb Angle =   70.0000
+         ACCEptor antecedents included
+         All hydrogen bonds for each hydrogen will be found
+         Hydrogen bonds between excluded atoms will be kept
+
+ EBONDC: Using routine EBONDFS for energy calculation.
+ EBONDC: returned from EBONDFS
+ EANGLC: QANGTYPE =            1
+ EANGLC: Using routine EANGLFS for energy calculation.
+ EBONDC: Using routine EBONDFS for energy calculation.
+ EBONDC: returned from EBONDFS
+ EPHIC: Using routine EPHIFS for energy calculation.
+ EIMPHIC: Using routine EIPHIFS for energy calculation.
+ ENBAEXP: Using routine  ENBAV2E3B1  for energy calculation.
+ ENBOND: Using routine ENBAEXP for energy calculation.
+ENER ENR:  Eval#     ENERgy      Delta-E         GRMS
+ENER INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+ENER EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+ENER>        0      -1009.1 1202195012.6          0.2
+ENER INTERN>        2.34848      2.90112      0.06710      0.31950      0.06218
+ENER EXTERN>      -55.53999   -959.30272      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  FSWItch  VATOm    VFSWIt  
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 18.000 CTEXNB =999.000 CTONNB = 13.000 CTOFNB = 17.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are    37653 atom  pairs and     1080 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR    44701 ATOM PAIRS AND        0 GROUP PAIRS
+ NBONDS: Using routine NBONDA for list generation.
+
+ General atom nonbond list generation found:
+    37653 ATOM PAIRS WERE FOUND FOR ATOM LIST
+      205 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  FSWItch  VATOm    VFSWIt  
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 18.000 CTEXNB =999.000 CTONNB = 13.000 CTOFNB = 17.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are    37653 atom  pairs and     1080 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ PRNHBD: CUToff Hydrogen Bond  distance =    0.5000   Angle =   90.0000
+         CuT switching ON HB dist. =     3.5000  OFf HB dist. =    4.0000
+         CuT switching ON Hb Angle =    50.0000  OFf Hb Angle =   70.0000
+         ACCEptor antecedents included
+         All hydrogen bonds for each hydrogen will be found
+         Hydrogen bonds between excluded atoms will be kept
+
+ EBONDC: Using routine EBONDFS for energy calculation.
+ EBONDC: returned from EBONDFS
+ EANGLC: QANGTYPE =            1
+ EANGLC: Using routine EANGLFS for energy calculation.
+ EBONDC: Using routine EBONDFS for energy calculation.
+ EBONDC: returned from EBONDFS
+ EPHIC: Using routine EPHIFS for energy calculation.
+ EIMPHIC: Using routine EIPHIFS for energy calculation.
+ ENBAEXP: Using routine  ENBAV2E3B1  for energy calculation.
+ ENBOND: Using routine ENBAEXP for energy calculation.
+ENER ENR:  Eval#     ENERgy      Delta-E         GRMS
+ENER INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+ENER EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+ENER>        0      -1009.1 1202195012.6          0.2
+ENER INTERN>        2.34848      2.90112      0.06710      0.31950      0.06218
+ENER EXTERN>      -55.53999   -959.30272      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+/mmhome/boittier/home/mmml/.venv/lib/python3.13/site-packages/orbax/checkpoint/_src/serialization/jax_array_handlers.py:712: UserWarning: Sharding info not provided when restoring. Populating sharding info from sharding file. Please note restoration time will be slightly increased due to reading from file. Note also that this option is unsafe when restoring on a different topology than the checkpoint was saved with.
+  warnings.warn(
+CHARMM pre-minimization starting (SD=200, ABNR=1000)
+CHARMM energy before minimization:
+CHARMM energy after minimization:
+CHARMM pre-minimization complete (0.340 s)
+[setup_calculator] Cutoff inputs -> ml_cutoff=0.1000, mm_switch_on=5.5000, mm_cutoff=2.0000, complementary_handoff=True
+[setup_calculator] mm_r_min=4.86 (exclude pairs with dimer COM < this)
+[setup_calculator] atoms_per_monomer=[10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10], total_atoms=300
+[setup_calculator] lambda_monomer=[1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1.]
+len(dimer_perms) 435
+[setup_calculator] max_atoms (model natoms)=20 (max monomer/dimer size)
+[setup_calculator] model_restart_path=/mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/aco1-ef1bd9eb-c9d1-438c-97ec-a6b692aeeba3
+dict_keys(['opt_state', 'params', 'step'])
+                                        Model Attributes                                        
+┏━━━━━┳━━━━━┳━━━━━┳━━━━━┳━━━━━┳━━━━━┳━━━━━┳━━━━━┳━━━━━┳━━━━━┳━━━━━┳━━━━━┳━━━━━┳━━━━━┳━━━━┳━━━━━┓
+┃ ch… ┃ cu… ┃ de… ┃ efa ┃ fe… ┃ in… ┃ ma… ┃ ma… ┃ n_… ┃ na… ┃ nu… ┃ nu… ┃ to… ┃ us… ┃ u… ┃ zbl ┃
+┡━━━━━╇━━━━━╇━━━━━╇━━━━━╇━━━━━╇━━━━━╇━━━━━╇━━━━━╇━━━━━╇━━━━━╇━━━━━╇━━━━━╇━━━━━╇━━━━━╇━━━━╇━━━━━┩
+│ Fa… │ 6.0 │ Fa… │ Fa… │ 64  │ Tr… │ 118 │ 0   │ 3   │ 20  │ 64  │ 5   │ 0.0 │ Tr… │ F… │ Tr… │
+└─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴────┴─────┘
+                                        Last Checkpoint                                         
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Checkpoint                    ┃ name       ┃ epoch ┃ best_loss  ┃ Save Time                  ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ /mmhome/boittier/home/mmml_t… │ epoch-1262 │ 1262  │ 0.08363779 │ 2026-05-23 15:11:26.011617 │
+└───────────────────────────────┴────────────┴───────┴────────────┴────────────────────────────┘
+E0525 17:41:26.598214 1105404 cuda_timer.cc:87] Delay kernel timed out: measured time has sub-optimal accuracy. There may be a missing warmup execution, please investigate in Nsight Systems.
+E0525 17:41:27.067856 1105421 cuda_timer.cc:87] Delay kernel timed out: measured time has sub-optimal accuracy. There may be a missing warmup execution, please investigate in Nsight Systems.
+E0525 17:41:27.447621 1105403 cuda_timer.cc:87] Delay kernel timed out: measured time has sub-optimal accuracy. There may be a missing warmup execution, please investigate in Nsight Systems.
+E0525 17:41:27.521414 1105408 cuda_timer.cc:87] Delay kernel timed out: measured time has sub-optimal accuracy. There may be a missing warmup execution, please investigate in Nsight Systems.
+E0525 17:41:27.605881 1105401 cuda_timer.cc:87] Delay kernel timed out: measured time has sub-optimal accuracy. There may be a missing warmup execution, please investigate in Nsight Systems.
+E0525 17:41:27.678639 1105403 cuda_timer.cc:87] Delay kernel timed out: measured time has sub-optimal accuracy. There may be a missing warmup execution, please investigate in Nsight Systems.
+E0525 17:41:27.761337 1105407 cuda_timer.cc:87] Delay kernel timed out: measured time has sub-optimal accuracy. There may be a missing warmup execution, please investigate in Nsight Systems.
+E0525 17:41:27.838526 1105398 cuda_timer.cc:87] Delay kernel timed out: measured time has sub-optimal accuracy. There may be a missing warmup execution, please investigate in Nsight Systems.
+E0525 17:41:27.937723 1105414 cuda_timer.cc:87] Delay kernel timed out: measured time has sub-optimal accuracy. There may be a missing warmup execution, please investigate in Nsight Systems.
+Running: /mmhome/boittier/home/mmml/.venv/bin/python3 /mmhome/boittier/home/mmml/scripts/md_10mer_mmml_pbc_suite_jaxmd.py --ensemble nvt --spacing 1.0 --ps 100.0 --dt-fs 0.5 --temperature 250.0 --pressure 1.0 --traj-chunk-frames 1000 --free-space --composition ACO:30 --checkpoint /mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/aco1-ef1bd9eb-c9d1-438c-97ec-a6b692aeeba3 --output-dir acetone/N30/T250/R2 --seed 230250 --min-intermonomer-atom-distance 0.1 --flat-bottom-radius 20.0 --flat-bottom-k 10.0
+Traceback (most recent call last):
+  File "/mmhome/boittier/home/mmml/.venv/bin/mmml", line 10, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/mmhome/boittier/home/mmml/mmml/cli/__main__.py", line 116, in main
+    return md_system.main()
+           ~~~~~~~~~~~~~~^^
+  File "/mmhome/boittier/home/mmml/mmml/cli/run/md_system.py", line 388, in main
+    completed = subprocess.run(cmd, cwd=str(_repo_root()))
+  File "/mmhome/boittier/home/micromamba/lib/python3.13/subprocess.py", line 556, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mmhome/boittier/home/micromamba/lib/python3.13/subprocess.py", line 1214, in communicate
+    self.wait()
+    ~~~~~~~~~^^
+  File "/mmhome/boittier/home/micromamba/lib/python3.13/subprocess.py", line 1280, in wait
+    return self._wait(timeout=timeout)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/mmhome/boittier/home/micromamba/lib/python3.13/subprocess.py", line 2085, in _wait
+    (pid, sts) = self._try_wait(0)
+                 ~~~~~~~~~~~~~~^^^
+  File "/mmhome/boittier/home/micromamba/lib/python3.13/subprocess.py", line 2043, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+                 ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

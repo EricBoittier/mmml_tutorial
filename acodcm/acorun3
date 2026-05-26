@@ -1,0 +1,926 @@
+/mmhome/boittier/home/mmml/mmml/data/charmm/top_all36_cgenff.rtf
+/mmhome/boittier/home/mmml/mmml/data/charmm/par_all36_cgenff.prm
+CHARMM_HOME /mmhome/boittier/home/mmml/setup/charmm
+CHARMM_LIB_DIR /mmhome/boittier/home/mmml/setup/charmm
+Using MMML checkpoint: /mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/dcm1-c137fb42-1f65-4748-880b-8f8184a20f70
+[17:38:45] PSF charge validation: total=-0.000000 e, charged_atoms=165, DCM:-0.000000 e
+  
+ CHARMM>     BLOCK
+ WARNING from DECODI -- Zero length string being converted to 0
+ Block structure initialized with   3 blocks.
+ All atoms have been assigned to block 1.
+ All interaction coefficients have been set to unity.
+  Setting number of block exclusions nblock_excldPairs=0
+  
+  BLOCK>            CALL 1 SELE ALL END
+ SELRPN>      0 atoms have been selected out of      0
+ The selected atoms have been reassigned to block   1
+  
+  BLOCK>              COEFF 1 1 1.0
+  
+  BLOCK>            END
+ Matrix of Interaction Coefficients
+ 
+    1.00000
+    1.00000   1.00000
+    1.00000   1.00000   1.00000
+ Matrix of BOND Interaction Coefficients
+ 
+    1.00000
+    1.00000   1.00000
+    1.00000   1.00000   1.00000
+ Matrix of ANGLE Interaction Coefficients
+ 
+    1.00000
+    1.00000   1.00000
+    1.00000   1.00000   1.00000
+ Matrix of DIHE Interaction Coefficients
+ 
+    1.00000
+    1.00000   1.00000
+    1.00000   1.00000   1.00000
+ Matrix of CROSS Interaction Coefficients
+ 
+    1.00000
+    1.00000   1.00000
+    1.00000   1.00000   1.00000
+ Matrix of ELEC Interaction Coefficients
+ 
+    1.00000
+    1.00000   1.00000
+    1.00000   1.00000   1.00000
+ Matrix of VDW Interaction Coefficients
+ 
+    1.00000
+    1.00000   1.00000
+    1.00000   1.00000   1.00000
+  
+ CHARMM>     
+  
+  
+ CHARMM>     PRNLev 0
+
+ DRUDES PARTICLES WILL BE GENERATED AUTOMATICALLY FOR ALL ATOMS WITH NON-ZERO ALPHA
+ Thole-type dipole screening, Slater-Delta shape {S(u) = 1 - (1+u/2)*exp(-u)}, default radius =  1.300000
+
+ DRUDES PARTICLES WILL BE GENERATED AUTOMATICALLY FOR ALL ATOMS WITH NON-ZERO ALPHA
+ Thole-type dipole screening, Slater-Delta shape {S(u) = 1 - (1+u/2)*exp(-u)}, default radius =  1.300000
+  
+ CHARMM>    WRNLev 9
+  
+  
+ CHARMM>     ENER
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  FSWItch  VATOm    VFSWIt  
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 18.000 CTEXNB =999.000 CTONNB = 13.000 CTOFNB = 17.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are     9510 atom  pairs and      330 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR    13531 ATOM PAIRS AND        0 GROUP PAIRS
+ NBONDS: Using routine NBONDA for list generation.
+
+ General atom nonbond list generation found:
+     9510 ATOM PAIRS WERE FOUND FOR ATOM LIST
+       90 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  FSWItch  VATOm    VFSWIt  
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 18.000 CTEXNB =999.000 CTONNB = 13.000 CTOFNB = 17.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are     9510 atom  pairs and      330 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ PRNHBD: CUToff Hydrogen Bond  distance =    0.5000   Angle =   90.0000
+         CuT switching ON HB dist. =     3.5000  OFf HB dist. =    4.0000
+         CuT switching ON Hb Angle =    50.0000  OFf Hb Angle =   70.0000
+         ACCEptor antecedents included
+         All hydrogen bonds for each hydrogen will be found
+         Hydrogen bonds between excluded atoms will be kept
+
+ EBONDC: Using routine EBONDFS for energy calculation.
+ EBONDC: returned from EBONDFS
+ EANGLC: QANGTYPE =            1
+ EANGLC: Using routine EANGLFS for energy calculation.
+ EBONDC: Using routine EBONDFS for energy calculation.
+ EBONDC: returned from EBONDFS
+ ENBAEXP: Using routine  ENBAV2E3B1  for energy calculation.
+ ENBOND: Using routine ENBAEXP for energy calculation.
+ENER ENR:  Eval#     ENERgy      Delta-E         GRMS
+ENER INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+ENER EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+ENER>        0  23653.75239      0.00000    275.58225
+ENER INTERN>    19723.50220   3830.51649    113.71337      0.00000      0.00000
+ENER EXTERN>      -13.80975     -0.16993      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  FSWItch  VATOm    VFSWIt  
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 18.000 CTEXNB =999.000 CTONNB = 13.000 CTOFNB = 17.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are     9510 atom  pairs and      330 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR    13531 ATOM PAIRS AND        0 GROUP PAIRS
+ NBONDS: Using routine NBONDA for list generation.
+
+ General atom nonbond list generation found:
+     9510 ATOM PAIRS WERE FOUND FOR ATOM LIST
+       90 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  FSWItch  VATOm    VFSWIt  
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 18.000 CTEXNB =999.000 CTONNB = 13.000 CTOFNB = 17.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are     9510 atom  pairs and      330 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ PRNHBD: CUToff Hydrogen Bond  distance =    0.5000   Angle =   90.0000
+         CuT switching ON HB dist. =     3.5000  OFf HB dist. =    4.0000
+         CuT switching ON Hb Angle =    50.0000  OFf Hb Angle =   70.0000
+         ACCEptor antecedents included
+         All hydrogen bonds for each hydrogen will be found
+         Hydrogen bonds between excluded atoms will be kept
+
+ EBONDC: Using routine EBONDFS for energy calculation.
+ EBONDC: returned from EBONDFS
+ EANGLC: QANGTYPE =            1
+ EANGLC: Using routine EANGLFS for energy calculation.
+ EBONDC: Using routine EBONDFS for energy calculation.
+ EBONDC: returned from EBONDFS
+ ENBAEXP: Using routine  ENBAV2E3B1  for energy calculation.
+ ENBOND: Using routine ENBAEXP for energy calculation.
+ENER ENR:  Eval#     ENERgy      Delta-E         GRMS
+ENER INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+ENER EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+ENER>        0  23653.75239      0.00000    275.58225
+ENER INTERN>    19723.50220   3830.51649    113.71337      0.00000      0.00000
+ENER EXTERN>      -13.80975     -0.16993      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>     PRNLev 0
+  
+ CHARMM>    WRNLev 9
+  
+  
+ CHARMM>     ENER
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  FSWItch  VATOm    VFSWIt  
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 18.000 CTEXNB =999.000 CTONNB = 13.000 CTOFNB = 17.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are    13098 atom  pairs and      330 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR    13531 ATOM PAIRS AND        0 GROUP PAIRS
+ NBONDS: Using routine NBONDA for list generation.
+
+ General atom nonbond list generation found:
+    13102 ATOM PAIRS WERE FOUND FOR ATOM LIST
+       42 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  FSWItch  VATOm    VFSWIt  
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 18.000 CTEXNB =999.000 CTONNB = 13.000 CTOFNB = 17.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are    13102 atom  pairs and      330 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ PRNHBD: CUToff Hydrogen Bond  distance =    0.5000   Angle =   90.0000
+         CuT switching ON HB dist. =     3.5000  OFf HB dist. =    4.0000
+         CuT switching ON Hb Angle =    50.0000  OFf Hb Angle =   70.0000
+         ACCEptor antecedents included
+/mmhome/boittier/home/mmml/.venv/lib/python3.13/site-packages/orbax/checkpoint/_src/serialization/jax_array_handlers.py:712: UserWarning: Sharding info not provided when restoring. Populating sharding info from sharding file. Please note restoration time will be slightly increased due to reading from file. Note also that this option is unsafe when restoring on a different topology than the checkpoint was saved with.
+  warnings.warn(
+CHARMM pre-minimization starting (SD=200, ABNR=1000)
+CHARMM energy before minimization:
+CHARMM energy after minimization:
+CHARMM pre-minimization complete (0.158 s)
+[setup_calculator] Cutoff inputs -> ml_cutoff=0.1000, mm_switch_on=5.5000, mm_cutoff=2.0000, complementary_handoff=True
+[setup_calculator] mm_r_min=4.86 (exclude pairs with dimer COM < this)
+[setup_calculator] atoms_per_monomer=[5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5], total_atoms=165
+[setup_calculator] lambda_monomer=[1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1.]
+len(dimer_perms) 528
+[setup_calculator] max_atoms (model natoms)=10 (max monomer/dimer size)
+[setup_calculator] model_restart_path=/mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/dcm1-c137fb42-1f65-4748-880b-8f8184a20f70
+dict_keys(['opt_state', 'params', 'step'])
+                                        Model Attributes                                        
+┏━━━━━┳━━━━━┳━━━━━┳━━━━━┳━━━━━┳━━━━━┳━━━━━┳━━━━━┳━━━━━┳━━━━━┳━━━━━┳━━━━━┳━━━━━┳━━━━━┳━━━━┳━━━━━┓
+┃ ch… ┃ cu… ┃ de… ┃ efa ┃ fe… ┃ in… ┃ ma… ┃ ma… ┃ n_… ┃ na… ┃ nu… ┃ nu… ┃ to… ┃ us… ┃ u… ┃ zbl ┃
+┡━━━━━╇━━━━━╇━━━━━╇━━━━━╇━━━━━╇━━━━━╇━━━━━╇━━━━━╇━━━━━╇━━━━━╇━━━━━╇━━━━━╇━━━━━╇━━━━━╇━━━━╇━━━━━┩
+│ Fa… │ 6.0 │ Fa… │ Fa… │ 64  │ Tr… │ 118 │ 0   │ 3   │ 20  │ 64  │ 5   │ 0.0 │ Tr… │ F… │ Tr… │
+└─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴────┴─────┘
+                                        Last Checkpoint                                         
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Checkpoint                    ┃ name      ┃ epoch ┃ best_loss   ┃ Save Time                  ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ /mmhome/boittier/home/mmml_t… │ epoch-555 │ 555   │ 0.051339287 │ 2026-05-23 15:07:21.263847 │
+└───────────────────────────────┴───────────┴───────┴─────────────┴────────────────────────────┘
+[setup_calculator] Model loaded: EF(
+    # attributes
+    features = 64
+    max_degree = 0
+    num_iterations = 5
+    num_basis_functions = 64
+    cutoff = 6.0
+    max_atomic_number = 118
+    charges = False
+    natoms = 10
+    total_charge = 0.0
+    n_res = 3
+    zbl = True
+    debug = False
+    efa = False
+    use_energy_bias = True
+    use_pbc = False
+    include_electrostatics = True
+)
+ASE BFGS pre-minimization starting (max 50 steps, fmax=0.1)
+      Step     Time          Energy          fmax
+BFGS:    0 17:39:16     -722.841370        8.841664
+BFGS:    1 17:39:17     -722.050720        4.742096
+BFGS:    2 17:39:17     -722.713318        3.952373
+BFGS:    3 17:39:17     -720.035339        7.828630
+BFGS:    4 17:39:17     -716.080383        5.110658
+BFGS:    5 17:39:17     -716.267029        6.304127
+BFGS:    6 17:39:17     -716.259399        5.139317
+BFGS:    7 17:39:17     -715.995911        5.440008
+BFGS:    8 17:39:17     -716.373657        8.990644
+BFGS:    9 17:39:17     -715.681396        3.176256
+BFGS:   10 17:39:17     -715.483582        1.519682
+BFGS:   11 17:39:17     -715.365417        1.188040
+BFGS:   12 17:39:17     -715.362915        1.819028
+BFGS:   13 17:39:17     -715.244080        1.176703
+BFGS:   14 17:39:17     -715.251160        1.047502
+BFGS:   15 17:39:17     -715.268555        0.199097
+BFGS:   16 17:39:17     -715.265808        0.588334
+BFGS:   17 17:39:17     -715.274841        0.517020
+BFGS:   18 17:39:17     -715.324097        0.409409
+BFGS:   19 17:39:17     -715.315125        0.232918
+BFGS:   20 17:39:17     -715.326477        0.225085
+BFGS:   21 17:39:17     -715.315308        0.152998
+BFGS:   22 17:39:17     -715.307739        0.110054
+BFGS:   23 17:39:17     -715.286316        0.166552
+BFGS:   24 17:39:17     -715.265320        0.256939
+BFGS:   25 17:39:17     -715.260925        0.143873
+BFGS:   26 17:39:17     -715.263611        0.135137
+BFGS:   27 17:39:17     -715.281006        0.210514
+BFGS:   28 17:39:17     -715.311218        0.335526
+BFGS:   29 17:39:17     -715.515930        3.225895
+BFGS:   30 17:39:17     -717.238525        4.231772
+BFGS:   31 17:39:17     -719.344299        3.260719
+BFGS:   32 17:39:17     -718.210632        2.825353
+BFGS:   33 17:39:17     -717.010864        4.838421
+BFGS:   34 17:39:17     -717.539429        1.326669
+BFGS:   35 17:39:17     -717.418884        1.248078
+BFGS:   36 17:39:18     -717.196289        1.448094
+BFGS:   37 17:39:18     -717.040161        1.028057
+BFGS:   38 17:39:18     -717.012634        0.679555
+BFGS:   39 17:39:18     -717.052429        0.638905
+BFGS:   40 17:39:18     -717.109436        0.654167
+BFGS:   41 17:39:18     -717.104675        0.938447
+BFGS:   42 17:39:18     -717.046753        0.552762
+BFGS:   43 17:39:18     -717.002197        0.543568
+BFGS:   44 17:39:18     -716.932739        0.497916
+BFGS:   45 17:39:18     -716.922302        0.513037
+BFGS:   46 17:39:18     -716.919495        0.531833
+BFGS:   47 17:39:18     -716.925110        0.374051
+BFGS:   48 17:39:18     -716.933472        0.304525
+BFGS:   49 17:39:18     -716.938171        0.180807
+BFGS:   50 17:39:18     -716.922852        0.154819
+ASE BFGS pre-minimization complete, fmax=0.133384 eV/A
+ASE FIRE rescue starting from best BFGS frame (bfgs, fmax=0.097468 > 0.100000)
+      Step     Time          Energy          fmax
+FIRE:    0 17:39:18     -715.308228        0.110065
+FIRE:    1 17:39:18     -715.310486        0.150144
+FIRE:    2 17:39:18     -715.295593        0.047851
+ASE FIRE rescue complete, fmax=0.041897 eV/A
+Restored best-force pre-MD structure (fire, fmax=0.041897 eV/A, E=-715.295593 eV)
+╭─────────────────────────────────────────── JAX-MD ───────────────────────────────────────────╮
+│ Compiling JAX energy/force (first run may take minutes)...                                   │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────────────── JAX ─────────────────────────────────────────────╮
+│ Compilation done in 18.05 s                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────── Forces ───────────────────────────────────────────╮
+│          Forces Summary                                                                      │
+│ ┏━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┓                                                             │
+│ ┃ Statistic     ┃ Value        ┃                                                             │
+│ ┡━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━┩                                                             │
+│ │ Energy (eV)   │ -715.295715  │                                                             │
+│ │ Shape         │ (165, 3)     │                                                             │
+│ │ Min component │ -0.0280 eV/Å │                                                             │
+│ │ Max component │ 0.0418 eV/Å  │                                                             │
+│ │ Mean |F|      │ 0.0125 eV/Å  │                                                             │
+│ │ Max |F|       │ 0.0478 eV/Å  │                                                             │
+│ │ Std |F|       │ 0.0088 eV/Å  │                                                             │
+│ └───────────────┴──────────────┘                                                             │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+╭───────────────────────────────────────── JAX-MD PBC ─────────────────────────────────────────╮
+│ free space (no PBC), pbc_map: False                                                          │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+/mmhome/boittier/home/mmml/.venv/lib/python3.13/site-packages/jax/_src/numpy/scalar_types.py:55: UserWarning: Explicitly requested dtype float64 requested in asarray is not available, and will be truncated to dtype float32. To enable more dtypes, set the jax_enable_x64 configuration option or the JAX_ENABLE_X64 shell environment variable. See https://github.com/jax-ml/jax#current-gotchas for more.
+  return asarray(x, dtype=self.dtype)
+╭───────────────────────────────────── JAX-MD Simulation ──────────────────────────────────────╮
+│ Ensemble: NVT | dt=0.0005 ps (0.5 fs) | kT=0.02154332585632801 (250.0 K) |                   │
+│ steps_per_recording=100                                                                      │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+╭────────────────────────────────────── NVT Nose-Hoover ───────────────────────────────────────╮
+│ chain_length=3 | chain_steps=2 | sy_steps=3 | tau=0.050000 ps                                │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+[jaxmd_nbr] internal updater settings (NVT fixed-box reuse): update_interval_calls=10, skin_distance=0.200 A
+╭──────────────────────────────────── JAX-MD Minimization ─────────────────────────────────────╮
+│ FIRE minimization (200 steps)                                                                │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+  0/200: E=-723.356995 eV, max|F|=30.551586
+  20/200: E=-722.775024 eV, max|F|=24.671314
+  40/200: E=-722.570007 eV, max|F|=13.028938
+  60/200: E=-722.466675 eV, max|F|=10.878268
+  80/200: E=-722.346863 eV, max|F|=11.844135
+  100/200: E=-722.133667 eV, max|F|=7.583663
+  120/200: E=-721.819702 eV, max|F|=8.254545
+  140/200: E=-721.318726 eV, max|F|=8.540957
+  160/200: E=-720.359314 eV, max|F|=22.511576
+  180/200: E=-717.624939 eV, max|F|=35.944489
+╭────────────────────────────────────── PBC Minimization ──────────────────────────────────────╮
+│ No cell: skipping PBC minimization                                                           │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+/mmhome/boittier/home/mmml/.venv/lib/python3.13/site-packages/jax/_src/numpy/reductions.py:226: UserWarning: Explicitly requested dtype float64 requested in sum is not available, and will be truncated to dtype float32. To enable more dtypes, set the jax_enable_x64 configuration option or the JAX_ENABLE_X64 shell environment variable. See https://github.com/jax-ml/jax#current-gotchas for more.
+  return _reduction(a, "sum", lax.add, 0, preproc=_cast_to_numeric,
+/mmhome/boittier/home/mmml/.venv/lib/python3.13/site-packages/jax/_src/numpy/reductions.py:159: UserWarning: Explicitly requested dtype float64 requested in convert_element_type is not available, and will be truncated to dtype float32. To enable more dtypes, set the jax_enable_x64 configuration option or the JAX_ENABLE_X64 shell environment variable. See https://github.com/jax-ml/jax#current-gotchas for more.
+  return lax.convert_element_type(result, dtype or result_dtype)
+╭─────────────────────────────────────────── JAX-MD ───────────────────────────────────────────╮
+│ Momentum initialized for 250.0 K                                                             │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────── Forces ───────────────────────────────────────────╮
+│          Forces Summary                                                                      │
+│ ┏━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┓                                                             │
+│ ┃ Statistic     ┃ Value        ┃                                                             │
+│ ┡━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━┩                                                             │
+│ │ Energy (eV)   │ -714.722717  │                                                             │
+│ │ Shape         │ (165, 3)     │                                                             │
+│ │ Min component │ -9.3675 eV/Å │                                                             │
+│ │ Max component │ 14.2411 eV/Å │                                                             │
+│ │ Mean |F|      │ 0.2746 eV/Å  │                                                             │
+│ │ Max |F|       │ 14.9560 eV/Å │                                                             │
+│ │ Std |F|       │ 1.6359 eV/Å  │                                                             │
+│ └───────────────┴──────────────┘                                                             │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+╭───────────────────────────────────── JAX-MD First Step ──────────────────────────────────────╮
+│                          First-step kinematics                                               │
+│ ┏━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓                     │
+│ ┃ Property            ┃ Value                                          ┃                     │
+│ ┡━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩                     │
+│ │ velocity sample [0] │ [ 0.06341946 -0.04049801 -0.01248999]          │                     │
+│ │ disp dt*v [0]       │ [ 3.1709733e-05 -2.0249008e-05 -6.2449940e-06] │                     │
+│ │ max|disp|           │ 0.000220                                       │                     │
+│ └─────────────────────┴────────────────────────────────────────────────┘                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────── JAX-MD ───────────────────────────────────────────╮
+│ First step OK: E_pot=-714.716370 eV                                                          │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────── JAX-MD ───────────────────────────────────────────╮
+│ Starting NVT simulation                                                                      │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+                Time (ps)       Steps   E_pot (eV)      E_tot (eV)      T (K)   avg(ns/day)
+    0.0500	   100	 -712.3640	 -706.9777	    252.55	    0.3042
+    0.5500	  1100	51532.7734	52238.2142	  33075.97	    3.0224
+╭─────────────────────────────────────────── Error ────────────────────────────────────────────╮
+│ Energy blow-up at step 1100 (E_pot=51532.7734); stopping.                                    │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────── HDF5 trajectory saved ────────────────────────────────────╮
+│ /mmhome/boittier/home/mmml/dichloromethane/N33/T250/R1/vac_nvt_jaxmd_nvt.h5                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────── Simulation complete ─────────────────────────────────────╮
+│ 1000 steps (0.50 ps)                                                                         │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+{
+  "ensemble": "nvt",
+  "nsteps_requested": 1000000,
+  "nsteps_completed": 1000,
+  "frames": 10,
+  "status": "complete",
+  "error": null,
+  "h5": "vac_nvt_jaxmd_nvt.h5",
+  "traj": "vac_nvt.part0000.traj",
+  "traj_parts": [
+    "vac_nvt.part0000.traj"
+  ],
+  "traj_part_count": 1,
+  "box_A": null,
+  "free_space": true,
+  "pressure_atm": 1.0,
+  "temperature_K": 250.0,
+  "composition": {
+    "DCM": 33
+  },
+  "psf_charges": {
+    "total_charge_e": -4.40619762898109e-16,
+    "n_charged_atoms": 165,
+    "min_charge_e": -0.081,
+    "max_charge_e": 0.09,
+    "residues": {
+      "DCM": {
+        "n_atoms": 5,
+        "charge_sum_e": -2.7755575615628914e-17,
+        "atom_types": [
+          "C",
+          "H1",
+          "H2",
+          "CL1",
+          "CL2"
+        ],
+        "charges_e": [
+          -0.018,
+          0.09,
+          0.09,
+          -0.081,
+          -0.081
+        ]
+      }
+    }
+  },
+  "charmm_minimization": {
+    "nbxmod": 5,
+    "sd_steps": 200,
+    "abnr_steps": 1000
+  },
+  "placement": "random_3d",
+  "placement_seed": 233250,
+  "neighbor_update_interval_steps": null,
+  "neighbor_expected_updates": null,
+  "neighbor_internal_update_interval_calls": 10,
+  "neighbor_internal_skin_distance_A": 0.2,
+  "pre_md_minimization": {
+    "charmm_min_wall_s": 0.1582666151225567,
+    "pre_bfgs_fmax_eVA": 8.065857887268066,
+    "bfgs_iterations": 50.0,
+    "bfgs_fmax_eVA": 0.13338392972946167,
+    "bfgs_traj": "vac_nvt_bfgs_min.traj",
+    "bfgs_best_force_fmax_eVA": 0.09746827185153961,
+    "fire_fmax_eVA": 0.041897401213645935,
+    "fire_traj": "vac_nvt_fire_min.traj",
+    "best_force_xyz": "vac_nvt_pre_md_best_force.xyz",
+    "best_force_energy_eV": -715.2955932617188,
+    "best_force_fmax_eVA": 0.041897401213645935,
+    "best_force_label": "fire",
+    "best_energy_xyz": "vac_nvt_pre_md_best_energy.xyz",
+    "best_energy_eV": -722.8413696289062,
+    "best_energy_fmax_eVA": 8.065857887268066,
+    "best_energy_label": "initial",
+    "restored_best_force_fmax_eVA": 0.041897401213645935
+  },
+  "dynamics_overlap_action": "warn",
+  "dynamics_overlap_charmm_rescue_enabled": true,
+  "dynamics_overlap_charmm_sd_steps": 200,
+  "dynamics_overlap_charmm_abnr_steps": 400,
+  "dynamics_overlap_charmm_rescue_count": 0,
+  "traj_export_molecular_wrap": false,
+  "dynamics_overlap_warning_count": 0,
+  "dynamics_min_intermonomer_distance_A": 2.1263368168514893
+}
+Wrote /mmhome/boittier/home/mmml/dichloromethane/N33/T250/R1/vac_nvt.part0000.traj
+Wrote /mmhome/boittier/home/mmml/dichloromethane/N33/T250/R1/suite_summary_jaxmd.json
+         All hydrogen bonds for each hydrogen will be found
+         Hydrogen bonds between excluded atoms will be kept
+
+ EBONDC: Using routine EBONDFS for energy calculation.
+ EBONDC: returned from EBONDFS
+ EANGLC: QANGTYPE =            1
+ EANGLC: Using routine EANGLFS for energy calculation.
+ EBONDC: Using routine EBONDFS for energy calculation.
+ EBONDC: returned from EBONDFS
+ ENBAEXP: Using routine  ENBAV2E3B1  for energy calculation.
+ ENBOND: Using routine ENBAEXP for energy calculation.
+ENER ENR:  Eval#     ENERgy      Delta-E         GRMS
+ENER INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+ENER EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+ENER>        0   -144.43247  23798.18486      0.11539
+ENER INTERN>        0.06553      8.88472      0.14149      0.00000      0.00000
+ENER EXTERN>     -143.17011    -10.35409      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  FSWItch  VATOm    VFSWIt  
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 18.000 CTEXNB =999.000 CTONNB = 13.000 CTOFNB = 17.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are    13102 atom  pairs and      330 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR    13531 ATOM PAIRS AND        0 GROUP PAIRS
+ NBONDS: Using routine NBONDA for list generation.
+
+ General atom nonbond list generation found:
+    13102 ATOM PAIRS WERE FOUND FOR ATOM LIST
+       42 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  FSWItch  VATOm    VFSWIt  
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 18.000 CTEXNB =999.000 CTONNB = 13.000 CTOFNB = 17.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are    13102 atom  pairs and      330 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ PRNHBD: CUToff Hydrogen Bond  distance =    0.5000   Angle =   90.0000
+         CuT switching ON HB dist. =     3.5000  OFf HB dist. =    4.0000
+         CuT switching ON Hb Angle =    50.0000  OFf Hb Angle =   70.0000
+         ACCEptor antecedents included
+         All hydrogen bonds for each hydrogen will be found
+         Hydrogen bonds between excluded atoms will be kept
+
+ EBONDC: Using routine EBONDFS for energy calculation.
+ EBONDC: returned from EBONDFS
+ EANGLC: QANGTYPE =            1
+ EANGLC: Using routine EANGLFS for energy calculation.
+ EBONDC: Using routine EBONDFS for energy calculation.
+ EBONDC: returned from EBONDFS
+ ENBAEXP: Using routine  ENBAV2E3B1  for energy calculation.
+ ENBOND: Using routine ENBAEXP for energy calculation.
+ENER ENR:  Eval#     ENERgy      Delta-E         GRMS
+ENER INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+ENER EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+ENER>        0   -144.43247  23798.18486      0.11539
+ENER INTERN>        0.06553      8.88472      0.14149      0.00000      0.00000
+ENER EXTERN>     -143.17011    -10.35409      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>     PRNLev 0
+
+ DRUDES PARTICLES WILL BE GENERATED AUTOMATICALLY FOR ALL ATOMS WITH NON-ZERO ALPHA
+ Thole-type dipole screening, Slater-Delta shape {S(u) = 1 - (1+u/2)*exp(-u)}, default radius =  1.300000
+      $$$$$$  New timer profile Local node$$$$$
+      Heuristic check                 0.00 Other:            0.00
+      NBONDS                          0.00 Other:            0.00
+   List time                       0.00 Other:            0.00
+      Nonbond force                   0.09 Other:            0.00
+         Bond energy                     0.00 Other:            0.00
+         Angle energy                    0.01 Other:            0.00
+         Dihedral energy                 0.00 Other:            0.00
+         Restraints energy               0.00 Other:            0.00
+      INTRNL energy                   0.02 Other:            0.01
+      Comm energy                     0.00 Other:            0.00
+      Comm force                      0.00 Other:            0.00
+   Energy time                     0.13 Other:            0.01
+ Total time                    132.90 Other:          132.77
+         $$$$$$  Average   profile $$$$$
+      Heuristic check                 0.00 Other:            0.00
+      NBONDS                          0.00 Other:            0.00
+   List time                       0.00 Other:            0.00
+      Nonbond force                   0.09 Other:            0.00
+         Bond energy                     0.00 Other:            0.00
+         Angle energy                    0.01 Other:            0.00
+         Dihedral energy                 0.00 Other:            0.00
+         Restraints energy               0.00 Other:            0.00
+      INTRNL energy                   0.02 Other:            0.01
+      Comm energy                     0.00 Other:            0.00
+      Comm force                      0.00 Other:            0.00
+   Energy time                     0.13 Other:            0.01
+ Total time                    132.90 Other:          132.77
+Running: /mmhome/boittier/home/mmml/.venv/bin/python3 /mmhome/boittier/home/mmml/scripts/md_10mer_mmml_pbc_suite_jaxmd.py --ensemble nvt --spacing 1.0 --ps 500.0 --dt-fs 0.5 --temperature 250.0 --pressure 1.0 --traj-chunk-frames 1000 --free-space --composition DCM:33 --checkpoint /mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/dcm1-c137fb42-1f65-4748-880b-8f8184a20f70 --output-dir dichloromethane/N33/T250/R1 --seed 233250 --min-intermonomer-atom-distance 0.1 --flat-bottom-radius 20.0 --flat-bottom-k 10.0
+/mmhome/boittier/home/mmml/mmml/data/charmm/top_all36_cgenff.rtf
+/mmhome/boittier/home/mmml/mmml/data/charmm/par_all36_cgenff.prm
+CHARMM_HOME /mmhome/boittier/home/mmml/setup/charmm
+CHARMM_LIB_DIR /mmhome/boittier/home/mmml/setup/charmm
+Using MMML checkpoint: /mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/dcm1-c137fb42-1f65-4748-880b-8f8184a20f70
+[17:41:03] PSF charge validation: total=-0.000000 e, charged_atoms=165, DCM:-0.000000 e
+  
+ CHARMM>     BLOCK
+ WARNING from DECODI -- Zero length string being converted to 0
+ Block structure initialized with   3 blocks.
+ All atoms have been assigned to block 1.
+ All interaction coefficients have been set to unity.
+  Setting number of block exclusions nblock_excldPairs=0
+  
+  BLOCK>            CALL 1 SELE ALL END
+ SELRPN>      0 atoms have been selected out of      0
+ The selected atoms have been reassigned to block   1
+  
+  BLOCK>              COEFF 1 1 1.0
+  
+  BLOCK>            END
+ Matrix of Interaction Coefficients
+ 
+    1.00000
+    1.00000   1.00000
+    1.00000   1.00000   1.00000
+ Matrix of BOND Interaction Coefficients
+ 
+    1.00000
+    1.00000   1.00000
+    1.00000   1.00000   1.00000
+ Matrix of ANGLE Interaction Coefficients
+ 
+    1.00000
+    1.00000   1.00000
+    1.00000   1.00000   1.00000
+ Matrix of DIHE Interaction Coefficients
+ 
+    1.00000
+    1.00000   1.00000
+    1.00000   1.00000   1.00000
+ Matrix of CROSS Interaction Coefficients
+ 
+    1.00000
+    1.00000   1.00000
+    1.00000   1.00000   1.00000
+ Matrix of ELEC Interaction Coefficients
+ 
+    1.00000
+    1.00000   1.00000
+    1.00000   1.00000   1.00000
+ Matrix of VDW Interaction Coefficients
+ 
+    1.00000
+    1.00000   1.00000
+    1.00000   1.00000   1.00000
+  
+ CHARMM>     
+  
+  
+ CHARMM>     PRNLev 0
+
+ DRUDES PARTICLES WILL BE GENERATED AUTOMATICALLY FOR ALL ATOMS WITH NON-ZERO ALPHA
+ Thole-type dipole screening, Slater-Delta shape {S(u) = 1 - (1+u/2)*exp(-u)}, default radius =  1.300000
+
+ DRUDES PARTICLES WILL BE GENERATED AUTOMATICALLY FOR ALL ATOMS WITH NON-ZERO ALPHA
+ Thole-type dipole screening, Slater-Delta shape {S(u) = 1 - (1+u/2)*exp(-u)}, default radius =  1.300000
+  
+ CHARMM>    WRNLev 9
+  
+  
+ CHARMM>     ENER
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  FSWItch  VATOm    VFSWIt  
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 18.000 CTEXNB =999.000 CTONNB = 13.000 CTOFNB = 17.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are     9888 atom  pairs and      330 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR    13531 ATOM PAIRS AND        0 GROUP PAIRS
+ NBONDS: Using routine NBONDA for list generation.
+
+ General atom nonbond list generation found:
+     9888 ATOM PAIRS WERE FOUND FOR ATOM LIST
+       97 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  FSWItch  VATOm    VFSWIt  
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 18.000 CTEXNB =999.000 CTONNB = 13.000 CTOFNB = 17.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are     9888 atom  pairs and      330 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ PRNHBD: CUToff Hydrogen Bond  distance =    0.5000   Angle =   90.0000
+         CuT switching ON HB dist. =     3.5000  OFf HB dist. =    4.0000
+         CuT switching ON Hb Angle =    50.0000  OFf Hb Angle =   70.0000
+         ACCEptor antecedents included
+         All hydrogen bonds for each hydrogen will be found
+         Hydrogen bonds between excluded atoms will be kept
+
+ EBONDC: Using routine EBONDFS for energy calculation.
+ EBONDC: returned from EBONDFS
+ EANGLC: QANGTYPE =            1
+ EANGLC: Using routine EANGLFS for energy calculation.
+ EBONDC: Using routine EBONDFS for energy calculation.
+ EBONDC: returned from EBONDFS
+ ENBAEXP: Using routine  ENBAV2E3B1  for energy calculation.
+ ENBOND: Using routine ENBAEXP for energy calculation.
+ENER ENR:  Eval#     ENERgy      Delta-E         GRMS
+ENER INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+ENER EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+ENER>        0  23651.75035      0.00000    275.58203
+ENER INTERN>    19723.50220   3830.51649    113.71337      0.00000      0.00000
+ENER EXTERN>      -15.72232     -0.25940      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  FSWItch  VATOm    VFSWIt  
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 18.000 CTEXNB =999.000 CTONNB = 13.000 CTOFNB = 17.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are     9888 atom  pairs and      330 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR    13531 ATOM PAIRS AND        0 GROUP PAIRS
+ NBONDS: Using routine NBONDA for list generation.
+
+ General atom nonbond list generation found:
+     9888 ATOM PAIRS WERE FOUND FOR ATOM LIST
+       97 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  FSWItch  VATOm    VFSWIt  
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 18.000 CTEXNB =999.000 CTONNB = 13.000 CTOFNB = 17.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are     9888 atom  pairs and      330 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ PRNHBD: CUToff Hydrogen Bond  distance =    0.5000   Angle =   90.0000
+         CuT switching ON HB dist. =     3.5000  OFf HB dist. =    4.0000
+         CuT switching ON Hb Angle =    50.0000  OFf Hb Angle =   70.0000
+         ACCEptor antecedents included
+         All hydrogen bonds for each hydrogen will be found
+         Hydrogen bonds between excluded atoms will be kept
+
+ EBONDC: Using routine EBONDFS for energy calculation.
+ EBONDC: returned from EBONDFS
+ EANGLC: QANGTYPE =            1
+ EANGLC: Using routine EANGLFS for energy calculation.
+ EBONDC: Using routine EBONDFS for energy calculation.
+ EBONDC: returned from EBONDFS
+ ENBAEXP: Using routine  ENBAV2E3B1  for energy calculation.
+ ENBOND: Using routine ENBAEXP for energy calculation.
+ENER ENR:  Eval#     ENERgy      Delta-E         GRMS
+ENER INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+ENER EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+ENER>        0  23651.75035      0.00000    275.58203
+ENER INTERN>    19723.50220   3830.51649    113.71337      0.00000      0.00000
+ENER EXTERN>      -15.72232     -0.25940      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>     PRNLev 0
+  
+ CHARMM>    WRNLev 9
+  
+  
+ CHARMM>     ENER
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  FSWItch  VATOm    VFSWIt  
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 18.000 CTEXNB =999.000 CTONNB = 13.000 CTOFNB = 17.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are    12694 atom  pairs and      330 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR    13531 ATOM PAIRS AND        0 GROUP PAIRS
+ NBONDS: Using routine NBONDA for list generation.
+
+ General atom nonbond list generation found:
+    12725 ATOM PAIRS WERE FOUND FOR ATOM LIST
+       90 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  FSWItch  VATOm    VFSWIt  
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 18.000 CTEXNB =999.000 CTONNB = 13.000 CTOFNB = 17.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are    12725 atom  pairs and      330 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ PRNHBD: CUToff Hydrogen Bond  distance =    0.5000   Angle =   90.0000
+         CuT switching ON HB dist. =     3.5000  OFf HB dist. =    4.0000
+         CuT switching ON Hb Angle =    50.0000  OFf Hb Angle =   70.0000
+         ACCEptor antecedents included
+/mmhome/boittier/home/mmml/.venv/lib/python3.13/site-packages/orbax/checkpoint/_src/serialization/jax_array_handlers.py:712: UserWarning: Sharding info not provided when restoring. Populating sharding info from sharding file. Please note restoration time will be slightly increased due to reading from file. Note also that this option is unsafe when restoring on a different topology than the checkpoint was saved with.
+  warnings.warn(
+CHARMM pre-minimization starting (SD=200, ABNR=1000)
+CHARMM energy before minimization:
+CHARMM energy after minimization:
+CHARMM pre-minimization complete (0.087 s)
+[setup_calculator] Cutoff inputs -> ml_cutoff=0.1000, mm_switch_on=5.5000, mm_cutoff=2.0000, complementary_handoff=True
+[setup_calculator] mm_r_min=4.86 (exclude pairs with dimer COM < this)
+[setup_calculator] atoms_per_monomer=[5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5], total_atoms=165
+[setup_calculator] lambda_monomer=[1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1.]
+len(dimer_perms) 528
+[setup_calculator] max_atoms (model natoms)=10 (max monomer/dimer size)
+[setup_calculator] model_restart_path=/mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/dcm1-c137fb42-1f65-4748-880b-8f8184a20f70
+dict_keys(['opt_state', 'params', 'step'])
+                                        Model Attributes                                        
+┏━━━━━┳━━━━━┳━━━━━┳━━━━━┳━━━━━┳━━━━━┳━━━━━┳━━━━━┳━━━━━┳━━━━━┳━━━━━┳━━━━━┳━━━━━┳━━━━━┳━━━━┳━━━━━┓
+┃ ch… ┃ cu… ┃ de… ┃ efa ┃ fe… ┃ in… ┃ ma… ┃ ma… ┃ n_… ┃ na… ┃ nu… ┃ nu… ┃ to… ┃ us… ┃ u… ┃ zbl ┃
+┡━━━━━╇━━━━━╇━━━━━╇━━━━━╇━━━━━╇━━━━━╇━━━━━╇━━━━━╇━━━━━╇━━━━━╇━━━━━╇━━━━━╇━━━━━╇━━━━━╇━━━━╇━━━━━┩
+│ Fa… │ 6.0 │ Fa… │ Fa… │ 64  │ Tr… │ 118 │ 0   │ 3   │ 20  │ 64  │ 5   │ 0.0 │ Tr… │ F… │ Tr… │
+└─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴────┴─────┘
+                                        Last Checkpoint                                         
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Checkpoint                    ┃ name      ┃ epoch ┃ best_loss   ┃ Save Time                  ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ /mmhome/boittier/home/mmml_t… │ epoch-555 │ 555   │ 0.051339287 │ 2026-05-23 15:07:21.263847 │
+└───────────────────────────────┴───────────┴───────┴─────────────┴────────────────────────────┘
+[setup_calculator] Model loaded: EF(
+    # attributes
+    features = 64
+    max_degree = 0
+    num_iterations = 5
+    num_basis_functions = 64
+    cutoff = 6.0
+    max_atomic_number = 118
+    charges = False
+    natoms = 10
+    total_charge = 0.0
+    n_res = 3
+    zbl = True
+    debug = False
+    efa = False
+    use_energy_bias = True
+    use_pbc = False
+    include_electrostatics = True
+)
+ASE BFGS pre-minimization starting (max 50 steps, fmax=0.1)
+      Step     Time          Energy          fmax
+BFGS:    0 17:41:36     -724.336731        2.566224
+BFGS:    1 17:41:48     -725.302307        3.438866
+BFGS:    2 17:41:59     -725.523621        4.184724
+BFGS:    3 17:42:12     -725.607544        1.571741
+BFGS:    4 17:42:22     -725.676392        1.570972
+BFGS:    5 17:42:34     -725.700928        1.487817
+BFGS:    6 17:42:46     -725.755920        1.794504
+BFGS:    7 17:42:57     -725.757874        0.891639
+BFGS:    8 17:43:08     -725.780151        0.378851
+BFGS:    9 17:43:20     -725.793091        0.349889
+BFGS:   10 17:43:32     -725.799805        0.308742
+BFGS:   11 17:43:44     -725.810974        0.322381
+BFGS:   12 17:43:56     -725.821777        0.338741
+BFGS:   13 17:44:07     -725.824158        0.418913
+BFGS:   14 17:44:18     -725.830750        0.167471
+BFGS:   15 17:44:25     -725.835083        0.240336
+BFGS:   16 17:44:25     -725.839050        0.256290
+BFGS:   17 17:44:25     -725.842896        0.096746
+ASE BFGS pre-minimization complete, fmax=0.072740 eV/A
+Restored best-force pre-MD structure (bfgs, fmax=0.072740 eV/A, E=-725.842896 eV)
+╭─────────────────────────────────────────── JAX-MD ───────────────────────────────────────────╮
+│ Compiling JAX energy/force (first run may take minutes)...                                   │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────────────── JAX ─────────────────────────────────────────────╮
+│ Compilation done in 18.92 s                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────── Forces ───────────────────────────────────────────╮
+│          Forces Summary                                                                      │
+│ ┏━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┓                                                             │
+│ ┃ Statistic     ┃ Value        ┃                                                             │
+│ ┡━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━┩                                                             │
+│ │ Energy (eV)   │ -725.842529  │                                                             │
+│ │ Shape         │ (165, 3)     │                                                             │
+│ │ Min component │ -0.0728 eV/Å │                                                             │
+│ │ Max component │ 0.0685 eV/Å  │                                                             │
+│ │ Mean |F|      │ 0.0209 eV/Å  │                                                             │
+│ │ Max |F|       │ 0.0968 eV/Å  │                                                             │
+│ │ Std |F|       │ 0.0139 eV/Å  │                                                             │
+│ └───────────────┴──────────────┘                                                             │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+╭───────────────────────────────────────── JAX-MD PBC ─────────────────────────────────────────╮
+│ free space (no PBC), pbc_map: False                                                          │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+/mmhome/boittier/home/mmml/.venv/lib/python3.13/site-packages/jax/_src/numpy/scalar_types.py:55: UserWarning: Explicitly requested dtype float64 requested in asarray is not available, and will be truncated to dtype float32. To enable more dtypes, set the jax_enable_x64 configuration option or the JAX_ENABLE_X64 shell environment variable. See https://github.com/jax-ml/jax#current-gotchas for more.
+  return asarray(x, dtype=self.dtype)
+╭───────────────────────────────────── JAX-MD Simulation ──────────────────────────────────────╮
+│ Ensemble: NVT | dt=0.0005 ps (0.5 fs) | kT=0.02154332585632801 (250.0 K) |                   │
+│ steps_per_recording=100                                                                      │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+╭────────────────────────────────────── NVT Nose-Hoover ───────────────────────────────────────╮
+│ chain_length=3 | chain_steps=2 | sy_steps=3 | tau=0.050000 ps                                │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+Running: /mmhome/boittier/home/mmml/.venv/bin/python3 /mmhome/boittier/home/mmml/scripts/md_10mer_mmml_pbc_suite_jaxmd.py --ensemble nvt --spacing 1.0 --ps 500.0 --dt-fs 0.5 --temperature 250.0 --pressure 1.0 --traj-chunk-frames 1000 --free-space --composition DCM:33 --checkpoint /mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/dcm1-c137fb42-1f65-4748-880b-8f8184a20f70 --output-dir dichloromethane/N33/T250/R2 --seed 433250 --min-intermonomer-atom-distance 0.1 --flat-bottom-radius 20.0 --flat-bottom-k 10.0
