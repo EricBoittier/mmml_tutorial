@@ -1,0 +1,28 @@
+REMARK  GENERATE LIGAND                                                               
+REMARK   DATE:     4/20/26      5:35: 4      CREATED BY USER: charmm-gui              
+ATOM      1  C1  BENZ    1      -4.050  -1.218   0.000  1.00  0.00      BENZ
+ATOM      2  C2  BENZ    1      -2.652  -1.219  -0.000  1.00  0.00      BENZ
+ATOM      3  C3  BENZ    1      -1.970  -0.000  -0.000  1.00  0.00      BENZ
+ATOM      4  C4  BENZ    1      -2.652   1.219  -0.000  1.00  0.00      BENZ
+ATOM      5  C5  BENZ    1      -4.050   1.218   0.000  1.00  0.00      BENZ
+ATOM      6  C6  BENZ    1      -4.745   0.000   0.000  1.00  0.00      BENZ
+ATOM      7  C7  BENZ    1       2.652  -1.219   0.000  1.00  0.00      BENZ
+ATOM      8  C8  BENZ    1       4.050  -1.218  -0.000  1.00  0.00      BENZ
+ATOM      9  C9  BENZ    1       4.745  -0.000  -0.000  1.00  0.00      BENZ
+ATOM     10  C10 BENZ    1       4.050   1.218  -0.000  1.00  0.00      BENZ
+ATOM     11  C11 BENZ    1       2.652   1.219   0.000  1.00  0.00      BENZ
+ATOM     12  C12 BENZ    1       1.970  -0.000   0.000  1.00  0.00      BENZ
+ATOM     13  H1  BENZ    1      -4.579  -2.158   0.000  1.00  0.00      BENZ
+ATOM     14  H2  BENZ    1      -2.093  -2.145  -0.000  1.00  0.00      BENZ
+ATOM     15  H3  BENZ    1      -0.920  -0.000  -0.000  1.00  0.00      BENZ
+ATOM     16  H4  BENZ    1      -2.093   2.145  -0.000  1.00  0.00      BENZ
+ATOM     17  H5  BENZ    1      -4.579   2.158   0.000  1.00  0.00      BENZ
+ATOM     18  H6  BENZ    1      -5.827  -0.000   0.000  1.00  0.00      BENZ
+ATOM     19  H7  BENZ    1       2.093  -2.145   0.000  1.00  0.00      BENZ
+ATOM     20  H8  BENZ    1       4.579  -2.158  -0.000  1.00  0.00      BENZ
+ATOM     21  H9  BENZ    1       5.827   0.000  -0.000  1.00  0.00      BENZ
+ATOM     22  H10 BENZ    1       4.579   2.158  -0.000  1.00  0.00      BENZ
+ATOM     23  H11 BENZ    1       2.093   2.145   0.000  1.00  0.00      BENZ
+ATOM     24  H12 BENZ    1       0.920   0.000   0.000  1.00  0.00      BENZ
+TER      25      BENZ     1
+END

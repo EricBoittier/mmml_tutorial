@@ -15,6 +15,11 @@ fi
 EVAL_NPZ="$(ls -t out/07_evaluated*.npz | head -1)"
 
 echo "=== 08: fix-and-split (train/valid/test) ==="
+<<<<<<< HEAD
 echo "Command: mmml fix-and-split --efd \"$EVAL_NPZ\" --output-dir out/splits"
 mmml fix-and-split --efd "$EVAL_NPZ" --output-dir out/splits --atomic-ref pbe0/def2-tzvp
+=======
+echo "Command: uv run mmml fix-and-split --efd out/07_evaluated.npz --output-dir out/splits--atomic-ref pbe0/def2-tzvp"
+mmml fix-and-split --efd output_from_md2.npz --output-dir out/output_from_md2 --atomic-ref pbe0/def2-tzvp
+>>>>>>> a0c444a (Sena additions to EF, etc)
 echo "Output: out/splits/energies_forces_dipoles_{train,valid,test}.npz, grids_esp_{train,valid,test}.npz"

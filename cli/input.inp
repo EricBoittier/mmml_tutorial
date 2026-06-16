@@ -1,0 +1,48 @@
+* Minimal CHARMM script using PDB + CHARMM36 TOPPAR
+*
+
+! ----------------------------
+! 1. Read force field
+! ----------------------------
+read rtf  card name toppar/top_all36_prot.rtf
+read param card name toppar/par_all36_prot.prm
+
+! ----------------------------
+! 2. Read structure from PDB
+! ----------------------------
+read sequ pdb name input.pdb
+generate PROA setup
+
+read coor pdb name input.pdb
+
+! ----------------------------
+! 3. Basic structure cleanup
+! ----------------------------
+ic param
+ic build
+
+hbuild
+
+! ----------------------------
+! 4. Nonbonded settings
+! ----------------------------
+nbonds atom vdw vatom vfswitch \
+       cutnb 14.0 ctonnb 10.0 ctofnb 12.0 \
+       ewald pmew fftx 64 ffty 64 fftz 64 kappa 0.34
+
+! ----------------------------
+! 5. Energy minimization
+! ----------------------------
+mini abnr nstep 500 nprint 50
+
+! ----------------------------
+! 6. Simple MD setup
+! ----------------------------
+open unit 10 write form name traj.dcd
+
+dynamics leap verlet start nstep 10000 timestep 0.002 \
+         firstt 300 finalt 300 tbath 300 \
+         iasors 1 iasvel 1 iscvel 0 ichecw 0 \
+         nsavc 100 iuncrd 10
+
+stop

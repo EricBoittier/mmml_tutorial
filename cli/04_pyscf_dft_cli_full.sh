@@ -7,7 +7,7 @@ set -e
 
 echo "=== 04: DFT full (energy, gradient, hessian, harmonic, thermo) ==="
 echo "Command: uv run mmml pyscf-dft --mol xyz/initial.xyz --energy --gradient --hessian --harmonic --thermo --output out/04_results"
-mmml pyscf-dft --mol xyz/initial.xyz \
+mmml pyscf-dft --mol xyz/stck_benz.xyz \
   --energy --gradient --hessian --harmonic --thermo \
-  --output out/04_results
+  --output out/04_results-stck
 echo "Output: out/04_results.npz and .h5"
