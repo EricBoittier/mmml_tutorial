@@ -7,6 +7,9 @@ set -e
 
 echo "=== 21: md-system mixed MEOH:TIP3 (1:1) ==="
 box_args=()
+MDSYS_BOX_A=30
+MDSYS_TEMP_K=260
+
 if [[ -n "$MDSYS_BOX_A" ]]; then
   box_args=(--box-size "$MDSYS_BOX_A")
 fi
@@ -22,7 +25,7 @@ mmml md-system \
   --setup pbc_nvt \
   --backend "$MDSYS_BACKEND" \
   "${nvt_args[@]}" \
-  --composition MEOH:5,TIP3:5 \
+  --composition MEOH:25,TIP3:25 \
   --temperature "$MDSYS_TEMP_K" \
   "${box_args[@]}" \
   --ps "$MDSYS_PS" \

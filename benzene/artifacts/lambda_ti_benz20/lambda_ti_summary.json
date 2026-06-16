@@ -1,0 +1,633 @@
+{
+  "system": {
+    "composition": {
+      "BENZ": 20
+    },
+    "composition_str": "BENZ:20",
+    "residue_labels": [
+      "BENZ",
+      "BENZ",
+      "BENZ",
+      "BENZ",
+      "BENZ",
+      "BENZ",
+      "BENZ",
+      "BENZ",
+      "BENZ",
+      "BENZ",
+      "BENZ",
+      "BENZ",
+      "BENZ",
+      "BENZ",
+      "BENZ",
+      "BENZ",
+      "BENZ",
+      "BENZ",
+      "BENZ",
+      "BENZ"
+    ],
+    "n_molecules": 20,
+    "n_atoms": 240,
+    "spacing_A": 3.1,
+    "placement_seed": 123,
+    "couple_residue_numbers": [
+      1
+    ],
+    "couple_residue_labels": [
+      "BENZ#1"
+    ],
+    "backend": "jaxmd",
+    "md_mode": "pbc_nvt",
+    "integrator": "nvt_nhc",
+    "jaxmd_ensemble": "nvt",
+    "use_pbc": true,
+    "box_A": 22.0,
+    "charmm_pre_minimize": true,
+    "calculator_pre_minimize": true,
+    "fix_com": false,
+    "no_fix_com": true,
+    "no_stationary": false
+  },
+  "description": {
+    "delta_F_couple_eV": "TI integral \u222b \u27e8\u2202U/\u2202\u03bb\u27e9 d\u03bb (JAX-MD production)",
+    "delta_F_diss_eV": "Negative of delta_F_couple",
+    "lambda_definition": "Residues [1] share \u03bb; inter-monomer ML/MM scale as \u03bb_i \u03bb_j."
+  },
+  "delta_F_couple_eV": NaN,
+  "delta_F_couple_kcal_mol": NaN,
+  "delta_F_diss_eV": NaN,
+  "delta_F_diss_kcal_mol": NaN,
+  "mbar": null,
+  "snapshots_npz": "/mmhome/boittier/home/mmml_tutorial/benzene/artifacts/lambda_ti_benz20/lambda_ti_snapshots.npz",
+  "windows": [
+    {
+      "window": 0,
+      "lambda_coupled": 0.0,
+      "couple_residue_numbers": [
+        1
+      ],
+      "repeats_per_window": 2,
+      "mean_dUdlambda_eV": -0.10926834830641746,
+      "std_dUdlambda_eV": 0.32258900985452216,
+      "n_samples": 2000,
+      "repeat_stats": [
+        {
+          "repeat": 0,
+          "n_samples": 1000,
+          "mean_dUdlambda_eV": 0.0035599135756492614,
+          "std_dUdlambda_eV": 0.36837134666663257,
+          "traj": "/mmhome/boittier/home/mmml_tutorial/benzene/artifacts/lambda_ti_benz20/trajectories/win_00_rep00_lam0.00_prod.traj",
+          "equil_traj": null,
+          "minimization": {
+            "charmm_min_wall_s": 0.36110978992655873,
+            "bfgs_iterations": 200,
+            "bfgs_fmax_eVA": 0.308539479970932,
+            "min_traj": "/mmhome/boittier/home/mmml_tutorial/benzene/artifacts/lambda_ti_benz20/trajectories/win_00_rep00_lam0.00_min.traj",
+            "fire_fmax_eVA": 0.08681178092956543,
+            "final_fmax_eVA": 0.08681178092956543
+          }
+        },
+        {
+          "repeat": 1,
+          "n_samples": 1000,
+          "mean_dUdlambda_eV": -0.2220966101884842,
+          "std_dUdlambda_eV": 0.21672437831078695,
+          "traj": "/mmhome/boittier/home/mmml_tutorial/benzene/artifacts/lambda_ti_benz20/trajectories/win_00_rep01_lam0.00_prod.traj",
+          "equil_traj": null,
+          "minimization": {
+            "charmm_min_wall_s": 0.09427403006702662,
+            "bfgs_iterations": 200,
+            "bfgs_fmax_eVA": 0.7393156886100769,
+            "min_traj": "/mmhome/boittier/home/mmml_tutorial/benzene/artifacts/lambda_ti_benz20/trajectories/win_00_rep01_lam0.00_min.traj",
+            "fire_fmax_eVA": 0.09400591254234314,
+            "final_fmax_eVA": 0.09400591254234314
+          }
+        }
+      ]
+    },
+    {
+      "window": 1,
+      "lambda_coupled": 0.1,
+      "couple_residue_numbers": [
+        1
+      ],
+      "repeats_per_window": 2,
+      "mean_dUdlambda_eV": 0.011240264095366001,
+      "std_dUdlambda_eV": 0.42682282295697727,
+      "n_samples": 2000,
+      "repeat_stats": [
+        {
+          "repeat": 0,
+          "n_samples": 1000,
+          "mean_dUdlambda_eV": 0.13812973421812058,
+          "std_dUdlambda_eV": 0.5424011829544908,
+          "traj": "/mmhome/boittier/home/mmml_tutorial/benzene/artifacts/lambda_ti_benz20/trajectories/win_01_rep00_lam0.10_prod.traj",
+          "equil_traj": null,
+          "minimization": {
+            "charmm_min_wall_s": 0.08160838903859258,
+            "bfgs_iterations": 200,
+            "bfgs_fmax_eVA": 1.264771580696106,
+            "min_traj": "/mmhome/boittier/home/mmml_tutorial/benzene/artifacts/lambda_ti_benz20/trajectories/win_01_rep00_lam0.10_min.traj",
+            "fire_fmax_eVA": 0.08572164922952652,
+            "final_fmax_eVA": 0.08572164922952652
+          }
+        },
+        {
+          "repeat": 1,
+          "n_samples": 1000,
+          "mean_dUdlambda_eV": -0.11564920602738857,
+          "std_dUdlambda_eV": 0.1948192132912679,
+          "traj": "/mmhome/boittier/home/mmml_tutorial/benzene/artifacts/lambda_ti_benz20/trajectories/win_01_rep01_lam0.10_prod.traj",
+          "equil_traj": null,
+          "minimization": {
+            "charmm_min_wall_s": 0.10551044391468167,
+            "bfgs_iterations": 200,
+            "bfgs_fmax_eVA": 0.3019860088825226,
+            "min_traj": "/mmhome/boittier/home/mmml_tutorial/benzene/artifacts/lambda_ti_benz20/trajectories/win_01_rep01_lam0.10_min.traj",
+            "fire_fmax_eVA": 0.0969666987657547,
+            "final_fmax_eVA": 0.0969666987657547
+          }
+        }
+      ]
+    },
+    {
+      "window": 2,
+      "lambda_coupled": 0.2,
+      "couple_residue_numbers": [
+        1
+      ],
+      "repeats_per_window": 2,
+      "mean_dUdlambda_eV": -0.11433739060163498,
+      "std_dUdlambda_eV": 0.20291900033855784,
+      "n_samples": 2000,
+      "repeat_stats": [
+        {
+          "repeat": 0,
+          "n_samples": 1000,
+          "mean_dUdlambda_eV": -0.20865748679637908,
+          "std_dUdlambda_eV": 0.07383409059630731,
+          "traj": "/mmhome/boittier/home/mmml_tutorial/benzene/artifacts/lambda_ti_benz20/trajectories/win_02_rep00_lam0.20_prod.traj",
+          "equil_traj": null,
+          "minimization": {
+            "charmm_min_wall_s": 0.07788735581561923,
+            "bfgs_iterations": 200,
+            "bfgs_fmax_eVA": 0.6593744158744812,
+            "min_traj": "/mmhome/boittier/home/mmml_tutorial/benzene/artifacts/lambda_ti_benz20/trajectories/win_02_rep00_lam0.20_min.traj",
+            "fire_fmax_eVA": 0.08155003935098648,
+            "final_fmax_eVA": 0.08155003935098648
+          }
+        },
+        {
+          "repeat": 1,
+          "n_samples": 1000,
+          "mean_dUdlambda_eV": -0.02001729440689087,
+          "std_dUdlambda_eV": 0.24312179534184916,
+          "traj": "/mmhome/boittier/home/mmml_tutorial/benzene/artifacts/lambda_ti_benz20/trajectories/win_02_rep01_lam0.20_prod.traj",
+          "equil_traj": null,
+          "minimization": {
+            "charmm_min_wall_s": 0.08740195794962347,
+            "bfgs_iterations": 200,
+            "bfgs_fmax_eVA": 0.7668585777282715,
+            "min_traj": "/mmhome/boittier/home/mmml_tutorial/benzene/artifacts/lambda_ti_benz20/trajectories/win_02_rep01_lam0.20_min.traj",
+            "fire_fmax_eVA": 0.09871632605791092,
+            "final_fmax_eVA": 0.09871632605791092
+          }
+        }
+      ]
+    },
+    {
+      "window": 3,
+      "lambda_coupled": 0.3,
+      "couple_residue_numbers": [
+        1
+      ],
+      "repeats_per_window": 2,
+      "mean_dUdlambda_eV": -0.143863903388381,
+      "std_dUdlambda_eV": 0.11428734110695091,
+      "n_samples": 2000,
+      "repeat_stats": [
+        {
+          "repeat": 0,
+          "n_samples": 1000,
+          "mean_dUdlambda_eV": -0.10475926172733308,
+          "std_dUdlambda_eV": 0.09363233839253844,
+          "traj": "/mmhome/boittier/home/mmml_tutorial/benzene/artifacts/lambda_ti_benz20/trajectories/win_03_rep00_lam0.30_prod.traj",
+          "equil_traj": null,
+          "minimization": {
+            "charmm_min_wall_s": 0.09329746081493795,
+            "bfgs_iterations": 200,
+            "bfgs_fmax_eVA": 0.4542914032936096,
+            "min_traj": "/mmhome/boittier/home/mmml_tutorial/benzene/artifacts/lambda_ti_benz20/trajectories/win_03_rep00_lam0.30_min.traj",
+            "fire_fmax_eVA": 0.24473389983177185,
+            "final_fmax_eVA": 0.24473389983177185
+          }
+        },
+        {
+          "repeat": 1,
+          "n_samples": 1000,
+          "mean_dUdlambda_eV": -0.18296854504942894,
+          "std_dUdlambda_eV": 0.11957354173419944,
+          "traj": "/mmhome/boittier/home/mmml_tutorial/benzene/artifacts/lambda_ti_benz20/trajectories/win_03_rep01_lam0.30_prod.traj",
+          "equil_traj": null,
+          "minimization": {
+            "charmm_min_wall_s": 0.09825193393044174,
+            "bfgs_iterations": 200,
+            "bfgs_fmax_eVA": 0.8670700192451477,
+            "min_traj": "/mmhome/boittier/home/mmml_tutorial/benzene/artifacts/lambda_ti_benz20/trajectories/win_03_rep01_lam0.30_min.traj",
+            "fire_fmax_eVA": 0.15612797439098358,
+            "final_fmax_eVA": 0.15612797439098358
+          }
+        }
+      ]
+    },
+    {
+      "window": 4,
+      "lambda_coupled": 0.4,
+      "couple_residue_numbers": [
+        1
+      ],
+      "repeats_per_window": 2,
+      "mean_dUdlambda_eV": NaN,
+      "std_dUdlambda_eV": NaN,
+      "n_samples": 2000,
+      "repeat_stats": [
+        {
+          "repeat": 0,
+          "n_samples": 1000,
+          "mean_dUdlambda_eV": NaN,
+          "std_dUdlambda_eV": NaN,
+          "traj": "/mmhome/boittier/home/mmml_tutorial/benzene/artifacts/lambda_ti_benz20/trajectories/win_04_rep00_lam0.40_prod.traj",
+          "equil_traj": null,
+          "minimization": {
+            "charmm_min_wall_s": 0.09361728793010116,
+            "bfgs_iterations": 200,
+            "bfgs_fmax_eVA": 1.6675171852111816,
+            "min_traj": "/mmhome/boittier/home/mmml_tutorial/benzene/artifacts/lambda_ti_benz20/trajectories/win_04_rep00_lam0.40_min.traj",
+            "fire_fmax_eVA": 0.15272203087806702,
+            "final_fmax_eVA": 0.15272203087806702
+          }
+        },
+        {
+          "repeat": 1,
+          "n_samples": 1000,
+          "mean_dUdlambda_eV": NaN,
+          "std_dUdlambda_eV": NaN,
+          "traj": "/mmhome/boittier/home/mmml_tutorial/benzene/artifacts/lambda_ti_benz20/trajectories/win_04_rep01_lam0.40_prod.traj",
+          "equil_traj": null,
+          "minimization": {
+            "charmm_min_wall_s": 0.09133248613215983,
+            "bfgs_iterations": 200,
+            "bfgs_fmax_eVA": 0.46354368329048157,
+            "min_traj": "/mmhome/boittier/home/mmml_tutorial/benzene/artifacts/lambda_ti_benz20/trajectories/win_04_rep01_lam0.40_min.traj",
+            "fire_fmax_eVA": 0.17870177328586578,
+            "final_fmax_eVA": 0.17870177328586578
+          }
+        }
+      ]
+    },
+    {
+      "window": 5,
+      "lambda_coupled": 0.5,
+      "couple_residue_numbers": [
+        1
+      ],
+      "repeats_per_window": 2,
+      "mean_dUdlambda_eV": -0.0363997273594141,
+      "std_dUdlambda_eV": 0.28268838097478,
+      "n_samples": 2000,
+      "repeat_stats": [
+        {
+          "repeat": 0,
+          "n_samples": 1000,
+          "mean_dUdlambda_eV": -0.015735695898532867,
+          "std_dUdlambda_eV": 0.24028688274938592,
+          "traj": "/mmhome/boittier/home/mmml_tutorial/benzene/artifacts/lambda_ti_benz20/trajectories/win_05_rep00_lam0.50_prod.traj",
+          "equil_traj": null,
+          "minimization": {
+            "charmm_min_wall_s": 0.09213516884483397,
+            "bfgs_iterations": 200,
+            "bfgs_fmax_eVA": 0.8058943152427673,
+            "min_traj": "/mmhome/boittier/home/mmml_tutorial/benzene/artifacts/lambda_ti_benz20/trajectories/win_05_rep00_lam0.50_min.traj",
+            "fire_fmax_eVA": 0.07983419299125671,
+            "final_fmax_eVA": 0.07983419299125671
+          }
+        },
+        {
+          "repeat": 1,
+          "n_samples": 1000,
+          "mean_dUdlambda_eV": -0.05706375882029533,
+          "std_dUdlambda_eV": 0.31817236061989257,
+          "traj": "/mmhome/boittier/home/mmml_tutorial/benzene/artifacts/lambda_ti_benz20/trajectories/win_05_rep01_lam0.50_prod.traj",
+          "equil_traj": null,
+          "minimization": {
+            "charmm_min_wall_s": 0.08225118997506797,
+            "bfgs_iterations": 200,
+            "bfgs_fmax_eVA": 0.5871909260749817,
+            "min_traj": "/mmhome/boittier/home/mmml_tutorial/benzene/artifacts/lambda_ti_benz20/trajectories/win_05_rep01_lam0.50_min.traj",
+            "fire_fmax_eVA": 0.0823434442281723,
+            "final_fmax_eVA": 0.0823434442281723
+          }
+        }
+      ]
+    },
+    {
+      "window": 6,
+      "lambda_coupled": 0.6,
+      "couple_residue_numbers": [
+        1
+      ],
+      "repeats_per_window": 2,
+      "mean_dUdlambda_eV": 0.10274671131372452,
+      "std_dUdlambda_eV": 0.5917495873085735,
+      "n_samples": 2000,
+      "repeat_stats": [
+        {
+          "repeat": 0,
+          "n_samples": 1000,
+          "mean_dUdlambda_eV": 0.14362257826328279,
+          "std_dUdlambda_eV": 0.7888689076295237,
+          "traj": "/mmhome/boittier/home/mmml_tutorial/benzene/artifacts/lambda_ti_benz20/trajectories/win_06_rep00_lam0.60_prod.traj",
+          "equil_traj": null,
+          "minimization": {
+            "charmm_min_wall_s": 0.08374843886122108,
+            "bfgs_iterations": 200,
+            "bfgs_fmax_eVA": 0.6964982748031616,
+            "min_traj": "/mmhome/boittier/home/mmml_tutorial/benzene/artifacts/lambda_ti_benz20/trajectories/win_06_rep00_lam0.60_min.traj",
+            "fire_fmax_eVA": 0.09502729028463364,
+            "final_fmax_eVA": 0.09502729028463364
+          }
+        },
+        {
+          "repeat": 1,
+          "n_samples": 1000,
+          "mean_dUdlambda_eV": 0.06187084436416626,
+          "std_dUdlambda_eV": 0.2732751758528027,
+          "traj": "/mmhome/boittier/home/mmml_tutorial/benzene/artifacts/lambda_ti_benz20/trajectories/win_06_rep01_lam0.60_prod.traj",
+          "equil_traj": null,
+          "minimization": {
+            "charmm_min_wall_s": 0.07410648907534778,
+            "bfgs_iterations": 200,
+            "bfgs_fmax_eVA": 1.045890212059021,
+            "min_traj": "/mmhome/boittier/home/mmml_tutorial/benzene/artifacts/lambda_ti_benz20/trajectories/win_06_rep01_lam0.60_min.traj",
+            "fire_fmax_eVA": 0.08483625948429108,
+            "final_fmax_eVA": 0.08483625948429108
+          }
+        }
+      ]
+    },
+    {
+      "window": 7,
+      "lambda_coupled": 0.7,
+      "couple_residue_numbers": [
+        1
+      ],
+      "repeats_per_window": 2,
+      "mean_dUdlambda_eV": 0.0581175716817379,
+      "std_dUdlambda_eV": 0.2284803341895291,
+      "n_samples": 2000,
+      "repeat_stats": [
+        {
+          "repeat": 0,
+          "n_samples": 1000,
+          "mean_dUdlambda_eV": -0.04183007663488388,
+          "std_dUdlambda_eV": 0.17629425672770965,
+          "traj": "/mmhome/boittier/home/mmml_tutorial/benzene/artifacts/lambda_ti_benz20/trajectories/win_07_rep00_lam0.70_prod.traj",
+          "equil_traj": null,
+          "minimization": {
+            "charmm_min_wall_s": 0.07397578004747629,
+            "bfgs_iterations": 200,
+            "bfgs_fmax_eVA": 0.41513484716415405,
+            "min_traj": "/mmhome/boittier/home/mmml_tutorial/benzene/artifacts/lambda_ti_benz20/trajectories/win_07_rep00_lam0.70_min.traj",
+            "fire_fmax_eVA": 0.08840204030275345,
+            "final_fmax_eVA": 0.08840204030275345
+          }
+        },
+        {
+          "repeat": 1,
+          "n_samples": 1000,
+          "mean_dUdlambda_eV": 0.15806521999835968,
+          "std_dUdlambda_eV": 0.2309714191398926,
+          "traj": "/mmhome/boittier/home/mmml_tutorial/benzene/artifacts/lambda_ti_benz20/trajectories/win_07_rep01_lam0.70_prod.traj",
+          "equil_traj": null,
+          "minimization": {
+            "charmm_min_wall_s": 0.08065592800267041,
+            "bfgs_iterations": 200,
+            "bfgs_fmax_eVA": 0.39253780245780945,
+            "min_traj": "/mmhome/boittier/home/mmml_tutorial/benzene/artifacts/lambda_ti_benz20/trajectories/win_07_rep01_lam0.70_min.traj",
+            "fire_fmax_eVA": 0.09068750590085983,
+            "final_fmax_eVA": 0.09068750590085983
+          }
+        }
+      ]
+    },
+    {
+      "window": 8,
+      "lambda_coupled": 0.8,
+      "couple_residue_numbers": [
+        1
+      ],
+      "repeats_per_window": 2,
+      "mean_dUdlambda_eV": -0.12078787881880998,
+      "std_dUdlambda_eV": 0.08341363839855975,
+      "n_samples": 2000,
+      "repeat_stats": [
+        {
+          "repeat": 0,
+          "n_samples": 1000,
+          "mean_dUdlambda_eV": -0.117501220703125,
+          "std_dUdlambda_eV": 0.07414053236590962,
+          "traj": "/mmhome/boittier/home/mmml_tutorial/benzene/artifacts/lambda_ti_benz20/trajectories/win_08_rep00_lam0.80_prod.traj",
+          "equil_traj": null,
+          "minimization": {
+            "charmm_min_wall_s": 0.09300730819813907,
+            "bfgs_iterations": 200,
+            "bfgs_fmax_eVA": 0.8228793144226074,
+            "min_traj": "/mmhome/boittier/home/mmml_tutorial/benzene/artifacts/lambda_ti_benz20/trajectories/win_08_rep00_lam0.80_min.traj",
+            "fire_fmax_eVA": 0.16763007640838623,
+            "final_fmax_eVA": 0.16763007640838623
+          }
+        },
+        {
+          "repeat": 1,
+          "n_samples": 1000,
+          "mean_dUdlambda_eV": -0.12407453693449497,
+          "std_dUdlambda_eV": 0.09163649578160481,
+          "traj": "/mmhome/boittier/home/mmml_tutorial/benzene/artifacts/lambda_ti_benz20/trajectories/win_08_rep01_lam0.80_prod.traj",
+          "equil_traj": null,
+          "minimization": {
+            "charmm_min_wall_s": 0.09321103105321527,
+            "bfgs_iterations": 200,
+            "bfgs_fmax_eVA": 0.33508309721946716,
+            "min_traj": "/mmhome/boittier/home/mmml_tutorial/benzene/artifacts/lambda_ti_benz20/trajectories/win_08_rep01_lam0.80_min.traj",
+            "fire_fmax_eVA": 0.2152472585439682,
+            "final_fmax_eVA": 0.2152472585439682
+          }
+        }
+      ]
+    },
+    {
+      "window": 9,
+      "lambda_coupled": 0.9,
+      "couple_residue_numbers": [
+        1
+      ],
+      "repeats_per_window": 2,
+      "mean_dUdlambda_eV": 0.05999645747244358,
+      "std_dUdlambda_eV": 0.3796740732629243,
+      "n_samples": 2000,
+      "repeat_stats": [
+        {
+          "repeat": 0,
+          "n_samples": 1000,
+          "mean_dUdlambda_eV": 0.10721672350168228,
+          "std_dUdlambda_eV": 0.4622521428512741,
+          "traj": "/mmhome/boittier/home/mmml_tutorial/benzene/artifacts/lambda_ti_benz20/trajectories/win_09_rep00_lam0.90_prod.traj",
+          "equil_traj": null,
+          "minimization": {
+            "charmm_min_wall_s": 0.09400665597058833,
+            "bfgs_iterations": 200,
+            "bfgs_fmax_eVA": 1.4433363676071167,
+            "min_traj": "/mmhome/boittier/home/mmml_tutorial/benzene/artifacts/lambda_ti_benz20/trajectories/win_09_rep00_lam0.90_min.traj",
+            "fire_fmax_eVA": 0.20415809750556946,
+            "final_fmax_eVA": 0.20415809750556946
+          }
+        },
+        {
+          "repeat": 1,
+          "n_samples": 1000,
+          "mean_dUdlambda_eV": 0.01277619144320488,
+          "std_dUdlambda_eV": 0.2648929089231758,
+          "traj": "/mmhome/boittier/home/mmml_tutorial/benzene/artifacts/lambda_ti_benz20/trajectories/win_09_rep01_lam0.90_prod.traj",
+          "equil_traj": null,
+          "minimization": {
+            "charmm_min_wall_s": 0.08893551118671894,
+            "bfgs_iterations": 200,
+            "bfgs_fmax_eVA": 0.6134181618690491,
+            "min_traj": "/mmhome/boittier/home/mmml_tutorial/benzene/artifacts/lambda_ti_benz20/trajectories/win_09_rep01_lam0.90_min.traj",
+            "fire_fmax_eVA": 0.08999259769916534,
+            "final_fmax_eVA": 0.08999259769916534
+          }
+        }
+      ]
+    },
+    {
+      "window": 10,
+      "lambda_coupled": 1.0,
+      "couple_residue_numbers": [
+        1
+      ],
+      "repeats_per_window": 2,
+      "mean_dUdlambda_eV": -0.014290918737649918,
+      "std_dUdlambda_eV": 0.4863536988643349,
+      "n_samples": 2000,
+      "repeat_stats": [
+        {
+          "repeat": 0,
+          "n_samples": 1000,
+          "mean_dUdlambda_eV": -0.02082259154319763,
+          "std_dUdlambda_eV": 0.5409019694155922,
+          "traj": "/mmhome/boittier/home/mmml_tutorial/benzene/artifacts/lambda_ti_benz20/trajectories/win_10_rep00_lam1.00_prod.traj",
+          "equil_traj": null,
+          "minimization": {
+            "charmm_min_wall_s": 0.07404178893193603,
+            "bfgs_iterations": 200,
+            "bfgs_fmax_eVA": 0.3009001314640045,
+            "min_traj": "/mmhome/boittier/home/mmml_tutorial/benzene/artifacts/lambda_ti_benz20/trajectories/win_10_rep00_lam1.00_min.traj",
+            "fire_fmax_eVA": 0.14679501950740814,
+            "final_fmax_eVA": 0.14679501950740814
+          }
+        },
+        {
+          "repeat": 1,
+          "n_samples": 1000,
+          "mean_dUdlambda_eV": -0.007759245932102203,
+          "std_dUdlambda_eV": 0.42475825451790405,
+          "traj": "/mmhome/boittier/home/mmml_tutorial/benzene/artifacts/lambda_ti_benz20/trajectories/win_10_rep01_lam1.00_prod.traj",
+          "equil_traj": null,
+          "minimization": {
+            "charmm_min_wall_s": 0.09301306307315826,
+            "bfgs_iterations": 200,
+            "bfgs_fmax_eVA": 1.2714015245437622,
+            "min_traj": "/mmhome/boittier/home/mmml_tutorial/benzene/artifacts/lambda_ti_benz20/trajectories/win_10_rep01_lam1.00_min.traj",
+            "fire_fmax_eVA": 0.17498265206813812,
+            "final_fmax_eVA": 0.17498265206813812
+          }
+        }
+      ]
+    }
+  ],
+  "args": {
+    "checkpoint": null,
+    "output_dir": "artifacts/lambda_ti_benz20",
+    "composition": "BENZ:20",
+    "n_molecules": 10,
+    "residue": "MEOH",
+    "template_pdb": null,
+    "spacing": 3.1,
+    "seed": 123,
+    "min_com_start_distance": 2.0,
+    "couple_residue_numbers": [
+      1
+    ],
+    "lambda_windows": [
+      0.0,
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      1.0
+    ],
+    "min_steps": 200,
+    "min_fmax": 0.1,
+    "n_equil": 0,
+    "save_equil_traj": false,
+    "equil_traj_interval": null,
+    "n_prod": 100000,
+    "repeats_per_window": 2,
+    "interval": 100,
+    "timestep_fs": 0.5,
+    "temperature_K": 300.0,
+    "ml_cutoff": 0.05,
+    "mm_switch_on": 5.5,
+    "mm_cutoff": 3.0,
+    "no_fix_com": true,
+    "no_stationary": false,
+    "md_mode": "pbc_nvt",
+    "backend": "jaxmd",
+    "box_size": 22.0,
+    "nvt_integrator": "nhc",
+    "langevin_friction": 0.02,
+    "charmm_pre_minimize": true,
+    "calculator_pre_minimize": true,
+    "pre_min_steps": 200,
+    "pre_min_fmax": 0.1,
+    "bfgs_maxstep": 0.05,
+    "charmm_sd_steps": 25,
+    "charmm_abnr_steps": 100,
+    "charmm_tolenr": 0.001,
+    "charmm_tolgrd": 0.001,
+    "charmm_nbxmod": 5,
+    "min_intermonomer_atom_distance": 0.1,
+    "rescue_minimize": true,
+    "rescue_fire_steps": 300,
+    "rescue_fire_fmax": 0.1,
+    "rescue_fire_maxstep": 0.02,
+    "max_fmax_after_min": 2.0,
+    "flat_bottom_radius": null,
+    "flat_bottom_k": 1.0,
+    "packmol_sphere": null,
+    "packmol_center": null,
+    "packmol_tolerance": 2.0,
+    "skip_jit_warmup": false,
+    "resume": false
+  },
+  "plots": [
+    "/mmhome/boittier/home/mmml_tutorial/benzene/artifacts/lambda_ti_benz20/ti_components_per_window.png",
+    "/mmhome/boittier/home/mmml_tutorial/benzene/artifacts/lambda_ti_benz20/ti_repeat_components_per_window.png"
+  ]
+}

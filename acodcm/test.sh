@@ -2,11 +2,11 @@
 
 set -euo pipefail
 
-export CUDA_VISIBLE_DEVICES=0
+export CUDA_VISIBLE_DEVICES=1
 
 temps=(250 260)
 
-sizes=$(seq 3 3 25)
+sizes=$(seq 92 3 100 )
 
 repeats=$(seq 1 4)
 
@@ -24,17 +24,17 @@ for temp in "${temps[@]}"; do
 
       mmml md-system \
         --setup free_nvt \
-        --backend jaxmd --no-charmm-pre-minimize \
+        --backend jaxmd --packmol-radius 15 \
         --spacing 1.0 \
         --temperature "$temp" \
         --checkpoint "$checkpoint" \
         --composition "ACO:${nres}" \
-        --flat-bottom-radius 20.0 \
-        --ps 500 \
+        --flat-bottom-radius 0.0001 \
+        --ps 50 \
         --seed "$seed" \
-        --dt-fs 0.5 \
+        --dt-fs 0.1 \
         --traj-chunk-frames 1000 \
-        --flat-bottom-k 1.0 \
+        --flat-bottom-k 10000.0 \
         --output-dir "$outdir"
 
     done
