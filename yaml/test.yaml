@@ -1,0 +1,66 @@
+# mmml md-system YAML examples
+#
+# Keys use argparse names (snake_case), not CLI flags:
+#   temperature: 300     not  --temperature: 300
+#   dt-fs: 0.25          or  dt_fs: 0.25
+#
+# Single run (flat keys at top level):
+#   mmml md-system --config yaml/test.yaml
+#
+# Campaign (defaults + runs; run one job or the full pipeline):
+#   mmml md-system --config yaml/test.yaml --job-id free_nve
+#   mmml md-system --config yaml/test.yaml --run-all
+#
+# CLI always wins over the file:
+#   mmml md-system --config yaml/test.yaml --ps 2.0 --seed 99
+
+# --- Single-run: JAX-MD NVT (like cli/test.sh) --------------------------------
+# Uncomment the block below and comment out the campaign section to use it alone.
+
+# setup: pbc_nvt
+# backend: jaxmd
+# composition: "DCM:10"
+# checkpoint: /path/to/DESdimers_params.json
+# temperature: 300.0
+# flat_bottom_radius: 25.0
+# flat_bottom_k: 10.0
+# ps: 1.0
+# dt_fs: 0.5
+# seed: 100
+# traj_chunk_frames: 1000
+# output_dir: out/mdsys/dcm_nvt_yaml
+
+# --- Campaign: free NVE → PBC NVT (tutorial-style) ----------------------------
+defaults:
+  composition: "DCM:10"
+  checkpoint: /path/to/DESdimers_params.json
+  dt_fs: 0.25
+  temperature: 300.0
+  seed: 123
+  spacing: 5.0
+  mm_switch_on: 9.0
+  mm_switch_width: 1.5
+  ml_switch_width: 1.0
+
+campaign_output: out/mdsys/campaign
+
+runs:
+  free_nve:
+    description: "Free-space NVE (tutorial step 16 analogue)"
+    backend: jaxmd
+    setup: free_nve
+    ps: 1.0
+    output_dir: out/mdsys/free_nve
+
+  pbc_nvt:
+    description: "PBC NVT after free NVE (optional handoff chain)"
+    backend: jaxmd
+    setup: pbc_nvt
+    depends_on: free_nve
+    box_size: 38.0
+    ps: 1.0
+    output_dir: out/mdsys/pbc_nvt
+    handoff_write_res: true
+    extra_args:
+      - "--traj-chunk-frames"
+      - "0"
