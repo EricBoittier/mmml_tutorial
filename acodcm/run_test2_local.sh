@@ -90,16 +90,7 @@ run_one() {
 
   reset_outdir_if_wrong "$outdir" "$nres"
 
-  node=$(pick_idle_node || true)
-  if [[ -z "${node:-}" ]]; then
-    node=$(sinfo -h -N -p long -t idle -o "%N" 2>/dev/null | head -1 || true)
-  fi
-  if [[ -z "${node:-}" ]]; then
-    echo "ERROR: no idle node for $tag" | tee -a "$log"
-    return 1
-  fi
-
-  echo "=== [$tag] node=$node $(date -Is) ===" | tee "$log"
+  echo "=== [$tag] $(date -Is) ===" | tee "$log"
   eval "$("$ENSURE" --n-ml "$n_ml" --box-size 30 2>&1 | grep '^export ' || true)"
   if [[ -z "${CHARMM_LIB_DIR:-}" ]]; then
     echo "ERROR: CHARMM_LIB_DIR unset for $tag" | tee -a "$log"
@@ -107,17 +98,21 @@ run_one() {
   fi
   echo "CHARMM_LIB_DIR=$CHARMM_LIB_DIR" | tee -a "$log"
 
-  local srun_extra=(--partition=long --exclusive --nodelist="$node" --cpus-per-task=16 --mem=180G --time=12:00:00)
-  if ! srun "${srun_extra[@]}" bash -lc "
+  # Run directly on the login/compute node (no srun). srun injects PMI that breaks
+  # gcc-12 OpenMPI under mmml-charmm-mpirun; n50 smoke test confirmed direct works.
+  if ! bash -lc "
       set -euo pipefail
       source '$MMML_ROOT/scripts/pc_bach_env.sh'
       export CHARMM_LIB_DIR='$CHARMM_LIB_DIR'
       export JAX_ENABLE_X64=1 MMML_CKPT='$MMML_CKPT' MMML_MLPOT_DEVICE=cpu JAX_PLATFORMS=cpu
       export XLA_PYTHON_CLIENT_PREALLOCATE=false MMML_JAX_COMPILE_THREADS=4
-      unset CUDA_VISIBLE_DEVICES OMPI_COMM_WORLD_SIZE PMI_SIZE PMIX_SIZE
+      unset CUDA_VISIBLE_DEVICES
       cd '$ROOT'
 
       echo '--- warmup-mlpot-jax ---'
+      while IFS= read -r _var; do
+        [[ -n \"\$_var\" ]] && unset \"\$_var\" 2>/dev/null || true
+      done < <(env | cut -d= -f1 | grep -E '^(OMPI_|PMI_|PMIX_|MPI_LOCALRANKID\$|SLURM_MPI_TYPE\$)' || true)
       '$WARMUP' warmup-mlpot-jax --checkpoint '$MMML_CKPT' \\
         --n-monomers $nres --atoms-per-monomer 5 --box-side 0 \\
         --ml-batch-size 32 --compile-threads 4
@@ -144,12 +139,17 @@ run_one() {
   return 1
 }
 
-for temp in "${temps[@]}"; do
-  for nres in $sizes; do
-    for rep in $repeats; do
-      run_one "$temp" "$nres" "$rep" || true
+if [[ $# -eq 3 ]]; then
+  # Usage: run_test2_local.sh <nres> <temp> <rep>
+  run_one "$2" "$1" "$3"
+else
+  for temp in "${temps[@]}"; do
+    for nres in $sizes; do
+      for rep in $repeats; do
+        run_one "$temp" "$nres" "$rep" || true
+      done
     done
   done
-done
+fi
 
 echo "Done. Logs: $log_dir"
