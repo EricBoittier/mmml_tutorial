@@ -98,36 +98,76 @@ run_one() {
   fi
   echo "CHARMM_LIB_DIR=$CHARMM_LIB_DIR" | tee -a "$log"
 
-  # Run directly on the login/compute node (no srun). srun injects PMI that breaks
-  # gcc-12 OpenMPI under mmml-charmm-mpirun; n50 smoke test confirmed direct works.
-  if ! bash -lc "
-      set -euo pipefail
-      source '$MMML_ROOT/scripts/pc_bach_env.sh'
-      export CHARMM_LIB_DIR='$CHARMM_LIB_DIR'
-      export JAX_ENABLE_X64=1 MMML_CKPT='$MMML_CKPT' MMML_MLPOT_DEVICE=cpu JAX_PLATFORMS=cpu
-      export XLA_PYTHON_CLIENT_PREALLOCATE=false MMML_JAX_COMPILE_THREADS=4
-      unset CUDA_VISIBLE_DEVICES
-      cd '$ROOT'
+  node=$(pick_idle_node || true)
+  if [[ -z "${node:-}" ]]; then
+    node=$(sinfo -h -N -p long -t idle -o "%N" 2>/dev/null | head -1 || true)
+  fi
+  if [[ -z "${node:-}" ]]; then
+    echo "ERROR: no idle node for $tag" | tee -a "$log"
+    return 1
+  fi
+  echo "node=$node" | tee -a "$log"
 
-      echo '--- warmup-mlpot-jax ---'
-      while IFS= read -r _var; do
-        [[ -n \"\$_var\" ]] && unset \"\$_var\" 2>/dev/null || true
-      done < <(env | cut -d= -f1 | grep -E '^(OMPI_|PMI_|PMIX_|MPI_LOCALRANKID\$|SLURM_MPI_TYPE\$)' || true)
-      '$WARMUP' warmup-mlpot-jax --checkpoint '$MMML_CKPT' \\
-        --n-monomers $nres --atoms-per-monomer 5 --box-side 0 \\
-        --ml-batch-size 32 --compile-threads 4
+  local jobscript
+  jobscript="$(mktemp "/tmp/test2_${tag}.XXXXXX.sh")"
+  cat >"$jobscript" <<JOBSCRIPT
+#!/usr/bin/env bash
+#SBATCH --partition=long
+#SBATCH --job-name=${tag}
+#SBATCH --nodelist=${node}
+#SBATCH --exclusive
+#SBATCH --mpi=none
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=32
+#SBATCH --mem=180G
+#SBATCH --time=12:00:00
+#SBATCH --output=${log}
+set -euo pipefail
+source '${MMML_ROOT}/scripts/pc_bach_env.sh'
+export CHARMM_LIB_DIR='${CHARMM_LIB_DIR}'
+export JAX_ENABLE_X64=1 MMML_CKPT='${MMML_CKPT}' MMML_MLPOT_DEVICE=cpu JAX_PLATFORMS=cpu
+export XLA_PYTHON_CLIENT_PREALLOCATE=false MMML_JAX_COMPILE_THREADS=2
+unset CUDA_VISIBLE_DEVICES
+cd '${ROOT}'
 
-      echo '--- md-system ---'
-      '$MPIRUN' md-system \\
-        --setup free_nvt --backend pycharmm --spacing 4.0 --temperature $temp \\
-        --composition DCM:${nres} --packmol-radius 20 --flat-bottom-radius 100.0 \\
-        --ps 100 --seed $seed --dt-fs 0.1 --traj-chunk-frames 1000 --flat-bottom-k 1.0 \\
-        --ml-batch-size 32 --no-echeck-heat --cleanup \\
-        --dynamics-intra-rescue-sd-steps 400 --dynamics-intra-min-distance 0.95 \\
-        --dynamics-overlap-action warn \\
-        --output-dir '$outdir'
-    " >>"$log" 2>&1; then
-    echo "FAILED $tag (see $log)" | tee -a "$log_dir/summary.log"
+echo '--- warmup-mlpot-jax ---'
+export MMML_WARMUP_MLPOT_JAX_ONLY=1
+while IFS= read -r _var; do
+  [[ -n "\$_var" ]] && unset "\$_var" 2>/dev/null || true
+done < <(env | cut -d= -f1 | grep -E '^(OMPI_|PMI_|PMIX_|MPI_LOCALRANKID\$|SLURM_MPI_TYPE\$)' || true)
+'${WARMUP}' warmup-mlpot-jax --checkpoint '${MMML_CKPT}' \\
+  --n-monomers ${nres} --atoms-per-monomer 5 --box-side 0 \\
+  --ml-batch-size 32 --compile-threads 2
+unset MMML_WARMUP_MLPOT_JAX_ONLY
+
+echo '--- md-system ---'
+'${MPIRUN}' md-system \\
+  --setup free_nvt --backend pycharmm --spacing 4.0 --temperature ${temp} \\
+  --composition DCM:${nres} --packmol-radius 20 --flat-bottom-radius 100.0 \\
+  --ps 100 --seed ${seed} --dt-fs 0.1 --traj-chunk-frames 1000 --flat-bottom-k 1.0 \\
+  --ml-batch-size 32 --no-echeck-heat --cleanup \\
+  --dynamics-intra-rescue-sd-steps 400 --dynamics-intra-min-distance 0.95 \\
+  --dynamics-overlap-action warn \\
+  --output-dir '${outdir}'
+JOBSCRIPT
+  chmod +x "$jobscript"
+
+  local jid
+  if ! jid=$(sbatch --parsable "$jobscript"); then
+    rm -f "$jobscript"
+    echo "FAILED $tag (sbatch submit)" | tee -a "$log_dir/summary.log"
+    return 1
+  fi
+  echo "sbatch $jid on $node" | tee -a "$log"
+  rm -f "$jobscript"
+
+  while squeue -j "$jid" -h 2>/dev/null | grep -q .; do
+    sleep 30
+  done
+  local exitcode
+  exitcode=$(sacct -j "$jid" -n -X --format=ExitCode 2>/dev/null | head -1 | cut -d: -f1)
+  if [[ "${exitcode:-1}" != "0" ]]; then
+    echo "FAILED $tag (sbatch exit ${exitcode:-?})" | tee -a "$log_dir/summary.log"
     return 1
   fi
 
