@@ -116,7 +116,6 @@ run_one() {
 #SBATCH --job-name=${tag}
 #SBATCH --nodelist=${node}
 #SBATCH --exclusive
-#SBATCH --mpi=none
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=32
 #SBATCH --mem=180G
