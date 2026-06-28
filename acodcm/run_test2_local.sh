@@ -21,7 +21,8 @@ export MMML_MLPOT_DEVICE=cpu
 export JAX_PLATFORMS=cpu
 unset CUDA_VISIBLE_DEVICES
 export XLA_PYTHON_CLIENT_PREALLOCATE=false
-export MMML_JAX_COMPILE_THREADS="${MMML_JAX_COMPILE_THREADS:-4}"
+export MMML_JAX_COMPILE_THREADS="${MMML_JAX_COMPILE_THREADS:-1}"
+export OMP_NUM_THREADS="${OMP_NUM_THREADS:-1}"
 
 MPIRUN="$MMML_ROOT/scripts/mmml-charmm-mpirun.sh"
 ENSURE="$MMML_ROOT/scripts/ensure_charmm_mlpot_limits.sh"
@@ -118,14 +119,14 @@ run_one() {
 #SBATCH --exclusive
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=32
-#SBATCH --mem=180G
+#SBATCH --mem=0
 #SBATCH --time=12:00:00
 #SBATCH --output=${log}
 set -euo pipefail
 source '${MMML_ROOT}/scripts/pc_bach_env.sh'
 export CHARMM_LIB_DIR='${CHARMM_LIB_DIR}'
 export JAX_ENABLE_X64=1 MMML_CKPT='${MMML_CKPT}' MMML_MLPOT_DEVICE=cpu JAX_PLATFORMS=cpu
-export XLA_PYTHON_CLIENT_PREALLOCATE=false MMML_JAX_COMPILE_THREADS=2
+export XLA_PYTHON_CLIENT_PREALLOCATE=false MMML_JAX_COMPILE_THREADS=1 OMP_NUM_THREADS=1
 unset CUDA_VISIBLE_DEVICES
 cd '${ROOT}'
 
@@ -136,7 +137,7 @@ while IFS= read -r _var; do
 done < <(env | cut -d= -f1 | grep -E '^(OMPI_|PMI_|PMIX_|MPI_LOCALRANKID\$|SLURM_MPI_TYPE\$)' || true)
 '${WARMUP}' warmup-mlpot-jax --checkpoint '${MMML_CKPT}' \\
   --n-monomers ${nres} --atoms-per-monomer 5 --box-side 0 \\
-  --ml-batch-size 32 --compile-threads 2
+  --ml-batch-size 16 --compile-threads 1
 unset MMML_WARMUP_MLPOT_JAX_ONLY
 
 echo '--- md-system ---'
@@ -144,7 +145,7 @@ echo '--- md-system ---'
   --setup free_nvt --backend pycharmm --spacing 4.0 --temperature ${temp} \\
   --composition DCM:${nres} --packmol-radius 20 --flat-bottom-radius 100.0 \\
   --ps 100 --seed ${seed} --dt-fs 0.1 --traj-chunk-frames 1000 --flat-bottom-k 1.0 \\
-  --ml-batch-size 32 --no-echeck-heat --cleanup \\
+  --ml-batch-size 16 --no-echeck-heat --cleanup \\
   --dynamics-intra-rescue-sd-steps 400 --dynamics-intra-min-distance 0.95 \\
   --dynamics-overlap-action warn \\
   --output-dir '${outdir}'
