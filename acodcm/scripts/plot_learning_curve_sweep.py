@@ -9,7 +9,7 @@ from pathlib import Path
 
 import numpy as np
 
-from mmml.cli.misc.extract_checkpoint_metrics import plot_training_comparison
+from mmml.cli.misc.extract_checkpoint_metrics import ComparisonRunSpec, plot_training_comparison
 
 
 def load_run(out_dir: Path) -> dict | None:
@@ -23,6 +23,47 @@ def load_run(out_dir: Path) -> dict | None:
         return None
     summary = json.loads(summary_path.read_text()) if summary_path.is_file() else {}
     return {"name": out_dir.name, "parent": out_dir.parent.name, "metrics": metrics, "summary": summary}
+
+
+def _n_train_sort_key(value) -> int:
+    if isinstance(value, int):
+        return value
+    text = str(value)
+    if text.startswith("n"):
+        return int(text[1:])
+    return int(text)
+
+
+def build_test_mae_table(runs: list[dict]) -> list[list[str]]:
+    """Pivot hold-out test MAE by n_train with one column per repeat."""
+    grouped: dict[int, dict[int, dict]] = {}
+    repeats: set[int] = set()
+    for run in runs:
+        summary = run["summary"]
+        n_train = summary.get("n_train") or _n_train_sort_key(run["parent"])
+        repeat = int(summary.get("repeat") or int(str(run["name"]).lstrip("r") or 0))
+        te = summary.get("test_eval", {})
+        if not te:
+            continue
+        grouped.setdefault(int(n_train), {})[repeat] = te
+        repeats.add(repeat)
+
+    rep_list = sorted(repeats)
+    headers = ["n_train"] + [f"r{r} E" for r in rep_list] + [f"r{r} F" for r in rep_list]
+    rows: list[list[str]] = []
+    for n_train in sorted(grouped):
+        by_rep = grouped[n_train]
+        row = [str(n_train)]
+        for repeat in rep_list:
+            te = by_rep.get(repeat, {})
+            e = te.get("energy_mae_kcal_mol")
+            row.append(f"{e:.3f}" if e is not None else "—")
+        for repeat in rep_list:
+            te = by_rep.get(repeat, {})
+            f = te.get("forces_mae_kcal_mol")
+            row.append(f"{f:.3f}" if f is not None else "—")
+        rows.append(row)
+    return [headers, *rows]
 
 
 def main() -> int:
@@ -59,14 +100,24 @@ def main() -> int:
             n_train = run["summary"].get("n_train") or run["parent"]
             grouped.setdefault(str(n_train), []).append(run)
 
-        comparison_runs = []
-        for key in sorted(grouped, key=lambda x: int(str(x).replace("n", "")) if str(x).startswith("n") else int(x)):
+        comparison_runs: list[ComparisonRunSpec] = []
+        for key in sorted(grouped, key=_n_train_sort_key):
             reps = grouped[key]
-            # Use first repeat for overlay (or could average)
             for rep in reps:
                 label = f"{rep['parent']}/{rep['name']}"
-                comparison_runs.append((label, rep["metrics"]))
+                repeat = rep["summary"].get("repeat")
+                if repeat is None and str(rep["name"]).startswith("r"):
+                    repeat = int(str(rep["name"])[1:])
+                comparison_runs.append(
+                    ComparisonRunSpec(
+                        name=label,
+                        metrics=rep["metrics"],
+                        group=str(rep["parent"]),
+                        repeat=int(repeat) if repeat is not None else None,
+                    )
+                )
 
+        summary_table = build_test_mae_table(runs)
         out_png = args.output.parent / f"comparison_{dataset}.png"
         plot_training_comparison(
             comparison_runs,
@@ -74,6 +125,10 @@ def main() -> int:
             ef_only=True,
             title=f"{dataset} learning curve sweep (valid metrics)",
             plot_style=args.plot_style,
+            summary_table=summary_table,
+            summary_table_title="Hold-out test MAE (kcal/mol)",
+            color_by_group=True,
+            linestyle_by_repeat=True,
             verbose=True,
         )
 
