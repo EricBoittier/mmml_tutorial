@@ -1,0 +1,38 @@
+data: ./out/splits/dcm/energies_forces_dipoles_train.npz 
+#valid_data: ./out/splits/dcm/energies_forces_dipoles_valid.npz
+ckpt_dir: ./ckpts/dcm1
+tag: dcm1
+
+# Omit n_train/n_valid when valid_data is set (uses full NPZ files as-is).
+n_train: 20000
+n_valid: 3000
+seed: 42
+
+batch_size: 16
+num_epochs: 1000
+  #best: true
+#save_config: "./ckpts/test"
+learning_rate: 0.001
+optimizer: adamw
+energy_weight: 1.0
+forces_weight: 52.91
+dipole_weight: 27.21
+charges_weight: 14.39
+objective: valid_loss
+#restart: /mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/dcm1/dcm1-74acc8fc-725b-4356-b138-c4e4788177a5/
+#restart: /mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/dcm1-c137fb42-1f65-4748-880b-8f8184a20f70
+#restart: /mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/dcm1/dcm1-efa336d8-e301-40a1-9163-3edfb404ab66
+
+# Auto-detected from N/R when omitted
+# num_atoms: 40
+max_atomic_number: 35
+
+features: 16
+max_degree: 0
+num_basis_functions: 16
+num_iterations: 2
+zbl: true
+n_res: 3
+cutoff: 6.0
+use_energy_bias: true
+
