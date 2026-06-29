@@ -5,6 +5,8 @@ outputs/
 *.traj
 *.xyz
 ckpts/
+slurm/
+acodcm/configs/learning_curve/generated*/
 
 evaluated.npz
 out/

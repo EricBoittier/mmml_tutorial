@@ -7,6 +7,7 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+EPOCH_TAG="${EPOCH_TAG:-e${NUM_EPOCHS:-1000}}"
 # shellcheck disable=SC1091
 source "${ROOT}/scripts/lc_common.sh"
 
@@ -25,7 +26,7 @@ if [[ -z "$JOB_KEY" ]]; then
   exit 2
 fi
 
-RUNS_FILE="${ROOT}/slurm/learning_curve/runs.tsv"
+RUNS_FILE="${ROOT}/slurm/learning_curve/${EPOCH_TAG}/runs.tsv"
 line=$(awk -F '\t' -v k="$JOB_KEY" '$1==k {print; exit}' "$RUNS_FILE" || true)
 if [[ -z "$line" ]]; then
   echo "Job key not in $RUNS_FILE: $JOB_KEY" >&2
@@ -42,13 +43,13 @@ else
   eval_natoms=10
 fi
 
-ckpt_dir="${ROOT}/ckpts/learning_curve/${dataset}/n${n_train}/r${repeat}"
-out_dir="${ROOT}/out/eval/learning_curve/${dataset}/n${n_train}/r${repeat}"
+ckpt_dir="${ROOT}/ckpts/learning_curve/${EPOCH_TAG}/${dataset}/n${n_train}/r${repeat}"
+out_dir="${ROOT}/out/eval/learning_curve/${EPOCH_TAG}/${dataset}/n${n_train}/r${repeat}"
 n_valid=$(( n_train * 300 / 8000 ))
 PLOT_STYLE="${PLOT_STYLE:-google}"
 MAIL_USER="${MAIL_USER:-ericdavid.boittier@unibas.ch}"
 VENV_ACTIVATE="${VENV_ACTIVATE:-$HOME/mmml/.venv/bin/activate}"
-SLURM_DIR="${ROOT}/slurm/learning_curve"
+SLURM_DIR="${ROOT}/slurm/learning_curve/${EPOCH_TAG}"
 log_file="${SLURM_DIR}/backfill_${job_key}.out"
 backfill_sbatch="${SLURM_DIR}/backfill_${job_key}.sbatch"
 
@@ -96,7 +97,7 @@ mmml extract-checkpoint-metrics "\$run_dir" \\
   --stride "\$stride" \\
   --log-loss \\
   --ef-only \\
-  --plot-style ${PLOT_STYLE}
+  \$(extract_metrics_plot_style_args "${PLOT_STYLE}")
 
 latest_epoch=\$(latest_epoch_dir "\$run_dir")
 latest_num=\$(basename "\$latest_epoch" | sed 's/epoch-//')

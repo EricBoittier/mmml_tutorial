@@ -54,3 +54,11 @@ pick_eval_checkpoint() {
   fi
   return 1
 }
+
+# Emit --plot-style only when the installed mmml CLI supports it.
+extract_metrics_plot_style_args() {
+  local style="${1:-${PLOT_STYLE:-google}}"
+  if mmml extract-checkpoint-metrics --help 2>&1 | grep -q -- '--plot-style'; then
+    echo --plot-style "$style"
+  fi
+}

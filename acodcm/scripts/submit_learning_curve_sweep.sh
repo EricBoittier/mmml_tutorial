@@ -185,7 +185,7 @@ mmml extract-checkpoint-metrics "\$run_dir" \\
   --stride "\$stride" \\
   --log-loss \\
   --ef-only \\
-  --plot-style ${PLOT_STYLE}
+  \$(extract_metrics_plot_style_args "${PLOT_STYLE}")
 
 echo "=== [3/3] Hold-out test E/F evaluation ==="
 latest_epoch=\$(latest_epoch_dir "\$run_dir")
