@@ -9,7 +9,12 @@ from pathlib import Path
 
 import numpy as np
 
-from mmml.cli.misc.extract_checkpoint_metrics import ComparisonRunSpec, plot_training_comparison
+from mmml.cli.misc.extract_checkpoint_metrics import (
+    ComparisonRunSpec,
+    collect_scaling_points,
+    plot_learning_curve_scaling,
+    plot_training_comparison,
+)
 
 
 def load_run(out_dir: Path) -> dict | None:
@@ -147,11 +152,29 @@ def main() -> int:
                 )
         aggregate["datasets"][dataset] = {
             "comparison_plot": str(out_png),
+            "scaling_plot": str(args.output.parent / f"scaling_{dataset}.png"),
             "test_eval_table": sorted(
                 test_rows,
                 key=lambda r: (r.get("n_train") or 0, r.get("repeat") or 0),
             ),
+            "scaling_points": [
+                {
+                    "n_train": p.n_train,
+                    "repeat": p.repeat,
+                    "inv_sqrt_n": p.inv_sqrt_n,
+                    **p.values,
+                }
+                for p in collect_scaling_points(runs)
+            ],
         }
+
+        plot_learning_curve_scaling(
+            runs,
+            args.output.parent / f"scaling_{dataset}.png",
+            title=f"{dataset} scaling: log10(metric) vs 1/sqrt(n_train)",
+            plot_style=args.plot_style,
+            verbose=True,
+        )
 
     args.summary_json.write_text(json.dumps(aggregate, indent=2))
     print(f"Wrote {args.summary_json}")
