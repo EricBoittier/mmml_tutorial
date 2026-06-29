@@ -171,7 +171,7 @@ def main() -> int:
         plot_learning_curve_scaling(
             runs,
             args.output.parent / f"scaling_{dataset}.png",
-            title=f"{dataset} scaling: log10(metric) vs 1/sqrt(n_train)",
+            title=f"{dataset} scaling: ln(metric) vs 1/sqrt(n_train)",
             plot_style=args.plot_style,
             verbose=True,
         )
