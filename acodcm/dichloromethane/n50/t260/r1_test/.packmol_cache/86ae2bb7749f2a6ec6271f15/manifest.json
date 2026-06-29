@@ -1,0 +1,20 @@
+{
+  "cache_key": "86ae2bb7749f2a6ec6271f15",
+  "center": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "composition": [
+    [
+      "DCM",
+      50
+    ]
+  ],
+  "cube_side": 36.0,
+  "placement": "cube",
+  "radius": null,
+  "seed": 250260,
+  "tolerance": 2.0,
+  "version": 2
+}

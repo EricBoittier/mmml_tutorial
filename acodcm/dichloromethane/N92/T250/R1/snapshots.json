@@ -1,0 +1,16 @@
+{
+  "tag": "dcm_92",
+  "snapshots": [
+    {
+      "seq": 0,
+      "slug": "pack",
+      "stem": "00_pack",
+      "kind": "packmol",
+      "label": "Packmol sphere placement (pre-minimize)",
+      "files": {
+        "pdb": "/cluster/home/boittier/mmml_tutorial/acodcm/dichloromethane/N92/T250/R1/model.pdb",
+        "psf": "/cluster/home/boittier/mmml_tutorial/acodcm/dichloromethane/N92/T250/R1/model.psf"
+      }
+    }
+  ]
+}

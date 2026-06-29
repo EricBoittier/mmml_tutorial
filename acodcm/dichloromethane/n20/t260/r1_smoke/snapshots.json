@@ -1,0 +1,45 @@
+{
+  "tag": "dcm_20",
+  "snapshots": [
+    {
+      "seq": 0,
+      "slug": "pack",
+      "stem": "00_pack",
+      "kind": "packmol",
+      "label": "Packmol sphere placement (pre-minimize)",
+      "files": {
+        "pdb": "/cluster/home/boittier/mmml_tutorial/acodcm/dichloromethane/n20/t260/r1_smoke/model.pdb",
+        "psf": "/cluster/home/boittier/mmml_tutorial/acodcm/dichloromethane/n20/t260/r1_smoke/model.psf"
+      }
+    },
+    {
+      "seq": 1,
+      "slug": "mm",
+      "stem": "01_mm",
+      "kind": "MM",
+      "label": "CHARMM CGENFF SD/ABNR before MLpot (MM only)",
+      "files": {
+        "crd": "/cluster/home/boittier/mmml_tutorial/acodcm/dichloromethane/n20/t260/r1_smoke/pretreat/01_mm.crd",
+        "energy_json": "/cluster/home/boittier/mmml_tutorial/acodcm/dichloromethane/n20/t260/r1_smoke/pretreat/01_mm_energy.json",
+        "pdb": "/cluster/home/boittier/mmml_tutorial/acodcm/dichloromethane/n20/t260/r1_smoke/pretreat/01_mm.pdb",
+        "psf": "/cluster/home/boittier/mmml_tutorial/acodcm/dichloromethane/n20/t260/r1_smoke/pretreat/01_mm.psf"
+      },
+      "grms_kcalmol_A": 0.5459952980292592
+    },
+    {
+      "seq": 2,
+      "slug": "mini",
+      "stem": "02_mini",
+      "kind": "MMML",
+      "label": "MLpot PhysNet steepest descent (USER / MMML)",
+      "files": {
+        "crd": "/cluster/home/boittier/mmml_tutorial/acodcm/dichloromethane/n20/t260/r1_smoke/02_mini.crd",
+        "energy_json": "/cluster/home/boittier/mmml_tutorial/acodcm/dichloromethane/n20/t260/r1_smoke/02_mini_energy.json",
+        "pdb": "/cluster/home/boittier/mmml_tutorial/acodcm/dichloromethane/n20/t260/r1_smoke/02_mini.pdb",
+        "psf": "/cluster/home/boittier/mmml_tutorial/acodcm/dichloromethane/n20/t260/r1_smoke/02_mini.psf",
+        "xyz": "/cluster/home/boittier/mmml_tutorial/acodcm/dichloromethane/n20/t260/r1_smoke/02_mini.xyz"
+      },
+      "grms_kcalmol_A": 1.7725815776408564
+    }
+  ]
+}

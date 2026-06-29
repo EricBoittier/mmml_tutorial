@@ -1,0 +1,125 @@
+=== [n92_t250_r1] 2026-06-28T15:17:34+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node02
+sbatch 5751629 on node02
+=== [n92_t250_r1] 2026-06-28T15:19:13+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node01
+sbatch 5751630 on node01
+FAILED n92_t250_r1 (sbatch exit      6)
+=== [n92_t250_r2] 2026-06-28T15:24:43+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node01
+sbatch 5751634 on node01
+FAILED n92_t250_r2 (sbatch exit      6)
+=== [n92_t250_r3] 2026-06-28T15:30:14+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node01
+sbatch 5751635 on node01
+FAILED n92_t250_r3 (sbatch exit      6)
+=== [n92_t250_r4] 2026-06-28T15:35:45+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node01
+sbatch 5751637 on node01
+FAILED n92_t250_r4 (sbatch exit      6)
+=== [n95_t250_r1] 2026-06-28T15:41:16+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node01
+sbatch 5751639 on node01
+FAILED n95_t250_r1 (sbatch exit      6)
+=== [n95_t250_r2] 2026-06-28T15:47:46+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node01
+sbatch 5751642 on node01
+FAILED n95_t250_r2 (sbatch exit      6)
+=== [n95_t250_r3] 2026-06-28T15:54:17+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node01
+sbatch 5751643 on node01
+FAILED n95_t250_r3 (sbatch exit      6)
+=== [n95_t250_r4] 2026-06-28T16:00:48+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node01
+sbatch 5751644 on node01
+FAILED n95_t250_r4 (sbatch exit      6)
+=== [n98_t250_r1] 2026-06-28T16:07:19+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node01
+sbatch 5751646 on node01
+FAILED n98_t250_r1 (sbatch exit      6)
+=== [n98_t250_r2] 2026-06-28T16:14:20+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node01
+sbatch 5751647 on node01
+FAILED n98_t250_r2 (sbatch exit      6)
+=== [n98_t250_r3] 2026-06-28T16:21:20+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node01
+sbatch 5751648 on node01
+FAILED n98_t250_r3 (sbatch exit      6)
+=== [n98_t250_r4] 2026-06-28T16:28:22+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node01
+sbatch 5751649 on node01
+FAILED n98_t250_r4 (sbatch exit      6)
+=== [n92_t260_r1] 2026-06-28T16:35:22+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node01
+sbatch 5751651 on node01
+FAILED n92_t260_r1 (sbatch exit      1)
+=== [n92_t260_r2] 2026-06-28T16:35:53+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node01
+sbatch 5751652 on node01
+FAILED n92_t260_r2 (sbatch exit      1)
+=== [n92_t260_r3] 2026-06-28T16:36:23+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node01
+sbatch 5751653 on node01
+FAILED n92_t260_r3 (sbatch exit      1)
+=== [n92_t260_r4] 2026-06-28T16:36:53+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node01
+sbatch 5751654 on node01
+FAILED n92_t260_r4 (sbatch exit      1)
+=== [n95_t260_r1] 2026-06-28T16:37:23+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node01
+sbatch 5751655 on node01
+FAILED n95_t260_r1 (sbatch exit      1)
+=== [n95_t260_r2] 2026-06-28T16:37:54+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node01
+sbatch 5751656 on node01
+FAILED n95_t260_r2 (sbatch exit      1)
+=== [n95_t260_r3] 2026-06-28T16:38:24+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node01
+sbatch 5751657 on node01
+FAILED n95_t260_r3 (sbatch exit      1)
+=== [n95_t260_r4] 2026-06-28T16:38:54+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node01
+sbatch 5751658 on node01
+FAILED n95_t260_r4 (sbatch exit      1)
+=== [n98_t260_r1] 2026-06-28T16:39:24+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node01
+sbatch 5751659 on node01
+FAILED n98_t260_r1 (sbatch exit      1)
+=== [n98_t260_r2] 2026-06-28T16:39:55+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node01
+sbatch 5751660 on node01
+FAILED n98_t260_r2 (sbatch exit      1)
+=== [n98_t260_r3] 2026-06-28T16:40:25+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node01
+sbatch 5751661 on node01
+FAILED n98_t260_r3 (sbatch exit      1)
+=== [n98_t260_r4] 2026-06-28T16:40:55+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node01
+sbatch 5751662 on node01
+FAILED n98_t260_r4 (sbatch exit      1)
+Done. Logs: /cluster/home/boittier/mmml_tutorial/acodcm/artifacts/test2_local_logs

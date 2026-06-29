@@ -1,0 +1,39 @@
+{
+  "category": "prep_ladder",
+  "title": "Pre-MLpot geometry gate",
+  "root": "/cluster/home/boittier/mmml_tutorial/acodcm/dichloromethane/n20/t260/r1_smoke/prep_ladder",
+  "steps": [
+    {
+      "index": 1,
+      "label": "initial",
+      "slug": "initial",
+      "stem": "001_initial",
+      "files": {
+        "crd": "/cluster/home/boittier/mmml_tutorial/acodcm/dichloromethane/n20/t260/r1_smoke/prep_ladder/001_initial.crd",
+        "pdb": "/cluster/home/boittier/mmml_tutorial/acodcm/dichloromethane/n20/t260/r1_smoke/prep_ladder/001_initial.pdb"
+      },
+      "note": "worst inter-monomer 2.928 \u00c5"
+    },
+    {
+      "index": 2,
+      "label": "pre_mlpot:monomer_repack",
+      "slug": "pre_mlpot_monomer_repack",
+      "stem": "002_pre_mlpot_monomer_repack",
+      "files": {
+        "crd": "/cluster/home/boittier/mmml_tutorial/acodcm/dichloromethane/n20/t260/r1_smoke/prep_ladder/002_pre_mlpot_monomer_repack.crd",
+        "pdb": "/cluster/home/boittier/mmml_tutorial/acodcm/dichloromethane/n20/t260/r1_smoke/prep_ladder/002_pre_mlpot_monomer_repack.pdb"
+      }
+    }
+  ],
+  "summary": {
+    "enabled": true,
+    "ran": true,
+    "reason": "ok",
+    "steps_applied": [
+      "pre_mlpot:monomer_repack"
+    ],
+    "worst_intermonomer_A": 1.8117398431016931,
+    "aborted": false,
+    "contact_summary": "worst inter-monomer contact 1.812 \u00c5 (monomers 8/18, atoms Cl\u2013H; prep floor 1.00 \u00c5, typical vdW 2.9 \u00c5); OK: above dynamics guard (1.5 \u00c5); H\u2013heavy contact: equilibrium liquid distances are usually \u22652.5 \u00c5; short prep contacts often involve rotatable methylenes"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "job_id": "prep",
+  "backend": "pycharmm",
+  "setup": "pycharmm_minimize",
+  "exit_code": 0,
+  "wall_time_s": 3.211837040999967,
+  "handoff": {},
+  "stages": []
+}

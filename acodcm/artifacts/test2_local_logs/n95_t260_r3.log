@@ -1,0 +1,41 @@
+--- warmup-mlpot-jax ---
+warmup-mlpot-jax: cleared 8 stale OpenMPI/PMI env var(s)
+[mmml] JAX compile XLA_FLAGS intra_op_parallelism_threads=1
+mmml: JAX compilation cache -> /cluster/home/boittier/.cache/mmml/jax-compilation-cache
+mmml: MLpot JAX runs on CPU (MMML_MLPOT_DEVICE=cpu). Unset or set MMML_MLPOT_DEVICE=gpu for GPU.
+[mmml] JAX compile XLA_FLAGS already set; not overriding
+Traceback (most recent call last):
+  File "/cluster/home/boittier/mmml/.venv/bin/mmml", line 10, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/cluster/home/boittier/mmml/mmml/cli/__main__.py", line 120, in main
+    return warmup_mlpot_jax.main()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/cluster/home/boittier/mmml/mmml/cli/run/warmup_mlpot_jax.py", line 243, in main
+    return run_warmup_mlpot_jax(args)
+  File "/cluster/home/boittier/mmml/mmml/cli/run/warmup_mlpot_jax.py", line 178, in run_warmup_mlpot_jax
+    from mmml.interfaces.pycharmmInterface.mlpot.medium_pbc_validation import (
+        lattice_positions_cubic_pbc,
+    )
+  File "/cluster/home/boittier/mmml/mmml/interfaces/pycharmmInterface/mlpot/__init__.py", line 44, in <module>
+    from mmml.interfaces.pycharmmInterface.mlpot.partial_mm import (
+    ...<2 lines>...
+    )
+  File "/cluster/home/boittier/mmml/mmml/interfaces/pycharmmInterface/mlpot/partial_mm.py", line 10, in <module>
+    from mmml.interfaces.pycharmmInterface.mlpot.setup import (
+    ...<2 lines>...
+    )
+  File "/cluster/home/boittier/mmml/mmml/interfaces/pycharmmInterface/mlpot/setup.py", line 12, in <module>
+    import pandas as pd
+  File "/cluster/home/boittier/mmml/.venv/lib/python3.13/site-packages/pandas/__init__.py", line 26, in <module>
+    from pandas.compat import (
+        is_numpy_dev as _is_numpy_dev,  # pyright: ignore[reportUnusedImport] # noqa: F401
+    )
+  File "/cluster/home/boittier/mmml/.venv/lib/python3.13/site-packages/pandas/compat/__init__.py", line 29, in <module>
+    from pandas.compat.pyarrow import (
+    ...<12 lines>...
+    )
+  File "/cluster/home/boittier/mmml/.venv/lib/python3.13/site-packages/pandas/compat/pyarrow.py", line 10, in <module>
+    _palv = Version(Version(pa.__version__).base_version)
+                            ^^^^^^^^^^^^^^
+AttributeError: module 'pyarrow' has no attribute '__version__'

@@ -1,0 +1,598 @@
+--- warmup-mlpot-jax ---
+warmup-mlpot-jax: cleared 8 stale OpenMPI/PMI env var(s)
+[mmml] JAX compile XLA_FLAGS intra_op_parallelism_threads=1
+mmml: JAX compilation cache -> /cluster/home/boittier/.cache/mmml/jax-compilation-cache
+mmml: MLpot JAX runs on CPU (MMML_MLPOT_DEVICE=cpu). Unset or set MMML_MLPOT_DEVICE=gpu for GPU.
+[mmml] JAX compile XLA_FLAGS already set; not overriding
+warmup-mlpot-jax: 98 monomers, 5 atoms, batch=16, gpus=1, compile_threads=1
+warmup-mlpot-jax: cache -> /cluster/home/boittier/.cache/mmml/jax-compilation-cache
+✓ Loaded checkpoint from /cluster/home/boittier/mmml/examples/ckpts_json/DESdimers_params.json
+[setup_calculator] Runtime natoms is the largest monomer/dimer in this system; n_res is an EF architecture parameter, not the number of CHARMM residues.
+╭───────────────────────────── [1mHybrid ML/MM setup[0m ─────────────────────────────╮
+│ [2m╭─[0m[2m────────────────────────────────[0m[2m [0m[1;2mSystem[0m[2m [0m[2m────────────────────────────────[0m[2m─╮[0m │
+│ [2m│[0m ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━┓ [2m│[0m │
+│ [2m│[0m ┃[1m [0m[1mn_monome…[0m[1m [0m┃[1m [0m[1matoms_pe…[0m[1m [0m┃[1m [0m[1mtotal_at…[0m[1m [0m┃[1m [0m[1mmax_atoms[0m[1m [0m┃[1m [0m[1mml_compu…[0m[1m [0m┃[1m [0m[1mcheckpo…[0m[1m [0m┃ [2m│[0m │
+│ [2m│[0m ┡━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━┩ [2m│[0m │
+│ [2m│[0m │ 98        │ [5, 5, 5, │ 490       │ 10        │ <class    │ /cluste… │ [2m│[0m │
+│ [2m│[0m │           │ 5, 5, 5,  │           │           │ 'jax.num… │          │ [2m│[0m │
+│ [2m│[0m │           │ …] (98    │           │           │           │          │ [2m│[0m │
+│ [2m│[0m │           │ items)    │           │           │           │          │ [2m│[0m │
+│ [2m│[0m └───────────┴───────────┴───────────┴───────────┴───────────┴──────────┘ [2m│[0m │
+│ [2m╰──────────────────────────────────────────────────────────────────────────╯[0m │
+│ [2m╭─[0m[2m──────────────────────────[0m[2m [0m[1;2mHandoff & cutoffs[0m[2m [0m[2m───────────────────────────[0m[2m─╮[0m │
+│ [2m│[0m ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━┓ [2m│[0m │
+│ [2m│[0m ┃[1m [0m[1mml_switc…[0m[1m [0m┃[1m [0m[1mmm_switc…[0m[1m [0m┃[1m [0m[1mmm_switc…[0m[1m [0m┃[1m [0m[1mcompleme…[0m[1m [0m┃[1m [0m[1mmm_r_mi…[0m[1m [0m┃[1m [0m[1mmodel_cu…[0m[1m [0m┃ [2m│[0m │
+│ [2m│[0m ┡━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━┩ [2m│[0m │
+│ [2m│[0m │ 1.5000    │ 8.0000    │ 5.0000    │ True      │ 5.8500   │ 6.0       │ [2m│[0m │
+│ [2m│[0m └───────────┴───────────┴───────────┴───────────┴──────────┴───────────┘ [2m│[0m │
+│ [2m╰──────────────────────────────────────────────────────────────────────────╯[0m │
+│ [2m╭─[0m[2m─────────────────────[0m[2m [0m[1;2mNeighbor lists & ML batching[0m[2m [0m[2m─────────────────────[0m[2m─╮[0m │
+│ [2m│[0m ┏━━━━━┳━━━━━┳━━━━━━┳━━━━━┳━━━━━━┳━━━━━┳━━━━━━┳━━━━━┳━━━━━━┳━━━━━┳━━━━━━┓ [2m│[0m │
+│ [2m│[0m ┃[1m [0m[1mml…[0m[1m [0m┃[1m [0m[1mdi…[0m[1m [0m┃[1m [0m[1mmax…[0m[1m [0m┃[1m [0m[1mml…[0m[1m [0m┃[1m [0m[1mml_…[0m[1m [0m┃[1m [0m[1mja…[0m[1m [0m┃[1m [0m[1mjax…[0m[1m [0m┃[1m [0m[1mma…[0m[1m [0m┃[1m [0m[1mcel…[0m[1m [0m┃[1m [0m[1mde…[0m[1m [0m┃[1m [0m[1mPBC [0m[1m [0m┃ [2m│[0m │
+│ [2m│[0m ┡━━━━━╇━━━━━╇━━━━━━╇━━━━━╇━━━━━━╇━━━━━╇━━━━━━╇━━━━━╇━━━━━━╇━━━━━╇━━━━━━┩ [2m│[0m │
+│ [2m│[0m │ Tr… │ 47… │ 4753 │ 16  │ 1    │ 0.… │ 1    │ au… │ 3.0  │ 0.… │ Fal… │ [2m│[0m │
+│ [2m│[0m └─────┴─────┴──────┴─────┴──────┴─────┴──────┴─────┴──────┴─────┴──────┘ [2m│[0m │
+│ [2m╰──────────────────────────────────────────────────────────────────────────╯[0m │
+│ [2m╭─[0m[2m────────────────────────────────[0m[2m [0m[1;2mModel[0m[2m [0m[2m─────────────────────────────────[0m[2m─╮[0m │
+│ [2m│[0m ┏━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━━┳━━━┳━━━━┳━━━┳━━━━┳━━━┓ [2m│[0m │
+│ [2m│[0m ┃[1m [0m[1m…[0m[1m [0m┃[1m [0m[1m…[0m[1m [0m┃[1m [0m[1m…[0m[1m [0m┃[1m [0m[1m…[0m[1m [0m┃[1m [0m[1m…[0m[1m [0m┃[1m [0m[1m…[0m[1m [0m┃[1m [0m[1m…[0m[1m [0m┃[1m [0m[1m…[0m[1m [0m┃[1m [0m[1m…[0m[1m [0m┃[1m [0m[1m…[0m[1m [0m┃[1m [0m[1m…[0m[1m [0m┃[1m [0m[1mz…[0m[1m [0m┃[1m [0m[1m…[0m[1m [0m┃[1m [0m[1me…[0m[1m [0m┃[1m [0m[1m…[0m[1m [0m┃[1m [0m[1mu…[0m[1m [0m┃[1m [0m[1m…[0m[1m [0m┃ [2m│[0m │
+│ [2m│[0m ┡━━━╇━━━╇━━━╇━━━╇━━━╇━━━╇━━━╇━━━╇━━━╇━━━╇━━━╇━━━━╇━━━╇━━━━╇━━━╇━━━━╇━━━┩ [2m│[0m │
+│ [2m│[0m │ … │ … │ 1 │ 2 │ … │ … │ … │ … │ … │ 0 │ 3 │ T… │ … │ F… │ … │ F… │ … │ [2m│[0m │
+│ [2m│[0m └───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴────┴───┴────┴───┴────┴───┘ [2m│[0m │
+│ [2m╰──────────────────────────────────────────────────────────────────────────╯[0m │
+│ [2m╭─[0m[2m─────────────────────────────[0m[2m [0m[1;2mML/MM flags[0m[2m [0m[2m──────────────────────────────[0m[2m─╮[0m │
+│ [2m│[0m ┏━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━┓ [2m│[0m │
+│ [2m│[0m ┃[1m [0m[1mdoML    [0m[1m [0m┃[1m [0m[1mdoMM     [0m[1m [0m┃[1m [0m[1mdoML_dimer       [0m[1m [0m┃[1m [0m[1mdefer_xla_warmup         [0m[1m [0m┃ [2m│[0m │
+│ [2m│[0m ┡━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━┩ [2m│[0m │
+│ [2m│[0m │ True     │ False     │ True              │ False                     │ [2m│[0m │
+│ [2m│[0m └──────────┴───────────┴───────────────────┴───────────────────────────┘ [2m│[0m │
+│ [2m╰──────────────────────────────────────────────────────────────────────────╯[0m │
+│ [2m╭─[0m[2m──────────────────────────────[0m[2m [0m[1;2mCheckpoint[0m[2m [0m[2m──────────────────────────────[0m[2m─╮[0m │
+│ [2m│[0m ┏━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓ [2m│[0m │
+│ [2m│[0m ┃[1m [0m[1mCheckpoint       [0m[1m [0m┃[1m [0m[1mname            [0m[1m [0m┃[1m [0m[1mepoch[0m[1m [0m┃[1m [0m[1mbest_loss[0m[1m [0m┃[1m [0m[1mSave Time[0m[1m [0m┃ [2m│[0m │
+│ [2m│[0m ┡━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━┩ [2m│[0m │
+│ [2m│[0m │ /cluster/home/bo… │ DESdimers_param… │ —     │ —         │ —         │ [2m│[0m │
+│ [2m│[0m └───────────────────┴──────────────────┴───────┴───────────┴───────────┘ [2m│[0m │
+│ [2m╰──────────────────────────────────────────────────────────────────────────╯[0m │
+╰──────────────────────────────────────────────────────────────────────────────╯
+[mmml] JAX compile threads=1 (OMP '1' -> 1; restored after warmup)
+[mmml] JAX compile threads=1 (OMP '1' -> 1; restored after warmup)
+E0628 16:21:15.865242   57601 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.874241   57599 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.874248   57594 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.874287   57621 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.874226   57610 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.874295   57616 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.874282   57596 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.874437   57610 contiguous_section_memory_manager.cc:71] releaseMappedMemory failed with error: Cannot allocate memory
+E0628 16:21:15.874263   57600 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.874283   57608 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.874236   57605 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.874315   57613 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.874531   57600 contiguous_section_memory_manager.cc:71] releaseMappedMemory failed with error: Cannot allocate memory
+E0628 16:21:15.874309   57602 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.874561   57613 contiguous_section_memory_manager.cc:71] releaseMappedMemory failed with error: Cannot allocate memory
+E0628 16:21:15.874300   57619 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.874568   57606 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.874390   57594 contiguous_section_memory_manager.cc:71] releaseMappedMemory failed with error: Cannot allocate memory
+E0628 16:21:15.874273   57595 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.874401   57621 contiguous_section_memory_manager.cc:71] releaseMappedMemory failed with error: Cannot allocate memory
+E0628 16:21:15.874661   57595 contiguous_section_memory_manager.cc:71] releaseMappedMemory failed with error: Cannot allocate memory
+E0628 16:21:15.874404   57618 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.874297   57598 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.874448   57616 contiguous_section_memory_manager.cc:71] releaseMappedMemory failed with error: Cannot allocate memory
+E0628 16:21:15.874351   57620 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.874489   57611 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.874767   57620 contiguous_section_memory_manager.cc:71] releaseMappedMemory failed with error: Cannot allocate memory
+E0628 16:21:15.874523   57605 contiguous_section_memory_manager.cc:71] releaseMappedMemory failed with error: Cannot allocate memory
+E0628 16:21:15.874230   57624 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.874572   57602 contiguous_section_memory_manager.cc:71] releaseMappedMemory failed with error: Cannot allocate memory
+E0628 16:21:15.874380   57599 contiguous_section_memory_manager.cc:71] releaseMappedMemory failed with error: Cannot allocate memory
+E0628 16:21:15.874602   57619 contiguous_section_memory_manager.cc:71] releaseMappedMemory failed with error: Cannot allocate memory
+E0628 16:21:15.874394   57614 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.874712   57618 contiguous_section_memory_manager.cc:71] releaseMappedMemory failed with error: Cannot allocate memory
+E0628 16:21:15.874739   57598 contiguous_section_memory_manager.cc:71] releaseMappedMemory failed with error: Cannot allocate memory
+E0628 16:21:15.874875   57614 contiguous_section_memory_manager.cc:71] releaseMappedMemory failed with error: Cannot allocate memory
+E0628 16:21:15.874522   57608 contiguous_section_memory_manager.cc:71] releaseMappedMemory failed with error: Cannot allocate memory
+E0628 16:21:15.874844   57624 contiguous_section_memory_manager.cc:71] releaseMappedMemory failed with error: Cannot allocate memory
+E0628 16:21:15.874875   57612 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.875103   57623 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.875831   57615 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.876511   57617 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.879216   57595 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.879386   57597 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.879506   57608 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.880277   57610 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.880581   57612 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.880694   57620 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.880903   57607 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.881014   57614 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.881137   57605 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.881267   57622 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.881388   57617 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.881552   57611 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.881713   57601 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.881792   57613 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.881889   57600 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.882049   57621 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.882320   57623 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.882858   57609 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.883243   57615 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.884032   57595 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.884211   57597 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.884938   57610 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.885139   57616 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.885210   57620 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.885329   57617 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.885553   57614 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.886402   57608 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.886403   57622 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.886527   57612 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.886763   57621 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.887479   57601 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.887888   57607 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.888029   57605 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.888199   57597 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.888518   57615 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.889097   57600 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.889277   57616 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.889408   57596 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.889523   57620 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.889926   57594 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.890120   57599 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.890350   57609 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.890490   57606 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.890629   57619 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.890785   57614 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.890887   57608 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.891131   57610 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.891707   57618 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.891868   57598 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.892531   57624 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.892773   57602 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.892880   57622 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.893406   57615 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.893497   57616 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.893615   57612 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.893640   57596 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.894085   57620 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.894167   57599 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.894878   57605 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.894969   57608 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.896061   57600 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.896350   57618 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.896522   57606 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.896616   57598 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.897500   57616 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.897874   57609 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.898190   57611 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.898282   57615 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.898577   57613 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.898919   57608 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.899152   57622 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.899238   57595 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.899411   57596 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.899685   57599 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.900296   57617 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.900514   57623 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.900696   57606 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.901052   57600 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.901735   57605 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.901776   57616 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.901851   57616 contiguous_section_memory_manager.cc:71] releaseMappedMemory failed with error: Cannot allocate memory
+E0628 16:21:15.902433   57618 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.902742   57621 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.902844   57601 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.902940   57608 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.903202   57598 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.903470   57597 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.903577   57595 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.903887   57613 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.904735   57607 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.904767   57606 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.904948   57609 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.905214   57599 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.905355   57594 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.906127   57619 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.906261   57623 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.907301   57618 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.907450   57608 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.907590   57614 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.907619   57598 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.907842   57621 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.908017   57600 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.908202   57610 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.908624   57603 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.908666   57601 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.908840   57613 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.909037   57612 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.909977   57606 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.910136   57595 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.910284   57597 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.910533   57624 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.910696   57620 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.911029   57602 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.911406   57599 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.911499   57608 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.912044   57619 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.912148   57621 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.912305   57598 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.913339   57618 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.913456   57601 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.914009   57606 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.914173   57613 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.914291   57597 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.914455   57611 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.914705   57596 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.914898   57623 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.915356   57617 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.915499   57624 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.916109   57610 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.916237   57612 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.916412   57595 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.916642   57615 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.916767   57622 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.916901   57598 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.916982   57619 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.917057   57621 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.917167   57599 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.917255   57601 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.917412   57608 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.917975   57616 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.918094   57618 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.919472   57605 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.919862   57606 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.919982   57623 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.920086   57594 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.920179   57597 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.920312   57595 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.920454   57612 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.920577   57624 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.921036   57596 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.921184   57601 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.921272   57598 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.921617   57619 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.921921   57613 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.922089   57622 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.922267   57607 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.922386   57618 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.922813   57599 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.922990   57609 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.923511   57614 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.924346   57615 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.924844   57594 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.925080   57596 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.925460   57598 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.925998   57600 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.926123   57606 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.926253   57597 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.926326   57619 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.926448   57595 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.926627   57603 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.926743   57612 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.926884   57622 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.927016   57601 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.927255   57623 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.927709   57620 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.928321   57599 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.928696   57613 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.928842   57594 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.928850   57602 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.929157   57596 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.929594   57598 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.929883   57614 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.930335   57617 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.930634   57611 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.930895   57619 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.932025   57615 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.932161   57606 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.932335   57595 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.932557   57601 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.932668   57623 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.932752   57594 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.933047   57610 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.933175   57608 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.933369   57603 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.933562   57621 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.933705   57600 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.933834   57622 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.933953   57599 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.934065   57598 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.934188   57613 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.934423   57616 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.935472   57620 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.935658   57596 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.936036   57619 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.936269   57602 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.936713   57611 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.937042   57605 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.937317   57606 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.937784   57608 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.937906   57623 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.937993   57603 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.938190   57624 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.938415   57621 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.938557   57618 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.938665   57622 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.938740   57594 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.939003   57615 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.939241   57598 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.939547   57607 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.940211   57610 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.940332   57599 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.940721   57619 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.941082   57609 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.941199   57600 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.941351   57596 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.941564   57597 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.941747   57608 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.942041   57620 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.942179   57613 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.942190   57603 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.942567   57621 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.942565   57612 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.942988   57594 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.944833   57623 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.944948   57607 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.945046   57610 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.945147   57617 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.945271   57624 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.945530   57622 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.945647   57598 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.945976   57618 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.946545   57614 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.946772   57621 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.946930   57594 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.947159   57619 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.947403   57597 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.947554   57595 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.947657   57600 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.947761   57608 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.948184   57620 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.948555   57612 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.950797   57594 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.950932   57621 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.951274   57616 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.951561   57607 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.951763   57610 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.951919   57623 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.952318   57622 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.952870   57614 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.953062   57611 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.953192   57597 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.953385   57619 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.953509   57608 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.953641   57602 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.953746   57606 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.954051   57620 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.954287   57600 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.954708   57605 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.954808   57594 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.955544   57599 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.956369   57596 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.956552   57607 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.957164   57601 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.957602   57608 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.958129   57615 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.958518   57603 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.958760   57597 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.958900   57602 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.959168   57614 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.959326   57611 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.959494   57623 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.959659   57609 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.959814   57613 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.960020   57620 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.960127   57617 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.960641   57600 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.960817   57594 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.961145   57624 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.962104   57596 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.962560   57598 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.962723   57595 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.962863   57601 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.963053   57618 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.963379   57602 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.964099   57612 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.965063   57609 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.965718   57611 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.965798   57617 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.966559   57621 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.966680   57594 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.967139   57600 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.967292   57616 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.968230   57610 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.968387   57595 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.968526   57601 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.969301   57619 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.969430   57618 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.969691   57606 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.969856   57617 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.969874   57622 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.970051   57602 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.970110   57612 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.970227   57609 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.970585   57599 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.971787   57605 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.971882   57616 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.972971   57608 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.973254   57610 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.974085   57607 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.974569   57602 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.974743   57622 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.974880   57603 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.975075   57614 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.975229   57609 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.975326   57617 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.975774   57612 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.975996   57616 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.976256   57615 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.977049   57596 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.977325   57620 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.977558   57613 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.977658   57624 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.978203   57623 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.978664   57605 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.978872   57608 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.979061   57598 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.979161   57602 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.979382   57610 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.980166   57616 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.980718   57607 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.980831   57609 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.980890   57617 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.981233   57614 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.981358   57622 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.981631   57611 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.982022   57594 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.982216   57621 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.982473   57597 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.983329   57595 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.983557   57601 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.983642   57602 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.983875   57620 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.984489   57608 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.984790   57600 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.986063   57617 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.987181   57619 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.987299   57606 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.987414   57598 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.987547   57599 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.987765   57610 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.987907   57618 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.987927   57622 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.988206   57616 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.988402   57607 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.988499   57614 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.988609   57621 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.988850   57609 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.990770   57620 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.990845   57608 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.990899   57617 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.990992   57602 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.991424   57612 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.991597   57603 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.992041   57596 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.992542   57610 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.992628   57622 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.993405   57599 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.994036   57616 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.994463   57615 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.994848   57624 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.994924   57617 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.995116   57621 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.995413   57613 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.995532   57620 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.996412   57605 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.997000   57623 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.997076   57610 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.997310   57602 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.997540   57622 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.998097   57603 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.998344   57611 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.998635   57594 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.998840   57595 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.998972   57601 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.999193   57597 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.999376   57599 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.999794   57616 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:15.999988   57620 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.000382   57617 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.001393   57621 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.002648   57594 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.002773   57619 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.003060   57606 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.003116   57601 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.003232   57599 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.003408   57610 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.003687   57605 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.003898   57600 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.004013   57616 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.004380   57598 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.004467   57618 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.004581   57614 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.004985   57622 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.005331   57623 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.005449   57595 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.005646   57607 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.005788   57617 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.005935   57621 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.006258   57608 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.006688   57609 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.006857   57612 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.006992   57596 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.007133   57601 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.007219   57599 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.007891   57620 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.008116   57616 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.009338   57614 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.009654   57619 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.009809   57606 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.009902   57623 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.010003   57622 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.011598   57601 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.011812   57595 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.011982   57598 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.012102   57624 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.012359   57608 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.012671   57616 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.012687   57616 contiguous_section_memory_manager.cc:71] releaseMappedMemory failed with error: Cannot allocate memory
+E0628 16:21:16.012696   57620 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.012712   57605 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.013113   57621 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.013504   57615 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.013657   57613 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.013779   57614 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.014626   57597 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.014924   57609 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.015038   57622 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.015387   57603 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.015513   57602 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.015822   57595 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.017146   57624 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.017500   57601 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.018014   57594 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.018188   57614 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.018288   57608 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.018650   57616 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.018883   57605 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.019482   57598 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.019616   57595 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.020295   57610 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.020761   57617 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.020959   57602 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.021508   57600 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.021631   57618 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.022024   57603 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.022142   57596 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.022311   57599 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.022464   57612 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.022565   57614 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.023271   57601 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.023653   57595 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.023934   57624 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.024432   57616 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.025429   57619 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.025560   57606 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.025621   57602 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.025807   57611 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.025922   57607 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.026415   57598 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.026867   57614 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.027804   57595 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.028010   57596 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.028138   57603 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.028386   57618 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.028476   57612 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.028578   57616 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.028766   57599 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.028845   57601 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.029209   57623 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.029376   57621 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.029575   57597 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.029925   57620 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.030265   57602 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 16:21:16.030322   57624 contiguous_section_memory_manager.cc:105] allocateMappedMemory failed with error: Cannot allocate memory
+E0628 16:21:16.030377   57624 contiguous_section_memory_manager.cc:148] Failed to satisfy suballocation request for 355
+LLVM ERROR: Unable to allocate section memory!
+/var/spool/slurm/slurmd/job5751647/slurm_script: line 26: 57305 Aborted                 (core dumped) '/cluster/home/boittier/mmml/.venv/bin/mmml' warmup-mlpot-jax --checkpoint '/cluster/home/boittier/mmml/examples/ckpts_json/DESdimers_params.json' --n-monomers 98 --atoms-per-monomer 5 --box-side 0 --ml-batch-size 16 --compile-threads 1

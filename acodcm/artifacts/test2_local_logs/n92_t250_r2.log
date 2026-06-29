@@ -1,0 +1,65 @@
+--- warmup-mlpot-jax ---
+warmup-mlpot-jax: cleared 8 stale OpenMPI/PMI env var(s)
+[mmml] JAX compile XLA_FLAGS intra_op_parallelism_threads=1
+mmml: JAX compilation cache -> /cluster/home/boittier/.cache/mmml/jax-compilation-cache
+mmml: MLpot JAX runs on CPU (MMML_MLPOT_DEVICE=cpu). Unset or set MMML_MLPOT_DEVICE=gpu for GPU.
+[mmml] JAX compile XLA_FLAGS already set; not overriding
+warmup-mlpot-jax: 92 monomers, 5 atoms, batch=16, gpus=1, compile_threads=1
+warmup-mlpot-jax: cache -> /cluster/home/boittier/.cache/mmml/jax-compilation-cache
+✓ Loaded checkpoint from /cluster/home/boittier/mmml/examples/ckpts_json/DESdimers_params.json
+[setup_calculator] Runtime natoms is the largest monomer/dimer in this system; n_res is an EF architecture parameter, not the number of CHARMM residues.
+╭───────────────────────────── [1mHybrid ML/MM setup[0m ─────────────────────────────╮
+│ [2m╭─[0m[2m────────────────────────────────[0m[2m [0m[1;2mSystem[0m[2m [0m[2m────────────────────────────────[0m[2m─╮[0m │
+│ [2m│[0m ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━┓ [2m│[0m │
+│ [2m│[0m ┃[1m [0m[1mn_monome…[0m[1m [0m┃[1m [0m[1matoms_pe…[0m[1m [0m┃[1m [0m[1mtotal_at…[0m[1m [0m┃[1m [0m[1mmax_atoms[0m[1m [0m┃[1m [0m[1mml_compu…[0m[1m [0m┃[1m [0m[1mcheckpo…[0m[1m [0m┃ [2m│[0m │
+│ [2m│[0m ┡━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━┩ [2m│[0m │
+│ [2m│[0m │ 92        │ [5, 5, 5, │ 460       │ 10        │ <class    │ /cluste… │ [2m│[0m │
+│ [2m│[0m │           │ 5, 5, 5,  │           │           │ 'jax.num… │          │ [2m│[0m │
+│ [2m│[0m │           │ …] (92    │           │           │           │          │ [2m│[0m │
+│ [2m│[0m │           │ items)    │           │           │           │          │ [2m│[0m │
+│ [2m│[0m └───────────┴───────────┴───────────┴───────────┴───────────┴──────────┘ [2m│[0m │
+│ [2m╰──────────────────────────────────────────────────────────────────────────╯[0m │
+│ [2m╭─[0m[2m──────────────────────────[0m[2m [0m[1;2mHandoff & cutoffs[0m[2m [0m[2m───────────────────────────[0m[2m─╮[0m │
+│ [2m│[0m ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━┓ [2m│[0m │
+│ [2m│[0m ┃[1m [0m[1mml_switc…[0m[1m [0m┃[1m [0m[1mmm_switc…[0m[1m [0m┃[1m [0m[1mmm_switc…[0m[1m [0m┃[1m [0m[1mcompleme…[0m[1m [0m┃[1m [0m[1mmm_r_mi…[0m[1m [0m┃[1m [0m[1mmodel_cu…[0m[1m [0m┃ [2m│[0m │
+│ [2m│[0m ┡━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━┩ [2m│[0m │
+│ [2m│[0m │ 1.5000    │ 8.0000    │ 5.0000    │ True      │ 5.8500   │ 6.0       │ [2m│[0m │
+│ [2m│[0m └───────────┴───────────┴───────────┴───────────┴──────────┴───────────┘ [2m│[0m │
+│ [2m╰──────────────────────────────────────────────────────────────────────────╯[0m │
+│ [2m╭─[0m[2m─────────────────────[0m[2m [0m[1;2mNeighbor lists & ML batching[0m[2m [0m[2m─────────────────────[0m[2m─╮[0m │
+│ [2m│[0m ┏━━━━━┳━━━━━┳━━━━━━┳━━━━━┳━━━━━━┳━━━━━┳━━━━━━┳━━━━━┳━━━━━━┳━━━━━┳━━━━━━┓ [2m│[0m │
+│ [2m│[0m ┃[1m [0m[1mml…[0m[1m [0m┃[1m [0m[1mdi…[0m[1m [0m┃[1m [0m[1mmax…[0m[1m [0m┃[1m [0m[1mml…[0m[1m [0m┃[1m [0m[1mml_…[0m[1m [0m┃[1m [0m[1mja…[0m[1m [0m┃[1m [0m[1mjax…[0m[1m [0m┃[1m [0m[1mma…[0m[1m [0m┃[1m [0m[1mcel…[0m[1m [0m┃[1m [0m[1mde…[0m[1m [0m┃[1m [0m[1mPBC [0m[1m [0m┃ [2m│[0m │
+│ [2m│[0m ┡━━━━━╇━━━━━╇━━━━━━╇━━━━━╇━━━━━━╇━━━━━╇━━━━━━╇━━━━━╇━━━━━━╇━━━━━╇━━━━━━┩ [2m│[0m │
+│ [2m│[0m │ Tr… │ 41… │ 4186 │ 16  │ 1    │ 0.… │ 1    │ au… │ 3.0  │ 0.… │ Fal… │ [2m│[0m │
+│ [2m│[0m └─────┴─────┴──────┴─────┴──────┴─────┴──────┴─────┴──────┴─────┴──────┘ [2m│[0m │
+│ [2m╰──────────────────────────────────────────────────────────────────────────╯[0m │
+│ [2m╭─[0m[2m────────────────────────────────[0m[2m [0m[1;2mModel[0m[2m [0m[2m─────────────────────────────────[0m[2m─╮[0m │
+│ [2m│[0m ┏━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━━┳━━━┳━━━━┳━━━┳━━━━┳━━━┓ [2m│[0m │
+│ [2m│[0m ┃[1m [0m[1m…[0m[1m [0m┃[1m [0m[1m…[0m[1m [0m┃[1m [0m[1m…[0m[1m [0m┃[1m [0m[1m…[0m[1m [0m┃[1m [0m[1m…[0m[1m [0m┃[1m [0m[1m…[0m[1m [0m┃[1m [0m[1m…[0m[1m [0m┃[1m [0m[1m…[0m[1m [0m┃[1m [0m[1m…[0m[1m [0m┃[1m [0m[1m…[0m[1m [0m┃[1m [0m[1m…[0m[1m [0m┃[1m [0m[1mz…[0m[1m [0m┃[1m [0m[1m…[0m[1m [0m┃[1m [0m[1me…[0m[1m [0m┃[1m [0m[1m…[0m[1m [0m┃[1m [0m[1mu…[0m[1m [0m┃[1m [0m[1m…[0m[1m [0m┃ [2m│[0m │
+│ [2m│[0m ┡━━━╇━━━╇━━━╇━━━╇━━━╇━━━╇━━━╇━━━╇━━━╇━━━╇━━━╇━━━━╇━━━╇━━━━╇━━━╇━━━━╇━━━┩ [2m│[0m │
+│ [2m│[0m │ … │ … │ 1 │ 2 │ … │ … │ … │ … │ … │ 0 │ 3 │ T… │ … │ F… │ … │ F… │ … │ [2m│[0m │
+│ [2m│[0m └───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴────┴───┴────┴───┴────┴───┘ [2m│[0m │
+│ [2m╰──────────────────────────────────────────────────────────────────────────╯[0m │
+│ [2m╭─[0m[2m─────────────────────────────[0m[2m [0m[1;2mML/MM flags[0m[2m [0m[2m──────────────────────────────[0m[2m─╮[0m │
+│ [2m│[0m ┏━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━┓ [2m│[0m │
+│ [2m│[0m ┃[1m [0m[1mdoML    [0m[1m [0m┃[1m [0m[1mdoMM     [0m[1m [0m┃[1m [0m[1mdoML_dimer       [0m[1m [0m┃[1m [0m[1mdefer_xla_warmup         [0m[1m [0m┃ [2m│[0m │
+│ [2m│[0m ┡━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━┩ [2m│[0m │
+│ [2m│[0m │ True     │ False     │ True              │ False                     │ [2m│[0m │
+│ [2m│[0m └──────────┴───────────┴───────────────────┴───────────────────────────┘ [2m│[0m │
+│ [2m╰──────────────────────────────────────────────────────────────────────────╯[0m │
+│ [2m╭─[0m[2m──────────────────────────────[0m[2m [0m[1;2mCheckpoint[0m[2m [0m[2m──────────────────────────────[0m[2m─╮[0m │
+│ [2m│[0m ┏━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓ [2m│[0m │
+│ [2m│[0m ┃[1m [0m[1mCheckpoint       [0m[1m [0m┃[1m [0m[1mname            [0m[1m [0m┃[1m [0m[1mepoch[0m[1m [0m┃[1m [0m[1mbest_loss[0m[1m [0m┃[1m [0m[1mSave Time[0m[1m [0m┃ [2m│[0m │
+│ [2m│[0m ┡━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━┩ [2m│[0m │
+│ [2m│[0m │ /cluster/home/bo… │ DESdimers_param… │ —     │ —         │ —         │ [2m│[0m │
+│ [2m│[0m └───────────────────┴──────────────────┴───────┴───────────┴───────────┘ [2m│[0m │
+│ [2m╰──────────────────────────────────────────────────────────────────────────╯[0m │
+╰──────────────────────────────────────────────────────────────────────────────╯
+[mmml] JAX compile threads=1 (OMP '1' -> 1; restored after warmup)
+[mmml] JAX compile threads=1 (OMP '1' -> 1; restored after warmup)
+E0628 15:30:08.583157   53207 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 15:30:08.583293   53182 execution_engine.cc:54] LLVM compilation error: Cannot allocate memory
+E0628 15:30:08.583334   53201 contiguous_section_memory_manager.cc:105] allocateMappedMemory failed with error: Cannot allocate memory
+E0628 15:30:08.583500   53201 contiguous_section_memory_manager.cc:148] Failed to satisfy suballocation request for 840
+LLVM ERROR: Unable to allocate section memory!
+/var/spool/slurm/slurmd/job5751634/slurm_script: line 26: 52888 Aborted                 (core dumped) '/cluster/home/boittier/mmml/.venv/bin/mmml' warmup-mlpot-jax --checkpoint '/cluster/home/boittier/mmml/examples/ckpts_json/DESdimers_params.json' --n-monomers 92 --atoms-per-monomer 5 --box-side 0 --ml-batch-size 16 --compile-threads 1

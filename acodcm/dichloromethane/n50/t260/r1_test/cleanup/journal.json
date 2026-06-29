@@ -1,0 +1,50 @@
+{
+  "category": "cleanup",
+  "title": "Pre-SD packing",
+  "steps": [
+    {
+      "index": 1,
+      "label": "initial",
+      "slug": "initial",
+      "stem": "001_initial",
+      "files": {
+        "crd": "/cluster/home/boittier/mmml_tutorial/acodcm/dichloromethane/n50/t260/r1_test/cleanup/001_initial.crd",
+        "pdb": "/cluster/home/boittier/mmml_tutorial/acodcm/dichloromethane/n50/t260/r1_test/cleanup/001_initial.pdb"
+      },
+      "hybrid_grms_kcalmol_A": 19.472087715862102
+    },
+    {
+      "index": 2,
+      "label": "Pre-SD packing:monomer_repack",
+      "slug": "pre_sd_packing_monomer_repack",
+      "stem": "002_pre_sd_packing_monomer_repack",
+      "files": {
+        "crd": "/cluster/home/boittier/mmml_tutorial/acodcm/dichloromethane/n50/t260/r1_test/cleanup/002_pre_sd_packing_monomer_repack.crd",
+        "pdb": "/cluster/home/boittier/mmml_tutorial/acodcm/dichloromethane/n50/t260/r1_test/cleanup/002_pre_sd_packing_monomer_repack.pdb"
+      },
+      "hybrid_grms_kcalmol_A": 19.472087715862102
+    },
+    {
+      "index": 3,
+      "label": "Pre-SD packing (post-FIRE)",
+      "slug": "pre_sd_packing_post_fire",
+      "stem": "003_pre_sd_packing_post_fire",
+      "files": {
+        "crd": "/cluster/home/boittier/mmml_tutorial/acodcm/dichloromethane/n50/t260/r1_test/cleanup/003_pre_sd_packing_post_fire.crd",
+        "pdb": "/cluster/home/boittier/mmml_tutorial/acodcm/dichloromethane/n50/t260/r1_test/cleanup/003_pre_sd_packing_post_fire.pdb"
+      },
+      "hybrid_grms_kcalmol_A": 30.73693110982363
+    },
+    {
+      "index": 4,
+      "label": "Pre-SD packing (post-BFGS)",
+      "slug": "pre_sd_packing_post_bfgs",
+      "stem": "004_pre_sd_packing_post_bfgs",
+      "files": {
+        "crd": "/cluster/home/boittier/mmml_tutorial/acodcm/dichloromethane/n50/t260/r1_test/cleanup/004_pre_sd_packing_post_bfgs.crd",
+        "pdb": "/cluster/home/boittier/mmml_tutorial/acodcm/dichloromethane/n50/t260/r1_test/cleanup/004_pre_sd_packing_post_bfgs.pdb"
+      },
+      "hybrid_grms_kcalmol_A": 30.73693110982363
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+seed 250260
+output dichloromethane/n50/t260/r1_test/packmol_cluster/init-packmol-sphere.pdb
+filetype pdb
+tolerance 2.0
+
+structure dichloromethane/n50/t260/r1_test/packmol_cluster/monomers/dcm.pdb
+  chain A
+  resnumbers 2
+  number 50
+  inside cube -18.0 -18.0 -18.0 36.0
+end structure

@@ -1,0 +1,39 @@
+{
+  "category": "prep_ladder",
+  "title": "Pre-MLpot geometry gate",
+  "root": "/cluster/home/boittier/mmml_tutorial/acodcm/dichloromethane/n50/t260/r1_test/prep_ladder",
+  "steps": [
+    {
+      "index": 1,
+      "label": "initial",
+      "slug": "initial",
+      "stem": "001_initial",
+      "files": {
+        "crd": "/cluster/home/boittier/mmml_tutorial/acodcm/dichloromethane/n50/t260/r1_test/prep_ladder/001_initial.crd",
+        "pdb": "/cluster/home/boittier/mmml_tutorial/acodcm/dichloromethane/n50/t260/r1_test/prep_ladder/001_initial.pdb"
+      },
+      "note": "worst inter-monomer 2.524 \u00c5"
+    },
+    {
+      "index": 2,
+      "label": "pre_mlpot:monomer_repack",
+      "slug": "pre_mlpot_monomer_repack",
+      "stem": "002_pre_mlpot_monomer_repack",
+      "files": {
+        "crd": "/cluster/home/boittier/mmml_tutorial/acodcm/dichloromethane/n50/t260/r1_test/prep_ladder/002_pre_mlpot_monomer_repack.crd",
+        "pdb": "/cluster/home/boittier/mmml_tutorial/acodcm/dichloromethane/n50/t260/r1_test/prep_ladder/002_pre_mlpot_monomer_repack.pdb"
+      }
+    }
+  ],
+  "summary": {
+    "enabled": true,
+    "ran": true,
+    "reason": "ok",
+    "steps_applied": [
+      "pre_mlpot:monomer_repack"
+    ],
+    "worst_intermonomer_A": 1.0941731990196448,
+    "aborted": false,
+    "contact_summary": "worst inter-monomer contact 1.094 \u00c5 (monomers 29/38, atoms Cl\u2013Cl; prep floor 1.00 \u00c5, typical vdW 3.6 \u00c5); tight for dynamics (1.5 \u00c5) but passes prep \u2014 hybrid mini / overlap rescue expected to open this before MD; substantially inside summed vdW radii \u2014 worth watching through pre-SD mini"
+  }
+}

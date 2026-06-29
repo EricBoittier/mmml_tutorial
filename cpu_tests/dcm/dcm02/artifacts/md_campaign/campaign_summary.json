@@ -1,0 +1,28 @@
+{
+  "jobs": [
+    {
+      "job_id": "prep",
+      "backend": "pycharmm",
+      "setup": "pycharmm_minimize",
+      "exit_code": 0,
+      "wall_time_s": 3.211837040999967,
+      "stages": []
+    },
+    {
+      "job_id": "heat_nve",
+      "backend": "pycharmm",
+      "setup": "pbc_nve",
+      "exit_code": 0,
+      "wall_time_s": 1.9706299579999609,
+      "stages": []
+    },
+    {
+      "job_id": "prod",
+      "backend": "pycharmm",
+      "setup": "pbc_npt",
+      "exit_code": 0,
+      "wall_time_s": 1.9347468569999933,
+      "stages": []
+    }
+  ]
+}

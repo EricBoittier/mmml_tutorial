@@ -1,0 +1,27 @@
+{
+  "category": "prep_ladder",
+  "title": "Pre-MLpot geometry gate",
+  "steps": [
+    {
+      "index": 1,
+      "label": "initial",
+      "slug": "initial",
+      "stem": "001_initial",
+      "files": {
+        "crd": "/cluster/home/boittier/mmml_tutorial/acodcm/dichloromethane/n98/t250/r1/prep_ladder/001_initial.crd",
+        "pdb": "/cluster/home/boittier/mmml_tutorial/acodcm/dichloromethane/n98/t250/r1/prep_ladder/001_initial.pdb"
+      },
+      "note": "worst inter-monomer 2.359 \u00c5"
+    },
+    {
+      "index": 2,
+      "label": "pre_mlpot:monomer_repack",
+      "slug": "pre_mlpot_monomer_repack",
+      "stem": "002_pre_mlpot_monomer_repack",
+      "files": {
+        "crd": "/cluster/home/boittier/mmml_tutorial/acodcm/dichloromethane/n98/t250/r1/prep_ladder/002_pre_mlpot_monomer_repack.crd",
+        "pdb": "/cluster/home/boittier/mmml_tutorial/acodcm/dichloromethane/n98/t250/r1/prep_ladder/002_pre_mlpot_monomer_repack.pdb"
+      }
+    }
+  ]
+}

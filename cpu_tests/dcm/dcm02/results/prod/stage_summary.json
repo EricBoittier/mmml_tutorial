@@ -1,0 +1,9 @@
+{
+  "job_id": "prod",
+  "backend": "pycharmm",
+  "setup": "pbc_npt",
+  "exit_code": 0,
+  "wall_time_s": 1.9347468569999933,
+  "handoff": {},
+  "stages": []
+}

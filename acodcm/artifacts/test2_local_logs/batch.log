@@ -1,0 +1,219 @@
+=== [n92_t250_r1] node=node01 2026-06-28T12:56:21+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+FAILED n92_t250_r1 (see /cluster/home/boittier/mmml_tutorial/acodcm/artifacts/test2_local_logs/n92_t250_r1.log)
+=== [n92_t250_r2] node=node01 2026-06-28T13:00:19+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+FAILED n92_t250_r2 (see /cluster/home/boittier/mmml_tutorial/acodcm/artifacts/test2_local_logs/n92_t250_r2.log)
+=== [n92_t250_r3] node=node01 2026-06-28T13:00:22+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+FAILED n92_t250_r3 (see /cluster/home/boittier/mmml_tutorial/acodcm/artifacts/test2_local_logs/n92_t250_r3.log)
+=== [n92_t250_r4] node=node01 2026-06-28T13:00:24+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+FAILED n92_t250_r4 (see /cluster/home/boittier/mmml_tutorial/acodcm/artifacts/test2_local_logs/n92_t250_r4.log)
+=== [n95_t250_r1] node=node01 2026-06-28T13:00:27+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+FAILED n95_t250_r1 (see /cluster/home/boittier/mmml_tutorial/acodcm/artifacts/test2_local_logs/n95_t250_r1.log)
+=== [n95_t250_r2] node=node01 2026-06-28T13:00:30+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+FAILED n95_t250_r2 (see /cluster/home/boittier/mmml_tutorial/acodcm/artifacts/test2_local_logs/n95_t250_r2.log)
+=== [n95_t250_r3] node=node01 2026-06-28T13:00:33+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+FAILED n95_t250_r3 (see /cluster/home/boittier/mmml_tutorial/acodcm/artifacts/test2_local_logs/n95_t250_r3.log)
+=== [n95_t250_r4] node=node01 2026-06-28T13:00:36+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+FAILED n95_t250_r4 (see /cluster/home/boittier/mmml_tutorial/acodcm/artifacts/test2_local_logs/n95_t250_r4.log)
+=== [n98_t250_r1] node=node01 2026-06-28T13:00:38+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+FAILED n98_t250_r1 (see /cluster/home/boittier/mmml_tutorial/acodcm/artifacts/test2_local_logs/n98_t250_r1.log)
+=== [n98_t250_r2] node=node01 2026-06-28T13:00:41+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+FAILED n98_t250_r2 (see /cluster/home/boittier/mmml_tutorial/acodcm/artifacts/test2_local_logs/n98_t250_r2.log)
+=== [n98_t250_r3] node=node01 2026-06-28T13:00:44+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+FAILED n98_t250_r3 (see /cluster/home/boittier/mmml_tutorial/acodcm/artifacts/test2_local_logs/n98_t250_r3.log)
+=== [n98_t250_r4] node=node01 2026-06-28T13:00:47+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+FAILED n98_t250_r4 (see /cluster/home/boittier/mmml_tutorial/acodcm/artifacts/test2_local_logs/n98_t250_r4.log)
+=== [n92_t260_r1] node=node01 2026-06-28T13:00:50+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+FAILED n92_t260_r1 (see /cluster/home/boittier/mmml_tutorial/acodcm/artifacts/test2_local_logs/n92_t260_r1.log)
+=== [n92_t260_r2] node=node01 2026-06-28T13:00:52+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+FAILED n92_t260_r2 (see /cluster/home/boittier/mmml_tutorial/acodcm/artifacts/test2_local_logs/n92_t260_r2.log)
+=== [n92_t260_r3] node=node01 2026-06-28T13:00:55+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+FAILED n92_t260_r3 (see /cluster/home/boittier/mmml_tutorial/acodcm/artifacts/test2_local_logs/n92_t260_r3.log)
+=== [n92_t260_r4] node=node01 2026-06-28T13:00:58+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+FAILED n92_t260_r4 (see /cluster/home/boittier/mmml_tutorial/acodcm/artifacts/test2_local_logs/n92_t260_r4.log)
+=== [n95_t260_r1] node=node01 2026-06-28T13:01:01+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+FAILED n95_t260_r1 (see /cluster/home/boittier/mmml_tutorial/acodcm/artifacts/test2_local_logs/n95_t260_r1.log)
+=== [n95_t260_r2] node=node01 2026-06-28T13:01:03+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+FAILED n95_t260_r2 (see /cluster/home/boittier/mmml_tutorial/acodcm/artifacts/test2_local_logs/n95_t260_r2.log)
+=== [n95_t260_r3] node=node01 2026-06-28T13:01:06+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+FAILED n95_t260_r3 (see /cluster/home/boittier/mmml_tutorial/acodcm/artifacts/test2_local_logs/n95_t260_r3.log)
+=== [n95_t260_r4] node=node01 2026-06-28T13:01:09+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+FAILED n95_t260_r4 (see /cluster/home/boittier/mmml_tutorial/acodcm/artifacts/test2_local_logs/n95_t260_r4.log)
+=== [n98_t260_r1] node=node01 2026-06-28T13:01:12+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+FAILED n98_t260_r1 (see /cluster/home/boittier/mmml_tutorial/acodcm/artifacts/test2_local_logs/n98_t260_r1.log)
+=== [n98_t260_r2] node=node01 2026-06-28T13:01:15+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+FAILED n98_t260_r2 (see /cluster/home/boittier/mmml_tutorial/acodcm/artifacts/test2_local_logs/n98_t260_r2.log)
+=== [n98_t260_r3] node=node01 2026-06-28T13:01:18+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+FAILED n98_t260_r3 (see /cluster/home/boittier/mmml_tutorial/acodcm/artifacts/test2_local_logs/n98_t260_r3.log)
+Removing stale output (nres=10, want 98): ./dichloromethane/n98/t260/r4
+=== [n98_t260_r4] node=node01 2026-06-28T13:01:20+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+FAILED n98_t260_r4 (see /cluster/home/boittier/mmml_tutorial/acodcm/artifacts/test2_local_logs/n98_t260_r4.log)
+Done. Logs: /cluster/home/boittier/mmml_tutorial/acodcm/artifacts/test2_local_logs
+=== [n92_t250_r1] 2026-06-28T13:43:18+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node01
+sbatch: unrecognized option '--mpi=none'
+Try "sbatch --help" for more information
+FAILED n92_t250_r1 (sbatch submit)
+=== [n92_t250_r2] 2026-06-28T13:43:19+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node01
+sbatch: unrecognized option '--mpi=none'
+Try "sbatch --help" for more information
+FAILED n92_t250_r2 (sbatch submit)
+=== [n92_t250_r3] 2026-06-28T13:43:19+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node01
+sbatch: unrecognized option '--mpi=none'
+Try "sbatch --help" for more information
+FAILED n92_t250_r3 (sbatch submit)
+=== [n92_t250_r4] 2026-06-28T13:43:20+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node01
+sbatch: unrecognized option '--mpi=none'
+Try "sbatch --help" for more information
+FAILED n92_t250_r4 (sbatch submit)
+=== [n95_t250_r1] 2026-06-28T13:43:21+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node01
+sbatch: unrecognized option '--mpi=none'
+Try "sbatch --help" for more information
+FAILED n95_t250_r1 (sbatch submit)
+=== [n95_t250_r2] 2026-06-28T13:43:21+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node01
+sbatch: unrecognized option '--mpi=none'
+Try "sbatch --help" for more information
+FAILED n95_t250_r2 (sbatch submit)
+=== [n95_t250_r3] 2026-06-28T13:43:22+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node01
+sbatch: unrecognized option '--mpi=none'
+Try "sbatch --help" for more information
+FAILED n95_t250_r3 (sbatch submit)
+=== [n95_t250_r4] 2026-06-28T13:43:22+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node01
+sbatch: unrecognized option '--mpi=none'
+Try "sbatch --help" for more information
+FAILED n95_t250_r4 (sbatch submit)
+=== [n98_t250_r1] 2026-06-28T13:43:23+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node01
+sbatch: unrecognized option '--mpi=none'
+Try "sbatch --help" for more information
+FAILED n98_t250_r1 (sbatch submit)
+=== [n98_t250_r2] 2026-06-28T13:43:23+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node01
+sbatch: unrecognized option '--mpi=none'
+Try "sbatch --help" for more information
+FAILED n98_t250_r2 (sbatch submit)
+=== [n98_t250_r3] 2026-06-28T13:43:24+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node01
+sbatch: unrecognized option '--mpi=none'
+Try "sbatch --help" for more information
+FAILED n98_t250_r3 (sbatch submit)
+=== [n98_t250_r4] 2026-06-28T13:43:24+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node01
+sbatch: unrecognized option '--mpi=none'
+Try "sbatch --help" for more information
+FAILED n98_t250_r4 (sbatch submit)
+=== [n92_t260_r1] 2026-06-28T13:43:25+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node01
+sbatch: unrecognized option '--mpi=none'
+Try "sbatch --help" for more information
+FAILED n92_t260_r1 (sbatch submit)
+=== [n92_t260_r2] 2026-06-28T13:43:25+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node01
+sbatch: unrecognized option '--mpi=none'
+Try "sbatch --help" for more information
+FAILED n92_t260_r2 (sbatch submit)
+=== [n92_t260_r3] 2026-06-28T13:43:26+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node01
+sbatch: unrecognized option '--mpi=none'
+Try "sbatch --help" for more information
+FAILED n92_t260_r3 (sbatch submit)
+=== [n92_t260_r4] 2026-06-28T13:43:26+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node01
+sbatch: unrecognized option '--mpi=none'
+Try "sbatch --help" for more information
+FAILED n92_t260_r4 (sbatch submit)
+=== [n95_t260_r1] 2026-06-28T13:43:27+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node01
+sbatch: unrecognized option '--mpi=none'
+Try "sbatch --help" for more information
+FAILED n95_t260_r1 (sbatch submit)
+=== [n95_t260_r2] 2026-06-28T13:43:27+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node01
+sbatch: unrecognized option '--mpi=none'
+Try "sbatch --help" for more information
+FAILED n95_t260_r2 (sbatch submit)
+=== [n95_t260_r3] 2026-06-28T13:43:28+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node01
+sbatch: unrecognized option '--mpi=none'
+Try "sbatch --help" for more information
+FAILED n95_t260_r3 (sbatch submit)
+=== [n95_t260_r4] 2026-06-28T13:43:28+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node01
+sbatch: unrecognized option '--mpi=none'
+Try "sbatch --help" for more information
+FAILED n95_t260_r4 (sbatch submit)
+=== [n98_t260_r1] 2026-06-28T13:43:29+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node01
+sbatch: unrecognized option '--mpi=none'
+Try "sbatch --help" for more information
+FAILED n98_t260_r1 (sbatch submit)
+=== [n98_t260_r2] 2026-06-28T13:43:29+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node01
+sbatch: unrecognized option '--mpi=none'
+Try "sbatch --help" for more information
+FAILED n98_t260_r2 (sbatch submit)
+=== [n98_t260_r3] 2026-06-28T13:43:30+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node01
+sbatch: unrecognized option '--mpi=none'
+Try "sbatch --help" for more information
+FAILED n98_t260_r3 (sbatch submit)
+=== [n98_t260_r4] 2026-06-28T13:43:30+02:00 ===
+CHARMM_LIB_DIR=/cluster/home/boittier/.cache/mmml-charmm-build/tier_4000000_nodomdec/lib
+node=node01
+sbatch: unrecognized option '--mpi=none'
+Try "sbatch --help" for more information
+FAILED n98_t260_r4 (sbatch submit)
+Done. Logs: /cluster/home/boittier/mmml_tutorial/acodcm/artifacts/test2_local_logs

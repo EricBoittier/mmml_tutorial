@@ -1,0 +1,1 @@
+mmml md-system --output-dir dichloromethane/n92/t260/r1_test --backend pycharmm --restart-from /cluster/home/boittier/mmml_tutorial/acodcm/dichloromethane/n92/t260/r1_test/prep_ladder/002_pre_mlpot_monomer_repack.crd

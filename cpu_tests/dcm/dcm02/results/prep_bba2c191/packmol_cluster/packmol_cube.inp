@@ -1,0 +1,11 @@
+seed 42
+output /cluster/home/boittier/mmml_tutorial/cpu_tests/dcm/dcm02/results/prep_bba2c191/packmol_cluster/init-packmol-sphere.pdb
+filetype pdb
+tolerance 2.0
+
+structure /cluster/home/boittier/mmml_tutorial/cpu_tests/dcm/dcm02/results/prep_bba2c191/packmol_cluster/monomers/dcm.pdb
+  chain A
+  resnumbers 2
+  number 20
+  inside cube -16.0 -16.0 -16.0 32.0
+end structure

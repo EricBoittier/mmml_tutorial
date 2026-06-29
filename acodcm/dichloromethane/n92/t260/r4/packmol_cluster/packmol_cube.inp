@@ -1,0 +1,11 @@
+seed 892260
+output dichloromethane/n92/t260/r4/packmol_cluster/init-packmol-sphere.pdb
+filetype pdb
+tolerance 2.0
+
+structure dichloromethane/n92/t260/r4/packmol_cluster/monomers/dcm.pdb
+  chain A
+  resnumbers 2
+  number 92
+  inside cube -15.0 -15.0 -15.0 30.0
+end structure

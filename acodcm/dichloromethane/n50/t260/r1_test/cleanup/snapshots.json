@@ -1,0 +1,31 @@
+{
+  "tag": "dcm_50",
+  "snapshots": [
+    {
+      "seq": 10,
+      "slug": "rescue_10",
+      "stem": "10_rescue_10",
+      "kind": "intra_rescue",
+      "label": "Geometry rescue: after MLpot mini (pre-dynamics)",
+      "files": {
+        "crd": "/cluster/home/boittier/mmml_tutorial/acodcm/dichloromethane/n50/t260/r1_test/cleanup/10_rescue_10.crd",
+        "energy_json": "/cluster/home/boittier/mmml_tutorial/acodcm/dichloromethane/n50/t260/r1_test/cleanup/10_rescue_10_energy.json",
+        "pdb": "/cluster/home/boittier/mmml_tutorial/acodcm/dichloromethane/n50/t260/r1_test/cleanup/10_rescue_10.pdb"
+      },
+      "grms_kcalmol_A": 0.9496557684552368
+    },
+    {
+      "seq": 11,
+      "slug": "rescue_11",
+      "stem": "11_rescue_11",
+      "kind": "intra_rescue",
+      "label": "Geometry rescue: HEAT at step 4000",
+      "files": {
+        "crd": "/cluster/home/boittier/mmml_tutorial/acodcm/dichloromethane/n50/t260/r1_test/cleanup/11_rescue_11.crd",
+        "energy_json": "/cluster/home/boittier/mmml_tutorial/acodcm/dichloromethane/n50/t260/r1_test/cleanup/11_rescue_11_energy.json",
+        "pdb": "/cluster/home/boittier/mmml_tutorial/acodcm/dichloromethane/n50/t260/r1_test/cleanup/11_rescue_11.pdb"
+      },
+      "grms_kcalmol_A": 39.406847813568106
+    }
+  ]
+}
