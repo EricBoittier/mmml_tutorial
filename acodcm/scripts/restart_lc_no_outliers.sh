@@ -104,6 +104,8 @@ PYTHONPATH="${HOME}/mmml" python3 scripts/build_lc_filtered_split.py \\
 cat > "${config_path}" <<YAML
 data: ${split_dir}/train.npz
 valid_data: ${split_dir}/valid.npz
+n_train: 0
+n_valid: 0
 ckpt_dir: ${ckpt_dir}
 tag: ${dataset}1_n${n_train}_r${repeat}_noout
 seed: ${seed}
