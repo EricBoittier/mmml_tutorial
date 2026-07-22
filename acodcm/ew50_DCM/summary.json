@@ -1,0 +1,13 @@
+{
+  "resid": "DCM",
+  "checkpoint": "/mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/_ew50_frozen",
+  "mm_switch_on": 6.0,
+  "ml_switch_width": 1.5,
+  "n_rays": 240,
+  "n_evaluated": 240,
+  "n_dropped": 0,
+  "n_rays_spurious": 29,
+  "frac_rays_spurious": 0.12083333333333333,
+  "mean_min_kcal": -1.1762406032440567,
+  "deepest_kcal": -3.149158900648356
+}

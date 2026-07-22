@@ -1,0 +1,14 @@
+{
+  "resid": "ACO",
+  "checkpoint": "/mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/_gate_frozen_e222",
+  "use_ema": true,
+  "mm_switch_on": 6.0,
+  "ml_switch_width": 1.5,
+  "n_rays": 240,
+  "n_evaluated": 240,
+  "n_dropped": 0,
+  "n_rays_spurious": 42,
+  "frac_rays_spurious": 0.175,
+  "mean_min_kcal": 22.39534349117988,
+  "deepest_kcal": -4.542276165890973
+}

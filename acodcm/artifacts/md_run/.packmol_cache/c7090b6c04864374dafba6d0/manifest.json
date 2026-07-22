@@ -1,0 +1,55 @@
+{
+  "cache_key": "c7090b6c04864374dafba6d0",
+  "center": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "composition": [
+    [
+      "DCM",
+      206
+    ]
+  ],
+  "cube_side": 26.0,
+  "fingerprint": {
+    "center": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "charmm_abnr_steps": 1000,
+    "charmm_sd_steps": 200,
+    "charmm_tolenr": 0.001,
+    "charmm_tolgrd": 0.001,
+    "composition": [
+      [
+        "DCM",
+        206
+      ]
+    ],
+    "cube_side": 26.0,
+    "packmol_padding_A": 1.0,
+    "placement": "cube",
+    "prep_gate_settings": {
+      "min_intermonomer_atom_distance": 0.5
+    },
+    "radius": null,
+    "seed": 22,
+    "sim_cell_side": 28.0,
+    "spacing": 5.0,
+    "tolerance": 2.0,
+    "version": 3
+  },
+  "packmol_padding_A": 1.0,
+  "placement": "cube",
+  "prep_gate_settings": {
+    "min_intermonomer_atom_distance": 0.5
+  },
+  "radius": null,
+  "seed": 22,
+  "sim_cell_side": 28.0,
+  "spacing": 5.0,
+  "tolerance": 2.0,
+  "version": 3
+}

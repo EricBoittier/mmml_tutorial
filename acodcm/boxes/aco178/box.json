@@ -1,0 +1,57 @@
+{
+  "status": "pass",
+  "profile": "dense",
+  "composition": "ACO:178",
+  "n_molecules": 178,
+  "n_atoms": 1780,
+  "box_side_A": 27.97648929585141,
+  "density_g_cm3": 0.7840000000000006,
+  "target_box_side_A": 27.97648929585141,
+  "target_density_g_cm3": 0.784,
+  "density_relative_error": 7.080503983578804e-16,
+  "worst_intermonomer_A": 1.5254276311282151,
+  "prep_overlap_floor_A": 0.45,
+  "dynamics_overlap_reference_A": 0.45,
+  "mm_grms_kcalmol_A": 0.14105851421590357,
+  "mc_density": {
+    "enabled": true,
+    "ran": false,
+    "reason": "hold_box_side",
+    "initial_box_A": 27.97648929585141,
+    "final_box_A": 27.97648929585141,
+    "target_density_g_cm3": null,
+    "initial_density_g_cm3": null,
+    "final_density_g_cm3": null,
+    "accepted_moves": 0,
+    "attempted_moves": 0,
+    "best_objective": null,
+    "min_intermonomer_distance_A": null
+  },
+  "geometry_gate": {
+    "enabled": true,
+    "ran": true,
+    "reason": "ok",
+    "steps_applied": [
+      "pre_mlpot:monomer_repack_skipped_clean",
+      "pre_mlpot:mc_density_skipped_hold_box"
+    ],
+    "worst_intermonomer_A": 2.216140692013853,
+    "aborted": false
+  },
+  "artifacts": {
+    "model_psf": "/mmhome/boittier/home/mmml_tutorial/acodcm/boxes/aco178/model.psf",
+    "model_crd": "/mmhome/boittier/home/mmml_tutorial/acodcm/boxes/aco178/model.crd",
+    "model_pdb": "/mmhome/boittier/home/mmml_tutorial/acodcm/boxes/aco178/model.pdb"
+  },
+  "steps_applied": [
+    "packmol_cluster",
+    "mc_density_skipped_hold_box",
+    "save_model_topology",
+    "charmm_mm_pre_minimize",
+    "pre_mlpot:monomer_repack_skipped_clean",
+    "pre_mlpot:mc_density_skipped_hold_box",
+    "write_model_crd"
+  ],
+  "message": "worst inter-monomer contact 1.525 \u00c5 (prep floor 0.450 \u00c5)",
+  "generated_at": "2026-07-16T20:22:23.701464+00:00"
+}

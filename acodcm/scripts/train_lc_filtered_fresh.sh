@@ -159,17 +159,16 @@ mmml physnet-evaluate \\
   -o "${out_dir}"
 
 echo "=== [4/4] run_summary.json ==="
-latest_num=\$(basename "\$run_dir" | sed 's|.*/epoch-||')
-if [[ "\$latest_num" == "\$run_dir" ]]; then
-  latest_num=\$(basename "\$(latest_epoch_dir "\$run_dir")" | sed 's/epoch-//')
-fi
-python3 - <<PY
+latest_num=\$(basename "\$(latest_epoch_dir "\$run_dir")" | sed 's/epoch-//')
+export LC_RUN_DIR="\$run_dir" LC_LATEST_NUM="\$latest_num"
+python3 - <<'PY'
 import json
+import os
 from pathlib import Path
-out = Path("${out_dir}")
+out = Path("""${out_dir}""")
 metrics = json.loads((out / "training_metrics.json").read_text())
 eval_metrics = json.loads((out / "metrics.json").read_text())
-manifest = json.loads(Path("${split_dir}/manifest.json").read_text())
+manifest = json.loads(Path("""${split_dir}/manifest.json""").read_text())
 energy = eval_metrics.get("energy", {})
 forces = eval_metrics.get("forces", {})
 summary = {
@@ -183,9 +182,8 @@ summary = {
     "outlier_mode": "${OUTLIER_MODE}",
     "n_outliers_removed": manifest.get("n_removed"),
     "removed_indices": manifest.get("removed_indices"),
-    "run_dir": "${ckpt_dir}",
-    "orbax_run_dir": "\$run_dir",
-    "latest_epoch": f"epoch-{\$latest_num}",
+    "run_dir": os.environ["LC_RUN_DIR"],
+    "latest_epoch": f"epoch-{os.environ['LC_LATEST_NUM']}",
     "test_eval": {
         "energy_mae_kcal_mol": energy.get("mae_kcal_mol"),
         "energy_rmse_kcal_mol": energy.get("rmse_kcal_mol"),

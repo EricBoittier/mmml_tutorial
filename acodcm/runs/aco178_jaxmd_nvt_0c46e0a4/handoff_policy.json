@@ -1,0 +1,29 @@
+{
+  "handoff_active": false,
+  "source_path": null,
+  "handoff_format": null,
+  "n_atoms": null,
+  "prior_backend": null,
+  "prior_stages": null,
+  "box_side_source": null,
+  "velocities_source": null,
+  "restart_path": null,
+  "box_side_A": 27.97648929585141,
+  "box_source": "yaml",
+  "box_warnings": [],
+  "velocities_in_handoff": false,
+  "continue_velocities": false,
+  "velocity_policy": "maxwell_boltzmann",
+  "use_handoff_velocities": false,
+  "skip_pre_min": false,
+  "handoff_pre_minimize": false,
+  "quality_gate_enabled": false,
+  "quality_gate_triggered": false,
+  "cutoffs": {
+    "ml_switch_width": 1.5,
+    "mm_switch_on": 6.0,
+    "mm_switch_width": 5.0
+  },
+  "initial_mmml_energy_eV": -7401.601532611775,
+  "initial_mmml_fmax_eVA": 1.1442263603058642
+}

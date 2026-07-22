@@ -1,5 +1,5 @@
 {
-  "tag": "dcm_200",
+  "tag": "dcm_240",
   "snapshots": [
     {
       "seq": 0,
@@ -8,8 +8,8 @@
       "kind": "packmol",
       "label": "Packmol sphere placement (pre-minimize)",
       "files": {
-        "pdb": "/cluster/home/boittier/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/model.pdb",
-        "psf": "/cluster/home/boittier/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/model.psf"
+        "pdb": "/mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/model.pdb",
+        "psf": "/mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/model.psf"
       }
     },
     {
@@ -19,12 +19,12 @@
       "kind": "MM",
       "label": "CHARMM CGENFF SD/ABNR before MLpot (MM only)",
       "files": {
-        "crd": "/cluster/home/boittier/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/pretreat/01_mm.crd",
-        "energy_json": "/cluster/home/boittier/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/pretreat/01_mm_energy.json",
-        "pdb": "/cluster/home/boittier/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/pretreat/01_mm.pdb",
-        "psf": "/cluster/home/boittier/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/pretreat/01_mm.psf"
+        "crd": "/mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/pretreat/01_mm.crd",
+        "energy_json": "/mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/pretreat/01_mm_energy.json",
+        "pdb": "/mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/pretreat/01_mm.pdb",
+        "psf": "/mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/pretreat/01_mm.psf"
       },
-      "grms_kcalmol_A": 0.24866572564016828
+      "grms_kcalmol_A": 0.09266844535365244
     }
   ]
 }

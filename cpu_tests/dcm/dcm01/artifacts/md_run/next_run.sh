@@ -6,15 +6,16 @@ CMD=(
   mmml
   md-system
   --config
-  /cluster/home/boittier/mmml_tutorial/cpu_tests/dcm/dcm01/md_system.yaml
+  md_system.yaml
   --output-dir
   artifacts/md_run
   --backend
   pycharmm
   --restart-from
-  /cluster/home/boittier/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/pretreat/mini_box_equil.res
+  /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/baseline.res
   --md-stages
   mini,heat,nve
-  --no-echeck-heat
+  --dynamics-intra-rescue-sd-steps
+  400
 )
 exec "${CMD[@]}"

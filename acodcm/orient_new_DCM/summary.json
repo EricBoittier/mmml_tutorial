@@ -1,0 +1,13 @@
+{
+  "resid": "DCM",
+  "checkpoint": "/mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/hybrid/hybrid-7721fa95-d060-4c33-83f3-ced2c4da6c4f",
+  "mm_switch_on": 6.0,
+  "ml_switch_width": 1.5,
+  "n_rays": 240,
+  "n_evaluated": 240,
+  "n_dropped": 0,
+  "n_rays_spurious": 121,
+  "frac_rays_spurious": 0.5041666666666667,
+  "mean_min_kcal": -6.369818680040042,
+  "deepest_kcal": -33.644117460250854
+}

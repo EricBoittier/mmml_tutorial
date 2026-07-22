@@ -1,0 +1,14 @@
+{
+  "resid": "ACO",
+  "checkpoint": "/mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/_gate_frozen_b7c117aa-27b1-46d3-9c02-4ceef4b14b17_e106",
+  "use_ema": true,
+  "mm_switch_on": 6.0,
+  "ml_switch_width": 1.5,
+  "n_rays": 240,
+  "n_evaluated": 240,
+  "n_dropped": 0,
+  "n_rays_spurious": 33,
+  "frac_rays_spurious": 0.1375,
+  "mean_min_kcal": 22.1047617819648,
+  "deepest_kcal": -4.760288367412985
+}
