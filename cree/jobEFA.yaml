@@ -1,0 +1,40 @@
+data: ./out/splits/energies_forces_dipoles_train.npz 
+  #valid_data: ./out/splits/dcm/energies_forces_dipoles_valid.npz
+ckpt_dir: ./ckpts/efa-test
+tag: efa1
+
+# Omit n_train/n_valid when valid_data is set (uses full NPZ files as-is).
+n_train: 9100
+n_valid: 1000
+seed: 42
+
+batch_size: 12
+num_epochs: 3500
+  #best: true
+#save: best
+#save_config: "./ckpts/test"
+learning_rate: 0.001
+optimizer: amsgrad
+energy_weight: 100.0
+forces_weight: 10.0 #52.91
+dipole_weight: 10.0 #10.0  #27.21
+charges_weight: 1.0
+charges: true
+include_electrostatics: true
+#restart: /mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/dcm1-c137fb42-1f65-4748-880b-8f8184a20f70
+#restart: /mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/dcm1/dcm1-efa336d8-e301-40a1-9163-3edfb404ab66
+#restart: /mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/dcm-test/dcm1-41eae5f0-bfb1-482c-a4f9-1ce618dea491
+
+# Auto-detected from N/R when omitted
+# num_atoms: 40
+max_atomic_number: 35
+restart: /mmhome/boittier/home/mmml_tutorial/cree/ckpts/efa-test/efa1-dd314f0c-6ba9-4d8e-ba95-1fc922cdc971/
+features: 46
+max_degree: 0
+num_basis_functions: 46
+num_iterations: 3
+zbl: true
+efa: true
+n_res: 3
+cutoff: 4.0
+

@@ -1,0 +1,57 @@
+{
+  "cache_key": "0e47508e47a7730691289b54",
+  "center": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "composition": [
+    [
+      "ACO",
+      178
+    ]
+  ],
+  "cube_side": 25.97648929585141,
+  "fingerprint": {
+    "center": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "charmm_abnr_steps": 1000,
+    "charmm_sd_steps": 1000,
+    "charmm_tolenr": 0.001,
+    "charmm_tolgrd": 0.001,
+    "composition": [
+      [
+        "ACO",
+        178
+      ]
+    ],
+    "cube_side": 25.97648929585141,
+    "packmol_padding_A": 1.0,
+    "placement": "cube",
+    "prep_gate_settings": {
+      "min_intermonomer_atom_distance": 0.45,
+      "pre_mlpot_overlap_min_distance": 0.45
+    },
+    "radius": null,
+    "seed": 123,
+    "sim_cell_side": 27.97648929585141,
+    "spacing": 4.0,
+    "tolerance": 2.0,
+    "version": 3
+  },
+  "packmol_padding_A": 1.0,
+  "placement": "cube",
+  "prep_gate_settings": {
+    "min_intermonomer_atom_distance": 0.45,
+    "pre_mlpot_overlap_min_distance": 0.45
+  },
+  "radius": null,
+  "seed": 123,
+  "sim_cell_side": 27.97648929585141,
+  "spacing": 4.0,
+  "tolerance": 2.0,
+  "version": 3
+}

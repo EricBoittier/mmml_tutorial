@@ -1,0 +1,57 @@
+{
+  "category": "prep_ladder",
+  "title": "Pre-MLpot geometry gate",
+  "root": "/mmhome/boittier/home/mmml_tutorial/acodcm/boxes/dcm206/prep_ladder",
+  "steps": [
+    {
+      "index": 1,
+      "label": "initial",
+      "slug": "initial",
+      "stem": "001_initial",
+      "files": {
+        "crd": "/mmhome/boittier/home/mmml_tutorial/acodcm/boxes/dcm206/prep_ladder/001_initial.crd",
+        "pdb": "/mmhome/boittier/home/mmml_tutorial/acodcm/boxes/dcm206/prep_ladder/001_initial.pdb",
+        "psf": "/mmhome/boittier/home/mmml_tutorial/acodcm/boxes/dcm206/prep_ladder/001_initial.psf"
+      },
+      "box_side_A": 28.16726609672617,
+      "note": "worst inter-monomer 2.352 \u00c5"
+    },
+    {
+      "index": 2,
+      "label": "pre_mlpot:monomer_repack_skipped_clean",
+      "slug": "pre_mlpot_monomer_repack_skipped_clean",
+      "stem": "002_pre_mlpot_monomer_repack_skipped_clean",
+      "files": {
+        "crd": "/mmhome/boittier/home/mmml_tutorial/acodcm/boxes/dcm206/prep_ladder/002_pre_mlpot_monomer_repack_skipped_clean.crd",
+        "pdb": "/mmhome/boittier/home/mmml_tutorial/acodcm/boxes/dcm206/prep_ladder/002_pre_mlpot_monomer_repack_skipped_clean.pdb",
+        "psf": "/mmhome/boittier/home/mmml_tutorial/acodcm/boxes/dcm206/prep_ladder/002_pre_mlpot_monomer_repack_skipped_clean.psf"
+      },
+      "box_side_A": 28.16726609672617,
+      "note": "worst inter-monomer 2.352 \u00c5 >= floor 0.450 \u00c5"
+    },
+    {
+      "index": 3,
+      "label": "pre_mlpot:mc_density_skipped_hold_box",
+      "slug": "pre_mlpot_mc_density_skipped_hold_box",
+      "stem": "003_pre_mlpot_mc_density_skipped_hold_box",
+      "files": {
+        "crd": "/mmhome/boittier/home/mmml_tutorial/acodcm/boxes/dcm206/prep_ladder/003_pre_mlpot_mc_density_skipped_hold_box.crd",
+        "pdb": "/mmhome/boittier/home/mmml_tutorial/acodcm/boxes/dcm206/prep_ladder/003_pre_mlpot_mc_density_skipped_hold_box.pdb",
+        "psf": "/mmhome/boittier/home/mmml_tutorial/acodcm/boxes/dcm206/prep_ladder/003_pre_mlpot_mc_density_skipped_hold_box.psf"
+      },
+      "box_side_A": 28.16726609672617
+    }
+  ],
+  "summary": {
+    "enabled": true,
+    "ran": true,
+    "reason": "ok",
+    "steps_applied": [
+      "pre_mlpot:monomer_repack_skipped_clean",
+      "pre_mlpot:mc_density_skipped_hold_box"
+    ],
+    "worst_intermonomer_A": 2.351621142141558,
+    "aborted": false,
+    "contact_summary": "worst inter-monomer contact 2.009 \u00c5 (monomers 109/182, atoms H\u2013H; prep floor 0.45 \u00c5, typical vdW 2.4 \u00c5); OK: above dynamics guard (0.5 \u00c5); H\u2013H: equilibrium ~2.4 \u00c5; sub-2 \u00c5 in prep is strained but usually relaxes in mini"
+  }
+}

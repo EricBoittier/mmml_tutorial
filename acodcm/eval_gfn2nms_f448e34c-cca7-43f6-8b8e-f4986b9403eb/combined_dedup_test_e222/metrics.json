@@ -1,0 +1,20 @@
+{
+  "checkpoint": "/mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/_gate_frozen_e222/epoch-222",
+  "data": "/mmhome/boittier/home/mmml_tutorial/acodcm/out_combined_dedup/energies_forces_dipoles_test.npz",
+  "natoms": 20,
+  "n_batches": 47,
+  "batch_size": 16,
+  "energy": {
+    "mae_kcal_mol": 1334.6851635739247,
+    "rmse_kcal_mol": 1411.7283770931244,
+    "mae_ev": 57.87792308329772,
+    "rmse_ev": 61.218861686536606
+  },
+  "forces": {
+    "mae_kcal_mol": 3.7476276988949793,
+    "rmse_kcal_mol": 6.434844442552055,
+    "mae_ev": 0.16251391236017576,
+    "rmse_ev": 0.27904365903171696
+  },
+  "n_params": 12589
+}

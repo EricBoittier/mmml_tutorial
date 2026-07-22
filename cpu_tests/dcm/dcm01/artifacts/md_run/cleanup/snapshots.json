@@ -1,0 +1,18 @@
+{
+  "tag": "tip3_100",
+  "snapshots": [
+    {
+      "seq": 10,
+      "slug": "rescue_10",
+      "stem": "10_rescue_10",
+      "kind": "intra_rescue",
+      "label": "Geometry rescue: HEAT after early-abort recovery (step 1000)",
+      "files": {
+        "crd": "/mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/cleanup/10_rescue_10.crd",
+        "energy_json": "/mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/cleanup/10_rescue_10_energy.json",
+        "pdb": "/mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/cleanup/10_rescue_10.pdb"
+      },
+      "grms_kcalmol_A": 45.05393931298807
+    }
+  ]
+}

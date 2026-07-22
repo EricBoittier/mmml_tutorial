@@ -1,0 +1,80 @@
+{
+  "ensemble": "nve",
+  "nsteps_requested": 200000,
+  "nsteps_completed": 7500,
+  "frames": 15,
+  "status": "interrupted",
+  "error": "KeyboardInterrupt",
+  "h5": "pbc_nve_jaxmd_nve.h5",
+  "traj": "pbc_nve.traj",
+  "traj_parts": [
+    "pbc_nve.traj"
+  ],
+  "traj_part_count": 1,
+  "box_A": 51.11939651795026,
+  "free_space": false,
+  "pressure_atm": 1.0,
+  "temperature_K": 250.0,
+  "composition": {
+    "ACO": 78
+  },
+  "psf_charges": {
+    "total_charge_e": -2.7755575615628914e-15,
+    "n_charged_atoms": 780,
+    "min_charge_e": -0.48,
+    "max_charge_e": 0.4,
+    "residues": {
+      "ACO": {
+        "n_atoms": 10,
+        "charge_sum_e": -5.551115123125783e-17,
+        "atom_types": [
+          "O1",
+          "C1",
+          "C2",
+          "C3",
+          "H21",
+          "H22",
+          "H23",
+          "H31",
+          "H32",
+          "H33"
+        ],
+        "charges_e": [
+          -0.48,
+          0.4,
+          -0.23,
+          -0.23,
+          0.09,
+          0.09,
+          0.09,
+          0.09,
+          0.09,
+          0.09
+        ]
+      }
+    }
+  },
+  "charmm_minimization": {
+    "nbxmod": 5,
+    "sd_steps": 200,
+    "abnr_steps": 1000,
+    "rescue_minimize": true,
+    "rescue_sd_steps": 100,
+    "rescue_abnr_steps": 300
+  },
+  "placement": "random_3d",
+  "placement_seed": 22,
+  "neighbor_update_interval_steps": 1,
+  "neighbor_expected_updates": 200000,
+  "neighbor_internal_update_interval_calls": 1,
+  "neighbor_internal_skin_distance_A": 0.5,
+  "pre_md_minimization": {},
+  "dynamics_overlap_action": "warn",
+  "dynamics_overlap_charmm_rescue_enabled": true,
+  "dynamics_overlap_charmm_sd_steps": 200,
+  "dynamics_overlap_charmm_abnr_steps": 400,
+  "dynamics_overlap_charmm_rescue_count": 0,
+  "traj_export_molecular_wrap": false,
+  "dynamics_overlap_warning_count": 0,
+  "dynamics_min_intermonomer_distance_A": 1.759863863112258
+}

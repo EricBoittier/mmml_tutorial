@@ -1,7 +1,7 @@
 {
   "category": "prep_ladder",
   "title": "Pre-MLpot geometry gate",
-  "root": "/cluster/home/boittier/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/prep_ladder",
+  "root": "/mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/prep_ladder",
   "steps": [
     {
       "index": 1,
@@ -9,11 +9,12 @@
       "slug": "initial",
       "stem": "001_initial",
       "files": {
-        "crd": "/cluster/home/boittier/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/prep_ladder/001_initial.crd",
-        "pdb": "/cluster/home/boittier/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/prep_ladder/001_initial.pdb"
+        "crd": "/mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/prep_ladder/001_initial.crd",
+        "pdb": "/mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/prep_ladder/001_initial.pdb",
+        "psf": "/mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/prep_ladder/001_initial.psf"
       },
-      "box_side_A": 31.2923156734942,
-      "note": "worst inter-monomer 2.219 \u00c5"
+      "box_side_A": 34.0,
+      "note": "worst inter-monomer 2.321 \u00c5"
     },
     {
       "index": 2,
@@ -21,10 +22,11 @@
       "slug": "pre_mlpot_monomer_repack",
       "stem": "002_pre_mlpot_monomer_repack",
       "files": {
-        "crd": "/cluster/home/boittier/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/prep_ladder/002_pre_mlpot_monomer_repack.crd",
-        "pdb": "/cluster/home/boittier/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/prep_ladder/002_pre_mlpot_monomer_repack.pdb"
+        "crd": "/mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/prep_ladder/002_pre_mlpot_monomer_repack.crd",
+        "pdb": "/mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/prep_ladder/002_pre_mlpot_monomer_repack.pdb",
+        "psf": "/mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/prep_ladder/002_pre_mlpot_monomer_repack.psf"
       },
-      "box_side_A": 31.2923156734942
+      "box_side_A": 34.0
     },
     {
       "index": 3,
@@ -32,10 +34,11 @@
       "slug": "pre_mlpot_mc_density_staged",
       "stem": "003_pre_mlpot_mc_density_staged",
       "files": {
-        "crd": "/cluster/home/boittier/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/prep_ladder/003_pre_mlpot_mc_density_staged.crd",
-        "pdb": "/cluster/home/boittier/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/prep_ladder/003_pre_mlpot_mc_density_staged.pdb"
+        "crd": "/mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/prep_ladder/003_pre_mlpot_mc_density_staged.crd",
+        "pdb": "/mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/prep_ladder/003_pre_mlpot_mc_density_staged.pdb",
+        "psf": "/mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/prep_ladder/003_pre_mlpot_mc_density_staged.psf"
       },
-      "box_side_A": 31.2923156734942
+      "box_side_A": 34.0
     },
     {
       "index": 4,
@@ -43,32 +46,11 @@
       "slug": "pre_mlpot_mc_density_target",
       "stem": "004_pre_mlpot_mc_density_target",
       "files": {
-        "crd": "/cluster/home/boittier/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/prep_ladder/004_pre_mlpot_mc_density_target.crd",
-        "pdb": "/cluster/home/boittier/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/prep_ladder/004_pre_mlpot_mc_density_target.pdb"
+        "crd": "/mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/prep_ladder/004_pre_mlpot_mc_density_target.crd",
+        "pdb": "/mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/prep_ladder/004_pre_mlpot_mc_density_target.pdb",
+        "psf": "/mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/prep_ladder/004_pre_mlpot_mc_density_target.psf"
       },
-      "box_side_A": 31.2923156734942
-    },
-    {
-      "index": 5,
-      "label": "pre_mlpot:lattice_box",
-      "slug": "pre_mlpot_lattice_box",
-      "stem": "005_pre_mlpot_lattice_box",
-      "files": {
-        "crd": "/cluster/home/boittier/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/prep_ladder/005_pre_mlpot_lattice_box.crd",
-        "pdb": "/cluster/home/boittier/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/prep_ladder/005_pre_mlpot_lattice_box.pdb"
-      },
-      "box_side_A": 31.2923156734942
-    },
-    {
-      "index": 6,
-      "label": "pre_mlpot:lattice_full",
-      "slug": "pre_mlpot_lattice_full",
-      "stem": "006_pre_mlpot_lattice_full",
-      "files": {
-        "crd": "/cluster/home/boittier/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/prep_ladder/006_pre_mlpot_lattice_full.crd",
-        "pdb": "/cluster/home/boittier/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/prep_ladder/006_pre_mlpot_lattice_full.pdb"
-      },
-      "box_side_A": 31.2923156734942
+      "box_side_A": 34.0
     }
   ],
   "summary": {
@@ -78,12 +60,10 @@
     "steps_applied": [
       "pre_mlpot:monomer_repack",
       "pre_mlpot:mc_density_staged",
-      "pre_mlpot:mc_density_target",
-      "pre_mlpot:lattice_box",
-      "pre_mlpot:lattice_full"
+      "pre_mlpot:mc_density_target"
     ],
-    "worst_intermonomer_A": 1.0179790407255067,
+    "worst_intermonomer_A": 4.998499974992499,
     "aborted": false,
-    "contact_summary": "worst inter-monomer contact 1.018 \u00c5 (monomers 20/93, atoms Cl\u2013Cl; prep floor 1.00 \u00c5, typical vdW 3.6 \u00c5); tight for dynamics (1.5 \u00c5) but passes prep \u2014 hybrid mini / overlap rescue expected to open this before MD; substantially inside summed vdW radii \u2014 worth watching through pre-SD mini"
+    "contact_summary": "worst inter-monomer contact 3.786 \u00c5 (monomers 80/125, atoms H\u2013H; prep floor 0.45 \u00c5, typical vdW 2.4 \u00c5); OK: above dynamics guard (1.5 \u00c5); H\u2013H: equilibrium ~2.4 \u00c5; sub-2 \u00c5 in prep is strained but usually relaxes in mini"
   }
 }

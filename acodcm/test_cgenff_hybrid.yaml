@@ -1,0 +1,40 @@
+data:       /mmhome/boittier/home/mmml_tutorial/acodcm/out_combined_dedup/energies_forces_dipoles_train.npz
+valid_data: /mmhome/boittier/home/mmml_tutorial/acodcm/out_combined_dedup/energies_forces_dipoles_valid.npz
+ckpt_dir:   ./ckpts/hybrid
+tag:        hybrid
+
+num_atoms: 20
+max_atomic_number: 35
+ema_decay: 0.0
+
+max_degree: 2
+cutoff: 8.0
+num_iterations: 2
+features: 32
+  #charges: true
+seed: 2
+batch_size: 64
+num_epochs: 3000
+learning_rate: 0.001
+objective: valid_loss
+
+restart: /mmhome/boittier/home/mmml/artifacts/spooky_so3lr_muon3/
+#restart: /mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/hybrid/hybrid-7721fa95-d060-4c33-83f3-ced2c4da6c4f
+optimizer: amsgrad
+  #restart: /mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/hybrid/hybrid-940b8905-5166-4b08-a33a-8bb8a711581c
+
+hybrid_mm: true          # E = ml_switch_scale(r_com)*E_ML + E_MM
+  #charges: true          # required — the flag errors without a charge head
+
+  #restart: /mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/hybrid/hybrid-83e16fa9-e47f-4441-bc0d-8a1ce9c26c08
+zbl: true
+
+  # fluct charges (corr) 
+  #restart: /mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/hybrid/hybrid-2ea60948-46b7-4351-9e10-278f7e829b50
+  #mm_charge_correction: true
+  
+  #nocharges
+  #restart: /mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/hybrid/hybrid-96e58a2d-3798-4463-a318-fca1b7001dc3
+
+energy_weight: 52.0
+forces_weight: 52.91

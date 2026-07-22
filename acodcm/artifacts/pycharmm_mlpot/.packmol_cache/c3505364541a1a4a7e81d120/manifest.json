@@ -1,0 +1,67 @@
+{
+  "cache_key": "c3505364541a1a4a7e81d120",
+  "center": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "composition": [
+    [
+      "DCM",
+      1
+    ],
+    [
+      "ACO",
+      1
+    ]
+  ],
+  "cube_side": 32.0,
+  "fingerprint": {
+    "center": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "charmm_abnr_steps": 100,
+    "charmm_sd_steps": 25,
+    "charmm_tolenr": 0.001,
+    "charmm_tolgrd": 0.001,
+    "composition": [
+      [
+        "DCM",
+        1
+      ],
+      [
+        "ACO",
+        1
+      ]
+    ],
+    "cube_side": 32.0,
+    "packmol_padding_A": 1.0,
+    "placement": "cube",
+    "prep_gate_settings": {
+      "allow_high_grms": false,
+      "max_grms_before_dyn": 50.0,
+      "no_scale_max_grms": false
+    },
+    "radius": null,
+    "seed": 123,
+    "sim_cell_side": 34.0,
+    "spacing": 5.0,
+    "tolerance": 2.0,
+    "version": 3
+  },
+  "packmol_padding_A": 1.0,
+  "placement": "cube",
+  "prep_gate_settings": {
+    "allow_high_grms": false,
+    "max_grms_before_dyn": 50.0,
+    "no_scale_max_grms": false
+  },
+  "radius": null,
+  "seed": 123,
+  "sim_cell_side": 34.0,
+  "spacing": 5.0,
+  "tolerance": 2.0,
+  "version": 3
+}

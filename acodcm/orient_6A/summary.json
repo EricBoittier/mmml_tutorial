@@ -1,0 +1,13 @@
+{
+  "resid": "ACO",
+  "checkpoint": "/mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/hybrid/hybrid-940b8905-5166-4b08-a33a-8bb8a711581c",
+  "mm_switch_on": 6.0,
+  "ml_switch_width": 1.5,
+  "n_rays": 240,
+  "n_evaluated": 240,
+  "n_dropped": 0,
+  "n_rays_spurious": 150,
+  "frac_rays_spurious": 0.625,
+  "mean_min_kcal": -1.6796335179169972,
+  "deepest_kcal": -7.3877979698181155
+}

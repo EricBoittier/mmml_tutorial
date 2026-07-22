@@ -1,0 +1,29 @@
+{
+  "handoff_active": true,
+  "source_path": null,
+  "handoff_format": null,
+  "n_atoms": 1780,
+  "prior_backend": "jaxmd",
+  "prior_stages": null,
+  "box_side_source": null,
+  "velocities_source": null,
+  "restart_path": null,
+  "box_side_A": 27.97648929585141,
+  "box_source": "handoff_cell",
+  "box_warnings": [],
+  "velocities_in_handoff": true,
+  "continue_velocities": false,
+  "velocity_policy": "rethermalize",
+  "use_handoff_velocities": false,
+  "skip_pre_min": true,
+  "handoff_pre_minimize": false,
+  "quality_gate_enabled": false,
+  "quality_gate_triggered": false,
+  "cutoffs": {
+    "ml_switch_width": 1.5,
+    "mm_switch_on": 6.0,
+    "mm_switch_width": 5.0
+  },
+  "initial_mmml_energy_eV": -131.48141479492188,
+  "initial_mmml_fmax_eVA": 0.7145018577575684
+}

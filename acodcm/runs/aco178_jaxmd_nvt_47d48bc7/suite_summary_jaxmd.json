@@ -1,0 +1,133 @@
+{
+  "ensemble": "nvt",
+  "nsteps_requested": 10000,
+  "nsteps_completed": 7000,
+  "frames": 14,
+  "status": "interrupted",
+  "error": "KeyboardInterrupt",
+  "h5": "pbc_nvt_jaxmd_nvt.h5",
+  "traj": "pbc_nvt.traj",
+  "traj_parts": [
+    "pbc_nvt.traj"
+  ],
+  "traj_part_count": 1,
+  "box_A": 27.97648929585141,
+  "free_space": false,
+  "pressure_atm": 1.0,
+  "temperature_K": 250.0,
+  "composition": {
+    "ACO": 178
+  },
+  "psf_charges": {
+    "total_charge_e": 7.105427357601002e-15,
+    "n_charged_atoms": 1780,
+    "min_charge_e": -0.48,
+    "max_charge_e": 0.4,
+    "residues": {
+      "ACO": {
+        "n_atoms": 10,
+        "charge_sum_e": -5.551115123125783e-17,
+        "atom_types": [
+          "O1",
+          "C1",
+          "C2",
+          "C3",
+          "H21",
+          "H22",
+          "H23",
+          "H31",
+          "H32",
+          "H33"
+        ],
+        "charges_e": [
+          -0.48,
+          0.4,
+          -0.23,
+          -0.23,
+          0.09,
+          0.09,
+          0.09,
+          0.09,
+          0.09,
+          0.09
+        ]
+      }
+    }
+  },
+  "charmm_minimization": {
+    "nbxmod": 5,
+    "sd_steps": 200,
+    "abnr_steps": 1000,
+    "rescue_minimize": true,
+    "rescue_sd_steps": 100,
+    "rescue_abnr_steps": 300
+  },
+  "placement": "random_3d",
+  "placement_seed": 22,
+  "neighbor_update_interval_steps": 1,
+  "neighbor_expected_updates": 10000,
+  "neighbor_internal_update_interval_calls": 1,
+  "neighbor_internal_skin_distance_A": 0.5,
+  "pre_md_minimization": {
+    "charmm_min_wall_s": 0.6024961171206087,
+    "pre_bfgs_fmax_eVA": 1.290078484683879,
+    "pre_min_ase_order": "fire-first",
+    "bfgs_polish_max_fmax": 1.0,
+    "charmm_rescue_pre_fire_fmax_eVA": 1.2383431659647535,
+    "fire_fmax_eVA": 0.14740015216514585,
+    "premin_fire_traj": "pbc_nvt_premin_fire_min.traj",
+    "premin_bfgs_iterations": 50.0,
+    "premin_bfgs_fmax_eVA": 0.41732282331606424,
+    "premin_bfgs_traj": "pbc_nvt_premin_bfgs_min.traj",
+    "premin_best_force_fmax_eVA": 0.13313927815762247,
+    "charmm_rescue_post_fire_fmax_eVA": 1.2624834861999763,
+    "post_charmm_rescue_fire_fmax_eVA": 0.6702632794203771,
+    "post_charmm_rescue_fire_traj": "pbc_nvt_post_charmm_rescue_fire_min.traj",
+    "post_charmm_rescue_bfgs_iterations": 50.0,
+    "post_charmm_rescue_bfgs_fmax_eVA": 0.6702632794203771,
+    "post_charmm_rescue_bfgs_traj": "pbc_nvt_post_charmm_rescue_bfgs_min.traj",
+    "best_force_xyz": "pbc_nvt_pre_md_best_force.xyz",
+    "best_force_energy_eV": -7511.613473325921,
+    "best_force_fmax_eVA": 0.12937372451967316,
+    "best_force_label": "bfgs_pre_min",
+    "best_energy_xyz": "pbc_nvt_pre_md_best_energy.xyz",
+    "best_energy_eV": -7526.930308622386,
+    "best_energy_fmax_eVA": 0.6702632794203771,
+    "best_energy_label": "bfgs_rescue_(post_charmm)",
+    "restored_best_force_fmax_eVA": 0.13313927815762178
+  },
+  "dynamics_overlap_action": "warn",
+  "dynamics_overlap_charmm_rescue_enabled": true,
+  "dynamics_overlap_charmm_sd_steps": 200,
+  "dynamics_overlap_charmm_abnr_steps": 400,
+  "dynamics_overlap_charmm_rescue_count": 1,
+  "traj_export_molecular_wrap": false,
+  "dynamics_overlap_warning_count": 1,
+  "dynamics_min_intermonomer_distance_A": 0.2817,
+  "mm_pair_update_stats": {
+    "calls": 7054,
+    "updates": 47,
+    "reused": 7006,
+    "reallocs": 0,
+    "fallbacks": 0,
+    "cache_checks": 7100,
+    "host_syncs": 47,
+    "device_skin_checks": 7053,
+    "cpu_rebuilds": 47,
+    "gpu_rebuilds": 0,
+    "capacity_grows": 0,
+    "com_filter_calls": 0,
+    "capacity_multiplier": 1.75,
+    "pair_capacity": 945010,
+    "pair_capacity_initial": 945010,
+    "pair_capacity_changes": 0,
+    "pair_capacity_history": [
+      945010
+    ],
+    "update_interval": 1,
+    "skin_distance": 0.5,
+    "cache_reuse_reason": "device_skin",
+    "last_reuse_reason": "device_skin"
+  },
+  "mm_pair_reuse_fraction": 0.9931953501559398
+}

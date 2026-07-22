@@ -1,0 +1,20 @@
+{
+  "checkpoint": "/mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/_gate_frozen_e222/epoch-222",
+  "data": "/mmhome/boittier/home/mmml_tutorial/acodcm/gfn2_nms_test.npz",
+  "natoms": 20,
+  "n_batches": 154,
+  "batch_size": 16,
+  "energy": {
+    "mae_kcal_mol": 20.08693165241801,
+    "rmse_kcal_mol": 58.35326083451435,
+    "mae_ev": 0.8710592706710006,
+    "rmse_ev": 2.5304585938424333
+  },
+  "forces": {
+    "mae_kcal_mol": 4.65812696296137,
+    "rmse_kcal_mol": 57.149546415147,
+    "mae_ev": 0.2019972360767018,
+    "rmse_ev": 2.478260148486341
+  },
+  "n_params": 12589
+}

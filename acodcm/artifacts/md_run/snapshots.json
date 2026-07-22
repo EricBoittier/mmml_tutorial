@@ -1,0 +1,45 @@
+{
+  "tag": "dcm_30",
+  "snapshots": [
+    {
+      "seq": 0,
+      "slug": "pack",
+      "stem": "00_pack",
+      "kind": "packmol",
+      "label": "Packmol sphere placement (pre-minimize)",
+      "files": {
+        "pdb": "/mmhome/boittier/home/mmml_tutorial/acodcm/artifacts/md_run/model.pdb",
+        "psf": "/mmhome/boittier/home/mmml_tutorial/acodcm/artifacts/md_run/model.psf"
+      }
+    },
+    {
+      "seq": 1,
+      "slug": "mm",
+      "stem": "01_mm",
+      "kind": "MM",
+      "label": "CHARMM CGENFF SD/ABNR before MLpot (MM only)",
+      "files": {
+        "crd": "/mmhome/boittier/home/mmml_tutorial/acodcm/artifacts/md_run/pretreat/01_mm.crd",
+        "energy_json": "/mmhome/boittier/home/mmml_tutorial/acodcm/artifacts/md_run/pretreat/01_mm_energy.json",
+        "pdb": "/mmhome/boittier/home/mmml_tutorial/acodcm/artifacts/md_run/pretreat/01_mm.pdb",
+        "psf": "/mmhome/boittier/home/mmml_tutorial/acodcm/artifacts/md_run/pretreat/01_mm.psf"
+      },
+      "grms_kcalmol_A": 0.10574683299290719
+    },
+    {
+      "seq": 2,
+      "slug": "mini",
+      "stem": "02_mini",
+      "kind": "MMML",
+      "label": "MLpot PhysNet steepest descent (USER / MMML)",
+      "files": {
+        "crd": "/mmhome/boittier/home/mmml_tutorial/acodcm/artifacts/md_run/02_mini.crd",
+        "energy_json": "/mmhome/boittier/home/mmml_tutorial/acodcm/artifacts/md_run/02_mini_energy.json",
+        "pdb": "/mmhome/boittier/home/mmml_tutorial/acodcm/artifacts/md_run/02_mini.pdb",
+        "psf": "/mmhome/boittier/home/mmml_tutorial/acodcm/artifacts/md_run/02_mini.psf",
+        "xyz": "/mmhome/boittier/home/mmml_tutorial/acodcm/artifacts/md_run/02_mini.xyz"
+      },
+      "grms_kcalmol_A": 21.521437862009613
+    }
+  ]
+}

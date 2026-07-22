@@ -1,0 +1,113 @@
+{
+  "ensemble": "nve",
+  "nsteps_requested": 20000,
+  "nsteps_completed": 2000,
+  "frames": 4,
+  "status": "interrupted",
+  "error": "KeyboardInterrupt",
+  "h5": "pbc_nve_jaxmd_nve.h5",
+  "traj": "pbc_nve.traj",
+  "traj_parts": [
+    "pbc_nve.traj"
+  ],
+  "traj_part_count": 1,
+  "box_A": 28.16726609672617,
+  "free_space": false,
+  "pressure_atm": 1.0,
+  "temperature_K": 250.0,
+  "composition": {
+    "DCM": 206
+  },
+  "psf_charges": {
+    "total_charge_e": -2.858824288409778e-15,
+    "n_charged_atoms": 1030,
+    "min_charge_e": -0.081,
+    "max_charge_e": 0.09,
+    "residues": {
+      "DCM": {
+        "n_atoms": 5,
+        "charge_sum_e": -2.7755575615628914e-17,
+        "atom_types": [
+          "C",
+          "H1",
+          "H2",
+          "CL1",
+          "CL2"
+        ],
+        "charges_e": [
+          -0.018,
+          0.09,
+          0.09,
+          -0.081,
+          -0.081
+        ]
+      }
+    }
+  },
+  "charmm_minimization": {
+    "nbxmod": 5,
+    "sd_steps": 200,
+    "abnr_steps": 1000,
+    "rescue_minimize": true,
+    "rescue_sd_steps": 100,
+    "rescue_abnr_steps": 300
+  },
+  "placement": "random_3d",
+  "placement_seed": 22,
+  "neighbor_update_interval_steps": 1,
+  "neighbor_expected_updates": 20000,
+  "neighbor_internal_update_interval_calls": 1,
+  "neighbor_internal_skin_distance_A": 0.5,
+  "pre_md_minimization": {
+    "charmm_min_wall_s": 0.3015289921313524,
+    "pre_bfgs_fmax_eVA": 1.005564868568007,
+    "pre_min_ase_order": "fire-first",
+    "bfgs_polish_max_fmax": 1.0,
+    "charmm_rescue_pre_fire_fmax_eVA": 1.0006447695482699,
+    "fire_fmax_eVA": 0.08586505616266137,
+    "premin_fire_traj": "pbc_nve_premin_fire_min.traj",
+    "best_force_xyz": "pbc_nve_pre_md_best_force.xyz",
+    "best_force_energy_eV": -4668.671953150222,
+    "best_force_fmax_eVA": 0.08586505616266137,
+    "best_force_label": "fire_pre_min",
+    "best_energy_xyz": "pbc_nve_pre_md_best_energy.xyz",
+    "best_energy_eV": -4668.671953150222,
+    "best_energy_fmax_eVA": 0.08586505616266137,
+    "best_energy_label": "fire_pre_min",
+    "restored_best_force_fmax_eVA": 0.08586505616266137
+  },
+  "dynamics_overlap_action": "warn",
+  "dynamics_overlap_charmm_rescue_enabled": true,
+  "dynamics_overlap_charmm_sd_steps": 200,
+  "dynamics_overlap_charmm_abnr_steps": 400,
+  "dynamics_overlap_charmm_rescue_count": 0,
+  "traj_export_molecular_wrap": false,
+  "dynamics_overlap_warning_count": 0,
+  "dynamics_min_intermonomer_distance_A": 2.3409339010276553,
+  "mm_pair_update_stats": {
+    "calls": 2389,
+    "updates": 3,
+    "reused": 2386,
+    "reallocs": 0,
+    "fallbacks": 0,
+    "cache_checks": 2391,
+    "host_syncs": 3,
+    "device_skin_checks": 2388,
+    "cpu_rebuilds": 3,
+    "gpu_rebuilds": 0,
+    "capacity_grows": 0,
+    "com_filter_calls": 0,
+    "capacity_multiplier": 1.75,
+    "pair_capacity": 312500,
+    "pair_capacity_initial": 312500,
+    "pair_capacity_changes": 0,
+    "pair_capacity_history": [
+      312500
+    ],
+    "update_interval": 1,
+    "skin_distance": 0.5,
+    "cache_reuse_reason": "device_skin",
+    "last_reuse_reason": "device_skin"
+  },
+  "mm_pair_reuse_fraction": 0.9987442444537463
+}

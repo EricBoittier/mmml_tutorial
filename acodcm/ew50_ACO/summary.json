@@ -1,0 +1,13 @@
+{
+  "resid": "ACO",
+  "checkpoint": "/mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/_ew50_frozen",
+  "mm_switch_on": 6.0,
+  "ml_switch_width": 1.5,
+  "n_rays": 240,
+  "n_evaluated": 240,
+  "n_dropped": 0,
+  "n_rays_spurious": 10,
+  "frac_rays_spurious": 0.041666666666666664,
+  "mean_min_kcal": -1.3056576738286334,
+  "deepest_kcal": -16.44507262039557
+}
