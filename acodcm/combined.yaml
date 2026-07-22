@@ -1,0 +1,10 @@
+data:       .../out_combined_dedup/energies_forces_dipoles_train.npz
+valid_data: .../out_combined_dedup/energies_forces_dipoles_valid.npz
+ckpt_dir:   ./ckpts/combined
+tag:        combined
+num_atoms: 20
+max_atomic_number: 35
+ema_decay: 0.0
+batch_size: 8
+num_epochs: 2000
+objective: valid_loss

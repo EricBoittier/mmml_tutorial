@@ -1,0 +1,49 @@
+# Hybrid ML/MM training on PBE0-D4/def2-TZVP dimer-scan data (outlier-filtered,
+# stratified by res_name). Same geometries and architecture as gfn2_nms_hybrid.yaml
+# -- only the reference level of theory and the data-cleaning step differ.
+#
+# Filtering: scripts/filter_and_stratify_dataset.py dropped the top 5% of
+# structures by referenced E and by max per-atom |F| (union), refit atom_ref_energies
+# on the retained 21128/22322, then split 80/10/10 WITHIN each res_name category
+# (ACO, DCM, ACO,ACO, DCM,DCM) so no split is skewed toward one monomer/dimer type.
+# Validated against GFN2-xTB first: scripts/validate_pbe0_vs_gfn2_dataset.py
+# (r=0.994 energy, r=0.966 force on matched geometries; PBE0 is steeper at close
+# contact, which is exactly the regime this filter thins out).
+
+data:       /mmhome/boittier/home/mmml_tutorial/acodcm/pbe0_nms15_clean_train.npz
+valid_data: /mmhome/boittier/home/mmml_tutorial/acodcm/pbe0_nms15_clean_valid.npz
+ckpt_dir:   ./ckpts/pbe0_nms
+tag:        pbe0nms
+
+# --- architecture (matches gfn2_nms_hybrid.yaml) -----------------------------
+num_iterations: 3
+features: 32
+n_res: 4
+num_basis_functions: 32
+cutoff: 6.5
+max_atomic_number: 35   # Cl is 17
+num_atoms: 20            # 2 x 10 (ACO dimer); DCM dimers pad to this
+
+zbl: true
+max_degree: 0
+charges: false
+
+# --- hybrid ML/MM ------------------------------------------------------------
+hybrid_mm: true
+ml_switch_width: 1.5
+mm_switch_on: 6.0
+mm_switch_width: 5.0
+
+# --- optimisation ------------------------------------------------------------
+seed: 2
+batch_size: 32
+num_epochs: 1000
+learning_rate: 0.0001
+optimizer: adamw
+objective: valid_loss
+ema_decay: 0.999
+
+energy_weight: 50.0
+forces_weight: 52.91
+dipole_weight: 27.21
+charges_weight: 14.39
