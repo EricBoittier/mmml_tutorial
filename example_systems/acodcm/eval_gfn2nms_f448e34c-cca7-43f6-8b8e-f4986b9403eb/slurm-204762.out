@@ -1,0 +1,110 @@
+[CudaDevice(id=0)]
+/mmhome/boittier/home/mmml/.venv/lib/python3.13/site-packages/orbax/checkpoint/_src/serialization/jax_array_handlers.py:925: UserWarning: Sharding info not provided when restoring. Populating sharding info from sharding file. Please note restoration time will be slightly increased due to reading from file. Note also that this option is unsafe when restoring on a different topology than the checkpoint was saved with.
+  warnings.warn(
+dict_keys(['opt_state', 'params', 'step'])
+                                Model Attributes                                
+┏━━━┳━━━┳━━━┳━━━┳━━┳━━━┳━━┳━━━┳━━┳━━━┳━━┳━━━┳━━┳━━━┳━━┳━━━┳━━┳━━━┳━━┳━━━┳━━┳━━━┓
+┃ … ┃ … ┃ … ┃ … ┃  ┃ … ┃  ┃ … ┃  ┃ … ┃  ┃ … ┃  ┃ … ┃  ┃ … ┃  ┃ … ┃  ┃ … ┃  ┃ … ┃
+┡━━━╇━━━╇━━━╇━━━╇━━╇━━━╇━━╇━━━╇━━╇━━━╇━━╇━━━╇━━╇━━━╇━━╇━━━╇━━╇━━━╇━━╇━━━╇━━╇━━━┩
+│ … │ … │ … │ … │  │ … │  │ … │  │ … │  │ 2 │  │ … │  │ … │  │ … │  │ … │  │ … │
+└───┴───┴───┴───┴──┴───┴──┴───┴──┴───┴──┴───┴──┴───┴──┴───┴──┴───┴──┴───┴──┴───┘
+                                Last Checkpoint                                 
+┏━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━┳━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━┓
+┃ Checkpoint        ┃ name      ┃ epoch ┃ best_loss         ┃ Save Time        ┃
+┡━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━┩
+│ /mmhome/boittier… │ epoch-222 │ 222   │ 53.55431365966797 │ 2026-07-17       │
+│                   │           │       │                   │ 17:16:08.139260  │
+└───────────────────┴───────────┴───────┴───────────────────┴──────────────────┘
+dataR (2478, 20, 3)
+dataE [ 4.24556883 -1.40222585 -1.44843621  0.39262191 -0.47995747 -1.36279216
+ -1.43091546  4.13932626 -0.32245125  6.50415719]
+dataE [10438.37960618 52204.61746422 52204.57125386 10434.52665927
+ 10433.65407989 52204.65689791 52204.58877462 52210.15901633
+  5216.74456742 52212.52384726]
+D (2478, 3)
+
+Evaluating 154 batches × batch_size=16 (natoms=20, checkpoint=epoch-222)
+
+0it [00:00, ?it/s]1it [00:24, 24.78s/it]2it [00:25, 10.86s/it]3it [00:26,  6.40s/it]4it [00:28,  4.31s/it]5it [00:29,  3.15s/it]6it [00:30,  2.45s/it]7it [00:31,  2.01s/it]8it [00:32,  1.72s/it]9it [00:33,  1.53s/it]10it [00:34,  1.40s/it]11it [00:35,  1.31s/it]12it [00:36,  1.24s/it]13it [00:38,  1.20s/it]14it [00:39,  1.17s/it]15it [00:40,  1.15s/it]16it [00:41,  1.14s/it]17it [00:42,  1.13s/it]18it [00:43,  1.12s/it]19it [00:44,  1.12s/it]20it [00:45,  1.11s/it]21it [00:46,  1.11s/it]22it [00:47,  1.11s/it]23it [00:49,  1.11s/it]24it [00:50,  1.11s/it]25it [00:51,  1.11s/it]26it [00:52,  1.11s/it]27it [00:53,  1.11s/it]28it [00:54,  1.11s/it]29it [00:55,  1.11s/it]30it [00:56,  1.11s/it]31it [00:57,  1.11s/it]32it [00:59,  1.11s/it]33it [01:00,  1.11s/it]34it [01:01,  1.11s/it]35it [01:02,  1.11s/it]36it [01:03,  1.11s/it]37it [01:04,  1.11s/it]38it [01:05,  1.11s/it]39it [01:06,  1.11s/it]40it [01:07,  1.11s/it]41it [01:09,  1.11s/it]42it [01:10,  1.11s/it]43it [01:11,  1.11s/it]44it [01:12,  1.11s/it]45it [01:13,  1.11s/it]46it [01:14,  1.11s/it]47it [01:15,  1.11s/it]48it [01:16,  1.11s/it]49it [01:17,  1.11s/it]50it [01:19,  1.12s/it]51it [01:20,  1.12s/it]52it [01:21,  1.12s/it]53it [01:22,  1.12s/it]54it [01:23,  1.12s/it]55it [01:24,  1.12s/it]56it [01:25,  1.12s/it]57it [01:26,  1.12s/it]58it [01:28,  1.12s/it]59it [01:29,  1.12s/it]60it [01:30,  1.12s/it]61it [01:31,  1.12s/it]62it [01:32,  1.12s/it]63it [01:33,  1.12s/it]64it [01:34,  1.12s/it]65it [01:35,  1.12s/it]66it [01:36,  1.12s/it]67it [01:38,  1.12s/it]68it [01:39,  1.12s/it]69it [01:40,  1.12s/it]70it [01:41,  1.12s/it]71it [01:42,  1.12s/it]72it [01:43,  1.12s/it]73it [01:44,  1.12s/it]74it [01:45,  1.12s/it]75it [01:47,  1.12s/it]76it [01:48,  1.12s/it]77it [01:49,  1.12s/it]78it [01:50,  1.12s/it]79it [01:51,  1.12s/it]80it [01:52,  1.12s/it]81it [01:53,  1.12s/it]82it [01:54,  1.12s/it]83it [01:56,  1.12s/it]84it [01:57,  1.12s/it]85it [01:58,  1.12s/it]86it [01:59,  1.12s/it]87it [02:00,  1.12s/it]88it [02:01,  1.12s/it]89it [02:02,  1.12s/it]90it [02:03,  1.12s/it]91it [02:05,  1.12s/it]92it [02:06,  1.12s/it]93it [02:07,  1.12s/it]94it [02:08,  1.12s/it]95it [02:09,  1.12s/it]96it [02:10,  1.12s/it]97it [02:11,  1.12s/it]98it [02:12,  1.12s/it]99it [02:13,  1.12s/it]100it [02:15,  1.12s/it]101it [02:16,  1.12s/it]102it [02:17,  1.12s/it]103it [02:18,  1.12s/it]104it [02:19,  1.12s/it]105it [02:20,  1.12s/it]106it [02:21,  1.12s/it]107it [02:22,  1.12s/it]108it [02:24,  1.12s/it]109it [02:25,  1.12s/it]110it [02:26,  1.12s/it]111it [02:27,  1.12s/it]112it [02:28,  1.12s/it]113it [02:29,  1.12s/it]114it [02:30,  1.12s/it]115it [02:31,  1.12s/it]116it [02:33,  1.12s/it]117it [02:34,  1.12s/it]118it [02:35,  1.12s/it]119it [02:36,  1.12s/it]120it [02:37,  1.12s/it]121it [02:38,  1.12s/it]122it [02:39,  1.12s/it]123it [02:40,  1.12s/it]124it [02:42,  1.12s/it]125it [02:43,  1.12s/it]126it [02:44,  1.12s/it]127it [02:45,  1.12s/it]128it [02:46,  1.12s/it]129it [02:47,  1.12s/it]130it [02:48,  1.12s/it]131it [02:49,  1.12s/it]132it [02:51,  1.12s/it]133it [02:52,  1.12s/it]134it [02:53,  1.12s/it]135it [02:54,  1.12s/it]136it [02:55,  1.12s/it]137it [02:56,  1.12s/it]138it [02:57,  1.12s/it]139it [02:58,  1.12s/it]140it [03:00,  1.12s/it]141it [03:01,  1.12s/it]142it [03:02,  1.12s/it]143it [03:03,  1.12s/it]144it [03:04,  1.12s/it]145it [03:05,  1.12s/it]146it [03:06,  1.13s/it]147it [03:07,  1.13s/it]148it [03:09,  1.13s/it]149it [03:10,  1.12s/it]150it [03:11,  1.12s/it]151it [03:12,  1.12s/it]152it [03:13,  1.12s/it]153it [03:14,  1.12s/it]154it [03:15,  1.12s/it]154it [03:15,  1.27s/it]
+Wrote /mmhome/boittier/home/mmml_tutorial/acodcm/eval_gfn2nms_f448e34c-cca7-43f6-8b8e-f4986b9403eb/gfn2_nms_test_e222_subatom/metrics.json
+Wrote /mmhome/boittier/home/mmml_tutorial/acodcm/eval_gfn2nms_f448e34c-cca7-43f6-8b8e-f4986b9403eb/gfn2_nms_test_e222_subatom/parity_plots.png
+Wrote /mmhome/boittier/home/mmml_tutorial/acodcm/eval_gfn2nms_f448e34c-cca7-43f6-8b8e-f4986b9403eb/gfn2_nms_test_e222_subatom/predictions.npz
+
+Summary (energies/forces in kcal/mol; dipoles in e·Bohr when present):
+  Energy   MAE=739508.680796  RMSE=881725.633050
+  Forces   MAE=4.658157  RMSE=57.149794
+/mmhome/boittier/home/mmml/.venv/lib/python3.13/site-packages/orbax/checkpoint/_src/serialization/jax_array_handlers.py:925: UserWarning: Sharding info not provided when restoring. Populating sharding info from sharding file. Please note restoration time will be slightly increased due to reading from file. Note also that this option is unsafe when restoring on a different topology than the checkpoint was saved with.
+  warnings.warn(
+dict_keys(['opt_state', 'params', 'step'])
+                                Model Attributes                                
+┏━━━┳━━━┳━━━┳━━━┳━━┳━━━┳━━┳━━━┳━━┳━━━┳━━┳━━━┳━━┳━━━┳━━┳━━━┳━━┳━━━┳━━┳━━━┳━━┳━━━┓
+┃ … ┃ … ┃ … ┃ … ┃  ┃ … ┃  ┃ … ┃  ┃ … ┃  ┃ … ┃  ┃ … ┃  ┃ … ┃  ┃ … ┃  ┃ … ┃  ┃ … ┃
+┡━━━╇━━━╇━━━╇━━━╇━━╇━━━╇━━╇━━━╇━━╇━━━╇━━╇━━━╇━━╇━━━╇━━╇━━━╇━━╇━━━╇━━╇━━━╇━━╇━━━┩
+│ … │ … │ … │ … │  │ … │  │ … │  │ … │  │ 2 │  │ … │  │ … │  │ … │  │ … │  │ … │
+└───┴───┴───┴───┴──┴───┴──┴───┴──┴───┴──┴───┴──┴───┴──┴───┴──┴───┴──┴───┴──┴───┘
+                                Last Checkpoint                                 
+┏━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━┳━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━┓
+┃ Checkpoint        ┃ name      ┃ epoch ┃ best_loss         ┃ Save Time        ┃
+┡━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━┩
+│ /mmhome/boittier… │ epoch-222 │ 222   │ 53.55431365966797 │ 2026-07-17       │
+│                   │           │       │                   │ 17:16:08.139260  │
+└───────────────────┴───────────┴───────┴───────────────────┴──────────────────┘
+dataR (765, 20, 3)
+dataE [-40.86323094 -40.67084845 -41.00537013 -40.62589084 -40.87128875
+ -40.87409242 -40.9128703  -40.90215998 -40.7915734  -40.37012511]
+dataE [5176.20378774 5176.39617022 5176.06164855 5176.44112784 5176.19572993
+ 5176.19292626 5176.15414838 5176.16485869 5176.27544528 5176.69689356]
+D (765, 3)
+
+Evaluating 47 batches × batch_size=16 (natoms=20, checkpoint=epoch-222)
+
+0it [00:00, ?it/s]1it [00:24, 24.73s/it]2it [00:25, 10.83s/it]3it [00:26,  6.39s/it]4it [00:28,  4.30s/it]5it [00:29,  3.14s/it]6it [00:30,  2.45s/it]7it [00:31,  2.01s/it]8it [00:32,  1.72s/it]9it [00:33,  1.53s/it]10it [00:34,  1.39s/it]11it [00:35,  1.30s/it]12it [00:36,  1.24s/it]13it [00:37,  1.20s/it]14it [00:39,  1.17s/it]15it [00:40,  1.15s/it]16it [00:41,  1.13s/it]17it [00:42,  1.12s/it]18it [00:43,  1.12s/it]19it [00:44,  1.11s/it]20it [00:45,  1.11s/it]21it [00:46,  1.11s/it]22it [00:47,  1.10s/it]23it [00:48,  1.10s/it]24it [00:50,  1.10s/it]25it [00:51,  1.10s/it]26it [00:52,  1.10s/it]27it [00:53,  1.10s/it]28it [00:54,  1.10s/it]29it [00:55,  1.10s/it]30it [00:56,  1.10s/it]31it [00:57,  1.10s/it]32it [00:58,  1.10s/it]33it [00:59,  1.10s/it]34it [01:01,  1.10s/it]35it [01:02,  1.10s/it]36it [01:03,  1.10s/it]37it [01:04,  1.10s/it]38it [01:05,  1.11s/it]39it [01:06,  1.11s/it]40it [01:07,  1.11s/it]41it [01:08,  1.11s/it]42it [01:09,  1.11s/it]43it [01:11,  1.11s/it]44it [01:12,  1.11s/it]45it [01:13,  1.11s/it]46it [01:14,  1.11s/it]47it [01:15,  1.11s/it]47it [01:15,  1.61s/it]
+Wrote /mmhome/boittier/home/mmml_tutorial/acodcm/eval_gfn2nms_f448e34c-cca7-43f6-8b8e-f4986b9403eb/combined_dedup_test_e222_subatom/metrics.json
+Wrote /mmhome/boittier/home/mmml_tutorial/acodcm/eval_gfn2nms_f448e34c-cca7-43f6-8b8e-f4986b9403eb/combined_dedup_test_e222_subatom/parity_plots.png
+Wrote /mmhome/boittier/home/mmml_tutorial/acodcm/eval_gfn2nms_f448e34c-cca7-43f6-8b8e-f4986b9403eb/combined_dedup_test_e222_subatom/predictions.npz
+
+Summary (energies/forces in kcal/mol; dipoles in e·Bohr when present):
+  Energy   MAE=768964.903805  RMSE=904751.870193
+  Forces   MAE=3.747615  RMSE=6.434834
+DONE
+=== gfn2_nms_test_e222_subatom ===
+{
+  "checkpoint": "/mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/_gate_frozen_e222/epoch-222",
+  "data": "/mmhome/boittier/home/mmml_tutorial/acodcm/gfn2_nms_test.npz",
+  "natoms": 20,
+  "n_batches": 154,
+  "batch_size": 16,
+  "energy": {
+    "mae_kcal_mol": 739508.6807960164,
+    "rmse_kcal_mol": 881725.6330501141,
+    "mae_ev": 32068.406628521094,
+    "rmse_ev": 38235.57027755928
+  },
+  "forces": {
+    "mae_kcal_mol": 4.658157415022959,
+    "rmse_kcal_mol": 57.149793515663454,
+    "mae_ev": 0.20199855661440347,
+    "rmse_ev": 2.4782708638708195
+  },
+  "n_params": 12589
+}=== combined_dedup_test_e222_subatom ===
+{
+  "checkpoint": "/mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/_gate_frozen_e222/epoch-222",
+  "data": "/mmhome/boittier/home/mmml_tutorial/acodcm/out_combined_dedup/energies_forces_dipoles_test.npz",
+  "natoms": 20,
+  "n_batches": 47,
+  "batch_size": 16,
+  "energy": {
+    "mae_kcal_mol": 768964.9038047213,
+    "rmse_kcal_mol": 904751.870193286,
+    "mae_ev": 33345.76031173513,
+    "rmse_ev": 39234.09099138938
+  },
+  "forces": {
+    "mae_kcal_mol": 3.7476146630084437,
+    "rmse_kcal_mol": 6.434833970471874,
+    "mae_ev": 0.16251334706578363,
+    "rmse_ev": 0.27904320491544465
+  },
+  "n_params": 12589
+}

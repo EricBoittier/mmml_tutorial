@@ -1,0 +1,67 @@
+Wrote /mmhome/boittier/home/mmml_tutorial/acodcm/slurm/learning_curve/aco_n800_r1.sbatch  (aco n_train=800 r=1)
+  submitted 203226
+Wrote /mmhome/boittier/home/mmml_tutorial/acodcm/slurm/learning_curve/aco_n800_r2.sbatch  (aco n_train=800 r=2)
+  submitted 203227
+Wrote /mmhome/boittier/home/mmml_tutorial/acodcm/slurm/learning_curve/aco_n800_r3.sbatch  (aco n_train=800 r=3)
+  submitted 203228
+Wrote /mmhome/boittier/home/mmml_tutorial/acodcm/slurm/learning_curve/aco_n1600_r1.sbatch  (aco n_train=1600 r=1)
+  submitted 203229
+Wrote /mmhome/boittier/home/mmml_tutorial/acodcm/slurm/learning_curve/aco_n1600_r2.sbatch  (aco n_train=1600 r=2)
+  submitted 203230
+Wrote /mmhome/boittier/home/mmml_tutorial/acodcm/slurm/learning_curve/aco_n1600_r3.sbatch  (aco n_train=1600 r=3)
+  submitted 203231
+Wrote /mmhome/boittier/home/mmml_tutorial/acodcm/slurm/learning_curve/aco_n3200_r1.sbatch  (aco n_train=3200 r=1)
+  submitted 203232
+Wrote /mmhome/boittier/home/mmml_tutorial/acodcm/slurm/learning_curve/aco_n3200_r2.sbatch  (aco n_train=3200 r=2)
+  submitted 203233
+Wrote /mmhome/boittier/home/mmml_tutorial/acodcm/slurm/learning_curve/aco_n3200_r3.sbatch  (aco n_train=3200 r=3)
+  submitted 203234
+Wrote /mmhome/boittier/home/mmml_tutorial/acodcm/slurm/learning_curve/aco_n6400_r1.sbatch  (aco n_train=6400 r=1)
+  submitted 203235
+Wrote /mmhome/boittier/home/mmml_tutorial/acodcm/slurm/learning_curve/aco_n6400_r2.sbatch  (aco n_train=6400 r=2)
+  submitted 203236
+Wrote /mmhome/boittier/home/mmml_tutorial/acodcm/slurm/learning_curve/aco_n6400_r3.sbatch  (aco n_train=6400 r=3)
+  submitted 203237
+Wrote /mmhome/boittier/home/mmml_tutorial/acodcm/slurm/learning_curve/aco_n12000_r1.sbatch  (aco n_train=12000 r=1)
+  submitted 203238
+Wrote /mmhome/boittier/home/mmml_tutorial/acodcm/slurm/learning_curve/aco_n12000_r2.sbatch  (aco n_train=12000 r=2)
+  submitted 203239
+Wrote /mmhome/boittier/home/mmml_tutorial/acodcm/slurm/learning_curve/aco_n12000_r3.sbatch  (aco n_train=12000 r=3)
+  submitted 203240
+Wrote /mmhome/boittier/home/mmml_tutorial/acodcm/slurm/learning_curve/dcm_n800_r1.sbatch  (dcm n_train=800 r=1)
+  submitted 203241
+Wrote /mmhome/boittier/home/mmml_tutorial/acodcm/slurm/learning_curve/dcm_n800_r2.sbatch  (dcm n_train=800 r=2)
+  submitted 203242
+Wrote /mmhome/boittier/home/mmml_tutorial/acodcm/slurm/learning_curve/dcm_n800_r3.sbatch  (dcm n_train=800 r=3)
+  submitted 203243
+Wrote /mmhome/boittier/home/mmml_tutorial/acodcm/slurm/learning_curve/dcm_n1600_r1.sbatch  (dcm n_train=1600 r=1)
+  submitted 203244
+Wrote /mmhome/boittier/home/mmml_tutorial/acodcm/slurm/learning_curve/dcm_n1600_r2.sbatch  (dcm n_train=1600 r=2)
+  submitted 203245
+Wrote /mmhome/boittier/home/mmml_tutorial/acodcm/slurm/learning_curve/dcm_n1600_r3.sbatch  (dcm n_train=1600 r=3)
+  submitted 203246
+Wrote /mmhome/boittier/home/mmml_tutorial/acodcm/slurm/learning_curve/dcm_n3200_r1.sbatch  (dcm n_train=3200 r=1)
+  submitted 203247
+Wrote /mmhome/boittier/home/mmml_tutorial/acodcm/slurm/learning_curve/dcm_n3200_r2.sbatch  (dcm n_train=3200 r=2)
+  submitted 203248
+Wrote /mmhome/boittier/home/mmml_tutorial/acodcm/slurm/learning_curve/dcm_n3200_r3.sbatch  (dcm n_train=3200 r=3)
+  submitted 203249
+Wrote /mmhome/boittier/home/mmml_tutorial/acodcm/slurm/learning_curve/dcm_n6400_r1.sbatch  (dcm n_train=6400 r=1)
+  submitted 203250
+Wrote /mmhome/boittier/home/mmml_tutorial/acodcm/slurm/learning_curve/dcm_n6400_r2.sbatch  (dcm n_train=6400 r=2)
+  submitted 203251
+Wrote /mmhome/boittier/home/mmml_tutorial/acodcm/slurm/learning_curve/dcm_n6400_r3.sbatch  (dcm n_train=6400 r=3)
+  submitted 203252
+Wrote /mmhome/boittier/home/mmml_tutorial/acodcm/slurm/learning_curve/dcm_n12000_r1.sbatch  (dcm n_train=12000 r=1)
+  submitted 203253
+Wrote /mmhome/boittier/home/mmml_tutorial/acodcm/slurm/learning_curve/dcm_n12000_r2.sbatch  (dcm n_train=12000 r=2)
+  submitted 203254
+Wrote /mmhome/boittier/home/mmml_tutorial/acodcm/slurm/learning_curve/dcm_n12000_r3.sbatch  (dcm n_train=12000 r=3)
+  submitted 203255
+Submitted summary job 203256 (afterany:203226:203227:203228:203229:203230:203231:203232:203233:203234:203235:203236:203237:203238:203239:203240:203241:203242:203243:203244:203245:203246:203247:203248:203249:203250:203251:203252:203253:203254:203255)
+
+Configs:  /mmhome/boittier/home/mmml_tutorial/acodcm/configs/learning_curve/generated
+Slurm:    /mmhome/boittier/home/mmml_tutorial/acodcm/slurm/learning_curve
+Ckpts:    /mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/learning_curve
+Results:  /mmhome/boittier/home/mmml_tutorial/acodcm/out/eval/learning_curve
+Runs TSV: /mmhome/boittier/home/mmml_tutorial/acodcm/slurm/learning_curve/runs.tsv

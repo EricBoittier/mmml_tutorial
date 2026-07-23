@@ -1,0 +1,138 @@
+HOST=gpu09  DATE=2026-06-29T17:11:31+02:00
+JOB=aco_n1600_r1  n_train=1600  n_valid=60  seed=1042
+=== [1/3] PhysNet training ===
+[CudaDevice(id=0)]
+gpu
+[CudaDevice(id=0)]
+Namespace(config=None, data='./out/splits/aco/energies_forces_dipoles_train.npz', valid_data=None, ckpt_dir='./ckpts/learning_curve/aco/n1600/r1', tag='aco1_n1600_r1', model=None, n_train=1600, n_valid=60, seed=1042, batch_size=25, num_epochs=3500, learning_rate=0.001, energy_weight=1000.0, forces_weight=100.0, dipole_weight=1.0, charges_weight=1.0, objective='valid_loss', restart=None, num_atoms=20, features=32, max_degree=2, num_basis_functions=32, num_iterations=3, n_res=3, cutoff=4.0, max_atomic_number=35, zbl=True, use_pbc=False, use_energy_bias=True, optimizer='amsgrad', transform=None, schedule_fn=None, early_stop_patience=None, best=False, save_every_epoch=True, profile_epoch_timing=False, print_freq=1, batch_method='default', batch_args_dict=None, data_keys=None, conversion=None, init_params=None, physnet_checkpoint=None, physnet_transfer_model=None, list_physnet_transfer_models=False, physnet_transfer_category=None, match_checkpoint_architecture=True, distill=False, distill_alpha=1.0, distill_targets=None, teacher_checkpoint=None, metrics_plot=None, log_loss=False, rot_augment=False, rot_perturbation=1.0, charges=True, total_charge=0.0, include_electrostatics=False, efa=False, debug=False, save_config=None, quiet=False)
+Checkpoint directory (absolute): /mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/learning_curve/aco/n1600/r1
+Using specified num_atoms = 20
+dataR (16800, 20, 3)
+dataE [-81.64890567 -81.61583119 -40.98909133 -81.6630987  -81.78574893
+ -81.64504849 -81.73795782 -81.85385307 -81.7529597  -81.45295431]
+dataE [-81.64890567 -81.61583119 -40.98909133 -81.6630987  -81.78574893
+ -81.64504849 -81.73795782 -81.85385307 -81.7529597  -81.45295431]
+D (16800, 3)
+Saving model to args.model.json
+{'features': 32, 'max_degree': 2, 'num_iterations': 3, 'num_basis_functions': 32, 'cutoff': 4.0, 'max_atomic_number': 35, 'charges': True, 'natoms': 20, 'max_padded_atoms': 20, 'total_charge': 0.0, 'n_res': 3, 'n_refinement_blocks': 3, 'zbl': True, 'debug': False, 'efa': False, 'use_energy_bias': True, 'use_pbc': False, 'include_electrostatics': False}
+                             Train Data                             
+┏━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Key ┃ Shape + Stats                                              ┃
+┡━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ R   │ shape=(1600, 20, 3) x∈[-18, 18.31] μ=-1.701 σ=7.04         │
+│ Z   │ shape=(1600, 20) x∈[0, 8]                                  │
+│ F   │ shape=(1600, 20, 3) x∈[-4.555, 4.511] μ=1.575e-09 σ=0.9548 │
+│ E   │ shape=(1600, 1) x∈[-82.15, -40.48] μ=-77.42 σ=12.45        │
+│ N   │ shape=(1600, 1) x∈[10, 20]                                 │
+│ Q   │ shape=(1600, 1) x∈[0, 0] μ=0 σ=0                           │
+│ D   │ shape=(1600, 3) x∈[-0.4191, 0.4123] μ=-0.01248 σ=0.1668    │
+└─────┴────────────────────────────────────────────────────────────┘
+                         Validation Data                          
+┏━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Key ┃ Shape + Stats                                            ┃
+┡━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ R   │ shape=(60, 20, 3) x∈[-17.5, 17.33] μ=-1.887 σ=7.126      │
+│ Z   │ shape=(60, 20) x∈[0, 8]                                  │
+│ F   │ shape=(60, 20, 3) x∈[-4.042, 4.387] μ=-7.142e-10 σ=0.963 │
+│ E   │ shape=(60, 1) x∈[-82, -40.9] μ=-80.31 σ=7.316            │
+│ N   │ shape=(60, 1) x∈[10, 20]                                 │
+│ Q   │ shape=(60, 1) x∈[0, 0] μ=0 σ=0                           │
+│ D   │ shape=(60, 3) x∈[-0.3625, 0.403] μ=0.02175 σ=0.1686      │
+└─────┴──────────────────────────────────────────────────────────┘
+Using default (fat) batching method
+Training Routine
+                       .,,uod8B8bou,,.
+              ..,uod8BBBBBBBBBBBBBBBBRPFT?l!i:.
+         ,=m8BBBBBBBBBBBBBBBRPFT?!||||||||||||||
+         !...:!TVBBBRPFT||||||||||!!^^""'   ||||
+         !.......:!?|||||!!^^""'            ||||
+         !.........||||                     ||||
+         !.........||||  ##                 ||||
+         !.........||||      PhysNet        ||||
+         !.........||||      JAX            ||||
+         !.........||||                     ||||
+         !.........||||                     ||||
+         `.........||||                    ,||||
+          .;.......||||               _.-!!|||||
+   .,uodWBBBBb.....||||       _.-!!|||||||||!:'
+!YBBBBBBBBBBBBBBb..!|||:..-!!|||||||!iof68BBBBBb....
+!..YBBBBBBBBBBBBBBb!!||||||||!iof68BBBBBBRPFT?!::   `.
+!....YBBBBBBBBBBBBBBbaaitf68BBBBBBRPFT?!:::::::::     `.
+!......YBBBBBBBBBBBBBBBBBBBRPFT?!::::::;:!^"`;:::       `.
+!........YBBBBBBBBBBRPFT?!::::::::::^''...::::::;         iBBbo.
+`..........YBRPFT?!::::::::::::::::::::::::;iof68bo.      WBBBBbo.
+  `..........:::::::::::::::::::::::;iof688888888888b.     `YBBBP^'
+    `........::::::::::::::::;iof688888888888888888888b.     `
+      `......:::::::::;iof688888888888888888888888888888b.
+        `....:::;iof688888888888888888888888888888888899fT!
+          `..::!8888888888888888888888888888888899fT|!^"'
+            `' !!988888888888888888888888899fT|!^"'
+                `!!8888888888888888899fT|!^"'
+                  `!988888888899fT|!^"'
+                    `!9899fT|!^"'
+                      `!^"'
+DATA_PATH: /mmhome/boittier/home/mmml/mmml/models/physnetjax/data
+LOGS_PATH: /mmhome/boittier/home/mmml/mmml/models/physnetjax/logs
+ANALYSIS_PATH: /mmhome/boittier/home/mmml/mmml/models/physnetjax/analysis
+MAIN_PATH: /mmhome/boittier/home/mmml/mmml/models/physnetjax
+PYCHARMM_DIR: None
+Start Time:  15:11:36
+                              Optimizer Arguments                               
+┏━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━━┳━━━━━┳━━━━━━┳━━━━━━━┓
+┃ opti… ┃ opti… ┃ sche… ┃ sche… ┃ trans… ┃ redu… ┃ clip_… ┃ b1  ┃ b2   ┃ eps   ┃
+┡━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━━╇━━━━━╇━━━━━━╇━━━━━━━┩
+│ amsg… │ Grad… │ None  │ <fun… │ None   │ Grad… │ 10.0   │ 0.9 │ 0.99 │ 0.001 │
+│       │ chai… │       │ cons… │        │ redu… │        │     │      │       │
+│       │ at    │       │ at    │        │ at    │        │     │      │       │
+│       │ 0x14… │       │ 0x14… │        │ 0x14… │        │     │      │       │
+│       │ upda… │       │       │        │ upda… │        │     │      │       │
+│       │ chai… │       │       │        │ redu… │        │     │      │       │
+│       │ at    │       │       │        │ at    │        │     │      │       │
+│       │ 0x14… │       │       │        │ 0x14… │        │     │      │       │
+└───────┴───────┴───────┴───────┴────────┴───────┴────────┴─────┴──────┴───────┘
+                              Training Parameters                               
+┏━━━━━━━━┳━━━━━━━━┳━━━━━━━━┳━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━━┓
+┃ energ… ┃ force… ┃ dipol… ┃ charg… ┃ batch… ┃ num_… ┃ rot_a… ┃ rot_… ┃ train… ┃
+┡━━━━━━━━╇━━━━━━━━╇━━━━━━━━╇━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━━┩
+│ 1000.0 │ 100.0  │ 1.0    │ 1.0    │ 25     │ 20    │ False  │ 1.0   │ {'ene… │
+│        │        │        │        │        │       │        │       │ 'eV',  │
+│        │        │        │        │        │       │        │       │ 'forc… │
+│        │        │        │        │        │       │        │       │ 'eV/A… │
+│        │        │        │        │        │       │        │       │ 'coor… │
+│        │        │        │        │        │       │        │       │ 'Angs… │
+└────────┴────────┴────────┴────────┴────────┴───────┴────────┴───────┴────────┘
+                                 Training Style                                 
+┏━━━━━━━━━┳━━━━━━━┳━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━┓
+┃ restart ┃ best  ┃ save_e… ┃ data_k… ┃ object… ┃ distill ┃ distill… ┃ distil… ┃
+┡━━━━━━━━━╇━━━━━━━╇━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━┩
+│ None    │ False │ True    │ ('R',   │ valid_… │ False   │ 1.0      │ None    │
+│         │       │         │ 'Z',    │         │         │          │         │
+│         │       │         │ 'F',    │         │         │          │         │
+│         │       │         │ 'N',    │         │         │          │         │
+│         │       │         │ 'E',    │         │         │          │         │
+│         │       │         │ 'D',    │         │         │          │         │
+│         │       │         │ 'batch… │         │         │          │         │
+└─────────┴───────┴─────────┴─────────┴─────────┴─────────┴──────────┴─────────┘
+                            Validation Batch[0]                            
+┏━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Key            ┃ Shape + Stats                                          ┃
+┡━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ R              │ shape=(500, 3) x∈[-17.5, 17.33] μ=-2.846 σ=6.573       │
+│ Z              │ shape=(500,) x∈[0, 8]                                  │
+│ F              │ shape=(500, 3) x∈[-3.966, 3.906] μ=-1.748e-09 σ=0.9012 │
+│ N              │ shape=(25,) x∈[10, 20]                                 │
+│ E              │ shape=(25, 1) x∈[-82, -40.9] μ=-80.09 σ=8.002          │
+│ D              │ shape=(25, 3) x∈[-0.3625, 0.3844] μ=0.02808 σ=0.1851   │
+│ dst_idx        │ shape=(9500,) x∈[0, 499]                               │
+│ src_idx        │ shape=(9500,) x∈[0, 499]                               │
+│ batch_mask     │ shape=(9500,) x∈[0, 1]                                 │
+│ batch_segments │ shape=(500,) x∈[0, 24]                                 │
+│ atom_mask      │ shape=(500,) x∈[0, 1]                                  │
+└────────────────┴────────────────────────────────────────────────────────┘
+                                Model Attributes                                
+┏━━━┳━━━┳━━━┳━━━┳━━━━┳━━━┳━━━━┳━━━┳━━━━┳━━━┳━━━━┳━━━┳━━━━┳━━━┳━━━━┳━━━┳━━━━┳━━━┓
+┃ … ┃ … ┃ … ┃ … ┃ c… ┃ … ┃ c… ┃ … ┃ m… ┃ … ┃ n… ┃ … ┃ z… ┃ … ┃ e… ┃ … ┃ u… ┃ … ┃
+┡━━━╇━━━╇━━━╇━━━╇━━━━╇━━━╇━━━━╇━━━╇━━━━╇━━━╇━━━━╇━━━╇━━━━╇━━━╇━━━━╇━━━╇━━━━╇━━━┩
+│ … │ 2 │ 3 │ … │ 4… │ … │ T… │ … │ 20 │ … │ 3  │ 3 │ T… │ … │ F… │ … │ F… │ … │
+└───┴───┴───┴───┴────┴───┴────┴───┴────┴───┴────┴───┴────┴───┴────┴───┴────┴───┘
+slurmstepd: error: *** JOB 203229 ON gpu09 CANCELLED AT 2026-06-29T17:11:59 ***

@@ -1,0 +1,11 @@
+seed 123
+output /mmhome/boittier/home/mmml_tutorial/acodcm/boxes/dcm206/packmol_cluster/init-packmol-sphere.pdb
+filetype pdb
+tolerance 2.0
+
+structure /mmhome/boittier/home/mmml_tutorial/acodcm/boxes/dcm206/packmol_cluster/monomers/dcm.pdb
+  chain A
+  resnumbers 2
+  number 206
+  inside cube -12.873398108887118 -12.873398108887118 -12.873398108887118 25.746796217774236
+end structure

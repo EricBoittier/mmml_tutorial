@@ -1,0 +1,92 @@
+gpu01
+GPU 0: NVIDIA GeForce RTX 3080 (UUID: GPU-4af6010a-7e17-1d16-080b-8bf879e5498f)
+jax devices [CudaDevice(id=0)]
+=== orientation scan: ACO (epoch-106) ===
+/mmhome/boittier/home/mmml/.venv/lib/python3.13/site-packages/orbax/checkpoint/_src/serialization/jax_array_handlers.py:925: UserWarning: Sharding info not provided when restoring. Populating sharding info from sharding file. Please note restoration time will be slightly increased due to reading from file. Note also that this option is unsafe when restoring on a different topology than the checkpoint was saved with.
+  warnings.warn(
+ACO: 10 directions x 24 orientations = 240 rays x 36 r-points = 8640 evaluations
+handoff: ML on 0-4.5, blend to 6, MM tail to 11 A
+dict_keys(['opt_state', 'params', 'step'])
+                                Model Attributes                                
+┏━━━┳━━━┳━━━┳━━━┳━━┳━━━┳━━┳━━━┳━━┳━━━┳━━┳━━━┳━━┳━━━┳━━┳━━━┳━━┳━━━┳━━┳━━━┳━━┳━━━┓
+┃ … ┃ … ┃ … ┃ … ┃  ┃ … ┃  ┃ … ┃  ┃ … ┃  ┃ … ┃  ┃ … ┃  ┃ … ┃  ┃ … ┃  ┃ … ┃  ┃ … ┃
+┡━━━╇━━━╇━━━╇━━━╇━━╇━━━╇━━╇━━━╇━━╇━━━╇━━╇━━━╇━━╇━━━╇━━╇━━━╇━━╇━━━╇━━╇━━━╇━━╇━━━┩
+│ … │ … │ … │ … │  │ … │  │ … │  │ … │  │ 2 │  │ … │  │ … │  │ … │  │ … │  │ … │
+└───┴───┴───┴───┴──┴───┴──┴───┴──┴───┴──┴───┴──┴───┴──┴───┴──┴───┴──┴───┴──┴───┘
+                                Last Checkpoint                                 
+┏━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━┳━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━┓
+┃ Checkpoint        ┃ name      ┃ epoch ┃ best_loss         ┃ Save Time        ┃
+┡━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━┩
+│ /mmhome/boittier… │ epoch-106 │ 106   │ 59.58141326904297 │ 2026-07-17       │
+│                   │           │       │                   │ 18:17:06.372913  │
+└───────────────────┴───────────┴───────┴───────────────────┴──────────────────┘
+135 batches of 64 covering all 8640 real points (+0 padding)
+  batch 0/135
+  batch 50/135
+  batch 100/135
+
+=== ACO @ mm_switch_on=6 ===
+  rays evaluated : 240 (0 dropped by the batcher)
+  SPURIOUS (>1 ML minimum) : 33  (13.8% of rays)
+  deepest well  : -4.76 kcal/mol
+  mean well     : 22.10 kcal/mol
+  -> /mmhome/boittier/home/mmml_tutorial/acodcm/orient_gfn2nms_b7c117aa-27b1-46d3-9c02-4ceef4b14b17/ACO/rays.csv, summary.json
+=== ACO summary ===
+{
+  "resid": "ACO",
+  "checkpoint": "/mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/_gate_frozen_b7c117aa-27b1-46d3-9c02-4ceef4b14b17_e106",
+  "use_ema": true,
+  "mm_switch_on": 6.0,
+  "ml_switch_width": 1.5,
+  "n_rays": 240,
+  "n_evaluated": 240,
+  "n_dropped": 0,
+  "n_rays_spurious": 33,
+  "frac_rays_spurious": 0.1375,
+  "mean_min_kcal": 22.1047617819648,
+  "deepest_kcal": -4.760288367412985
+}=== orientation scan: DCM (epoch-106) ===
+/mmhome/boittier/home/mmml/.venv/lib/python3.13/site-packages/orbax/checkpoint/_src/serialization/jax_array_handlers.py:925: UserWarning: Sharding info not provided when restoring. Populating sharding info from sharding file. Please note restoration time will be slightly increased due to reading from file. Note also that this option is unsafe when restoring on a different topology than the checkpoint was saved with.
+  warnings.warn(
+DCM: 10 directions x 24 orientations = 240 rays x 36 r-points = 8640 evaluations
+handoff: ML on 0-4.5, blend to 6, MM tail to 11 A
+dict_keys(['opt_state', 'params', 'step'])
+                                Model Attributes                                
+┏━━━┳━━━┳━━━┳━━━┳━━┳━━━┳━━┳━━━┳━━┳━━━┳━━┳━━━┳━━┳━━━┳━━┳━━━┳━━┳━━━┳━━┳━━━┳━━┳━━━┓
+┃ … ┃ … ┃ … ┃ … ┃  ┃ … ┃  ┃ … ┃  ┃ … ┃  ┃ … ┃  ┃ … ┃  ┃ … ┃  ┃ … ┃  ┃ … ┃  ┃ … ┃
+┡━━━╇━━━╇━━━╇━━━╇━━╇━━━╇━━╇━━━╇━━╇━━━╇━━╇━━━╇━━╇━━━╇━━╇━━━╇━━╇━━━╇━━╇━━━╇━━╇━━━┩
+│ … │ … │ … │ … │  │ … │  │ … │  │ … │  │ 2 │  │ … │  │ … │  │ … │  │ … │  │ … │
+└───┴───┴───┴───┴──┴───┴──┴───┴──┴───┴──┴───┴──┴───┴──┴───┴──┴───┴──┴───┴──┴───┘
+                                Last Checkpoint                                 
+┏━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━┳━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━┓
+┃ Checkpoint        ┃ name      ┃ epoch ┃ best_loss         ┃ Save Time        ┃
+┡━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━┩
+│ /mmhome/boittier… │ epoch-106 │ 106   │ 59.58141326904297 │ 2026-07-17       │
+│                   │           │       │                   │ 18:17:06.372913  │
+└───────────────────┴───────────┴───────┴───────────────────┴──────────────────┘
+135 batches of 64 covering all 8640 real points (+0 padding)
+  batch 0/135
+  batch 50/135
+  batch 100/135
+
+=== DCM @ mm_switch_on=6 ===
+  rays evaluated : 240 (0 dropped by the batcher)
+  SPURIOUS (>1 ML minimum) : 94  (39.2% of rays)
+  deepest well  : -2.76 kcal/mol
+  mean well     : -1.28 kcal/mol
+  -> /mmhome/boittier/home/mmml_tutorial/acodcm/orient_gfn2nms_b7c117aa-27b1-46d3-9c02-4ceef4b14b17/DCM/rays.csv, summary.json
+=== DCM summary ===
+{
+  "resid": "DCM",
+  "checkpoint": "/mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/_gate_frozen_b7c117aa-27b1-46d3-9c02-4ceef4b14b17_e106",
+  "use_ema": true,
+  "mm_switch_on": 6.0,
+  "ml_switch_width": 1.5,
+  "n_rays": 240,
+  "n_evaluated": 240,
+  "n_dropped": 0,
+  "n_rays_spurious": 94,
+  "frac_rays_spurious": 0.39166666666666666,
+  "mean_min_kcal": -1.2827636815103394,
+  "deepest_kcal": -2.7568330550193787
+}DONE

@@ -1,0 +1,317 @@
+HOST=gpu08  DATE=2026-06-29T21:34:10+02:00
+JOB=aco_n12000_r1  n_train=12000  n_valid=450  seed=1042  epochs=1000
+=== [1/3] PhysNet training ===
+[CudaDevice(id=0)]
+gpu
+[CudaDevice(id=0)]
+Namespace(config=None, data='./out/splits/aco/energies_forces_dipoles_train.npz', valid_data=None, ckpt_dir='./ckpts/learning_curve/e1000/aco/n12000/r1', tag='aco1_n12000_r1', model=None, n_train=12000, n_valid=450, seed=1042, batch_size=25, num_epochs=1000, learning_rate=0.001, energy_weight=1000.0, forces_weight=100.0, dipole_weight=1.0, charges_weight=1.0, objective='valid_loss', restart=None, num_atoms=20, features=32, max_degree=2, num_basis_functions=32, num_iterations=3, n_res=3, cutoff=4.0, max_atomic_number=35, zbl=True, use_pbc=False, use_energy_bias=True, optimizer='amsgrad', transform=None, schedule_fn=None, early_stop_patience=None, best=False, save_every_epoch=True, profile_epoch_timing=False, print_freq=1, batch_method='default', batch_args_dict=None, data_keys=None, conversion=None, init_params=None, physnet_checkpoint=None, physnet_transfer_model=None, list_physnet_transfer_models=False, physnet_transfer_category=None, match_checkpoint_architecture=True, distill=False, distill_alpha=1.0, distill_targets=None, teacher_checkpoint=None, metrics_plot=None, log_loss=False, rot_augment=False, rot_perturbation=1.0, charges=True, total_charge=0.0, include_electrostatics=False, efa=False, debug=False, save_config=None, quiet=False)
+Checkpoint directory (absolute): /mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/learning_curve/e1000/aco/n12000/r1
+Using specified num_atoms = 20
+dataR (16800, 20, 3)
+dataE [-81.64890567 -81.61583119 -40.98909133 -81.6630987  -81.78574893
+ -81.64504849 -81.73795782 -81.85385307 -81.7529597  -81.45295431]
+dataE [-81.64890567 -81.61583119 -40.98909133 -81.6630987  -81.78574893
+ -81.64504849 -81.73795782 -81.85385307 -81.7529597  -81.45295431]
+D (16800, 3)
+Saving model to args.model.json
+{'features': 32, 'max_degree': 2, 'num_iterations': 3, 'num_basis_functions': 32, 'cutoff': 4.0, 'max_atomic_number': 35, 'charges': True, 'natoms': 20, 'max_padded_atoms': 20, 'total_charge': 0.0, 'n_res': 3, 'n_refinement_blocks': 3, 'zbl': True, 'debug': False, 'efa': False, 'use_energy_bias': True, 'use_pbc': False, 'include_electrostatics': False}
+                             Train Data                             
+┏━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Key ┃ Shape + Stats                                              ┃
+┡━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ R   │ shape=(12000, 20, 3) x∈[-18, 18.31] μ=-1.716 σ=7.108       │
+│ Z   │ shape=(12000, 20) x∈[0, 8]                                 │
+│ F   │ shape=(12000, 20, 3) x∈[-4.566, 4.561] μ=7.62e-10 σ=0.9638 │
+│ E   │ shape=(12000, 1) x∈[-82.15, -40.37] μ=-77.8 σ=11.95        │
+│ N   │ shape=(12000, 1) x∈[10, 20]                                │
+│ Q   │ shape=(12000, 1) x∈[0, 0] μ=0 σ=0                          │
+│ D   │ shape=(12000, 3) x∈[-0.4548, 0.4229] μ=-0.01073 σ=0.1663   │
+└─────┴────────────────────────────────────────────────────────────┘
+                          Validation Data                          
+┏━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Key ┃ Shape + Stats                                             ┃
+┡━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ R   │ shape=(450, 20, 3) x∈[-18, 18.31] μ=-1.762 σ=7.258        │
+│ Z   │ shape=(450, 20) x∈[0, 8]                                  │
+│ F   │ shape=(450, 20, 3) x∈[-4.556, 4.511] μ=1.733e-09 σ=0.9607 │
+│ E   │ shape=(450, 1) x∈[-82.15, -40.65] μ=-78.57 σ=10.79        │
+│ N   │ shape=(450, 1) x∈[10, 20]                                 │
+│ Q   │ shape=(450, 1) x∈[0, 0] μ=0 σ=0                           │
+│ D   │ shape=(450, 3) x∈[-0.4191, 0.403] μ=-0.01326 σ=0.1646     │
+└─────┴───────────────────────────────────────────────────────────┘
+Using default (fat) batching method
+Training Routine
+                       .,,uod8B8bou,,.
+              ..,uod8BBBBBBBBBBBBBBBBRPFT?l!i:.
+         ,=m8BBBBBBBBBBBBBBBRPFT?!||||||||||||||
+         !...:!TVBBBRPFT||||||||||!!^^""'   ||||
+         !.......:!?|||||!!^^""'            ||||
+         !.........||||                     ||||
+         !.........||||  ##                 ||||
+         !.........||||      PhysNet        ||||
+         !.........||||      JAX            ||||
+         !.........||||                     ||||
+         !.........||||                     ||||
+         `.........||||                    ,||||
+          .;.......||||               _.-!!|||||
+   .,uodWBBBBb.....||||       _.-!!|||||||||!:'
+!YBBBBBBBBBBBBBBb..!|||:..-!!|||||||!iof68BBBBBb....
+!..YBBBBBBBBBBBBBBb!!||||||||!iof68BBBBBBRPFT?!::   `.
+!....YBBBBBBBBBBBBBBbaaitf68BBBBBBRPFT?!:::::::::     `.
+!......YBBBBBBBBBBBBBBBBBBBRPFT?!::::::;:!^"`;:::       `.
+!........YBBBBBBBBBBRPFT?!::::::::::^''...::::::;         iBBbo.
+`..........YBRPFT?!::::::::::::::::::::::::;iof68bo.      WBBBBbo.
+  `..........:::::::::::::::::::::::;iof688888888888b.     `YBBBP^'
+    `........::::::::::::::::;iof688888888888888888888b.     `
+      `......:::::::::;iof688888888888888888888888888888b.
+        `....:::;iof688888888888888888888888888888888899fT!
+          `..::!8888888888888888888888888888888899fT|!^"'
+            `' !!988888888888888888888888899fT|!^"'
+                `!!8888888888888888899fT|!^"'
+                  `!988888888899fT|!^"'
+                    `!9899fT|!^"'
+                      `!^"'
+DATA_PATH: /mmhome/boittier/home/mmml/mmml/models/physnetjax/data
+LOGS_PATH: /mmhome/boittier/home/mmml/mmml/models/physnetjax/logs
+ANALYSIS_PATH: /mmhome/boittier/home/mmml/mmml/models/physnetjax/analysis
+MAIN_PATH: /mmhome/boittier/home/mmml/mmml/models/physnetjax
+PYCHARMM_DIR: None
+Start Time:  19:34:13
+                              Optimizer Arguments                               
+┏━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━━┳━━━━━┳━━━━━━┳━━━━━━━┓
+┃ opti… ┃ opti… ┃ sche… ┃ sche… ┃ trans… ┃ redu… ┃ clip_… ┃ b1  ┃ b2   ┃ eps   ┃
+┡━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━━╇━━━━━╇━━━━━━╇━━━━━━━┩
+│ amsg… │ Grad… │ None  │ <fun… │ None   │ Grad… │ 10.0   │ 0.9 │ 0.99 │ 0.001 │
+│       │ chai… │       │ cons… │        │ redu… │        │     │      │       │
+│       │ at    │       │ at    │        │ at    │        │     │      │       │
+│       │ 0x14… │       │ 0x14… │        │ 0x14… │        │     │      │       │
+│       │ upda… │       │       │        │ upda… │        │     │      │       │
+│       │ chai… │       │       │        │ redu… │        │     │      │       │
+│       │ at    │       │       │        │ at    │        │     │      │       │
+│       │ 0x14… │       │       │        │ 0x14… │        │     │      │       │
+└───────┴───────┴───────┴───────┴────────┴───────┴────────┴─────┴──────┴───────┘
+                              Training Parameters                               
+┏━━━━━━━━┳━━━━━━━━┳━━━━━━━━┳━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━━┓
+┃ energ… ┃ force… ┃ dipol… ┃ charg… ┃ batch… ┃ num_… ┃ rot_a… ┃ rot_… ┃ train… ┃
+┡━━━━━━━━╇━━━━━━━━╇━━━━━━━━╇━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━━┩
+│ 1000.0 │ 100.0  │ 1.0    │ 1.0    │ 25     │ 20    │ False  │ 1.0   │ {'ene… │
+│        │        │        │        │        │       │        │       │ 'eV',  │
+│        │        │        │        │        │       │        │       │ 'forc… │
+│        │        │        │        │        │       │        │       │ 'eV/A… │
+│        │        │        │        │        │       │        │       │ 'coor… │
+│        │        │        │        │        │       │        │       │ 'Angs… │
+└────────┴────────┴────────┴────────┴────────┴───────┴────────┴───────┴────────┘
+                                 Training Style                                 
+┏━━━━━━━━━┳━━━━━━━┳━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━┓
+┃ restart ┃ best  ┃ save_e… ┃ data_k… ┃ object… ┃ distill ┃ distill… ┃ distil… ┃
+┡━━━━━━━━━╇━━━━━━━╇━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━┩
+│ None    │ False │ True    │ ('R',   │ valid_… │ False   │ 1.0      │ None    │
+│         │       │         │ 'Z',    │         │         │          │         │
+│         │       │         │ 'F',    │         │         │          │         │
+│         │       │         │ 'N',    │         │         │          │         │
+│         │       │         │ 'E',    │         │         │          │         │
+│         │       │         │ 'D',    │         │         │          │         │
+│         │       │         │ 'batch… │         │         │          │         │
+└─────────┴───────┴─────────┴─────────┴─────────┴─────────┴──────────┴─────────┘
+                           Validation Batch[0]                            
+┏━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Key            ┃ Shape + Stats                                         ┃
+┡━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ R              │ shape=(500, 3) x∈[-17.58, 17.8] μ=-1.112 σ=7.404      │
+│ Z              │ shape=(500,) x∈[0, 8]                                 │
+│ F              │ shape=(500, 3) x∈[-3.64, 4.506] μ=3.497e-09 σ=1.016   │
+│ N              │ shape=(25,) x∈[10, 20]                                │
+│ E              │ shape=(25, 1) x∈[-81.87, -40.78] μ=-76.64 σ=13.23     │
+│ D              │ shape=(25, 3) x∈[-0.3394, 0.3214] μ=-0.02328 σ=0.1623 │
+│ dst_idx        │ shape=(9500,) x∈[0, 499]                              │
+│ src_idx        │ shape=(9500,) x∈[0, 499]                              │
+│ batch_mask     │ shape=(9500,) x∈[0, 1]                                │
+│ batch_segments │ shape=(500,) x∈[0, 24]                                │
+│ atom_mask      │ shape=(500,) x∈[0, 1]                                 │
+└────────────────┴───────────────────────────────────────────────────────┘
+                                Model Attributes                                
+┏━━━┳━━━┳━━━┳━━━┳━━━━┳━━━┳━━━━┳━━━┳━━━━┳━━━┳━━━━┳━━━┳━━━━┳━━━┳━━━━┳━━━┳━━━━┳━━━┓
+┃ … ┃ … ┃ … ┃ … ┃ c… ┃ … ┃ c… ┃ … ┃ m… ┃ … ┃ n… ┃ … ┃ z… ┃ … ┃ e… ┃ … ┃ u… ┃ … ┃
+┡━━━╇━━━╇━━━╇━━━╇━━━━╇━━━╇━━━━╇━━━╇━━━━╇━━━╇━━━━╇━━━╇━━━━╇━━━╇━━━━╇━━━╇━━━━╇━━━┩
+│ … │ 2 │ 3 │ … │ 4… │ … │ T… │ … │ 20 │ … │ 3  │ 3 │ T… │ … │ F… │ … │ F… │ … │
+└───┴───┴───┴───┴────┴───┴────┴───┴────┴───┴────┴───┴────┴───┴────┴───┴────┴───┘
+                          PhysNetJax Training Progress                          
+┏┳━━┳━━━━┳━━━━━┳━━━━━┳━━━━━━┳━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━━┓
+┃┃  ┃ Ef ┃ Tra ┃ Val ┃      ┃       ┃        ┃       ┃        ┃ Train ┃        ┃
+┃┃  ┃ f. ┃ in  ┃ id  ┃      ┃ Train ┃ Valid  ┃ Train ┃ Valid  ┃ Dipol ┃ Valid  ┃
+┃┃  ┃    ┃ Los ┃ Los ┃ Best ┃ Energ ┃ Energy ┃ Force ┃ Forces ┃ es    ┃ Dipole ┃
+┃┃  ┃ LR ┃ s   ┃ s   ┃ Loss ┃ y MAE ┃ MAE    ┃ s MAE ┃ MAE    ┃ MAE   ┃ s MAE  ┃
+┡╇━━╇━━━━╇━━━━━╇━━━━━╇━━━━━━╇━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━━┩
+││  │ 5. │ 0.0 │ 0.0 │ 0.03 │ 0.023 │ 8.389e │ 7.257 │ 4.666e │ 0.015 │ 0.0159 │
+││  │ 90 │ 689 │ 332 │ 31   │ 6     │ -03    │ e-03  │ -03    │ 8     │        │
+││  │ 5e │     │     │      │       │        │       │        │       │        │
+││  │ -0 │     │     │      │       │        │       │        │       │        │
+││  │ 4  │     │     │      │       │        │       │        │       │        │
+││  │ 5. │ 0.0 │ 0.0 │ 0.03 │ 0.020 │ 8.528e │ 7.542 │ 4.673e │ 0.015 │ 0.0159 │
+││  │ 90 │ 731 │ 332 │ 31   │ 5     │ -03    │ e-03  │ -03    │ 8     │        │
+││  │ 5e │     │     │      │       │        │       │        │       │        │
+││  │ -0 │     │     │      │       │        │       │        │       │        │
+││  │ 4  │     │     │      │       │        │       │        │       │        │
+││  │ 5. │ 0.0 │ 0.0 │ 0.03 │ 0.016 │ 8.978e │ 7.943 │ 4.684e │ 0.016 │ 0.0159 │
+││  │ 90 │ 878 │ 332 │ 31   │ 5     │ -03    │ e-03  │ -03    │ 5     │        │
+││  │ 5e │     │     │      │       │        │       │        │       │        │
+││  │ -0 │     │     │      │       │        │       │        │       │        │
+││  │ 4  │     │     │      │       │        │       │        │       │        │
+││  │ 5. │ 0.0 │ 0.0 │ 0.03 │ 0.018 │ 9.239e │ 8.185 │ 4.704e │ 0.016 │ 0.0160 │
+││  │ 90 │ 873 │ 333 │ 31   │ 5     │ -03    │ e-03  │ -03    │ 6     │        │
+││  │ 5e │     │     │      │       │        │       │        │       │        │
+││  │ -0 │     │     │      │       │        │       │        │       │        │
+││  │ 4  │     │     │      │       │        │       │        │       │        │
+││  │ 5. │ 0.0 │ 0.0 │ 0.03 │ 0.017 │ 9.553e │ 8.694 │ 4.737e │ 0.016 │ 0.0162 │
+││  │ 90 │ 957 │ 335 │ 31   │ 5     │ -03    │ e-03  │ -03    │ 8     │        │
+││  │ 5e │     │     │      │       │        │       │        │       │        │
+││  │ -0 │     │     │      │       │        │       │        │       │        │
+││  │ 4  │     │     │      │       │        │       │        │       │        │
+││  │ 5. │ 0.0 │ 0.0 │ 0.03 │ 0.017 │ 0.0101 │ 8.105 │ 4.773e │ 0.017 │ 0.0163 │
+││  │ 90 │ 883 │ 338 │ 31   │ 0     │        │ e-03  │ -03    │ 0     │        │
+││  │ 5e │     │     │      │       │        │       │        │       │        │
+││  │ -0 │     │     │      │       │        │       │        │       │        │
+││  │ 4  │     │     │      │       │        │       │        │       │        │
+││  │ 5. │ 0.0 │ 0.0 │ 0.03 │ 0.019 │ 9.577e │ 8.182 │ 4.791e │ 0.017 │ 0.0164 │
+││  │ 90 │ 925 │ 341 │ 31   │ 6     │ -03    │ e-03  │ -03    │ 0     │        │
+││  │ 5e │     │     │      │       │        │       │        │       │        │
+││  │ -0 │     │     │      │       │        │       │        │       │        │
+││  │ 4  │     │     │      │       │        │       │        │       │        │
+││  │ 5. │ 0.0 │ 0.0 │ 0.03 │ 0.016 │ 9.935e │ 8.874 │ 4.818e │ 0.017 │ 0.0165 │
+││  │ 90 │ 986 │ 343 │ 31   │ 0     │ -03    │ e-03  │ -03    │ 2     │        │
+││  │ 5e │     │     │      │       │        │       │        │       │        │
+││  │ -0 │     │     │      │       │        │       │        │       │        │
+││  │ 4  │     │     │      │       │        │       │        │       │        │
+││  │ 5. │ 0.0 │ 0.0 │ 0.03 │ 0.021 │ 9.735e │ 7.272 │ 4.839e │ 0.016 │ 0.0165 │
+││  │ 90 │ 735 │ 343 │ 31   │ 5     │ -03    │ e-03  │ -03    │ 6     │        │
+││  │ 5e │     │     │      │       │        │       │        │       │        │
+││  │ -0 │     │     │      │       │        │       │        │       │        │
+││  │ 4  │     │     │      │       │        │       │        │       │        │
+││  │ 5. │ 0.0 │ 0.0 │ 0.03 │ 0.015 │ 9.516e │ 6.837 │ 4.824e │ 0.016 │ 0.0165 │
+││  │ 90 │ 597 │ 342 │ 31   │ 0     │ -03    │ e-03  │ -03    │ 7     │        │
+││  │ 5e │     │     │      │       │        │       │        │       │        │
+││  │ -0 │     │     │      │       │        │       │        │       │        │
+││  │ 4  │     │     │      │       │        │       │        │       │        │
+└┴──┴────┴─────┴─────┴──────┴───────┴────────┴───────┴────────┴───────┴────────┘
+                                Last Checkpoint                                 
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳┓
+┃ Checkpoint                                                                  ┃┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇┩
+│ /mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/learning_curve/e1000/aco/… ││
+└─────────────────────────────────────────────────────────────────────────────┴┘
+Saving portable checkpoint to /mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/learning_curve/e1000/aco/n12000/r1/params_aco1_n12000_r1_2026-06-29_22-20-41.json
+Run directory: /mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/learning_curve/e1000/aco/n12000/r1/aco1_n12000_r1-5a712bfa-4e30-4667-84ce-540359429a34
+=== [2/3] Learning curves from checkpoints ===
+/mmhome/boittier/home/mmml/.venv/lib/python3.14/site-packages/orbax/checkpoint/_src/serialization/jax_array_handlers.py:925: UserWarning: Sharding info not provided when restoring. Populating sharding info from sharding file. Please note restoration time will be slightly increased due to reading from file. Note also that this option is unsafe when restoring on a different topology than the checkpoint was saved with.
+  warnings.warn(
+WARNING:matplotlib.font_manager:findfont: Failed to find font weight medium, now using 400.
+
+================================================================================
+EXTRACTING TRAINING METRICS FROM CHECKPOINTS
+================================================================================
+
+Checkpoint directory: aco1_n12000_r1-5a712bfa-4e30-4667-84ce-540359429a34
+Output: /mmhome/boittier/home/mmml_tutorial/acodcm/out/eval/learning_curve/e1000/aco/n12000/r1/training_curves.png
+
+📊 Extracting metrics from checkpoints...
+Found 200 epoch checkpoints
+Extracted metrics from 200/200 checkpoints
+Wrote metrics JSON: /mmhome/boittier/home/mmml_tutorial/acodcm/out/eval/learning_curve/e1000/aco/n12000/r1/training_metrics.json
+
+📈 Creating training plots...
+Saved: /mmhome/boittier/home/mmml_tutorial/acodcm/out/eval/learning_curve/e1000/aco/n12000/r1/training_curves.png
+
+================================================================================
+TRAINING METRICS SUMMARY
+================================================================================
+
+Checkpoint: aco1_n12000_r1-5a712bfa-4e30-4667-84ce-540359429a34
+Epochs analyzed: 200
+Epoch range: 1 to 996
+
+LOSS STATISTICS
+--------------------------------------------------------------------------------
+Training Loss:
+  Initial: 6987086848.000000
+  Final:   0.088254
+  Best:    0.050939 (epoch 881)
+  Improvement: 100.0%
+
+Validation Loss:
+  Initial: 23039477760.000000
+  Final:   0.033821
+  Best:    0.033125 (epoch 986)
+  Improvement: 100.0%
+
+VALIDATION MAE METRICS
+--------------------------------------------------------------------------------
+Energy   MAE: 0.231817 kcal/mol     (best: 0.189215 @ epoch 896)
+Forces   MAE: 0.110076 kcal/mol/Å   (best: 0.107600 @ epoch 991)
+Dipole   MAE: 0.016297 e·Å          (best: 0.015917 @ epoch 991)
+
+LEARNING RATE
+--------------------------------------------------------------------------------
+Initial: 1.000000e-03
+Final:   5.904899e-04
+Decay:   41.0%
+
+CONVERGENCE ANALYSIS
+--------------------------------------------------------------------------------
+Last 10 epochs:
+  Mean loss: 0.033561
+  Std dev:   0.000239
+  Relative std: 0.71%
+  ✅ Converged (std < 1%)
+
+================================================================================
+
+✅ ANALYSIS COMPLETE!
+
+To evaluate the best checkpoint:
+  python -m mmml.cli.evaluate_model \
+      /mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/learning_curve/e1000/aco/n12000/r1/aco1_n12000_r1-5a712bfa-4e30-4667-84ce-540359429a34/epoch-986 \
+      --test-data splits/data_test.npz
+=== [3/3] Hold-out test E/F evaluation ===
+Latest epoch: /mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/learning_curve/e1000/aco/n12000/r1/aco1_n12000_r1-5a712bfa-4e30-4667-84ce-540359429a34/epoch-1000
+/mmhome/boittier/home/mmml/.venv/lib/python3.14/site-packages/orbax/checkpoint/_src/serialization/jax_array_handlers.py:925: UserWarning: Sharding info not provided when restoring. Populating sharding info from sharding file. Please note restoration time will be slightly increased due to reading from file. Note also that this option is unsafe when restoring on a different topology than the checkpoint was saved with.
+  warnings.warn(
+Wrote portable checkpoint to /mmhome/boittier/home/mmml_tutorial/acodcm/out/eval/learning_curve/e1000/aco/n12000/r1/latest.json
+Eval checkpoint: /mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/learning_curve/e1000/aco/n12000/r1/params_aco1_n12000_r1_2026-06-29_22-20-41.json
+dataR (2100, 20, 3)
+dataE [-81.29090465 -81.54559955 -81.7907611  -81.94174604 -81.5298973
+ -81.66088965 -81.5388692  -81.59623926 -81.25757762 -81.93940915]
+dataE [-81.29090465 -81.54559955 -81.7907611  -81.94174604 -81.5298973
+ -81.66088965 -81.5388692  -81.59623926 -81.25757762 -81.93940915]
+D (2100, 3)
+
+Evaluating 84 batches × batch_size=25 (natoms=20, checkpoint=params_aco1_n12000_r1_2026-06-29_22-20-41.json)
+
+0it [00:00, ?it/s]1it [00:11, 11.02s/it]2it [00:11,  4.79s/it]3it [00:11,  2.80s/it]4it [00:12,  1.86s/it]5it [00:12,  1.34s/it]6it [00:13,  1.05s/it]7it [00:13,  1.18it/s]8it [00:14,  1.41it/s]9it [00:14,  1.61it/s]10it [00:14,  1.79it/s]11it [00:15,  1.93it/s]12it [00:15,  2.04it/s]13it [00:16,  2.13it/s]14it [00:16,  2.19it/s]15it [00:17,  2.23it/s]16it [00:17,  2.27it/s]17it [00:17,  2.29it/s]18it [00:18,  2.30it/s]19it [00:18,  2.31it/s]20it [00:19,  2.33it/s]21it [00:19,  2.33it/s]22it [00:20,  2.34it/s]23it [00:20,  2.34it/s]24it [00:20,  2.35it/s]25it [00:21,  2.35it/s]26it [00:21,  2.35it/s]27it [00:22,  2.35it/s]28it [00:22,  2.34it/s]29it [00:22,  2.33it/s]30it [00:23,  2.32it/s]31it [00:23,  2.25it/s]32it [00:24,  2.28it/s]33it [00:24,  2.30it/s]34it [00:25,  2.32it/s]35it [00:25,  2.33it/s]36it [00:26,  2.33it/s]37it [00:26,  2.34it/s]38it [00:26,  2.34it/s]39it [00:27,  2.34it/s]40it [00:27,  2.34it/s]41it [00:28,  2.34it/s]42it [00:28,  2.33it/s]43it [00:29,  2.34it/s]44it [00:29,  2.31it/s]45it [00:29,  2.24it/s]46it [00:30,  2.19it/s]47it [00:30,  2.16it/s]48it [00:31,  2.14it/s]49it [00:31,  2.12it/s]50it [00:32,  2.11it/s]51it [00:32,  2.11it/s]52it [00:33,  2.10it/s]53it [00:33,  2.09it/s]54it [00:34,  2.09it/s]55it [00:34,  2.08it/s]56it [00:35,  2.07it/s]57it [00:35,  2.02it/s]58it [00:36,  2.04it/s]59it [00:36,  2.06it/s]60it [00:37,  2.06it/s]61it [00:37,  2.07it/s]62it [00:38,  2.07it/s]63it [00:38,  2.07it/s]64it [00:39,  2.07it/s]65it [00:39,  2.07it/s]66it [00:40,  2.07it/s]67it [00:40,  2.07it/s]68it [00:41,  2.07it/s]69it [00:41,  2.07it/s]70it [00:42,  2.07it/s]71it [00:42,  2.07it/s]72it [00:42,  2.07it/s]73it [00:43,  2.07it/s]74it [00:43,  2.07it/s]75it [00:44,  2.07it/s]76it [00:44,  2.07it/s]77it [00:45,  2.07it/s]78it [00:45,  2.07it/s]79it [00:46,  2.07it/s]80it [00:46,  2.07it/s]81it [00:47,  2.06it/s]82it [00:47,  2.00it/s]83it [00:48,  2.02it/s]84it [00:48,  2.03it/s]84it [00:48,  1.72it/s]
+Wrote /mmhome/boittier/home/mmml_tutorial/acodcm/out/eval/learning_curve/e1000/aco/n12000/r1/metrics.json
+
+Summary (energies/forces in kcal/mol; dipoles in e·Bohr when present):
+  Energy   MAE=0.198023  RMSE=0.281690
+  Forces   MAE=0.104134  RMSE=0.185544
+  Dipole   MAE=0.005523  RMSE=0.007641
+{
+  "dataset": "aco",
+  "n_train": 12000,
+  "n_valid": 450,
+  "repeat": 1,
+  "seed": 1042,
+  "num_epochs": 1000,
+  "run_dir": "/mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/learning_curve/e1000/aco/n12000/r1/aco1_n12000_r1-5a712bfa-4e30-4667-84ce-540359429a34",
+  "latest_epoch": "epoch-1000",
+  "test_eval": {
+    "energy_mae_kcal_mol": 0.1980232462438439,
+    "energy_rmse_kcal_mol": 0.2816895699611963,
+    "forces_mae_kcal_mol": 0.10413423566099439,
+    "forces_rmse_kcal_mol": 0.1855440073224345
+  },
+  "training_final": {
+    "valid_loss": 0.03382137417793274,
+    "valid_energy_mae": 0.010052566416561604,
+    "valid_forces_mae": 0.004773335997015238
+  }
+}
+Done: /mmhome/boittier/home/mmml_tutorial/acodcm/out/eval/learning_curve/e1000/aco/n12000/r1

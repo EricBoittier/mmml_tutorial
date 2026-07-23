@@ -1,0 +1,211 @@
+HOST=gpu11  DATE=2026-06-29T22:35:26+02:00
+JOB=dcm_n3200_r2  n_train=3200  n_valid=120  seed=2042  epochs=1000
+=== [1/3] PhysNet training ===
+[CudaDevice(id=0)]
+gpu
+[CudaDevice(id=0)]
+Namespace(config=None, data='./out/splits/dcm/energies_forces_dipoles_train.npz', valid_data=None, ckpt_dir='./ckpts/learning_curve/e1000/dcm/n3200/r2', tag='dcm1_n3200_r2', model=None, n_train=3200, n_valid=120, seed=2042, batch_size=25, num_epochs=1000, learning_rate=0.001, energy_weight=1000.0, forces_weight=100.0, dipole_weight=1.0, charges_weight=1.0, objective='valid_loss', restart=None, num_atoms=None, features=32, max_degree=2, num_basis_functions=32, num_iterations=3, n_res=3, cutoff=4.0, max_atomic_number=35, zbl=True, use_pbc=False, use_energy_bias=True, optimizer='amsgrad', transform=None, schedule_fn=None, early_stop_patience=None, best=False, save_every_epoch=True, profile_epoch_timing=False, print_freq=1, batch_method='default', batch_args_dict=None, data_keys=None, conversion=None, init_params=None, physnet_checkpoint=None, physnet_transfer_model=None, list_physnet_transfer_models=False, physnet_transfer_category=None, match_checkpoint_architecture=True, distill=False, distill_alpha=1.0, distill_targets=None, teacher_checkpoint=None, metrics_plot=None, log_loss=False, rot_augment=False, rot_perturbation=1.0, charges=True, total_charge=0.0, include_electrostatics=False, efa=False, debug=False, save_config=None, quiet=False)
+Checkpoint directory (absolute): /mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/learning_curve/e1000/dcm/n3200/r2
+Auto-detected num_atoms = 10
+dataR (33560, 10, 3)
+dataE [-43.45069637 -43.44837717 -43.49810193 -43.43578565 -43.64451108
+ -43.51424383 -43.25661255 -43.34768087 -21.72998254 -43.37375689]
+dataE [-43.45069637 -43.44837717 -43.49810193 -43.43578565 -43.64451108
+ -43.51424383 -43.25661255 -43.34768087 -21.72998254 -43.37375689]
+D (33560, 3)
+Saving model to args.model.json
+{'features': 32, 'max_degree': 2, 'num_iterations': 3, 'num_basis_functions': 32, 'cutoff': 4.0, 'max_atomic_number': 35, 'charges': True, 'natoms': 10, 'max_padded_atoms': 10, 'total_charge': 0.0, 'n_res': 3, 'n_refinement_blocks': 3, 'zbl': True, 'debug': False, 'efa': False, 'use_energy_bias': True, 'use_pbc': False, 'include_electrostatics': False}
+                             Train Data                             
+┏━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Key ┃ Shape + Stats                                              ┃
+┡━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ R   │ shape=(3200, 10, 3) x∈[-17.94, 17.67] μ=-0.6268 σ=6.855    │
+│ Z   │ shape=(3200, 10) x∈[0, 17]                                 │
+│ F   │ shape=(3200, 10, 3) x∈[-3.926, 3.117] μ=-2.196e-10 σ=0.754 │
+│ E   │ shape=(3200, 1) x∈[-43.72, -21.48] μ=-41.42 σ=6.253        │
+│ N   │ shape=(3200, 1) x∈[5, 10]                                  │
+│ Q   │ shape=(3200, 1) x∈[0, 0] μ=0 σ=0                           │
+│ D   │ shape=(3200, 3) x∈[-0.2899, 0.2901] μ=-0.001907 σ=0.1126   │
+└─────┴────────────────────────────────────────────────────────────┘
+                          Validation Data                           
+┏━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Key ┃ Shape + Stats                                              ┃
+┡━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ R   │ shape=(120, 10, 3) x∈[-16.66, 17.5] μ=-0.4909 σ=6.792      │
+│ Z   │ shape=(120, 10) x∈[0, 17]                                  │
+│ F   │ shape=(120, 10, 3) x∈[-3.959, 3.043] μ=-1.143e-09 σ=0.7295 │
+│ E   │ shape=(120, 1) x∈[-43.59, -21.53] μ=-40.33 σ=7.579         │
+│ N   │ shape=(120, 1) x∈[5, 10]                                   │
+│ Q   │ shape=(120, 1) x∈[0, 0] μ=0 σ=0                            │
+│ D   │ shape=(120, 3) x∈[-0.2807, 0.2706] μ=0.001987 σ=0.1115     │
+└─────┴────────────────────────────────────────────────────────────┘
+Using default (fat) batching method
+Training Routine
+                       .,,uod8B8bou,,.
+              ..,uod8BBBBBBBBBBBBBBBBRPFT?l!i:.
+         ,=m8BBBBBBBBBBBBBBBRPFT?!||||||||||||||
+         !...:!TVBBBRPFT||||||||||!!^^""'   ||||
+         !.......:!?|||||!!^^""'            ||||
+         !.........||||                     ||||
+         !.........||||  ##                 ||||
+         !.........||||      PhysNet        ||||
+         !.........||||      JAX            ||||
+         !.........||||                     ||||
+         !.........||||                     ||||
+         `.........||||                    ,||||
+          .;.......||||               _.-!!|||||
+   .,uodWBBBBb.....||||       _.-!!|||||||||!:'
+!YBBBBBBBBBBBBBBb..!|||:..-!!|||||||!iof68BBBBBb....
+!..YBBBBBBBBBBBBBBb!!||||||||!iof68BBBBBBRPFT?!::   `.
+!....YBBBBBBBBBBBBBBbaaitf68BBBBBBRPFT?!:::::::::     `.
+!......YBBBBBBBBBBBBBBBBBBBRPFT?!::::::;:!^"`;:::       `.
+!........YBBBBBBBBBBRPFT?!::::::::::^''...::::::;         iBBbo.
+`..........YBRPFT?!::::::::::::::::::::::::;iof68bo.      WBBBBbo.
+  `..........:::::::::::::::::::::::;iof688888888888b.     `YBBBP^'
+    `........::::::::::::::::;iof688888888888888888888b.     `
+      `......:::::::::;iof688888888888888888888888888888b.
+        `....:::;iof688888888888888888888888888888888899fT!
+          `..::!8888888888888888888888888888888899fT|!^"'
+            `' !!988888888888888888888888899fT|!^"'
+                `!!8888888888888888899fT|!^"'
+                  `!988888888899fT|!^"'
+                    `!9899fT|!^"'
+                      `!^"'
+DATA_PATH: /mmhome/boittier/home/mmml/mmml/models/physnetjax/data
+LOGS_PATH: /mmhome/boittier/home/mmml/mmml/models/physnetjax/logs
+ANALYSIS_PATH: /mmhome/boittier/home/mmml/mmml/models/physnetjax/analysis
+MAIN_PATH: /mmhome/boittier/home/mmml/mmml/models/physnetjax
+PYCHARMM_DIR: None
+Start Time:  20:35:30
+                              Optimizer Arguments                               
+┏━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━━┳━━━━━┳━━━━━━┳━━━━━━━┓
+┃ opti… ┃ opti… ┃ sche… ┃ sche… ┃ trans… ┃ redu… ┃ clip_… ┃ b1  ┃ b2   ┃ eps   ┃
+┡━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━━╇━━━━━╇━━━━━━╇━━━━━━━┩
+│ amsg… │ Grad… │ None  │ <fun… │ None   │ Grad… │ 10.0   │ 0.9 │ 0.99 │ 0.001 │
+│       │ chai… │       │ cons… │        │ redu… │        │     │      │       │
+│       │ at    │       │ at    │        │ at    │        │     │      │       │
+│       │ 0x14… │       │ 0x14… │        │ 0x14… │        │     │      │       │
+│       │ upda… │       │       │        │ upda… │        │     │      │       │
+│       │ chai… │       │       │        │ redu… │        │     │      │       │
+│       │ at    │       │       │        │ at    │        │     │      │       │
+│       │ 0x14… │       │       │        │ 0x14… │        │     │      │       │
+└───────┴───────┴───────┴───────┴────────┴───────┴────────┴─────┴──────┴───────┘
+                              Training Parameters                               
+┏━━━━━━━━┳━━━━━━━━┳━━━━━━━━┳━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━━┓
+┃ energ… ┃ force… ┃ dipol… ┃ charg… ┃ batch… ┃ num_… ┃ rot_a… ┃ rot_… ┃ train… ┃
+┡━━━━━━━━╇━━━━━━━━╇━━━━━━━━╇━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━━┩
+│ 1000.0 │ 100.0  │ 1.0    │ 1.0    │ 25     │ 10    │ False  │ 1.0   │ {'ene… │
+│        │        │        │        │        │       │        │       │ 'eV',  │
+│        │        │        │        │        │       │        │       │ 'forc… │
+│        │        │        │        │        │       │        │       │ 'eV/A… │
+│        │        │        │        │        │       │        │       │ 'coor… │
+│        │        │        │        │        │       │        │       │ 'Angs… │
+└────────┴────────┴────────┴────────┴────────┴───────┴────────┴───────┴────────┘
+                                 Training Style                                 
+┏━━━━━━━━━┳━━━━━━━┳━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━┓
+┃ restart ┃ best  ┃ save_e… ┃ data_k… ┃ object… ┃ distill ┃ distill… ┃ distil… ┃
+┡━━━━━━━━━╇━━━━━━━╇━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━┩
+│ None    │ False │ True    │ ('R',   │ valid_… │ False   │ 1.0      │ None    │
+│         │       │         │ 'Z',    │         │         │          │         │
+│         │       │         │ 'F',    │         │         │          │         │
+│         │       │         │ 'N',    │         │         │          │         │
+│         │       │         │ 'E',    │         │         │          │         │
+│         │       │         │ 'D',    │         │         │          │         │
+│         │       │         │ 'batch… │         │         │          │         │
+└─────────┴───────┴─────────┴─────────┴─────────┴─────────┴──────────┴─────────┘
+                            Validation Batch[0]                            
+┏━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Key            ┃ Shape + Stats                                          ┃
+┡━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ R              │ shape=(250, 3) x∈[-16.66, 17.29] μ=0.507 σ=7.046       │
+│ Z              │ shape=(250,) x∈[0, 17]                                 │
+│ F              │ shape=(250, 3) x∈[-3.041, 2.572] μ=1.748e-09 σ=0.7377  │
+│ N              │ shape=(25,) x∈[5, 10]                                  │
+│ E              │ shape=(25, 1) x∈[-43.58, -21.54] μ=-39.91 σ=7.96       │
+│ D              │ shape=(25, 3) x∈[-0.2807, 0.2706] μ=-0.003399 σ=0.1148 │
+│ dst_idx        │ shape=(2250,) x∈[0, 249]                               │
+│ src_idx        │ shape=(2250,) x∈[0, 249]                               │
+│ batch_mask     │ shape=(2250,) x∈[0, 1]                                 │
+│ batch_segments │ shape=(250,) x∈[0, 24]                                 │
+│ atom_mask      │ shape=(250,) x∈[0, 1]                                  │
+└────────────────┴────────────────────────────────────────────────────────┘
+                                Model Attributes                                
+┏━━━┳━━━┳━━━┳━━━┳━━━━┳━━━┳━━━━┳━━━┳━━━━┳━━━┳━━━━┳━━━┳━━━━┳━━━┳━━━━┳━━━┳━━━━┳━━━┓
+┃ … ┃ … ┃ … ┃ … ┃ c… ┃ … ┃ c… ┃ … ┃ m… ┃ … ┃ n… ┃ … ┃ z… ┃ … ┃ e… ┃ … ┃ u… ┃ … ┃
+┡━━━╇━━━╇━━━╇━━━╇━━━━╇━━━╇━━━━╇━━━╇━━━━╇━━━╇━━━━╇━━━╇━━━━╇━━━╇━━━━╇━━━╇━━━━╇━━━┩
+│ … │ 2 │ 3 │ … │ 4… │ … │ T… │ … │ 10 │ … │ 3  │ 3 │ T… │ … │ F… │ … │ F… │ … │
+└───┴───┴───┴───┴────┴───┴────┴───┴────┴───┴────┴───┴────┴───┴────┴───┴────┴───┘
+                          PhysNetJax Training Progress                          
+┏┳━━┳━━━━┳━━━━━┳━━━━━┳━━━━━━┳━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━━┓
+┃┃  ┃ Ef ┃ Tra ┃ Val ┃      ┃       ┃        ┃       ┃        ┃ Train ┃        ┃
+┃┃  ┃ f. ┃ in  ┃ id  ┃      ┃ Train ┃ Valid  ┃ Train ┃ Valid  ┃ Dipol ┃ Valid  ┃
+┃┃  ┃    ┃ Los ┃ Los ┃ Best ┃ Energ ┃ Energy ┃ Force ┃ Forces ┃ es    ┃ Dipole ┃
+┃┃  ┃ LR ┃ s   ┃ s   ┃ Loss ┃ y MAE ┃ MAE    ┃ s MAE ┃ MAE    ┃ MAE   ┃ s MAE  ┃
+┡╇━━╇━━━━╇━━━━━╇━━━━━╇━━━━━━╇━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━━┩
+││  │ 7. │ 0.2 │ 0.0 │ 0.05 │ 0.060 │ 9.078e │ 8.133 │ 5.602e │ 0.023 │ 0.0226 │
+││  │ 29 │ 740 │ 589 │ 77   │ 2     │ -03    │ e-03  │ -03    │ 0     │        │
+││  │ 0e │     │     │      │       │        │       │        │       │        │
+││  │ -0 │     │     │      │       │        │       │        │       │        │
+││  │ 4  │     │     │      │       │        │       │        │       │        │
+││  │ 7. │ 0.2 │ 0.0 │ 0.05 │ 0.058 │ 8.902e │ 8.095 │ 5.575e │ 0.023 │ 0.0226 │
+││  │ 29 │ 653 │ 600 │ 77   │ 8     │ -03    │ e-03  │ -03    │ 0     │        │
+││  │ 0e │     │     │      │       │        │       │        │       │        │
+││  │ -0 │     │     │      │       │        │       │        │       │        │
+││  │ 4  │     │     │      │       │        │       │        │       │        │
+││  │ 7. │ 0.2 │ 0.0 │ 0.05 │ 0.057 │ 9.115e │ 8.681 │ 5.695e │ 0.023 │ 0.0226 │
+││  │ 29 │ 620 │ 625 │ 77   │ 3     │ -03    │ e-03  │ -03    │ 1     │        │
+││  │ 0e │     │     │      │       │        │       │        │       │        │
+││  │ -0 │     │     │      │       │        │       │        │       │        │
+││  │ 4  │     │     │      │       │        │       │        │       │        │
+││  │ 7. │ 0.2 │ 0.0 │ 0.05 │ 0.055 │ 9.281e │ 8.448 │ 5.633e │ 0.023 │ 0.0226 │
+││  │ 29 │ 484 │ 586 │ 77   │ 5     │ -03    │ e-03  │ -03    │ 0     │        │
+││  │ 0e │     │     │      │       │        │       │        │       │        │
+││  │ -0 │     │     │      │       │        │       │        │       │        │
+││  │ 4  │     │     │      │       │        │       │        │       │        │
+││  │ 7. │ 0.2 │ 0.0 │ 0.05 │ 0.055 │ 9.998e │ 7.548 │ 5.596e │ 0.023 │ 0.0226 │
+││  │ 29 │ 406 │ 592 │ 77   │ 9     │ -03    │ e-03  │ -03    │ 0     │        │
+││  │ 0e │     │     │      │       │        │       │        │       │        │
+││  │ -0 │     │     │      │       │        │       │        │       │        │
+││  │ 4  │     │     │      │       │        │       │        │       │        │
+││  │ 7. │ 0.2 │ 0.0 │ 0.05 │ 0.055 │ 9.323e │ 7.465 │ 5.613e │ 0.023 │ 0.0226 │
+││  │ 29 │ 379 │ 586 │ 77   │ 6     │ -03    │ e-03  │ -03    │ 0     │        │
+││  │ 0e │     │     │      │       │        │       │        │       │        │
+││  │ -0 │     │     │      │       │        │       │        │       │        │
+││  │ 4  │     │     │      │       │        │       │        │       │        │
+││  │ 7. │ 0.2 │ 0.0 │ 0.05 │ 0.057 │ 9.298e │ 7.754 │ 5.704e │ 0.023 │ 0.0226 │
+││  │ 29 │ 515 │ 599 │ 77   │ 4     │ -03    │ e-03  │ -03    │ 0     │        │
+││  │ 0e │     │     │      │       │        │       │        │       │        │
+││  │ -0 │     │     │      │       │        │       │        │       │        │
+││  │ 4  │     │     │      │       │        │       │        │       │        │
+││  │ 7. │ 0.2 │ 0.0 │ 0.05 │ 0.059 │ 8.919e │ 7.046 │ 5.741e │ 0.023 │ 0.0226 │
+││  │ 29 │ 577 │ 606 │ 77   │ 4     │ -03    │ e-03  │ -03    │ 0     │        │
+││  │ 0e │     │     │      │       │        │       │        │       │        │
+││  │ -0 │     │     │      │       │        │       │        │       │        │
+││  │ 4  │     │     │      │       │        │       │        │       │        │
+││  │ 7. │ 0.2 │ 0.0 │ 0.05 │ 0.059 │ 9.583e │ 7.208 │ 5.690e │ 0.023 │ 0.0226 │
+││  │ 29 │ 580 │ 587 │ 77   │ 5     │ -03    │ e-03  │ -03    │ 0     │        │
+││  │ 0e │     │     │      │       │        │       │        │       │        │
+││  │ -0 │     │     │      │       │        │       │        │       │        │
+││  │ 4  │     │     │      │       │        │       │        │       │        │
+││  │ 7. │ 0.2 │ 0.0 │ 0.05 │ 0.057 │ 9.087e │ 7.193 │ 5.727e │ 0.023 │ 0.0226 │
+││  │ 29 │ 497 │ 598 │ 77   │ 9     │ -03    │ e-03  │ -03    │ 0     │        │
+││  │ 0e │     │     │      │       │        │       │        │       │        │
+││  │ -0 │     │     │      │       │        │       │        │       │        │
+││  │ 4  │     │     │      │       │        │       │        │       │        │
+└┴──┴────┴─────┴─────┴──────┴───────┴────────┴───────┴────────┴───────┴────────┘
+                                Last Checkpoint                                 
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳┓
+┃ Checkpoint                                                                  ┃┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇┩
+│ /mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/learning_curve/e1000/dcm/… ││
+└─────────────────────────────────────────────────────────────────────────────┴┘
+Saving portable checkpoint to /mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/learning_curve/e1000/dcm/n3200/r2/params_dcm1_n3200_r2_2026-06-29_22-52-04.json
+Run directory: /mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/learning_curve/e1000/dcm/n3200/r2/dcm1_n3200_r2-50ef088c-2980-452b-9e99-33898f650863
+=== [2/3] Learning curves from checkpoints ===
+usage: mmml extract-checkpoint-metrics [-h] -o OUTPUT [--log-loss] [--quiet]
+                                       [--stride STRIDE]
+                                       [--max-epochs MAX_EPOCHS]
+                                       [--metrics-json METRICS_JSON]
+                                       [--ef-only]
+                                       checkpoint_dir
+mmml extract-checkpoint-metrics: error: unrecognized arguments: --plot-style google

@@ -1,11 +1,11 @@
-seed 42
-output artifacts/md_run/packmol_cluster/init-packmol-sphere.pdb
+seed 2
+output /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_cluster/init-packmol-sphere.pdb
 filetype pdb
 tolerance 2.0
 
-structure artifacts/md_run/packmol_cluster/monomers/dcm.pdb
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_cluster/monomers/dcm.pdb
   chain A
   resnumbers 2
-  number 200
-  inside cube -16.0 -16.0 -16.0 32.0
+  number 240
+  inside cube -14.5 -14.5 -14.5 29.0
 end structure

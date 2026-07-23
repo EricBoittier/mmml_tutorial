@@ -1,0 +1,9 @@
+=== serial lc sweep 2026-06-29T17:12:10+02:00 ===
+Wrote /mmhome/boittier/home/mmml_tutorial/acodcm/slurm/learning_curve/aco_n800_r1.sbatch  (aco n_train=800 r=1)
+  submitted 203257 (serial wait)
+  finished 203257 state=FAILED
+Wrote /mmhome/boittier/home/mmml_tutorial/acodcm/slurm/learning_curve/aco_n800_r2.sbatch  (aco n_train=800 r=2)
+  submitted 203262 (serial wait)
+  finished 203262 state=FAILED
+Wrote /mmhome/boittier/home/mmml_tutorial/acodcm/slurm/learning_curve/aco_n800_r3.sbatch  (aco n_train=800 r=3)
+  submitted 203272 (serial wait)

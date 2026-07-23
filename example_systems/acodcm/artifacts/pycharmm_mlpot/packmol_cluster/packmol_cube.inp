@@ -1,0 +1,18 @@
+seed 123
+output /mmhome/boittier/home/mmml_tutorial/acodcm/artifacts/pycharmm_mlpot/packmol_cluster/init-packmol-sphere.pdb
+filetype pdb
+tolerance 2.0
+
+structure /mmhome/boittier/home/mmml_tutorial/acodcm/artifacts/pycharmm_mlpot/packmol_cluster/monomers/dcm.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube -16.0 -16.0 -16.0 32.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/acodcm/artifacts/pycharmm_mlpot/packmol_cluster/monomers/aco.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube -16.0 -16.0 -16.0 32.0
+end structure

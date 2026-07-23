@@ -1,0 +1,1684 @@
+seed 2
+output /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/repack.pdb
+filetype pdb
+tolerance 5.0
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0000.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0001.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0002.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0003.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0004.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0005.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0006.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0007.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0008.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0009.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0010.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0011.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0012.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0013.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0014.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0015.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0016.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0017.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0018.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0019.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0020.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0021.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0022.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0023.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0024.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0025.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0026.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0027.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0028.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0029.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0030.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0031.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0032.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0033.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0034.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0035.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0036.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0037.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0038.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0039.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0040.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0041.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0042.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0043.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0044.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0045.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0046.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0047.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0048.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0049.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0050.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0051.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0052.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0053.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0054.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0055.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0056.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0057.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0058.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0059.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0060.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0061.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0062.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0063.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0064.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0065.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0066.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0067.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0068.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0069.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0070.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0071.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0072.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0073.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0074.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0075.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0076.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0077.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0078.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0079.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0080.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0081.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0082.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0083.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0084.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0085.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0086.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0087.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0088.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0089.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0090.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0091.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0092.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0093.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0094.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0095.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0096.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0097.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0098.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0099.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0100.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0101.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0102.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0103.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0104.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0105.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0106.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0107.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0108.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0109.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0110.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0111.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0112.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0113.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0114.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0115.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0116.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0117.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0118.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0119.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0120.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0121.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0122.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0123.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0124.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0125.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0126.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0127.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0128.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0129.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0130.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0131.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0132.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0133.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0134.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0135.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0136.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0137.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0138.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0139.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0140.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0141.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0142.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0143.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0144.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0145.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0146.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0147.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0148.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0149.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0150.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0151.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0152.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0153.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0154.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0155.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0156.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0157.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0158.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0159.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0160.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0161.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0162.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0163.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0164.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0165.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0166.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0167.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0168.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0169.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0170.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0171.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0172.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0173.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0174.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0175.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0176.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0177.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0178.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0179.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0180.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0181.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0182.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0183.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0184.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0185.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0186.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0187.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0188.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0189.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0190.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0191.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0192.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0193.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0194.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0195.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0196.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0197.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0198.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0199.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0200.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0201.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0202.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0203.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0204.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0205.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0206.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0207.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0208.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0209.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0210.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0211.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0212.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0213.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0214.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0215.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0216.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0217.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0218.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0219.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0220.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0221.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0222.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0223.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0224.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0225.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0226.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0227.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0228.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0229.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0230.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0231.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0232.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0233.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0234.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0235.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0236.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0237.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0238.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/packmol_repack/movable_0239.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 29.0
+end structure

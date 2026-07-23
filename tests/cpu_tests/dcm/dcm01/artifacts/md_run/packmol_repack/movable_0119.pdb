@@ -1,0 +1,8 @@
+REMARK   mmml packmol monomer (CHARMM atom names for PSF reordering)
+CRYST1   200.000   200.000   200.000  90.00  90.00  90.00 P 1           1
+ATOM      1    C M11 A   1       0.032   0.002  -0.156  1.00  0.00           C
+ATOM      2   H1 M11 A   1      -0.139   0.870  -0.828  1.00  0.00           H
+ATOM      3   H2 M11 A   1       0.457  -0.857  -0.715  1.00  0.00           H
+ATOM      4  CL1 M11 A   1       1.177   0.472   1.133  1.00  0.00          Cl
+ATOM      5  CL2 M11 A   1      -1.528  -0.487   0.565  1.00  0.00          Cl
+END

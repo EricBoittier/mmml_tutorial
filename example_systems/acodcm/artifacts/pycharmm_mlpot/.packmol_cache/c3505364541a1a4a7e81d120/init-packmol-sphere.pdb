@@ -1,0 +1,21 @@
+HEADER 
+TITLE     Built with Packmol                                             
+REMARK   Packmol generated pdb file 
+REMARK   Home-Page: http://m3g.iqm.unicamp.br/packmol
+REMARK
+ATOM      1    C DCM A   1     -10.288  14.375  14.271  1.00  0.00           C  
+ATOM      2   H1 DCM A   1      -9.910  14.001  13.297  1.00  0.00           H  
+ATOM      3   H2 DCM A   1      -9.482  14.861  14.853  1.00  0.00           H  
+ATOM      4  CL1 DCM A   1     -11.587  15.568  13.968  1.00  0.00          Cl  
+ATOM      5  CL2 DCM A   1     -10.937  12.998  15.208  1.00  0.00          Cl  
+ATOM      6   O1 ACO A   2     -12.607  15.522 -13.377  1.00  0.00           O  
+ATOM      7   C1 ACO A   2     -13.334  14.643 -13.821  1.00  0.00           C  
+ATOM      8   C2 ACO A   2     -14.779  14.885 -14.093  1.00  0.00           C  
+ATOM      9   C3 ACO A   2     -12.813  13.274 -14.110  1.00  0.00           C  
+ATOM     10  H21 ACO A   2     -15.011  15.950 -13.881  1.00  0.00           H  
+ATOM     11  H22 ACO A   2     -15.005  14.669 -15.158  1.00  0.00           H  
+ATOM     12  H23 ACO A   2     -15.400  14.241 -13.439  1.00  0.00           H  
+ATOM     13  H31 ACO A   2     -13.331  12.531 -13.471  1.00  0.00           H  
+ATOM     14  H32 ACO A   2     -12.976  13.028 -15.181  1.00  0.00           H  
+ATOM     15  H33 ACO A   2     -11.726  13.251 -13.891  1.00  0.00           H  
+END

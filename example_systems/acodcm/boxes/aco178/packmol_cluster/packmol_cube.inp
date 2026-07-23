@@ -1,0 +1,11 @@
+seed 123
+output /mmhome/boittier/home/mmml_tutorial/acodcm/boxes/aco178/packmol_cluster/init-packmol-sphere.pdb
+filetype pdb
+tolerance 2.0
+
+structure /mmhome/boittier/home/mmml_tutorial/acodcm/boxes/aco178/packmol_cluster/monomers/aco.pdb
+  chain A
+  resnumbers 2
+  number 178
+  inside cube -12.988244647925706 -12.988244647925706 -12.988244647925706 25.97648929585141
+end structure

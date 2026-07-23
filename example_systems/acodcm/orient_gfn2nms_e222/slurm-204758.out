@@ -1,0 +1,80 @@
+gpu25
+GPU 0: NVIDIA GeForce RTX 3090 Ti (UUID: GPU-b2edbf07-bddd-ff5c-6c30-e9e11445989f)
+=== orbax-to-json EMA from frozen epoch-222 ===
+E0717 17:17:56.491298   71800 platform_util.cc:271] Failed to create stream executor for device CUDA:0: CUDA error: : CUDA_ERROR_DEVICE_UNAVAILABLE: CUDA-capable device(s) is/are busy or unavailable
+Traceback (most recent call last):
+  File "/mmhome/boittier/home/mmml/.venv/lib/python3.13/site-packages/jax/_src/xla_bridge.py", line 839, in backends
+    backend = _init_backend(platform)
+  File "/mmhome/boittier/home/mmml/.venv/lib/python3.13/site-packages/jax/_src/xla_bridge.py", line 923, in _init_backend
+    backend = registration.factory()
+  File "/mmhome/boittier/home/mmml/.venv/lib/python3.13/site-packages/jax/_src/xla_bridge.py", line 576, in make_pjrt_c_api_client
+    return xla_client.make_c_api_client(plugin_name, updated_options, None)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mmhome/boittier/home/mmml/.venv/lib/python3.13/site-packages/jaxlib/xla_client.py", line 160, in make_c_api_client
+    return _xla.get_c_api_client(
+           ~~~~~~~~~~~~~~~~~~~~~^
+        plugin_name,
+        ^^^^^^^^^^^^
+    ...<4 lines>...
+        sort_devices_by_process_index,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+jax.errors.JaxRuntimeError: INTERNAL: no supported devices found for platform CUDA
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/mmhome/boittier/home/mmml/mmml/cli/__main__.py", line 365, in <module>
+    cli()
+    ~~~^^
+  File "/mmhome/boittier/home/mmml/mmml/cli/__main__.py", line 41, in cli
+    _hard_exit(main())
+               ~~~~^^
+  File "/mmhome/boittier/home/mmml/mmml/cli/__main__.py", line 345, in main
+    return orbax_to_json_cmd.main()
+           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/mmhome/boittier/home/mmml/mmml/cli/misc/orbax_to_json_cmd.py", line 63, in main
+    output_path = orbax_to_json(
+        orbax_checkpoint_dir=epoch_dir,
+        output_path=args.output,
+        params_key=args.params_key,
+    )
+  File "/mmhome/boittier/home/mmml/mmml/utils/model_checkpoint.py", line 699, in orbax_to_json
+    checkpointer = ocp.PyTreeCheckpointer()
+  File "/mmhome/boittier/home/mmml/.venv/lib/python3.13/site-packages/orbax/checkpoint/_src/checkpointers/pytree_checkpointer.py", line 41, in __init__
+    pytree_checkpoint_handler.PyTreeCheckpointHandler(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        use_ocdbt=use_ocdbt,
+        ^^^^^^^^^^^^^^^^^^^^
+        use_zarr3=use_zarr3,
+        ^^^^^^^^^^^^^^^^^^^^
+        use_compression=use_compression,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ),
+    ^
+  File "/mmhome/boittier/home/mmml/.venv/lib/python3.13/site-packages/orbax/checkpoint/_src/handlers/pytree_checkpoint_handler.py", line 600, in __init__
+    self._handler_impl = handler_impl or BasePyTreeCheckpointHandler(
+                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        save_concurrent_bytes=self._save_concurrent_bytes,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+        is_prioritized_key_fn=is_prioritized_key_fn,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/mmhome/boittier/home/mmml/.venv/lib/python3.13/site-packages/orbax/checkpoint/_src/handlers/base_pytree_checkpoint_handler.py", line 490, in __init__
+    enable_pinned_host_transfer = jax.default_backend() == 'gpu'
+                                  ~~~~~~~~~~~~~~~~~~~^^
+  File "/mmhome/boittier/home/mmml/.venv/lib/python3.13/site-packages/jax/_src/xla_bridge.py", line 1044, in default_backend
+    return get_backend(None).platform
+           ~~~~~~~~~~~^^^^^^
+  File "/mmhome/boittier/home/mmml/.venv/lib/python3.13/site-packages/jax/_src/xla_bridge.py", line 973, in get_backend
+    return _get_backend_uncached(platform)
+  File "/mmhome/boittier/home/mmml/.venv/lib/python3.13/site-packages/jax/_src/xla_bridge.py", line 952, in _get_backend_uncached
+    bs = backends()
+  File "/mmhome/boittier/home/mmml/.venv/lib/python3.13/site-packages/jax/_src/xla_bridge.py", line 855, in backends
+    raise RuntimeError(err_msg)
+RuntimeError: Unable to initialize backend 'cuda': INTERNAL: no supported devices found for platform CUDA (you may need to uninstall the failing plugin package, or set JAX_PLATFORMS=cpu to skip this backend.)

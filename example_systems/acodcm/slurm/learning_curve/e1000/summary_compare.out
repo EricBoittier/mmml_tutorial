@@ -1,0 +1,4 @@
+WARNING:matplotlib.font_manager:findfont: Failed to find font weight medium, now using 400.
+Saved: /mmhome/boittier/home/mmml_tutorial/acodcm/out/eval/learning_curve/e1000/comparison_aco.png
+Saved: /mmhome/boittier/home/mmml_tutorial/acodcm/out/eval/learning_curve/e1000/comparison_dcm.png
+Wrote /mmhome/boittier/home/mmml_tutorial/acodcm/out/eval/learning_curve/e1000/aggregate_summary.json

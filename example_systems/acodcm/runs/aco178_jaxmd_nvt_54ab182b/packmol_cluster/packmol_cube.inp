@@ -1,0 +1,11 @@
+seed 22
+output /mmhome/boittier/home/mmml_tutorial/acodcm/runs/aco178_jaxmd_nvt_54ab182b/packmol_cluster/init-packmol-sphere.pdb
+filetype pdb
+tolerance 2.0
+
+structure /mmhome/boittier/home/mmml_tutorial/acodcm/runs/aco178_jaxmd_nvt_54ab182b/packmol_cluster/monomers/aco.pdb
+  chain A
+  resnumbers 2
+  number 78
+  inside cube -16.0 -16.0 -16.0 32.0
+end structure

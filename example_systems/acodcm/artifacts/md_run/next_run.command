@@ -1,0 +1,1 @@
+mmml md-system --config md_system.yaml --output-dir artifacts/md_run --backend pycharmm --restart-from /mmhome/boittier/home/mmml_tutorial/acodcm/artifacts/md_run/baseline.res --md-stages mini,heat,nve --dynamics-intra-rescue-sd-steps 400

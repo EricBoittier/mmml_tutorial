@@ -1,0 +1,48 @@
+gpu01
+GPU 0: NVIDIA GeForce RTX 3080 (UUID: GPU-4af6010a-7e17-1d16-080b-8bf879e5498f)
+jax devices [CudaDevice(id=0)]
+=== ACO orientation scan (Orbax epoch-222, EMA) ===
+/mmhome/boittier/home/mmml/.venv/lib/python3.13/site-packages/orbax/checkpoint/_src/serialization/jax_array_handlers.py:925: UserWarning: Sharding info not provided when restoring. Populating sharding info from sharding file. Please note restoration time will be slightly increased due to reading from file. Note also that this option is unsafe when restoring on a different topology than the checkpoint was saved with.
+  warnings.warn(
+ACO: 10 directions x 24 orientations = 240 rays x 36 r-points = 8640 evaluations
+handoff: ML on 0-4.5, blend to 6, MM tail to 11 A
+dict_keys(['opt_state', 'params', 'step'])
+                                Model Attributes                                
+┏━━━┳━━━┳━━━┳━━━┳━━┳━━━┳━━┳━━━┳━━┳━━━┳━━┳━━━┳━━┳━━━┳━━┳━━━┳━━┳━━━┳━━┳━━━┳━━┳━━━┓
+┃ … ┃ … ┃ … ┃ … ┃  ┃ … ┃  ┃ … ┃  ┃ … ┃  ┃ … ┃  ┃ … ┃  ┃ … ┃  ┃ … ┃  ┃ … ┃  ┃ … ┃
+┡━━━╇━━━╇━━━╇━━━╇━━╇━━━╇━━╇━━━╇━━╇━━━╇━━╇━━━╇━━╇━━━╇━━╇━━━╇━━╇━━━╇━━╇━━━╇━━╇━━━┩
+│ … │ … │ … │ … │  │ … │  │ … │  │ … │  │ 2 │  │ … │  │ … │  │ … │  │ … │  │ … │
+└───┴───┴───┴───┴──┴───┴──┴───┴──┴───┴──┴───┴──┴───┴──┴───┴──┴───┴──┴───┴──┴───┘
+                                Last Checkpoint                                 
+┏━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━┳━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━┓
+┃ Checkpoint        ┃ name      ┃ epoch ┃ best_loss         ┃ Save Time        ┃
+┡━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━┩
+│ /mmhome/boittier… │ epoch-222 │ 222   │ 53.55431365966797 │ 2026-07-17       │
+│                   │           │       │                   │ 17:16:08.139260  │
+└───────────────────┴───────────┴───────┴───────────────────┴──────────────────┘
+135 batches of 64 covering all 8640 real points (+0 padding)
+  batch 0/135
+  batch 50/135
+  batch 100/135
+
+=== ACO @ mm_switch_on=6 ===
+  rays evaluated : 240 (0 dropped by the batcher)
+  SPURIOUS (>1 ML minimum) : 42  (17.5% of rays)
+  deepest well  : -4.54 kcal/mol
+  mean well     : 22.40 kcal/mol
+  -> /mmhome/boittier/home/mmml_tutorial/acodcm/orient_gfn2nms_e222/rays.csv, summary.json
+=== done ===
+{
+  "resid": "ACO",
+  "checkpoint": "/mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/_gate_frozen_e222",
+  "use_ema": true,
+  "mm_switch_on": 6.0,
+  "ml_switch_width": 1.5,
+  "n_rays": 240,
+  "n_evaluated": 240,
+  "n_dropped": 0,
+  "n_rays_spurious": 42,
+  "frac_rays_spurious": 0.175,
+  "mean_min_kcal": 22.39534349117988,
+  "deepest_kcal": -4.542276165890973
+}

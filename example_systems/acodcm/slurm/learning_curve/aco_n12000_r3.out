@@ -1,0 +1,74 @@
+HOST=gpu08  DATE=2026-06-29T17:11:49+02:00
+JOB=aco_n12000_r3  n_train=12000  n_valid=450  seed=3042
+=== [1/3] PhysNet training ===
+E0629 17:11:50.626344  665910 platform_util.cc:271] Failed to create stream executor for device CUDA:0: CUDA error: : CUDA_ERROR_DEVICE_UNAVAILABLE: CUDA-capable device(s) is/are busy or unavailable
+Traceback (most recent call last):
+  File "/mmhome/boittier/home/mmml/.venv/lib/python3.14/site-packages/jax/_src/xla_bridge.py", line 839, in backends
+    backend = _init_backend(platform)
+  File "/mmhome/boittier/home/mmml/.venv/lib/python3.14/site-packages/jax/_src/xla_bridge.py", line 923, in _init_backend
+    backend = registration.factory()
+  File "/mmhome/boittier/home/mmml/.venv/lib/python3.14/site-packages/jax/_src/xla_bridge.py", line 576, in make_pjrt_c_api_client
+    return xla_client.make_c_api_client(plugin_name, updated_options, None)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mmhome/boittier/home/mmml/.venv/lib/python3.14/site-packages/jaxlib/xla_client.py", line 160, in make_c_api_client
+    return _xla.get_c_api_client(
+           ~~~~~~~~~~~~~~~~~~~~~^
+        plugin_name,
+        ^^^^^^^^^^^^
+    ...<4 lines>...
+        sort_devices_by_process_index,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+jax.errors.JaxRuntimeError: INTERNAL: no supported devices found for platform CUDA
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mmhome/boittier/home/mmml/.venv/bin/mmml", line 10, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/mmhome/boittier/home/mmml/mmml/cli/__main__.py", line 207, in main
+    from .make import make_training
+  File "/mmhome/boittier/home/mmml/mmml/cli/make/make_training.py", line 40, in <module>
+    from mmml.models.physnetjax.physnetjax.training.training import train_model
+  File "/mmhome/boittier/home/mmml/mmml/models/physnetjax/physnetjax/training/training.py", line 31, in <module>
+    from mmml.models.physnetjax.physnetjax.restart.restart import (
+    ...<3 lines>...
+    )
+  File "/mmhome/boittier/home/mmml/mmml/models/physnetjax/physnetjax/restart/restart.py", line 22, in <module>
+    orbax_checkpointer = orbax.checkpoint.PyTreeCheckpointer()
+  File "/mmhome/boittier/home/mmml/.venv/lib/python3.14/site-packages/orbax/checkpoint/_src/checkpointers/pytree_checkpointer.py", line 41, in __init__
+    pytree_checkpoint_handler.PyTreeCheckpointHandler(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        use_ocdbt=use_ocdbt,
+        ^^^^^^^^^^^^^^^^^^^^
+        use_zarr3=use_zarr3,
+        ^^^^^^^^^^^^^^^^^^^^
+        use_compression=use_compression,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ),
+    ^
+  File "/mmhome/boittier/home/mmml/.venv/lib/python3.14/site-packages/orbax/checkpoint/_src/handlers/pytree_checkpoint_handler.py", line 600, in __init__
+    self._handler_impl = handler_impl or BasePyTreeCheckpointHandler(
+                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        save_concurrent_bytes=self._save_concurrent_bytes,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+        is_prioritized_key_fn=is_prioritized_key_fn,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/mmhome/boittier/home/mmml/.venv/lib/python3.14/site-packages/orbax/checkpoint/_src/handlers/base_pytree_checkpoint_handler.py", line 490, in __init__
+    enable_pinned_host_transfer = jax.default_backend() == 'gpu'
+                                  ~~~~~~~~~~~~~~~~~~~^^
+  File "/mmhome/boittier/home/mmml/.venv/lib/python3.14/site-packages/jax/_src/xla_bridge.py", line 1044, in default_backend
+    return get_backend(None).platform
+           ~~~~~~~~~~~^^^^^^
+  File "/mmhome/boittier/home/mmml/.venv/lib/python3.14/site-packages/jax/_src/xla_bridge.py", line 973, in get_backend
+    return _get_backend_uncached(platform)
+  File "/mmhome/boittier/home/mmml/.venv/lib/python3.14/site-packages/jax/_src/xla_bridge.py", line 952, in _get_backend_uncached
+    bs = backends()
+  File "/mmhome/boittier/home/mmml/.venv/lib/python3.14/site-packages/jax/_src/xla_bridge.py", line 855, in backends
+    raise RuntimeError(err_msg)
+RuntimeError: Unable to initialize backend 'cuda': INTERNAL: no supported devices found for platform CUDA (set JAX_PLATFORMS='' to automatically choose an available backend)

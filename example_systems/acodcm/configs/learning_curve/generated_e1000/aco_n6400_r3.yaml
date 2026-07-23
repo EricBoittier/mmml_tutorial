@@ -1,0 +1,27 @@
+data: ./out/splits/aco/energies_forces_dipoles_train.npz
+ckpt_dir: ./ckpts/learning_curve/e1000/aco/n6400/r3
+tag: aco1_n6400_r3
+n_train: 6400
+n_valid: 240
+seed: 3042
+
+batch_size: 25
+num_epochs: 1000
+learning_rate: 0.001
+optimizer: amsgrad
+energy_weight: 1000.0
+forces_weight: 100.0
+dipole_weight: 1.0
+charges_weight: 1.0
+charges: true
+include_electrostatics: false
+
+max_atomic_number: 35
+features: 32
+max_degree: 2
+num_basis_functions: 32
+num_iterations: 3
+n_res: 3
+cutoff: 4.0
+zbl: true
+num_atoms: 20

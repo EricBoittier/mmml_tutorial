@@ -1,0 +1,114 @@
+Run directory: /mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/learning_curve/e1000/aco/n6400/r2/aco1_n6400_r2-bbf4c06c-ca11-414a-b68d-c750c080c8db
+Checkpoints: 1000  stride: 5
+/mmhome/boittier/home/mmml/.venv/lib/python3.14/site-packages/orbax/checkpoint/_src/serialization/jax_array_handlers.py:925: UserWarning: Sharding info not provided when restoring. Populating sharding info from sharding file. Please note restoration time will be slightly increased due to reading from file. Note also that this option is unsafe when restoring on a different topology than the checkpoint was saved with.
+  warnings.warn(
+WARNING:matplotlib.font_manager:findfont: Failed to find font weight medium, now using 400.
+
+================================================================================
+EXTRACTING TRAINING METRICS FROM CHECKPOINTS
+================================================================================
+
+Checkpoint directory: aco1_n6400_r2-bbf4c06c-ca11-414a-b68d-c750c080c8db
+Output: /mmhome/boittier/home/mmml_tutorial/acodcm/out/eval/learning_curve/e1000/aco/n6400/r2/training_curves.png
+
+📊 Extracting metrics from checkpoints...
+Found 200 epoch checkpoints
+Extracted metrics from 200/200 checkpoints
+Wrote metrics JSON: /mmhome/boittier/home/mmml_tutorial/acodcm/out/eval/learning_curve/e1000/aco/n6400/r2/training_metrics.json
+
+📈 Creating training plots...
+Saved: /mmhome/boittier/home/mmml_tutorial/acodcm/out/eval/learning_curve/e1000/aco/n6400/r2/training_curves.png
+
+================================================================================
+TRAINING METRICS SUMMARY
+================================================================================
+
+Checkpoint: aco1_n6400_r2-bbf4c06c-ca11-414a-b68d-c750c080c8db
+Epochs analyzed: 200
+Epoch range: 1 to 996
+
+LOSS STATISTICS
+--------------------------------------------------------------------------------
+Training Loss:
+  Initial: 12955464704.000000
+  Final:   0.678240
+  Best:    0.422912 (epoch 911)
+  Improvement: 100.0%
+
+Validation Loss:
+  Initial: 46193188864.000000
+  Final:   0.147014
+  Best:    0.140055 (epoch 926)
+  Improvement: 100.0%
+
+VALIDATION MAE METRICS
+--------------------------------------------------------------------------------
+Energy   MAE: 0.587686 kcal/mol     (best: 0.254335 @ epoch 926)
+Forces   MAE: 0.253277 kcal/mol/Å   (best: 0.252924 @ epoch 991)
+Dipole   MAE: 0.027908 e·Å          (best: 0.027895 @ epoch 991)
+
+LEARNING RATE
+--------------------------------------------------------------------------------
+Initial: 1.000000e-03
+Final:   4.304672e-04
+Decay:   57.0%
+
+CONVERGENCE ANALYSIS
+--------------------------------------------------------------------------------
+Last 10 epochs:
+  Mean loss: 0.147999
+  Std dev:   0.003360
+  Relative std: 2.27%
+  ⚠️  Nearly converged (std < 5%)
+
+================================================================================
+
+✅ ANALYSIS COMPLETE!
+
+To evaluate the best checkpoint:
+  python -m mmml.cli.evaluate_model \
+      /mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/learning_curve/e1000/aco/n6400/r2/aco1_n6400_r2-bbf4c06c-ca11-414a-b68d-c750c080c8db/epoch-926 \
+      --test-data splits/data_test.npz
+Latest epoch: /mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/learning_curve/e1000/aco/n6400/r2/aco1_n6400_r2-bbf4c06c-ca11-414a-b68d-c750c080c8db/epoch-1000
+/mmhome/boittier/home/mmml/.venv/lib/python3.14/site-packages/orbax/checkpoint/_src/serialization/jax_array_handlers.py:925: UserWarning: Sharding info not provided when restoring. Populating sharding info from sharding file. Please note restoration time will be slightly increased due to reading from file. Note also that this option is unsafe when restoring on a different topology than the checkpoint was saved with.
+  warnings.warn(
+Wrote portable checkpoint to /mmhome/boittier/home/mmml_tutorial/acodcm/out/eval/learning_curve/e1000/aco/n6400/r2/latest.json
+Eval checkpoint: /mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/learning_curve/e1000/aco/n6400/r2/params_aco1_n6400_r2_2026-06-29_22-43-16.json
+dataR (2100, 20, 3)
+dataE [-81.29090465 -81.54559955 -81.7907611  -81.94174604 -81.5298973
+ -81.66088965 -81.5388692  -81.59623926 -81.25757762 -81.93940915]
+dataE [-81.29090465 -81.54559955 -81.7907611  -81.94174604 -81.5298973
+ -81.66088965 -81.5388692  -81.59623926 -81.25757762 -81.93940915]
+D (2100, 3)
+
+Evaluating 84 batches × batch_size=25 (natoms=20, checkpoint=params_aco1_n6400_r2_2026-06-29_22-43-16.json)
+
+0it [00:00, ?it/s]1it [00:26, 26.57s/it]2it [00:27, 11.74s/it]3it [00:29,  7.00s/it]4it [00:30,  4.78s/it]5it [00:32,  3.55s/it]6it [00:33,  2.84s/it]7it [00:34,  2.35s/it]8it [00:36,  2.04s/it]9it [00:37,  1.83s/it]10it [00:38,  1.69s/it]11it [00:40,  1.59s/it]12it [00:41,  1.52s/it]13it [00:43,  1.47s/it]14it [00:44,  1.44s/it]15it [00:45,  1.42s/it]16it [00:47,  1.40s/it]17it [00:48,  1.39s/it]18it [00:49,  1.39s/it]19it [00:51,  1.38s/it]20it [00:52,  1.38s/it]21it [00:53,  1.37s/it]22it [00:55,  1.37s/it]23it [00:56,  1.37s/it]24it [00:58,  1.37s/it]25it [00:59,  1.37s/it]26it [01:00,  1.37s/it]27it [01:02,  1.37s/it]28it [01:03,  1.37s/it]29it [01:04,  1.37s/it]30it [01:06,  1.37s/it]31it [01:07,  1.40s/it]32it [01:09,  1.39s/it]33it [01:10,  1.38s/it]34it [01:11,  1.38s/it]35it [01:13,  1.38s/it]36it [01:14,  1.38s/it]37it [01:15,  1.38s/it]38it [01:17,  1.37s/it]39it [01:18,  1.37s/it]40it [01:20,  1.37s/it]41it [01:21,  1.37s/it]42it [01:22,  1.37s/it]43it [01:24,  1.37s/it]44it [01:25,  1.37s/it]45it [01:26,  1.37s/it]46it [01:28,  1.38s/it]47it [01:29,  1.38s/it]48it [01:31,  1.38s/it]49it [01:32,  1.38s/it]50it [01:33,  1.38s/it]51it [01:35,  1.38s/it]52it [01:36,  1.38s/it]53it [01:38,  1.38s/it]54it [01:39,  1.38s/it]55it [01:40,  1.38s/it]56it [01:42,  1.39s/it]57it [01:43,  1.40s/it]58it [01:45,  1.40s/it]59it [01:46,  1.39s/it]60it [01:47,  1.39s/it]61it [01:49,  1.39s/it]62it [01:50,  1.39s/it]63it [01:51,  1.38s/it]64it [01:53,  1.38s/it]65it [01:54,  1.39s/it]66it [01:56,  1.38s/it]67it [01:57,  1.38s/it]68it [01:58,  1.38s/it]69it [02:00,  1.38s/it]70it [02:01,  1.38s/it]71it [02:02,  1.38s/it]72it [02:04,  1.38s/it]73it [02:05,  1.39s/it]74it [02:07,  1.39s/it]75it [02:08,  1.39s/it]76it [02:09,  1.39s/it]77it [02:11,  1.39s/it]78it [02:12,  1.39s/it]79it [02:14,  1.39s/it]80it [02:15,  1.39s/it]81it [02:16,  1.39s/it]82it [02:18,  1.41s/it]83it [02:19,  1.41s/it]84it [02:21,  1.40s/it]84it [02:21,  1.68s/it]
+Wrote /mmhome/boittier/home/mmml_tutorial/acodcm/out/eval/learning_curve/e1000/aco/n6400/r2/metrics.json
+
+Summary (energies/forces in kcal/mol; dipoles in e·Bohr when present):
+  Energy   MAE=0.613123  RMSE=0.706404
+  Forces   MAE=0.241472  RMSE=0.371263
+  Dipole   MAE=0.009266  RMSE=0.012414
+{
+  "dataset": "aco",
+  "n_train": 6400,
+  "n_valid": 240,
+  "repeat": 2,
+  "seed": 2042,
+  "run_dir": "/mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/learning_curve/e1000/aco/n6400/r2/aco1_n6400_r2-bbf4c06c-ca11-414a-b68d-c750c080c8db",
+  "latest_epoch": "epoch-1000",
+  "test_eval": {
+    "energy_mae_kcal_mol": 0.6131231604596834,
+    "energy_rmse_kcal_mol": 0.7064044585655369,
+    "forces_mae_kcal_mol": 0.24147243258663523,
+    "forces_rmse_kcal_mol": 0.37126286231375805
+  },
+  "training_final": {
+    "valid_loss": 0.14701376855373383,
+    "valid_energy_mae": 0.025484517216682434,
+    "valid_forces_mae": 0.010983162559568882
+  },
+  "backfilled": true
+}
+Backfill done: /mmhome/boittier/home/mmml_tutorial/acodcm/out/eval/learning_curve/e1000/aco/n6400/r2

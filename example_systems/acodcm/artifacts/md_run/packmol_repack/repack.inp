@@ -1,0 +1,214 @@
+seed 2
+output /mmhome/boittier/home/mmml_tutorial/acodcm/artifacts/md_run/packmol_repack/repack.pdb
+filetype pdb
+tolerance 5.0
+
+structure /mmhome/boittier/home/mmml_tutorial/acodcm/artifacts/md_run/packmol_repack/movable_0000.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 35.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/acodcm/artifacts/md_run/packmol_repack/movable_0001.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 35.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/acodcm/artifacts/md_run/packmol_repack/movable_0002.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 35.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/acodcm/artifacts/md_run/packmol_repack/movable_0003.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 35.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/acodcm/artifacts/md_run/packmol_repack/movable_0004.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 35.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/acodcm/artifacts/md_run/packmol_repack/movable_0005.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 35.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/acodcm/artifacts/md_run/packmol_repack/movable_0006.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 35.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/acodcm/artifacts/md_run/packmol_repack/movable_0007.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 35.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/acodcm/artifacts/md_run/packmol_repack/movable_0008.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 35.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/acodcm/artifacts/md_run/packmol_repack/movable_0009.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 35.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/acodcm/artifacts/md_run/packmol_repack/movable_0010.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 35.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/acodcm/artifacts/md_run/packmol_repack/movable_0011.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 35.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/acodcm/artifacts/md_run/packmol_repack/movable_0012.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 35.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/acodcm/artifacts/md_run/packmol_repack/movable_0013.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 35.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/acodcm/artifacts/md_run/packmol_repack/movable_0014.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 35.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/acodcm/artifacts/md_run/packmol_repack/movable_0015.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 35.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/acodcm/artifacts/md_run/packmol_repack/movable_0016.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 35.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/acodcm/artifacts/md_run/packmol_repack/movable_0017.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 35.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/acodcm/artifacts/md_run/packmol_repack/movable_0018.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 35.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/acodcm/artifacts/md_run/packmol_repack/movable_0019.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 35.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/acodcm/artifacts/md_run/packmol_repack/movable_0020.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 35.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/acodcm/artifacts/md_run/packmol_repack/movable_0021.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 35.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/acodcm/artifacts/md_run/packmol_repack/movable_0022.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 35.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/acodcm/artifacts/md_run/packmol_repack/movable_0023.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 35.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/acodcm/artifacts/md_run/packmol_repack/movable_0024.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 35.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/acodcm/artifacts/md_run/packmol_repack/movable_0025.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 35.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/acodcm/artifacts/md_run/packmol_repack/movable_0026.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 35.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/acodcm/artifacts/md_run/packmol_repack/movable_0027.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 35.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/acodcm/artifacts/md_run/packmol_repack/movable_0028.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 35.0
+end structure
+
+structure /mmhome/boittier/home/mmml_tutorial/acodcm/artifacts/md_run/packmol_repack/movable_0029.pdb
+  chain A
+  resnumbers 2
+  number 1
+  inside cube 2.5 2.5 2.5 35.0
+end structure

@@ -1,0 +1,114 @@
+Run directory: /mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/learning_curve/e1000/dcm/n1600/r2/dcm1_n1600_r2-2183dad2-4c0b-4e1d-9a35-d5d9317f1938
+Checkpoints: 1000  stride: 5
+/mmhome/boittier/home/mmml/.venv/lib/python3.14/site-packages/orbax/checkpoint/_src/serialization/jax_array_handlers.py:925: UserWarning: Sharding info not provided when restoring. Populating sharding info from sharding file. Please note restoration time will be slightly increased due to reading from file. Note also that this option is unsafe when restoring on a different topology than the checkpoint was saved with.
+  warnings.warn(
+WARNING:matplotlib.font_manager:findfont: Failed to find font weight medium, now using 400.
+
+================================================================================
+EXTRACTING TRAINING METRICS FROM CHECKPOINTS
+================================================================================
+
+Checkpoint directory: dcm1_n1600_r2-2183dad2-4c0b-4e1d-9a35-d5d9317f1938
+Output: /mmhome/boittier/home/mmml_tutorial/acodcm/out/eval/learning_curve/e1000/dcm/n1600/r2/training_curves.png
+
+📊 Extracting metrics from checkpoints...
+Found 200 epoch checkpoints
+Extracted metrics from 200/200 checkpoints
+Wrote metrics JSON: /mmhome/boittier/home/mmml_tutorial/acodcm/out/eval/learning_curve/e1000/dcm/n1600/r2/training_metrics.json
+
+📈 Creating training plots...
+Saved: /mmhome/boittier/home/mmml_tutorial/acodcm/out/eval/learning_curve/e1000/dcm/n1600/r2/training_curves.png
+
+================================================================================
+TRAINING METRICS SUMMARY
+================================================================================
+
+Checkpoint: dcm1_n1600_r2-2183dad2-4c0b-4e1d-9a35-d5d9317f1938
+Epochs analyzed: 200
+Epoch range: 1 to 996
+
+LOSS STATISTICS
+--------------------------------------------------------------------------------
+Training Loss:
+  Initial: 161144684544.000000
+  Final:   0.272751
+  Best:    0.255860 (epoch 991)
+  Improvement: 100.0%
+
+Validation Loss:
+  Initial: 209895129088.000000
+  Final:   0.064371
+  Best:    0.062183 (epoch 991)
+  Improvement: 100.0%
+
+VALIDATION MAE METRICS
+--------------------------------------------------------------------------------
+Energy   MAE: 0.161571 kcal/mol     (best: 0.137677 @ epoch 906)
+Forces   MAE: 0.152122 kcal/mol/Å   (best: 0.148110 @ epoch 976)
+Dipole   MAE: 0.023215 e·Å          (best: 0.023187 @ epoch 546)
+
+LEARNING RATE
+--------------------------------------------------------------------------------
+Initial: 1.000000e-03
+Final:   5.314409e-04
+Decay:   46.9%
+
+CONVERGENCE ANALYSIS
+--------------------------------------------------------------------------------
+Last 10 epochs:
+  Mean loss: 0.065586
+  Std dev:   0.002065
+  Relative std: 3.15%
+  ⚠️  Nearly converged (std < 5%)
+
+================================================================================
+
+✅ ANALYSIS COMPLETE!
+
+To evaluate the best checkpoint:
+  python -m mmml.cli.evaluate_model \
+      /mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/learning_curve/e1000/dcm/n1600/r2/dcm1_n1600_r2-2183dad2-4c0b-4e1d-9a35-d5d9317f1938/epoch-991 \
+      --test-data splits/data_test.npz
+Latest epoch: /mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/learning_curve/e1000/dcm/n1600/r2/dcm1_n1600_r2-2183dad2-4c0b-4e1d-9a35-d5d9317f1938/epoch-1000
+/mmhome/boittier/home/mmml/.venv/lib/python3.14/site-packages/orbax/checkpoint/_src/serialization/jax_array_handlers.py:925: UserWarning: Sharding info not provided when restoring. Populating sharding info from sharding file. Please note restoration time will be slightly increased due to reading from file. Note also that this option is unsafe when restoring on a different topology than the checkpoint was saved with.
+  warnings.warn(
+Wrote portable checkpoint to /mmhome/boittier/home/mmml_tutorial/acodcm/out/eval/learning_curve/e1000/dcm/n1600/r2/latest.json
+Eval checkpoint: /mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/learning_curve/e1000/dcm/n1600/r2/params_dcm1_n1600_r2_2026-06-29_22-36-28.json
+dataR (4195, 10, 3)
+dataE [-43.17928049 -43.52360204 -43.53107111 -43.38530143 -43.50133309
+ -43.46786404 -43.35071352 -43.33364039 -21.65470478 -43.35757384]
+dataE [-43.17928049 -43.52360204 -43.53107111 -43.38530143 -43.50133309
+ -43.46786404 -43.35071352 -43.33364039 -21.65470478 -43.35757384]
+D (4195, 3)
+
+Evaluating 167 batches × batch_size=25 (natoms=10, checkpoint=params_dcm1_n1600_r2_2026-06-29_22-36-28.json)
+
+0it [00:00, ?it/s]1it [00:26, 26.52s/it]2it [00:27, 11.73s/it]3it [00:29,  7.00s/it]4it [00:30,  4.78s/it]5it [00:32,  3.56s/it]6it [00:33,  2.85s/it]7it [00:34,  2.36s/it]8it [00:36,  2.05s/it]9it [00:37,  1.84s/it]10it [00:38,  1.69s/it]11it [00:40,  1.60s/it]12it [00:41,  1.53s/it]13it [00:43,  1.49s/it]14it [00:44,  1.45s/it]15it [00:45,  1.43s/it]16it [00:47,  1.41s/it]17it [00:48,  1.40s/it]18it [00:50,  1.39s/it]19it [00:51,  1.39s/it]20it [00:52,  1.38s/it]21it [00:54,  1.38s/it]22it [00:55,  1.38s/it]23it [00:56,  1.38s/it]24it [00:58,  1.38s/it]25it [00:59,  1.38s/it]26it [01:01,  1.38s/it]27it [01:02,  1.38s/it]28it [01:03,  1.38s/it]29it [01:05,  1.38s/it]30it [01:06,  1.38s/it]31it [01:08,  1.40s/it]32it [01:09,  1.40s/it]33it [01:10,  1.40s/it]34it [01:12,  1.39s/it]35it [01:13,  1.39s/it]36it [01:14,  1.39s/it]37it [01:16,  1.39s/it]38it [01:17,  1.39s/it]39it [01:19,  1.39s/it]40it [01:20,  1.39s/it]41it [01:21,  1.39s/it]42it [01:23,  1.39s/it]43it [01:24,  1.39s/it]44it [01:26,  1.39s/it]45it [01:27,  1.39s/it]46it [01:28,  1.39s/it]47it [01:30,  1.39s/it]48it [01:31,  1.39s/it]49it [01:33,  1.39s/it]50it [01:34,  1.39s/it]51it [01:35,  1.39s/it]52it [01:37,  1.39s/it]53it [01:38,  1.39s/it]54it [01:39,  1.39s/it]55it [01:41,  1.40s/it]56it [01:42,  1.42s/it]57it [01:44,  1.41s/it]58it [01:45,  1.40s/it]59it [01:47,  1.40s/it]60it [01:48,  1.40s/it]61it [01:49,  1.40s/it]62it [01:51,  1.40s/it]63it [01:52,  1.40s/it]64it [01:54,  1.40s/it]65it [01:55,  1.40s/it]66it [01:56,  1.40s/it]67it [01:58,  1.40s/it]68it [01:59,  1.40s/it]69it [02:01,  1.40s/it]70it [02:02,  1.40s/it]71it [02:03,  1.40s/it]72it [02:05,  1.40s/it]73it [02:06,  1.40s/it]74it [02:08,  1.40s/it]75it [02:09,  1.40s/it]76it [02:10,  1.40s/it]77it [02:12,  1.39s/it]78it [02:13,  1.40s/it]79it [02:14,  1.39s/it]80it [02:16,  1.40s/it]81it [02:17,  1.40s/it]82it [02:19,  1.42s/it]83it [02:20,  1.41s/it]84it [02:22,  1.41s/it]85it [02:23,  1.41s/it]86it [02:24,  1.40s/it]87it [02:26,  1.40s/it]88it [02:27,  1.41s/it]89it [02:29,  1.40s/it]90it [02:30,  1.40s/it]91it [02:31,  1.40s/it]92it [02:33,  1.40s/it]93it [02:34,  1.40s/it]94it [02:36,  1.40s/it]95it [02:37,  1.40s/it]96it [02:38,  1.39s/it]97it [02:40,  1.40s/it]98it [02:41,  1.40s/it]99it [02:43,  1.40s/it]100it [02:44,  1.40s/it]101it [02:45,  1.40s/it]102it [02:47,  1.40s/it]103it [02:48,  1.40s/it]104it [02:50,  1.40s/it]105it [02:51,  1.40s/it]106it [02:52,  1.40s/it]107it [02:54,  1.39s/it]108it [02:55,  1.40s/it]109it [02:57,  1.42s/it]110it [02:58,  1.41s/it]111it [02:59,  1.40s/it]112it [03:01,  1.40s/it]113it [03:02,  1.41s/it]114it [03:04,  1.40s/it]115it [03:05,  1.40s/it]116it [03:06,  1.40s/it]117it [03:08,  1.40s/it]118it [03:09,  1.40s/it]119it [03:11,  1.39s/it]120it [03:12,  1.39s/it]121it [03:13,  1.40s/it]122it [03:15,  1.40s/it]123it [03:16,  1.40s/it]124it [03:18,  1.40s/it]125it [03:19,  1.40s/it]126it [03:20,  1.40s/it]127it [03:22,  1.40s/it]128it [03:23,  1.40s/it]129it [03:25,  1.40s/it]130it [03:26,  1.40s/it]131it [03:27,  1.40s/it]132it [03:29,  1.40s/it]133it [03:30,  1.40s/it]134it [03:32,  1.40s/it]135it [03:33,  1.42s/it]136it [03:34,  1.41s/it]137it [03:36,  1.41s/it]138it [03:37,  1.41s/it]139it [03:39,  1.41s/it]140it [03:40,  1.40s/it]141it [03:41,  1.40s/it]142it [03:43,  1.40s/it]143it [03:44,  1.40s/it]144it [03:46,  1.40s/it]145it [03:47,  1.40s/it]146it [03:48,  1.40s/it]147it [03:50,  1.40s/it]148it [03:51,  1.40s/it]149it [03:53,  1.41s/it]150it [03:54,  1.41s/it]151it [03:55,  1.41s/it]152it [03:57,  1.40s/it]153it [03:58,  1.40s/it]154it [04:00,  1.41s/it]155it [04:01,  1.40s/it]156it [04:02,  1.40s/it]157it [04:04,  1.40s/it]158it [04:05,  1.40s/it]159it [04:07,  1.40s/it]160it [04:08,  1.41s/it]161it [04:09,  1.42s/it]162it [04:11,  1.41s/it]163it [04:12,  1.41s/it]164it [04:14,  1.41s/it]165it [04:15,  1.40s/it]166it [04:16,  1.40s/it]167it [04:18,  1.40s/it]167it [04:18,  1.55s/it]
+Wrote /mmhome/boittier/home/mmml_tutorial/acodcm/out/eval/learning_curve/e1000/dcm/n1600/r2/metrics.json
+
+Summary (energies/forces in kcal/mol; dipoles in e·Bohr when present):
+  Energy   MAE=0.315083  RMSE=0.809284
+  Forces   MAE=0.367441  RMSE=8.837687
+  Dipole   MAE=0.007709  RMSE=0.009938
+{
+  "dataset": "dcm",
+  "n_train": 1600,
+  "n_valid": 60,
+  "repeat": 2,
+  "seed": 2042,
+  "run_dir": "/mmhome/boittier/home/mmml_tutorial/acodcm/ckpts/learning_curve/e1000/dcm/n1600/r2/dcm1_n1600_r2-2183dad2-4c0b-4e1d-9a35-d5d9317f1938",
+  "latest_epoch": "epoch-1000",
+  "test_eval": {
+    "energy_mae_kcal_mol": 0.31508339821367376,
+    "energy_rmse_kcal_mol": 0.8092835942268434,
+    "forces_mae_kcal_mol": 0.36744054131441495,
+    "forces_rmse_kcal_mol": 8.837687205986196
+  },
+  "training_final": {
+    "valid_loss": 0.0643712729215622,
+    "valid_energy_mae": 0.007006377913057804,
+    "valid_forces_mae": 0.00659662950783968
+  },
+  "backfilled": true
+}
+Backfill done: /mmhome/boittier/home/mmml_tutorial/acodcm/out/eval/learning_curve/e1000/dcm/n1600/r2
