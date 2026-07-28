@@ -1,0 +1,32 @@
+# PhysNet train config for ACEM+FORM merged splits (nma_etc).
+# CLI flags in 07_physnet_train.sh override paths / epochs.
+
+data: out/splits/energies_forces_dipoles_train.npz
+valid_data: out/splits/energies_forces_dipoles_valid.npz
+ckpt_dir: ./out/ckpts/acem_form_physnet
+tag: acem_form_mp2
+
+seed: 42
+batch_size: 32
+num_epochs: 200
+learning_rate: 0.001
+
+energy_weight: 1.0
+forces_weight: 52.91
+dipole_weight: 27.21
+charges_weight: 14.39
+objective: valid_loss
+
+# Auto from N/R when omitted; merged pad is 9 (ACEM)
+# num_atoms: 9
+max_atomic_number: 35
+
+features: 64
+max_degree: 0
+num_basis_functions: 32
+num_iterations: 2
+n_res: 2
+cutoff: 8.0
+use_energy_bias: true
+charges: true
+zbl: true

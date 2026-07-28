@@ -1,0 +1,68 @@
+# Shared defaults for nma_etc scripts.
+#
+# Usage (from this directory):
+#   cd nma_etc
+#   bash 01_make_res.sh
+#
+# Override any variable before sourcing, or export in your shell.
+
+HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "$HERE"
+
+# Upstream mmml checkout (ic-scan example YAMLs, optional)
+MMML_ROOT="${MMML_ROOT:-$HOME/mmml}"
+
+# Residue for make-res / ic-scan / dimer / box (docs: NMA)
+RES="${RES:-NMA}"
+
+# Provided MP2 / aug-cc-pVTZ EFD NPZs (ACEM=9 atoms, FORM=6 atoms)
+ACEM_NPZ="${ACEM_NPZ:-$HERE/acem_mp2_aug-cc-pvtz_16106.npz}"
+FORM_NPZ="${FORM_NPZ:-$HERE/form_mp2_aug-cc-pvtz_4000.npz}"
+
+# After 04_pad_merge_npz.py: both padded to ACEM natoms
+MERGED_NPZ="${MERGED_NPZ:-$HERE/out/acem_form_merged.npz}"
+PAD_NATOMS="${PAD_NATOMS:-9}"
+
+SPLITS_DIR="${SPLITS_DIR:-$HERE/out/splits}"
+PHYSNET_TRAIN_NPZ="${PHYSNET_TRAIN_NPZ:-$SPLITS_DIR/energies_forces_dipoles_train.npz}"
+PHYSNET_VALID_NPZ="${PHYSNET_VALID_NPZ:-$SPLITS_DIR/energies_forces_dipoles_valid.npz}"
+PHYSNET_TEST_NPZ="${PHYSNET_TEST_NPZ:-$SPLITS_DIR/energies_forces_dipoles_test.npz}"
+
+PHYSNET_CKPT_DIR="${PHYSNET_CKPT_DIR:-$HERE/out/ckpts/acem_form_physnet}"
+PHYSNET_TAG="${PHYSNET_TAG:-acem_form_mp2}"
+# Set after training, or point at an existing Orbax/JSON checkpoint:
+PHYSNET_CHECKPOINT="${PHYSNET_CHECKPOINT:-}"
+
+# Smoke training defaults (override for production)
+PHYSNET_EPOCHS="${PHYSNET_EPOCHS:-200}"
+PHYSNET_BATCH="${PHYSNET_BATCH:-32}"
+PHYSNET_LR="${PHYSNET_LR:-0.001}"
+
+EVAL_OUT="${EVAL_OUT:-$HERE/out/eval}"
+IC_SCAN_OUT="${IC_SCAN_OUT:-$HERE/out/ic_scan}"
+DIMER_OUT="${DIMER_OUT:-$HERE/out/dimer}"
+MDSYS_OUT="${MDSYS_OUT:-$HERE/out/md}"
+MDSYS_N="${MDSYS_N:-50}"
+MDSYS_TEMP_K="${MDSYS_TEMP_K:-300}"
+MDSYS_BOX_SIDE="${MDSYS_BOX_SIDE:-30.0}"
+
+# MD composition: ACEM matches the larger training species; NMA needs an NMA-trained ckpt.
+MD_RES="${MD_RES:-ACEM}"
+MD_N="${MD_N:-$MDSYS_N}"
+
+mkdir -p out configs
+
+resolve_checkpoint() {
+  if [[ -n "${PHYSNET_CHECKPOINT}" && -e "${PHYSNET_CHECKPOINT}" ]]; then
+    echo "${PHYSNET_CHECKPOINT}"
+    return 0
+  fi
+  local latest
+  latest="$(ls -dt "${PHYSNET_CKPT_DIR}"/"${PHYSNET_TAG}"* 2>/dev/null | head -1 || true)"
+  if [[ -n "${latest}" ]]; then
+    echo "${latest}"
+    return 0
+  fi
+  echo ""
+  return 1
+}

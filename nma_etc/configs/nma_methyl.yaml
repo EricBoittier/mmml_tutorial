@@ -1,0 +1,28 @@
+# NMA methyl rotations — local copy for nma_etc (see mmml/examples/ic_scan/nma_methyl.yaml).
+# structure path is relative to cwd when running the script (nma_etc/).
+
+structure: xyz/nma.xyz
+calculator: xtb
+evaluate: energy
+geometry_mode: rigid
+failure_policy: fail
+
+dofs:
+  - name: acetyl_methyl
+    kind: dihedral
+    atoms: [6, 4, 0, 1]      # N-C-CL-HL1
+    start: -180
+    stop: 180
+    n_points: 37
+  - name: n_methyl
+    kind: dihedral
+    atoms: [4, 6, 8, 9]      # C-N-CR-HR1
+    start: -180
+    stop: 180
+    n_points: 37
+
+scans:
+  - name: acetyl_1d
+    dofs: [acetyl_methyl]
+  - name: n_methyl_1d
+    dofs: [n_methyl]
