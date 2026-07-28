@@ -1,0 +1,11 @@
+seed 42
+output /mmhome/boittier/home/mmml_tutorial/tests/cpu_tests/dcm/dcm02/artifacts/pycharmm_mlpot/packmol_cluster/init-packmol-sphere.pdb
+filetype pdb
+tolerance 2.0
+
+structure /mmhome/boittier/home/mmml_tutorial/tests/cpu_tests/dcm/dcm02/artifacts/pycharmm_mlpot/packmol_cluster/monomers/dcm.pdb
+  chain A
+  resnumbers 2
+  number 20
+  inside cube -15.0 -15.0 -15.0 30.0
+end structure

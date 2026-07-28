@@ -1,9 +1,9 @@
 PSF EXT CMAP XPLOR
 
          1 !NTITLE
-*  DATE:     7/16/26     14:29: 0      CREATED BY USER: boittier                
+*  DATE:     7/24/26     15:30:22      CREATED BY USER: boittier                
 
-       700 !NATOM
+      1200 !NATOM
          1 CLST     1        DCM      C        CG321   -0.180000E-01   12.0110           0
          2 CLST     1        DCM      H1       HGA2     0.900000E-01   1.00800           0
          3 CLST     1        DCM      H2       HGA2     0.900000E-01   1.00800           0
@@ -704,8 +704,508 @@ PSF EXT CMAP XPLOR
        698 CLST     140      DCM      H2       HGA2     0.900000E-01   1.00800           0
        699 CLST     140      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
        700 CLST     140      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       701 CLST     141      DCM      C        CG321   -0.180000E-01   12.0110           0
+       702 CLST     141      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       703 CLST     141      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       704 CLST     141      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       705 CLST     141      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       706 CLST     142      DCM      C        CG321   -0.180000E-01   12.0110           0
+       707 CLST     142      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       708 CLST     142      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       709 CLST     142      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       710 CLST     142      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       711 CLST     143      DCM      C        CG321   -0.180000E-01   12.0110           0
+       712 CLST     143      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       713 CLST     143      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       714 CLST     143      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       715 CLST     143      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       716 CLST     144      DCM      C        CG321   -0.180000E-01   12.0110           0
+       717 CLST     144      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       718 CLST     144      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       719 CLST     144      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       720 CLST     144      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       721 CLST     145      DCM      C        CG321   -0.180000E-01   12.0110           0
+       722 CLST     145      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       723 CLST     145      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       724 CLST     145      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       725 CLST     145      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       726 CLST     146      DCM      C        CG321   -0.180000E-01   12.0110           0
+       727 CLST     146      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       728 CLST     146      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       729 CLST     146      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       730 CLST     146      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       731 CLST     147      DCM      C        CG321   -0.180000E-01   12.0110           0
+       732 CLST     147      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       733 CLST     147      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       734 CLST     147      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       735 CLST     147      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       736 CLST     148      DCM      C        CG321   -0.180000E-01   12.0110           0
+       737 CLST     148      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       738 CLST     148      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       739 CLST     148      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       740 CLST     148      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       741 CLST     149      DCM      C        CG321   -0.180000E-01   12.0110           0
+       742 CLST     149      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       743 CLST     149      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       744 CLST     149      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       745 CLST     149      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       746 CLST     150      DCM      C        CG321   -0.180000E-01   12.0110           0
+       747 CLST     150      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       748 CLST     150      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       749 CLST     150      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       750 CLST     150      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       751 CLST     151      DCM      C        CG321   -0.180000E-01   12.0110           0
+       752 CLST     151      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       753 CLST     151      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       754 CLST     151      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       755 CLST     151      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       756 CLST     152      DCM      C        CG321   -0.180000E-01   12.0110           0
+       757 CLST     152      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       758 CLST     152      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       759 CLST     152      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       760 CLST     152      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       761 CLST     153      DCM      C        CG321   -0.180000E-01   12.0110           0
+       762 CLST     153      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       763 CLST     153      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       764 CLST     153      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       765 CLST     153      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       766 CLST     154      DCM      C        CG321   -0.180000E-01   12.0110           0
+       767 CLST     154      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       768 CLST     154      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       769 CLST     154      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       770 CLST     154      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       771 CLST     155      DCM      C        CG321   -0.180000E-01   12.0110           0
+       772 CLST     155      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       773 CLST     155      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       774 CLST     155      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       775 CLST     155      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       776 CLST     156      DCM      C        CG321   -0.180000E-01   12.0110           0
+       777 CLST     156      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       778 CLST     156      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       779 CLST     156      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       780 CLST     156      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       781 CLST     157      DCM      C        CG321   -0.180000E-01   12.0110           0
+       782 CLST     157      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       783 CLST     157      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       784 CLST     157      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       785 CLST     157      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       786 CLST     158      DCM      C        CG321   -0.180000E-01   12.0110           0
+       787 CLST     158      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       788 CLST     158      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       789 CLST     158      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       790 CLST     158      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       791 CLST     159      DCM      C        CG321   -0.180000E-01   12.0110           0
+       792 CLST     159      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       793 CLST     159      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       794 CLST     159      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       795 CLST     159      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       796 CLST     160      DCM      C        CG321   -0.180000E-01   12.0110           0
+       797 CLST     160      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       798 CLST     160      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       799 CLST     160      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       800 CLST     160      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       801 CLST     161      DCM      C        CG321   -0.180000E-01   12.0110           0
+       802 CLST     161      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       803 CLST     161      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       804 CLST     161      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       805 CLST     161      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       806 CLST     162      DCM      C        CG321   -0.180000E-01   12.0110           0
+       807 CLST     162      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       808 CLST     162      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       809 CLST     162      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       810 CLST     162      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       811 CLST     163      DCM      C        CG321   -0.180000E-01   12.0110           0
+       812 CLST     163      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       813 CLST     163      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       814 CLST     163      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       815 CLST     163      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       816 CLST     164      DCM      C        CG321   -0.180000E-01   12.0110           0
+       817 CLST     164      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       818 CLST     164      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       819 CLST     164      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       820 CLST     164      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       821 CLST     165      DCM      C        CG321   -0.180000E-01   12.0110           0
+       822 CLST     165      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       823 CLST     165      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       824 CLST     165      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       825 CLST     165      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       826 CLST     166      DCM      C        CG321   -0.180000E-01   12.0110           0
+       827 CLST     166      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       828 CLST     166      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       829 CLST     166      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       830 CLST     166      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       831 CLST     167      DCM      C        CG321   -0.180000E-01   12.0110           0
+       832 CLST     167      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       833 CLST     167      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       834 CLST     167      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       835 CLST     167      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       836 CLST     168      DCM      C        CG321   -0.180000E-01   12.0110           0
+       837 CLST     168      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       838 CLST     168      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       839 CLST     168      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       840 CLST     168      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       841 CLST     169      DCM      C        CG321   -0.180000E-01   12.0110           0
+       842 CLST     169      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       843 CLST     169      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       844 CLST     169      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       845 CLST     169      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       846 CLST     170      DCM      C        CG321   -0.180000E-01   12.0110           0
+       847 CLST     170      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       848 CLST     170      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       849 CLST     170      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       850 CLST     170      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       851 CLST     171      DCM      C        CG321   -0.180000E-01   12.0110           0
+       852 CLST     171      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       853 CLST     171      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       854 CLST     171      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       855 CLST     171      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       856 CLST     172      DCM      C        CG321   -0.180000E-01   12.0110           0
+       857 CLST     172      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       858 CLST     172      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       859 CLST     172      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       860 CLST     172      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       861 CLST     173      DCM      C        CG321   -0.180000E-01   12.0110           0
+       862 CLST     173      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       863 CLST     173      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       864 CLST     173      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       865 CLST     173      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       866 CLST     174      DCM      C        CG321   -0.180000E-01   12.0110           0
+       867 CLST     174      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       868 CLST     174      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       869 CLST     174      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       870 CLST     174      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       871 CLST     175      DCM      C        CG321   -0.180000E-01   12.0110           0
+       872 CLST     175      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       873 CLST     175      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       874 CLST     175      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       875 CLST     175      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       876 CLST     176      DCM      C        CG321   -0.180000E-01   12.0110           0
+       877 CLST     176      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       878 CLST     176      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       879 CLST     176      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       880 CLST     176      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       881 CLST     177      DCM      C        CG321   -0.180000E-01   12.0110           0
+       882 CLST     177      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       883 CLST     177      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       884 CLST     177      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       885 CLST     177      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       886 CLST     178      DCM      C        CG321   -0.180000E-01   12.0110           0
+       887 CLST     178      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       888 CLST     178      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       889 CLST     178      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       890 CLST     178      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       891 CLST     179      DCM      C        CG321   -0.180000E-01   12.0110           0
+       892 CLST     179      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       893 CLST     179      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       894 CLST     179      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       895 CLST     179      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       896 CLST     180      DCM      C        CG321   -0.180000E-01   12.0110           0
+       897 CLST     180      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       898 CLST     180      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       899 CLST     180      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       900 CLST     180      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       901 CLST     181      DCM      C        CG321   -0.180000E-01   12.0110           0
+       902 CLST     181      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       903 CLST     181      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       904 CLST     181      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       905 CLST     181      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       906 CLST     182      DCM      C        CG321   -0.180000E-01   12.0110           0
+       907 CLST     182      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       908 CLST     182      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       909 CLST     182      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       910 CLST     182      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       911 CLST     183      DCM      C        CG321   -0.180000E-01   12.0110           0
+       912 CLST     183      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       913 CLST     183      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       914 CLST     183      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       915 CLST     183      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       916 CLST     184      DCM      C        CG321   -0.180000E-01   12.0110           0
+       917 CLST     184      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       918 CLST     184      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       919 CLST     184      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       920 CLST     184      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       921 CLST     185      DCM      C        CG321   -0.180000E-01   12.0110           0
+       922 CLST     185      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       923 CLST     185      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       924 CLST     185      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       925 CLST     185      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       926 CLST     186      DCM      C        CG321   -0.180000E-01   12.0110           0
+       927 CLST     186      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       928 CLST     186      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       929 CLST     186      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       930 CLST     186      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       931 CLST     187      DCM      C        CG321   -0.180000E-01   12.0110           0
+       932 CLST     187      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       933 CLST     187      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       934 CLST     187      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       935 CLST     187      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       936 CLST     188      DCM      C        CG321   -0.180000E-01   12.0110           0
+       937 CLST     188      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       938 CLST     188      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       939 CLST     188      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       940 CLST     188      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       941 CLST     189      DCM      C        CG321   -0.180000E-01   12.0110           0
+       942 CLST     189      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       943 CLST     189      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       944 CLST     189      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       945 CLST     189      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       946 CLST     190      DCM      C        CG321   -0.180000E-01   12.0110           0
+       947 CLST     190      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       948 CLST     190      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       949 CLST     190      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       950 CLST     190      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       951 CLST     191      DCM      C        CG321   -0.180000E-01   12.0110           0
+       952 CLST     191      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       953 CLST     191      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       954 CLST     191      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       955 CLST     191      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       956 CLST     192      DCM      C        CG321   -0.180000E-01   12.0110           0
+       957 CLST     192      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       958 CLST     192      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       959 CLST     192      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       960 CLST     192      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       961 CLST     193      DCM      C        CG321   -0.180000E-01   12.0110           0
+       962 CLST     193      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       963 CLST     193      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       964 CLST     193      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       965 CLST     193      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       966 CLST     194      DCM      C        CG321   -0.180000E-01   12.0110           0
+       967 CLST     194      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       968 CLST     194      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       969 CLST     194      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       970 CLST     194      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       971 CLST     195      DCM      C        CG321   -0.180000E-01   12.0110           0
+       972 CLST     195      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       973 CLST     195      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       974 CLST     195      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       975 CLST     195      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       976 CLST     196      DCM      C        CG321   -0.180000E-01   12.0110           0
+       977 CLST     196      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       978 CLST     196      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       979 CLST     196      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       980 CLST     196      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       981 CLST     197      DCM      C        CG321   -0.180000E-01   12.0110           0
+       982 CLST     197      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       983 CLST     197      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       984 CLST     197      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       985 CLST     197      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       986 CLST     198      DCM      C        CG321   -0.180000E-01   12.0110           0
+       987 CLST     198      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       988 CLST     198      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       989 CLST     198      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       990 CLST     198      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       991 CLST     199      DCM      C        CG321   -0.180000E-01   12.0110           0
+       992 CLST     199      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       993 CLST     199      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       994 CLST     199      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+       995 CLST     199      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+       996 CLST     200      DCM      C        CG321   -0.180000E-01   12.0110           0
+       997 CLST     200      DCM      H1       HGA2     0.900000E-01   1.00800           0
+       998 CLST     200      DCM      H2       HGA2     0.900000E-01   1.00800           0
+       999 CLST     200      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+      1000 CLST     200      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+      1001 CLST     201      DCM      C        CG321   -0.180000E-01   12.0110           0
+      1002 CLST     201      DCM      H1       HGA2     0.900000E-01   1.00800           0
+      1003 CLST     201      DCM      H2       HGA2     0.900000E-01   1.00800           0
+      1004 CLST     201      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+      1005 CLST     201      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+      1006 CLST     202      DCM      C        CG321   -0.180000E-01   12.0110           0
+      1007 CLST     202      DCM      H1       HGA2     0.900000E-01   1.00800           0
+      1008 CLST     202      DCM      H2       HGA2     0.900000E-01   1.00800           0
+      1009 CLST     202      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+      1010 CLST     202      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+      1011 CLST     203      DCM      C        CG321   -0.180000E-01   12.0110           0
+      1012 CLST     203      DCM      H1       HGA2     0.900000E-01   1.00800           0
+      1013 CLST     203      DCM      H2       HGA2     0.900000E-01   1.00800           0
+      1014 CLST     203      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+      1015 CLST     203      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+      1016 CLST     204      DCM      C        CG321   -0.180000E-01   12.0110           0
+      1017 CLST     204      DCM      H1       HGA2     0.900000E-01   1.00800           0
+      1018 CLST     204      DCM      H2       HGA2     0.900000E-01   1.00800           0
+      1019 CLST     204      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+      1020 CLST     204      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+      1021 CLST     205      DCM      C        CG321   -0.180000E-01   12.0110           0
+      1022 CLST     205      DCM      H1       HGA2     0.900000E-01   1.00800           0
+      1023 CLST     205      DCM      H2       HGA2     0.900000E-01   1.00800           0
+      1024 CLST     205      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+      1025 CLST     205      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+      1026 CLST     206      DCM      C        CG321   -0.180000E-01   12.0110           0
+      1027 CLST     206      DCM      H1       HGA2     0.900000E-01   1.00800           0
+      1028 CLST     206      DCM      H2       HGA2     0.900000E-01   1.00800           0
+      1029 CLST     206      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+      1030 CLST     206      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+      1031 CLST     207      DCM      C        CG321   -0.180000E-01   12.0110           0
+      1032 CLST     207      DCM      H1       HGA2     0.900000E-01   1.00800           0
+      1033 CLST     207      DCM      H2       HGA2     0.900000E-01   1.00800           0
+      1034 CLST     207      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+      1035 CLST     207      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+      1036 CLST     208      DCM      C        CG321   -0.180000E-01   12.0110           0
+      1037 CLST     208      DCM      H1       HGA2     0.900000E-01   1.00800           0
+      1038 CLST     208      DCM      H2       HGA2     0.900000E-01   1.00800           0
+      1039 CLST     208      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+      1040 CLST     208      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+      1041 CLST     209      DCM      C        CG321   -0.180000E-01   12.0110           0
+      1042 CLST     209      DCM      H1       HGA2     0.900000E-01   1.00800           0
+      1043 CLST     209      DCM      H2       HGA2     0.900000E-01   1.00800           0
+      1044 CLST     209      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+      1045 CLST     209      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+      1046 CLST     210      DCM      C        CG321   -0.180000E-01   12.0110           0
+      1047 CLST     210      DCM      H1       HGA2     0.900000E-01   1.00800           0
+      1048 CLST     210      DCM      H2       HGA2     0.900000E-01   1.00800           0
+      1049 CLST     210      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+      1050 CLST     210      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+      1051 CLST     211      DCM      C        CG321   -0.180000E-01   12.0110           0
+      1052 CLST     211      DCM      H1       HGA2     0.900000E-01   1.00800           0
+      1053 CLST     211      DCM      H2       HGA2     0.900000E-01   1.00800           0
+      1054 CLST     211      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+      1055 CLST     211      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+      1056 CLST     212      DCM      C        CG321   -0.180000E-01   12.0110           0
+      1057 CLST     212      DCM      H1       HGA2     0.900000E-01   1.00800           0
+      1058 CLST     212      DCM      H2       HGA2     0.900000E-01   1.00800           0
+      1059 CLST     212      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+      1060 CLST     212      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+      1061 CLST     213      DCM      C        CG321   -0.180000E-01   12.0110           0
+      1062 CLST     213      DCM      H1       HGA2     0.900000E-01   1.00800           0
+      1063 CLST     213      DCM      H2       HGA2     0.900000E-01   1.00800           0
+      1064 CLST     213      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+      1065 CLST     213      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+      1066 CLST     214      DCM      C        CG321   -0.180000E-01   12.0110           0
+      1067 CLST     214      DCM      H1       HGA2     0.900000E-01   1.00800           0
+      1068 CLST     214      DCM      H2       HGA2     0.900000E-01   1.00800           0
+      1069 CLST     214      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+      1070 CLST     214      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+      1071 CLST     215      DCM      C        CG321   -0.180000E-01   12.0110           0
+      1072 CLST     215      DCM      H1       HGA2     0.900000E-01   1.00800           0
+      1073 CLST     215      DCM      H2       HGA2     0.900000E-01   1.00800           0
+      1074 CLST     215      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+      1075 CLST     215      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+      1076 CLST     216      DCM      C        CG321   -0.180000E-01   12.0110           0
+      1077 CLST     216      DCM      H1       HGA2     0.900000E-01   1.00800           0
+      1078 CLST     216      DCM      H2       HGA2     0.900000E-01   1.00800           0
+      1079 CLST     216      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+      1080 CLST     216      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+      1081 CLST     217      DCM      C        CG321   -0.180000E-01   12.0110           0
+      1082 CLST     217      DCM      H1       HGA2     0.900000E-01   1.00800           0
+      1083 CLST     217      DCM      H2       HGA2     0.900000E-01   1.00800           0
+      1084 CLST     217      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+      1085 CLST     217      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+      1086 CLST     218      DCM      C        CG321   -0.180000E-01   12.0110           0
+      1087 CLST     218      DCM      H1       HGA2     0.900000E-01   1.00800           0
+      1088 CLST     218      DCM      H2       HGA2     0.900000E-01   1.00800           0
+      1089 CLST     218      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+      1090 CLST     218      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+      1091 CLST     219      DCM      C        CG321   -0.180000E-01   12.0110           0
+      1092 CLST     219      DCM      H1       HGA2     0.900000E-01   1.00800           0
+      1093 CLST     219      DCM      H2       HGA2     0.900000E-01   1.00800           0
+      1094 CLST     219      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+      1095 CLST     219      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+      1096 CLST     220      DCM      C        CG321   -0.180000E-01   12.0110           0
+      1097 CLST     220      DCM      H1       HGA2     0.900000E-01   1.00800           0
+      1098 CLST     220      DCM      H2       HGA2     0.900000E-01   1.00800           0
+      1099 CLST     220      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+      1100 CLST     220      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+      1101 CLST     221      DCM      C        CG321   -0.180000E-01   12.0110           0
+      1102 CLST     221      DCM      H1       HGA2     0.900000E-01   1.00800           0
+      1103 CLST     221      DCM      H2       HGA2     0.900000E-01   1.00800           0
+      1104 CLST     221      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+      1105 CLST     221      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+      1106 CLST     222      DCM      C        CG321   -0.180000E-01   12.0110           0
+      1107 CLST     222      DCM      H1       HGA2     0.900000E-01   1.00800           0
+      1108 CLST     222      DCM      H2       HGA2     0.900000E-01   1.00800           0
+      1109 CLST     222      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+      1110 CLST     222      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+      1111 CLST     223      DCM      C        CG321   -0.180000E-01   12.0110           0
+      1112 CLST     223      DCM      H1       HGA2     0.900000E-01   1.00800           0
+      1113 CLST     223      DCM      H2       HGA2     0.900000E-01   1.00800           0
+      1114 CLST     223      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+      1115 CLST     223      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+      1116 CLST     224      DCM      C        CG321   -0.180000E-01   12.0110           0
+      1117 CLST     224      DCM      H1       HGA2     0.900000E-01   1.00800           0
+      1118 CLST     224      DCM      H2       HGA2     0.900000E-01   1.00800           0
+      1119 CLST     224      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+      1120 CLST     224      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+      1121 CLST     225      DCM      C        CG321   -0.180000E-01   12.0110           0
+      1122 CLST     225      DCM      H1       HGA2     0.900000E-01   1.00800           0
+      1123 CLST     225      DCM      H2       HGA2     0.900000E-01   1.00800           0
+      1124 CLST     225      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+      1125 CLST     225      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+      1126 CLST     226      DCM      C        CG321   -0.180000E-01   12.0110           0
+      1127 CLST     226      DCM      H1       HGA2     0.900000E-01   1.00800           0
+      1128 CLST     226      DCM      H2       HGA2     0.900000E-01   1.00800           0
+      1129 CLST     226      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+      1130 CLST     226      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+      1131 CLST     227      DCM      C        CG321   -0.180000E-01   12.0110           0
+      1132 CLST     227      DCM      H1       HGA2     0.900000E-01   1.00800           0
+      1133 CLST     227      DCM      H2       HGA2     0.900000E-01   1.00800           0
+      1134 CLST     227      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+      1135 CLST     227      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+      1136 CLST     228      DCM      C        CG321   -0.180000E-01   12.0110           0
+      1137 CLST     228      DCM      H1       HGA2     0.900000E-01   1.00800           0
+      1138 CLST     228      DCM      H2       HGA2     0.900000E-01   1.00800           0
+      1139 CLST     228      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+      1140 CLST     228      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+      1141 CLST     229      DCM      C        CG321   -0.180000E-01   12.0110           0
+      1142 CLST     229      DCM      H1       HGA2     0.900000E-01   1.00800           0
+      1143 CLST     229      DCM      H2       HGA2     0.900000E-01   1.00800           0
+      1144 CLST     229      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+      1145 CLST     229      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+      1146 CLST     230      DCM      C        CG321   -0.180000E-01   12.0110           0
+      1147 CLST     230      DCM      H1       HGA2     0.900000E-01   1.00800           0
+      1148 CLST     230      DCM      H2       HGA2     0.900000E-01   1.00800           0
+      1149 CLST     230      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+      1150 CLST     230      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+      1151 CLST     231      DCM      C        CG321   -0.180000E-01   12.0110           0
+      1152 CLST     231      DCM      H1       HGA2     0.900000E-01   1.00800           0
+      1153 CLST     231      DCM      H2       HGA2     0.900000E-01   1.00800           0
+      1154 CLST     231      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+      1155 CLST     231      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+      1156 CLST     232      DCM      C        CG321   -0.180000E-01   12.0110           0
+      1157 CLST     232      DCM      H1       HGA2     0.900000E-01   1.00800           0
+      1158 CLST     232      DCM      H2       HGA2     0.900000E-01   1.00800           0
+      1159 CLST     232      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+      1160 CLST     232      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+      1161 CLST     233      DCM      C        CG321   -0.180000E-01   12.0110           0
+      1162 CLST     233      DCM      H1       HGA2     0.900000E-01   1.00800           0
+      1163 CLST     233      DCM      H2       HGA2     0.900000E-01   1.00800           0
+      1164 CLST     233      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+      1165 CLST     233      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+      1166 CLST     234      DCM      C        CG321   -0.180000E-01   12.0110           0
+      1167 CLST     234      DCM      H1       HGA2     0.900000E-01   1.00800           0
+      1168 CLST     234      DCM      H2       HGA2     0.900000E-01   1.00800           0
+      1169 CLST     234      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+      1170 CLST     234      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+      1171 CLST     235      DCM      C        CG321   -0.180000E-01   12.0110           0
+      1172 CLST     235      DCM      H1       HGA2     0.900000E-01   1.00800           0
+      1173 CLST     235      DCM      H2       HGA2     0.900000E-01   1.00800           0
+      1174 CLST     235      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+      1175 CLST     235      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+      1176 CLST     236      DCM      C        CG321   -0.180000E-01   12.0110           0
+      1177 CLST     236      DCM      H1       HGA2     0.900000E-01   1.00800           0
+      1178 CLST     236      DCM      H2       HGA2     0.900000E-01   1.00800           0
+      1179 CLST     236      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+      1180 CLST     236      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+      1181 CLST     237      DCM      C        CG321   -0.180000E-01   12.0110           0
+      1182 CLST     237      DCM      H1       HGA2     0.900000E-01   1.00800           0
+      1183 CLST     237      DCM      H2       HGA2     0.900000E-01   1.00800           0
+      1184 CLST     237      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+      1185 CLST     237      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+      1186 CLST     238      DCM      C        CG321   -0.180000E-01   12.0110           0
+      1187 CLST     238      DCM      H1       HGA2     0.900000E-01   1.00800           0
+      1188 CLST     238      DCM      H2       HGA2     0.900000E-01   1.00800           0
+      1189 CLST     238      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+      1190 CLST     238      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+      1191 CLST     239      DCM      C        CG321   -0.180000E-01   12.0110           0
+      1192 CLST     239      DCM      H1       HGA2     0.900000E-01   1.00800           0
+      1193 CLST     239      DCM      H2       HGA2     0.900000E-01   1.00800           0
+      1194 CLST     239      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+      1195 CLST     239      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
+      1196 CLST     240      DCM      C        CG321   -0.180000E-01   12.0110           0
+      1197 CLST     240      DCM      H1       HGA2     0.900000E-01   1.00800           0
+      1198 CLST     240      DCM      H2       HGA2     0.900000E-01   1.00800           0
+      1199 CLST     240      DCM      CL1      CLGA1   -0.810000E-01   35.4530           0
+      1200 CLST     240      DCM      CL2      CLGA1   -0.810000E-01   35.4530           0
 
-       560 !NBOND: bonds
+       960 !NBOND: bonds
          2         1         1         4         1         5         1         3
          7         6         6         9         6        10         6         8
         12        11        11        14        11        15        11        13
@@ -846,8 +1346,108 @@ PSF EXT CMAP XPLOR
        687       686       686       689       686       690       686       688
        692       691       691       694       691       695       691       693
        697       696       696       699       696       700       696       698
+       702       701       701       704       701       705       701       703
+       707       706       706       709       706       710       706       708
+       712       711       711       714       711       715       711       713
+       717       716       716       719       716       720       716       718
+       722       721       721       724       721       725       721       723
+       727       726       726       729       726       730       726       728
+       732       731       731       734       731       735       731       733
+       737       736       736       739       736       740       736       738
+       742       741       741       744       741       745       741       743
+       747       746       746       749       746       750       746       748
+       752       751       751       754       751       755       751       753
+       757       756       756       759       756       760       756       758
+       762       761       761       764       761       765       761       763
+       767       766       766       769       766       770       766       768
+       772       771       771       774       771       775       771       773
+       777       776       776       779       776       780       776       778
+       782       781       781       784       781       785       781       783
+       787       786       786       789       786       790       786       788
+       792       791       791       794       791       795       791       793
+       797       796       796       799       796       800       796       798
+       802       801       801       804       801       805       801       803
+       807       806       806       809       806       810       806       808
+       812       811       811       814       811       815       811       813
+       817       816       816       819       816       820       816       818
+       822       821       821       824       821       825       821       823
+       827       826       826       829       826       830       826       828
+       832       831       831       834       831       835       831       833
+       837       836       836       839       836       840       836       838
+       842       841       841       844       841       845       841       843
+       847       846       846       849       846       850       846       848
+       852       851       851       854       851       855       851       853
+       857       856       856       859       856       860       856       858
+       862       861       861       864       861       865       861       863
+       867       866       866       869       866       870       866       868
+       872       871       871       874       871       875       871       873
+       877       876       876       879       876       880       876       878
+       882       881       881       884       881       885       881       883
+       887       886       886       889       886       890       886       888
+       892       891       891       894       891       895       891       893
+       897       896       896       899       896       900       896       898
+       902       901       901       904       901       905       901       903
+       907       906       906       909       906       910       906       908
+       912       911       911       914       911       915       911       913
+       917       916       916       919       916       920       916       918
+       922       921       921       924       921       925       921       923
+       927       926       926       929       926       930       926       928
+       932       931       931       934       931       935       931       933
+       937       936       936       939       936       940       936       938
+       942       941       941       944       941       945       941       943
+       947       946       946       949       946       950       946       948
+       952       951       951       954       951       955       951       953
+       957       956       956       959       956       960       956       958
+       962       961       961       964       961       965       961       963
+       967       966       966       969       966       970       966       968
+       972       971       971       974       971       975       971       973
+       977       976       976       979       976       980       976       978
+       982       981       981       984       981       985       981       983
+       987       986       986       989       986       990       986       988
+       992       991       991       994       991       995       991       993
+       997       996       996       999       996      1000       996       998
+      1002      1001      1001      1004      1001      1005      1001      1003
+      1007      1006      1006      1009      1006      1010      1006      1008
+      1012      1011      1011      1014      1011      1015      1011      1013
+      1017      1016      1016      1019      1016      1020      1016      1018
+      1022      1021      1021      1024      1021      1025      1021      1023
+      1027      1026      1026      1029      1026      1030      1026      1028
+      1032      1031      1031      1034      1031      1035      1031      1033
+      1037      1036      1036      1039      1036      1040      1036      1038
+      1042      1041      1041      1044      1041      1045      1041      1043
+      1047      1046      1046      1049      1046      1050      1046      1048
+      1052      1051      1051      1054      1051      1055      1051      1053
+      1057      1056      1056      1059      1056      1060      1056      1058
+      1062      1061      1061      1064      1061      1065      1061      1063
+      1067      1066      1066      1069      1066      1070      1066      1068
+      1072      1071      1071      1074      1071      1075      1071      1073
+      1077      1076      1076      1079      1076      1080      1076      1078
+      1082      1081      1081      1084      1081      1085      1081      1083
+      1087      1086      1086      1089      1086      1090      1086      1088
+      1092      1091      1091      1094      1091      1095      1091      1093
+      1097      1096      1096      1099      1096      1100      1096      1098
+      1102      1101      1101      1104      1101      1105      1101      1103
+      1107      1106      1106      1109      1106      1110      1106      1108
+      1112      1111      1111      1114      1111      1115      1111      1113
+      1117      1116      1116      1119      1116      1120      1116      1118
+      1122      1121      1121      1124      1121      1125      1121      1123
+      1127      1126      1126      1129      1126      1130      1126      1128
+      1132      1131      1131      1134      1131      1135      1131      1133
+      1137      1136      1136      1139      1136      1140      1136      1138
+      1142      1141      1141      1144      1141      1145      1141      1143
+      1147      1146      1146      1149      1146      1150      1146      1148
+      1152      1151      1151      1154      1151      1155      1151      1153
+      1157      1156      1156      1159      1156      1160      1156      1158
+      1162      1161      1161      1164      1161      1165      1161      1163
+      1167      1166      1166      1169      1166      1170      1166      1168
+      1172      1171      1171      1174      1171      1175      1171      1173
+      1177      1176      1176      1179      1176      1180      1176      1178
+      1182      1181      1181      1184      1181      1185      1181      1183
+      1187      1186      1186      1189      1186      1190      1186      1188
+      1192      1191      1191      1194      1191      1195      1191      1193
+      1197      1196      1196      1199      1196      1200      1196      1198
 
-       840 !NTHETA: angles
+      1440 !NTHETA: angles
          2         1         3         2         1         4         2         1         5
          3         1         4         3         1         5         4         1         5
          7         6         8         7         6         9         7         6        10
@@ -1128,6 +1728,206 @@ PSF EXT CMAP XPLOR
        693       691       694       693       691       695       694       691       695
        697       696       698       697       696       699       697       696       700
        698       696       699       698       696       700       699       696       700
+       702       701       703       702       701       704       702       701       705
+       703       701       704       703       701       705       704       701       705
+       707       706       708       707       706       709       707       706       710
+       708       706       709       708       706       710       709       706       710
+       712       711       713       712       711       714       712       711       715
+       713       711       714       713       711       715       714       711       715
+       717       716       718       717       716       719       717       716       720
+       718       716       719       718       716       720       719       716       720
+       722       721       723       722       721       724       722       721       725
+       723       721       724       723       721       725       724       721       725
+       727       726       728       727       726       729       727       726       730
+       728       726       729       728       726       730       729       726       730
+       732       731       733       732       731       734       732       731       735
+       733       731       734       733       731       735       734       731       735
+       737       736       738       737       736       739       737       736       740
+       738       736       739       738       736       740       739       736       740
+       742       741       743       742       741       744       742       741       745
+       743       741       744       743       741       745       744       741       745
+       747       746       748       747       746       749       747       746       750
+       748       746       749       748       746       750       749       746       750
+       752       751       753       752       751       754       752       751       755
+       753       751       754       753       751       755       754       751       755
+       757       756       758       757       756       759       757       756       760
+       758       756       759       758       756       760       759       756       760
+       762       761       763       762       761       764       762       761       765
+       763       761       764       763       761       765       764       761       765
+       767       766       768       767       766       769       767       766       770
+       768       766       769       768       766       770       769       766       770
+       772       771       773       772       771       774       772       771       775
+       773       771       774       773       771       775       774       771       775
+       777       776       778       777       776       779       777       776       780
+       778       776       779       778       776       780       779       776       780
+       782       781       783       782       781       784       782       781       785
+       783       781       784       783       781       785       784       781       785
+       787       786       788       787       786       789       787       786       790
+       788       786       789       788       786       790       789       786       790
+       792       791       793       792       791       794       792       791       795
+       793       791       794       793       791       795       794       791       795
+       797       796       798       797       796       799       797       796       800
+       798       796       799       798       796       800       799       796       800
+       802       801       803       802       801       804       802       801       805
+       803       801       804       803       801       805       804       801       805
+       807       806       808       807       806       809       807       806       810
+       808       806       809       808       806       810       809       806       810
+       812       811       813       812       811       814       812       811       815
+       813       811       814       813       811       815       814       811       815
+       817       816       818       817       816       819       817       816       820
+       818       816       819       818       816       820       819       816       820
+       822       821       823       822       821       824       822       821       825
+       823       821       824       823       821       825       824       821       825
+       827       826       828       827       826       829       827       826       830
+       828       826       829       828       826       830       829       826       830
+       832       831       833       832       831       834       832       831       835
+       833       831       834       833       831       835       834       831       835
+       837       836       838       837       836       839       837       836       840
+       838       836       839       838       836       840       839       836       840
+       842       841       843       842       841       844       842       841       845
+       843       841       844       843       841       845       844       841       845
+       847       846       848       847       846       849       847       846       850
+       848       846       849       848       846       850       849       846       850
+       852       851       853       852       851       854       852       851       855
+       853       851       854       853       851       855       854       851       855
+       857       856       858       857       856       859       857       856       860
+       858       856       859       858       856       860       859       856       860
+       862       861       863       862       861       864       862       861       865
+       863       861       864       863       861       865       864       861       865
+       867       866       868       867       866       869       867       866       870
+       868       866       869       868       866       870       869       866       870
+       872       871       873       872       871       874       872       871       875
+       873       871       874       873       871       875       874       871       875
+       877       876       878       877       876       879       877       876       880
+       878       876       879       878       876       880       879       876       880
+       882       881       883       882       881       884       882       881       885
+       883       881       884       883       881       885       884       881       885
+       887       886       888       887       886       889       887       886       890
+       888       886       889       888       886       890       889       886       890
+       892       891       893       892       891       894       892       891       895
+       893       891       894       893       891       895       894       891       895
+       897       896       898       897       896       899       897       896       900
+       898       896       899       898       896       900       899       896       900
+       902       901       903       902       901       904       902       901       905
+       903       901       904       903       901       905       904       901       905
+       907       906       908       907       906       909       907       906       910
+       908       906       909       908       906       910       909       906       910
+       912       911       913       912       911       914       912       911       915
+       913       911       914       913       911       915       914       911       915
+       917       916       918       917       916       919       917       916       920
+       918       916       919       918       916       920       919       916       920
+       922       921       923       922       921       924       922       921       925
+       923       921       924       923       921       925       924       921       925
+       927       926       928       927       926       929       927       926       930
+       928       926       929       928       926       930       929       926       930
+       932       931       933       932       931       934       932       931       935
+       933       931       934       933       931       935       934       931       935
+       937       936       938       937       936       939       937       936       940
+       938       936       939       938       936       940       939       936       940
+       942       941       943       942       941       944       942       941       945
+       943       941       944       943       941       945       944       941       945
+       947       946       948       947       946       949       947       946       950
+       948       946       949       948       946       950       949       946       950
+       952       951       953       952       951       954       952       951       955
+       953       951       954       953       951       955       954       951       955
+       957       956       958       957       956       959       957       956       960
+       958       956       959       958       956       960       959       956       960
+       962       961       963       962       961       964       962       961       965
+       963       961       964       963       961       965       964       961       965
+       967       966       968       967       966       969       967       966       970
+       968       966       969       968       966       970       969       966       970
+       972       971       973       972       971       974       972       971       975
+       973       971       974       973       971       975       974       971       975
+       977       976       978       977       976       979       977       976       980
+       978       976       979       978       976       980       979       976       980
+       982       981       983       982       981       984       982       981       985
+       983       981       984       983       981       985       984       981       985
+       987       986       988       987       986       989       987       986       990
+       988       986       989       988       986       990       989       986       990
+       992       991       993       992       991       994       992       991       995
+       993       991       994       993       991       995       994       991       995
+       997       996       998       997       996       999       997       996      1000
+       998       996       999       998       996      1000       999       996      1000
+      1002      1001      1003      1002      1001      1004      1002      1001      1005
+      1003      1001      1004      1003      1001      1005      1004      1001      1005
+      1007      1006      1008      1007      1006      1009      1007      1006      1010
+      1008      1006      1009      1008      1006      1010      1009      1006      1010
+      1012      1011      1013      1012      1011      1014      1012      1011      1015
+      1013      1011      1014      1013      1011      1015      1014      1011      1015
+      1017      1016      1018      1017      1016      1019      1017      1016      1020
+      1018      1016      1019      1018      1016      1020      1019      1016      1020
+      1022      1021      1023      1022      1021      1024      1022      1021      1025
+      1023      1021      1024      1023      1021      1025      1024      1021      1025
+      1027      1026      1028      1027      1026      1029      1027      1026      1030
+      1028      1026      1029      1028      1026      1030      1029      1026      1030
+      1032      1031      1033      1032      1031      1034      1032      1031      1035
+      1033      1031      1034      1033      1031      1035      1034      1031      1035
+      1037      1036      1038      1037      1036      1039      1037      1036      1040
+      1038      1036      1039      1038      1036      1040      1039      1036      1040
+      1042      1041      1043      1042      1041      1044      1042      1041      1045
+      1043      1041      1044      1043      1041      1045      1044      1041      1045
+      1047      1046      1048      1047      1046      1049      1047      1046      1050
+      1048      1046      1049      1048      1046      1050      1049      1046      1050
+      1052      1051      1053      1052      1051      1054      1052      1051      1055
+      1053      1051      1054      1053      1051      1055      1054      1051      1055
+      1057      1056      1058      1057      1056      1059      1057      1056      1060
+      1058      1056      1059      1058      1056      1060      1059      1056      1060
+      1062      1061      1063      1062      1061      1064      1062      1061      1065
+      1063      1061      1064      1063      1061      1065      1064      1061      1065
+      1067      1066      1068      1067      1066      1069      1067      1066      1070
+      1068      1066      1069      1068      1066      1070      1069      1066      1070
+      1072      1071      1073      1072      1071      1074      1072      1071      1075
+      1073      1071      1074      1073      1071      1075      1074      1071      1075
+      1077      1076      1078      1077      1076      1079      1077      1076      1080
+      1078      1076      1079      1078      1076      1080      1079      1076      1080
+      1082      1081      1083      1082      1081      1084      1082      1081      1085
+      1083      1081      1084      1083      1081      1085      1084      1081      1085
+      1087      1086      1088      1087      1086      1089      1087      1086      1090
+      1088      1086      1089      1088      1086      1090      1089      1086      1090
+      1092      1091      1093      1092      1091      1094      1092      1091      1095
+      1093      1091      1094      1093      1091      1095      1094      1091      1095
+      1097      1096      1098      1097      1096      1099      1097      1096      1100
+      1098      1096      1099      1098      1096      1100      1099      1096      1100
+      1102      1101      1103      1102      1101      1104      1102      1101      1105
+      1103      1101      1104      1103      1101      1105      1104      1101      1105
+      1107      1106      1108      1107      1106      1109      1107      1106      1110
+      1108      1106      1109      1108      1106      1110      1109      1106      1110
+      1112      1111      1113      1112      1111      1114      1112      1111      1115
+      1113      1111      1114      1113      1111      1115      1114      1111      1115
+      1117      1116      1118      1117      1116      1119      1117      1116      1120
+      1118      1116      1119      1118      1116      1120      1119      1116      1120
+      1122      1121      1123      1122      1121      1124      1122      1121      1125
+      1123      1121      1124      1123      1121      1125      1124      1121      1125
+      1127      1126      1128      1127      1126      1129      1127      1126      1130
+      1128      1126      1129      1128      1126      1130      1129      1126      1130
+      1132      1131      1133      1132      1131      1134      1132      1131      1135
+      1133      1131      1134      1133      1131      1135      1134      1131      1135
+      1137      1136      1138      1137      1136      1139      1137      1136      1140
+      1138      1136      1139      1138      1136      1140      1139      1136      1140
+      1142      1141      1143      1142      1141      1144      1142      1141      1145
+      1143      1141      1144      1143      1141      1145      1144      1141      1145
+      1147      1146      1148      1147      1146      1149      1147      1146      1150
+      1148      1146      1149      1148      1146      1150      1149      1146      1150
+      1152      1151      1153      1152      1151      1154      1152      1151      1155
+      1153      1151      1154      1153      1151      1155      1154      1151      1155
+      1157      1156      1158      1157      1156      1159      1157      1156      1160
+      1158      1156      1159      1158      1156      1160      1159      1156      1160
+      1162      1161      1163      1162      1161      1164      1162      1161      1165
+      1163      1161      1164      1163      1161      1165      1164      1161      1165
+      1167      1166      1168      1167      1166      1169      1167      1166      1170
+      1168      1166      1169      1168      1166      1170      1169      1166      1170
+      1172      1171      1173      1172      1171      1174      1172      1171      1175
+      1173      1171      1174      1173      1171      1175      1174      1171      1175
+      1177      1176      1178      1177      1176      1179      1177      1176      1180
+      1178      1176      1179      1178      1176      1180      1179      1176      1180
+      1182      1181      1183      1182      1181      1184      1182      1181      1185
+      1183      1181      1184      1183      1181      1185      1184      1181      1185
+      1187      1186      1188      1187      1186      1189      1187      1186      1190
+      1188      1186      1189      1188      1186      1190      1189      1186      1190
+      1192      1191      1193      1192      1191      1194      1192      1191      1195
+      1193      1191      1194      1193      1191      1195      1194      1191      1195
+      1197      1196      1198      1197      1196      1199      1197      1196      1200
+      1198      1196      1199      1198      1196      1200      1199      1196      1200
 
          0 !NPHI: dihedrals
 
@@ -1230,9 +2030,71 @@ PSF EXT CMAP XPLOR
          0         0         0         0         0         0         0         0
          0         0         0         0         0         0         0         0
          0         0         0         0         0         0         0         0
-         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
 
-       140         0 !NGRP NST2
+       240         0 !NGRP NST2
          0         1         0         5         1         0        10         1         0
         15         1         0        20         1         0        25         1         0
         30         1         0        35         1         0        40         1         0
@@ -1279,7 +2141,40 @@ PSF EXT CMAP XPLOR
        645         1         0       650         1         0       655         1         0
        660         1         0       665         1         0       670         1         0
        675         1         0       680         1         0       685         1         0
-       690         1         0       695         1         0
+       690         1         0       695         1         0       700         1         0
+       705         1         0       710         1         0       715         1         0
+       720         1         0       725         1         0       730         1         0
+       735         1         0       740         1         0       745         1         0
+       750         1         0       755         1         0       760         1         0
+       765         1         0       770         1         0       775         1         0
+       780         1         0       785         1         0       790         1         0
+       795         1         0       800         1         0       805         1         0
+       810         1         0       815         1         0       820         1         0
+       825         1         0       830         1         0       835         1         0
+       840         1         0       845         1         0       850         1         0
+       855         1         0       860         1         0       865         1         0
+       870         1         0       875         1         0       880         1         0
+       885         1         0       890         1         0       895         1         0
+       900         1         0       905         1         0       910         1         0
+       915         1         0       920         1         0       925         1         0
+       930         1         0       935         1         0       940         1         0
+       945         1         0       950         1         0       955         1         0
+       960         1         0       965         1         0       970         1         0
+       975         1         0       980         1         0       985         1         0
+       990         1         0       995         1         0      1000         1         0
+      1005         1         0      1010         1         0      1015         1         0
+      1020         1         0      1025         1         0      1030         1         0
+      1035         1         0      1040         1         0      1045         1         0
+      1050         1         0      1055         1         0      1060         1         0
+      1065         1         0      1070         1         0      1075         1         0
+      1080         1         0      1085         1         0      1090         1         0
+      1095         1         0      1100         1         0      1105         1         0
+      1110         1         0      1115         1         0      1120         1         0
+      1125         1         0      1130         1         0      1135         1         0
+      1140         1         0      1145         1         0      1150         1         0
+      1155         1         0      1160         1         0      1165         1         0
+      1170         1         0      1175         1         0      1180         1         0
+      1185         1         0      1190         1         0      1195         1         0
 
          0         0 !NUMLP NUMLPH
 

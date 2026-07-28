@@ -12,10 +12,10 @@ CMD=(
   --backend
   pycharmm
   --restart-from
-  /mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/baseline.res
+  /mmhome/boittier/home/mmml_tutorial/tests/cpu_tests/dcm/dcm01/artifacts/md_run/baseline.res
   --md-stages
   mini,heat,nve
   --dynamics-intra-rescue-sd-steps
-  400
+  800
 )
 exec "${CMD[@]}"

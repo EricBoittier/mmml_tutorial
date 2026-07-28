@@ -3,7 +3,7 @@
 campaign_output: artifacts/md_campaign
 defaults:
   composition: DCM:20
-  checkpoint: /cluster/home/boittier/mmml/examples/ckpts_json/DESdimers_params.json
+    #  checkpoint: /cluster/home/boittier/mmml/examples/ckpts_json/DESdimers_params.json
   box_size: 32.0
   spacing: 5.0
   temperature: 260.0

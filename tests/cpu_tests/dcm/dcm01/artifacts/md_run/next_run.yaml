@@ -6,7 +6,7 @@ include:
 
 defaults:
   backend: 'pycharmm'
-  dynamics_intra_rescue_sd_steps: 400
+  dynamics_intra_rescue_sd_steps: 800
   md_stages: 'mini,heat,nve'
   output_dir: 'artifacts/md_run'
-  restart_from: '/mmhome/boittier/home/mmml_tutorial/cpu_tests/dcm/dcm01/artifacts/md_run/baseline.res'
+  restart_from: '/mmhome/boittier/home/mmml_tutorial/tests/cpu_tests/dcm/dcm01/artifacts/md_run/baseline.res'
