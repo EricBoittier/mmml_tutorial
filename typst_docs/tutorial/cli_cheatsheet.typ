@@ -193,7 +193,7 @@
     #cmd[`mmml gui`][molecular viewer]
     #cmd[`mmml kernel-fit`][kernel to MDCM charges]
     #cmd[`mmml extract-checkpoint-metrics`][Orbax plots]
-    #cmd[`python -m mmml.cli.misc.compare_charmm_ml`][CHARMM vs ML]
+    #cmd[`mmml compare-charmm-ml`][CHARMM vs ML]
     #cmd[`mmml downstream`][misc analysis; see --help]
   ]
 ]
@@ -968,12 +968,12 @@ mmml extract-checkpoint-metrics ~/ckpts/water_dimer_joint -o training_metrics.pn
 
 Use this after PhysNet or joint training to show loss and MAE curves.
 
-=== `python -m mmml.cli.misc.compare_charmm_ml`
+=== `mmml compare-charmm-ml`
 
 Compare CHARMM and ML behavior on a held-out test split.
 
 ```bash
-python -m mmml.cli.misc.compare_charmm_ml \
+mmml compare-charmm-ml \
   --checkpoint ~/ckpts/water_dimer_joint \
   --valid-efd out/splits_dimer/energies_forces_dipoles_test.npz \
   --valid-esp out/splits_dimer/grids_esp_test.npz \
@@ -982,8 +982,7 @@ python -m mmml.cli.misc.compare_charmm_ml \
   --out-dir charmm_ml_comparison
 ```
 
-This is module-level, not a top-level `mmml` command. Use it for diagnostic
-plots and HDF5 files that can feed `kernel-fit`.
+Produces diagnostic plots and HDF5 that can feed `kernel-fit`.
 
 #pagebreak()
 == Lower-Priority or Transitional Commands

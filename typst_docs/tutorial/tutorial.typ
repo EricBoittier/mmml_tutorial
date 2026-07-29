@@ -215,7 +215,7 @@ The figure below is the *contract* for the rest of the document: a linear
           row-gutter: 0.55em,
         )[
           - *11* — pure CHARMM heat / equilibration on `init-packmol.pdb` \
-          - *12* — `compare_charmm_ml` ESP / dipole diagnostics
+          - *12* — `compare-charmm-ml` ESP / dipole diagnostics
           ,
           - *16–21* — `mmml md-system` presets (free / PBC, NVE/NVT/NPT, mixed solvents) \
           - *EF track* — `mmml ef-train` / `ef-evaluate` / `ef-md` on ring or other EF-ready splits (not the default `cli/` benzene path)
@@ -595,9 +595,9 @@ Outputs: `pdb/{heat,equi}.pdb`, `dcd/{heat,equi}.dcd`, `res/{heat,equi}.res`.
 bash 12_charmm_esp_dipole_comparison.sh
 ```
 
-The script runs `compare_charmm_ml` against `~/ckpts/eg_joint` and `out/splits/*_test.npz`; edit the checkpoint path if your joint run uses another directory.
+The script runs `mmml compare-charmm-ml` against `~/ckpts/eg_joint` and `out/splits/*_test.npz`; edit the checkpoint path if your joint run uses another directory.
 
-#stepfig("step12_comparison.png", [Placeholder: replace by parity or GUI screenshots after you run `compare_charmm_ml` and regenerate assets if desired.])
+#stepfig("step12_comparison.png", [Placeholder: replace by parity or GUI screenshots after you run `compare-charmm-ml` and regenerate assets if desired.])
 
 === Step 13: PhysNet MD sampling
 

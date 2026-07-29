@@ -360,7 +360,8 @@ python -m mmml.cli.calculator --checkpoint <path-to-checkpoint> --test-molecule 
 | 07 | pyscf-evaluate | `mmml pyscf-evaluate -i out/06_sampled.npz -o out/07_evaluated.npz --esp` | `cli/07_pyscf_evaluate_cli.sh`, `programmatic/07_pyscf_evaluate_programmatic.py` |
 | 08 | fix-and-split | `mmml fix-and-split --efd out/07_evaluated.npz --output-dir out/splits` | `cli/08_fix_and_split_cli.sh` |
 | 09 | PhysNet train | `python examples/other/co2/physnet_train/trainer.py --train ... --valid ...` | `cli/09_physnet_train_cli.sh` |
-| 10 | PhysNet+DCMNet | `python -m mmml.cli.misc.train_joint --train-efd ... --train-esp ...` | `cli/10_physnet_dcmnet_train_cli.sh` |
+| 10 | PhysNet+DCMNet | `mmml train-joint --train-efd ... --train-esp ...` | `cli/10_physnet_dcmnet_train_cli.sh` |
+| 12 | CHARMM vs ML | `mmml compare-charmm-ml --checkpoint ... --valid-efd ... --valid-esp ...` | `cli/12_charmm_esp_dipole_comparison.sh` |
 | 16 | md-system free NVE | `mmml md-system --setup free_nve` | `cli/16_md_10mer_free_nve.sh` |
 | 17 | md-system free NVT | `mmml md-system --setup free_nvt --temperature 300` | `cli/17_md_10mer_free_nvt.sh` |
 | 18 | md-system pbc NVE | `mmml md-system --setup pbc_nve` | `cli/18_md_10mer_pbc_nve.sh` |
